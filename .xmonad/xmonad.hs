@@ -1,3 +1,4 @@
+-- [[file:README.org::*Imports][Imports:1]]
   -- Base
 import XMonad
 import System.Directory
@@ -79,7 +80,9 @@ import XMonad.Util.SpawnOnce
       -- SolarizedLight
       -- TomorrowNight
 import Colors.DoomOne
+-- Imports:1 ends here
 
+-- [[file:README.org::*Variables][Variables:1]]
 myFont :: String
 myFont = "xft:SauceCodePro Nerd Font Mono:regular:size=9:antialias=true:hinting=true"
 
@@ -110,12 +113,16 @@ myFocusColor  = color15     -- This variable is imported from Colors.THEME
 
 windowCount :: X (Maybe String)
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
+-- Variables:1 ends here
 
+-- [[file:README.org::*Autostart (The Startup Hook)][Autostart (The Startup Hook):1]]
 myStartupHook :: X ()
 myStartupHook = do
     spawn "killall conky"   -- kill current conky on each restart
     spawn "killall trayer"  -- kill current trayer on each restart
+-- Autostart (The Startup Hook):1 ends here
 
+-- [[file:README.org::*Autostart (The Startup Hook)][Autostart (The Startup Hook):2]]
     spawnOnce "lxsession"
     spawnOnce "picom"
     -- spawnOnce "nm-applet"
@@ -123,16 +130,22 @@ myStartupHook = do
     spawnOnce "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
     spawnOnce "unclutter" -- emacs daemon for the emacsclient
     -- spawnOnce "xset r rate 200 60" -- emacs daemon for the emacsclient
+-- Autostart (The Startup Hook):2 ends here
 
+-- [[file:README.org::*Autostart (The Startup Hook)][Autostart (The Startup Hook):3]]
     spawn ("sleep 2 && conky -c $HOME/.config/conky/xmonad/" ++ colorScheme ++ "-01.conkyrc")
     -- spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 22")
+-- Autostart (The Startup Hook):3 ends here
 
+-- [[file:README.org::*Autostart (The Startup Hook)][Autostart (The Startup Hook):4]]
     spawnOnce "xargs xwallpaper --stretch < ~/.cache/wall"
     -- spawnOnce "~/.fehbg &"  -- set last saved feh wallpaper
     -- spawnOnce "feh --randomize --bg-fill ~/wallpapers/*"  -- feh set random wallpaper
     -- spawnOnce "nitrogen --restore &"   -- if you prefer nitrogen to feh
     setWMName "LG3D"
+-- Autostart (The Startup Hook):4 ends here
 
+-- [[file:README.org::*Gridselect][Gridselect:1]]
 myColorizer :: Window -> Bool -> X (String, String)
 myColorizer = colorRangeFromClassName
                   (0x28,0x2c,0x34) -- lowest inactive bg
@@ -177,7 +190,9 @@ myAppGrid = [ ("Audacity", "audacity")
                  , ("OBS", "obs")
                  , ("PCManFM", "pcmanfm")
                  ]
+-- Gridselect:1 ends here
 
+-- [[file:README.org::*Scratchpads][Scratchpads:1]]
 myScratchPads :: [NamedScratchpad]
 myScratchPads = [ NS "terminal" spawnTerm findTerm manageTerm
                 , NS "mocp" spawnMocp findMocp manageMocp
@@ -208,7 +223,9 @@ myScratchPads = [ NS "terminal" spawnTerm findTerm manageTerm
                  w = 0.4
                  t = 0.75 -h
                  l = 0.70 -w
+-- Scratchpads:1 ends here
 
+-- [[file:README.org::*Layouts][Layouts:1]]
 --Makes setting the spacingRaw simpler to write. The spacingRaw module adds a configurable amount of space around windows.
 mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
 mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
@@ -323,14 +340,18 @@ myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts float
                                  ||| threeRow
                                  ||| tallAccordion
                                  ||| wideAccordion
+-- Layouts:1 ends here
 
+-- [[file:README.org::*Workspaces][Workspaces:1]]
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
 myWorkspaces = [" dev ", " www ", " sys ", " doc ", " vbox ", " chat ", " mus ", " vid ", " gfx "]
 myWorkspaceIndices = M.fromList $ zipWith (,) myWorkspaces [1..] -- (,) == \x y -> (x,y)
 
 clickable ws = "<action=xdotool key super+"++show i++">"++ws++"</action>"
     where i = fromJust $ M.lookup ws myWorkspaceIndices
+-- Workspaces:1 ends here
 
+-- [[file:README.org::*Managehook][Managehook:1]]
 myManageHook :: XMonad.Query (Data.Monoid.Endo WindowSet)
 myManageHook = composeAll
      -- 'doFloat' forces a window to float.  Useful for dialog boxes and such.
@@ -357,7 +378,9 @@ myManageHook = composeAll
      , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
      , isFullscreen -->  doFullFloat
      ] <+> namedScratchpadManageHook myScratchPads
+-- Managehook:1 ends here
 
+-- [[file:README.org::*Keybindings][Keybindings:1]]
 -- START_KEYS
 myKeys :: [(String, X ())]
 myKeys =
@@ -379,6 +402,11 @@ myKeys =
         , ("M-p h", spawn "dm-hub")           -- allows access to all dmscripts
         , ("M-f f", spawn "firefox-developer-edition")           -- allows access to all dmscripts
         , ("M-b c", spawn "bluetoothconnect")           -- allows access to all dmscripts
+        , ("M-d b", spawn "dmenu-bluetooth")           -- allows access to all dmscripts
+        , ("M-d c", spawn "dmenu-command")           -- run a command and see output via dunst
+        , ("M-d h", spawn "dmenu-handler")           -- do what i want with link
+        , ("M-d v", spawn "dmenu-vpn")           -- name says it all
+        , ("M-e E", spawn "eshell")           -- an emacs shell
         , ("M-y s", spawn "yt -D")           -- youtube open
         , ("M-y d", spawn "yt -Ddf")           -- youtube downloader
         , ("M-y l", spawn "yt -Dl")           -- youtube loop
@@ -518,7 +546,9 @@ myKeys =
           where nonNSP          = WSIs (return (\ws -> W.tag ws /= "NSP"))
                 nonEmptyNonNSP  = WSIs (return (\ws -> isJust (W.stack ws) && W.tag ws /= "NSP"))
 -- END_KEYS
+-- Keybindings:1 ends here
 
+-- [[file:README.org::*Main][Main:1]]
 main :: IO ()
 main = do
     -- Launching three instances of xmobar on their monitors.
@@ -569,3 +599,4 @@ main = do
               , ppOrder  = \(ws:l:t:ex) -> [ws,l]++ex++[t]
               }
         } `additionalKeysP` myKeys
+-- Main:1 ends here

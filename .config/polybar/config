@@ -1,3 +1,4 @@
+# [[file:../doom/config.org::*polybar config][polybar config:1]]
 ; Docs: https://github.com/polybar/polybar
 ;==========================================================
 
@@ -309,6 +310,7 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
+animation-charging-foreground = ${colors.draculagreen}
 animation-charging-framerate = 750
 
 [module/temperature]
@@ -779,3 +781,4 @@ scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 format-foreground = #fefefe
 format-background = #668bd7
+# polybar config:1 ends here

@@ -498,6 +498,11 @@ myKeys =
         , ("M-p h", spawn "dm-hub")           -- allows access to all dmscripts
         , ("M-f f", spawn "firefox-developer-edition")           -- allows access to all dmscripts
         , ("M-b c", spawn "bluetoothconnect")           -- allows access to all dmscripts
+        , ("M-d b", spawn "dmenu-bluetooth")           -- allows access to all dmscripts
+        , ("M-d c", spawn "dmenu-command")           -- run a command and see output via dunst
+        , ("M-d h", spawn "dmenu-handler")           -- do what i want with link
+        , ("M-d v", spawn "dmenu-vpn")           -- name says it all
+        , ("M-e E", spawn "eshell")           -- an emacs shell
         , ("M-y s", spawn "yt -D")           -- youtube open
         , ("M-y d", spawn "yt -Ddf")           -- youtube downloader
         , ("M-y l", spawn "yt -Dl")           -- youtube loop
