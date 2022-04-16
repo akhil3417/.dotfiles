@@ -1,0 +1,2 @@
+#!/bin/sh
+kmonad /home/shiva/test.kbd

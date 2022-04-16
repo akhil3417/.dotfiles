@@ -1,0 +1,6 @@
+#!/bin/bash
+# Script to run redshift/nightlight
+if [[ -x $(command -v redshift) ]]; then
+	redshift -l $(curl ipinfo.io | jq -j .loc | tr ',' ':') -b 1.0:0.8 -t 6400:4500 -m randr &
+
+fi

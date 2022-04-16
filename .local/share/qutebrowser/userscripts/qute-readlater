@@ -1,0 +1,146 @@
+#!/usr/bin/env python
+USAGE = """Test text"""
+EPILOG = """Dependencies: argparse,wallabag_api"""
+
+import argparse
+import aiohttp
+import asyncio
+import os
+import subprocess
+import functools
+import sys
+import enum
+from wallabag_api.wallabag import Wallabag
+
+argument_parser = argparse.ArgumentParser(description=__doc__, usage=USAGE, epilog=EPILOG)
+argument_parser.add_argument('url', nargs='?', default=os.getenv('QUTE_URL'))
+argument_parser.add_argument('title', nargs='?', default=os.getenv('QUTE_TITLE'))
+argument_parser.add_argument('--password-store', '-p',
+                             default=os.getenv('PASSWORD_STORE_DIR', default=os.path.expanduser('~/.password-store')),
+                             help='Path to your pass password-store')
+argument_parser.add_argument('--pass-user','-u', default='www/read.karthinks.com',
+                             help='User password location in password store')
+argument_parser.add_argument('--host','-l', default='https://read.karthinks.com',
+                             help='Wallabag server location')
+argument_parser.add_argument('--pass-api','-a', default='api/wallabag/qutescript',
+                             help='Wallabag API secret location in password store')
+argument_parser.add_argument('--io-encoding', '-i', default='UTF-8',
+                             help='Encoding used to communicate with subprocesses')
+argument_parser.add_argument('host', nargs='?', default='https://read.karthinks.com')
+
+stderr = functools.partial(print, file=sys.stderr)
+
+class ExitCodes(enum.IntEnum):
+    SUCCESS = 0
+    FAILURE = 1
+    # 1 is automatically used if Python throws an exception
+    NO_VALID_TOKEN = 2
+    COULD_NOT_MATCH_API = 4
+    COULD_NOT_MATCH_PASSWORD = 3
+
+def qute_command(command):
+    with open(os.environ['QUTE_FIFO'], 'w') as fifo:
+        fifo.write(command + '\n')
+        fifo.flush()
+
+def _run_pass(command, encoding):
+    process = subprocess.run(command, stdout=subprocess.PIPE)
+    return process.stdout.decode(encoding).split()
+
+
+def pass_(path, encoding):
+    return _run_pass(['pass', path], encoding)
+
+async def posturl(host, token, **params):
+    async with aiohttp.ClientSession() as session:
+        wall = Wallabag(host=host,
+                        client_secret=params.get('client_secret'),
+                        client_id=params.get('client_id'),
+                        token=token,
+                        extension=params['extension'],
+                        aio_sess=session)
+
+        await wall.post_entries(arguments.url, arguments.title, '', 0, 0)
+
+
+async def main(arguments):
+
+    # Find credentials
+    usercred = pass_(arguments.pass_user, arguments.io_encoding)
+    apicred  = pass_(arguments.pass_api, arguments.io_encoding)
+
+    if not usercred:
+        qute_command('message-error "Pass cant find Wallabag user credentials in password store at {!r}!."'.format(arguments.pass_user))
+        stderr('Pass cant find Wallabag user credentials in password store at {!r}!.'.format(arguments.pass_user))
+        return ExitCodes.COULD_NOT_MATCH_PASSWORD
+    if not apicred:
+        qute_command('message-error "Pass cant find Wallabag API credentials in password store at {!r}!."'.format(arguments.pass_api))
+        stderr('Pass cant find Wallabag API credentials in password store at {!r}!.'.format(arguments.pass_api))
+        return ExitCodes.COULD_NOT_MATCH_API
+    
+    params = {'username': usercred[2],
+              'password': usercred[0],
+              'client_id': apicred[2],
+              'client_secret': apicred[0],
+              'extension': 'pdf'}
+
+    # get a new token
+    # token = await Wallabag.get_token(host=arguments.host, **params)
+    tokenpath = os.path.expanduser('~/.cache/wallabag/token')
+    tokendir = os.path.expanduser('~/.cache/wallabag')
+    if os.path.exists(tokenpath):
+        token = open(tokenpath).read().strip()
+    else:
+        if not os.path.exists(tokendir):
+            os.mkdir(tokendir)
+        token = await Wallabag.get_token(host=arguments.host, **params)
+        open(tokenpath,'w').write(token)
+    
+    # initializing
+    try:
+        async with aiohttp.ClientSession() as session:
+            wall = Wallabag(host=arguments.host,
+                            client_secret=params.get('client_secret'),
+                            client_id=params.get('client_id'),
+                            token=token,
+                            extension=params['extension'],
+                            aio_sess=session)
+
+            await wall.post_entries(arguments.url, arguments.title, '', 0, 0)
+    except:
+        # Did not get token
+        try:
+            token = await Wallabag.get_token(host=arguments.host, **params)
+            open(tokenpath,'w').write(token)
+
+            async with aiohttp.ClientSession() as session:
+                wall = Wallabag(host=arguments.host,
+                                client_secret=params.get('client_secret'),
+                                client_id=params.get('client_id'),
+                                token=token,
+                                extension=params['extension'],
+                                aio_sess=session)
+
+                await wall.post_entries(arguments.url, arguments.title, '', 0, 0)
+        except:
+            # Token didn't work
+            qute_command('message-error "Could not get valid access token from {!r}"'.format(arguments.host))
+            stderr('Could not get valid access token from {!r}'.format(arguments.host))
+            return ExitCodes.NO_VALID_TOKEN
+
+    # async with aiohttp.ClientSession() as session:
+    #     wall = Wallabag(host=arguments.host,
+    #                     client_secret=params.get('client_secret'),
+    #                     client_id=params.get('client_id'),
+    #                     token='thistoken',
+    #                     extension=params['extension'],
+    #                     aio_sess=session)
+
+    #     await wall.post_entries(arguments.url, arguments.title, '', 0, 0)
+
+    qute_command('message-info "Saved for later at {!r}"'.format(arguments.host))
+    return ExitCodes.SUCCESS
+
+if __name__ == '__main__':
+    arguments = argument_parser.parse_args()
+    asyncio.run(main(arguments))

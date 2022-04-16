@@ -1,0 +1,100 @@
+#!/usr/bin/env bash
+# AUTHOR: Karthik Chikmagalur
+
+#--------------------------------------------------------------------
+# DFF            Find and open anything on the system.
+#                Type and hit RETURN to make a selection, or
+#                Hit CTRL+RETURN to select multiple items
+#                Hit SHIFT+RETURN to cycle through search backends:
+#                  fd (cached search),
+#                  locate,
+#                  fd (real time search),
+#                  quit
+#                Escape quits at any time.
+#
+# - By default, fd will only cache the user's home directory. Locate
+# will find anything.
+#
+# - Deleted files will show up in the results. Trying to open them
+# will cause the cache to be rebuilt.
+# --------------------------------------------------------------------
+if [ -f  "$HOME/.dmenurc" ]; then
+    .  $HOME/.dmenurc
+fi
+
+# PARAMETERS - REPLACE AS REQUIRED
+#--------------------------------
+PICKER_CMD="dmenu $DMENU_OPTIONS -i -l 12 -h 26 -p "
+# PICKER_CMD="rofi -dmenu"
+CACHE_CMD=ff-cache
+GREP_CMD='ag -i --silent --nonumbers'  #Command to search through the cache
+LOCATE_CMD='plocate -i --existing'            #Locate command, --all
+HISTORY_FILE="$HOME/.cache/dff.hist"
+#--------------------------------
+
+# Exit if any of the search commands returns exit code 1
+function exit_if_esc { if [[ $1 != 0 ]]; then exit 1; fi }
+
+touch "$HISTORY_FILE"
+#---------------------------------------------------------
+# MAKING A CHOICE
+# 1. First try the existing cache:
+# choices=$($CACHE_CMD | $PICKER_CMD "Open: ")
+# exit_if_esc $? # User hit Escape
+
+while IFS= read -r choice; do
+
+    exit_if_esc $? # User hit Escape
+    if [[ ! -f $choice ]] && [[ ! -d $choice ]]; then
+        # 2. Didn't find match, try locatedb:
+        if [[ ! -z $choice ]]; then
+            choice_locate=$($LOCATE_CMD -- ${choice} | $PICKER_CMD "[Locate] Open: ")
+        fi
+        exit_if_esc $? # User hit Escape
+
+        # 3. If not happy with locate, rebuild cache and:
+        if [[ ! -f "$choice_locate" ]] && [[ ! -d "$choice_locate" ]]; then
+            $CACHE_CMD -r
+            choice=$($CACHE_CMD | $GREP_CMD $(echo "$choice" | sed -re 's/ +/.*/') | $PICKER_CMD "[Cache rebuilt] Open: ")
+        else
+            choice="$choice_locate"
+        fi
+    fi
+
+    # Write choice to history file & to stdout
+
+    if [ -s "$HISTORY_FILE" ]; then
+        sort -u "$HISTORY_FILE" -o "$HISTORY_FILE"
+        sed -i "1s;^;$choice\n;" "$HISTORY_FILE"
+    else
+        echo -n "$choice" >> "$HISTORY_FILE"
+    fi
+    
+    echo "$choice"
+done < <( { cat "$HISTORY_FILE" && $CACHE_CMD; } | $PICKER_CMD "Open: " )
+
+# Scratch
+#----------
+# TODO: Add --help/-h options
+# TODO: Allow searching from $BASE_DIR when supplied as argument
+# xdg-open  "$choice"
+
+#--------------------------------------------------------------------
+# HOW?
+# 0. Maintain fd cache.
+# 1. Search in cache.
+# 2. If no satisfactory results in cache then search with locate.
+# 3. If no satisfactory results in locatedb then rebuild cache and
+# search again.
+# 4. Handle files by extension first and mimetype as fallback
+#--------------------------------------------------------------------
+
+#--------------------------------------------------------------------
+# DEPENDENCIES:
+# dmenu
+# ag
+# locate or mlocate
+# fd
+# setsid (part of the util-linux package)
+#--------------------------------------------------------------------
+

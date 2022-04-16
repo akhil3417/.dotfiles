@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+emacsclient -create-frame --alternate-editor='' --no-wait --eval \
+"(progn (x-focus-frame nil) (mu4e-compose-from-mailto \"$1\" t))"

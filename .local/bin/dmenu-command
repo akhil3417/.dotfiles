@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+histfile="$HOME/.cache/dmenu-command-hist"
+
+if ! [ -f "$histfile"]; then
+    touch "$histfile"
+fi
+
+if [ -f "$HOME/.dmenurc" ]; then
+    source "$HOME/.dmenurc"
+fi
+
+comm=$(dmenu $DMENU_OPTIONS -p "Run command: " < "$histfile")
+
+notify-send "$(bash -c "$comm")"
+
+if [ -z $(grep -xFi "$comm" "$histfile") ] && [ -n "$comm" ]; then
+    echo "$comm" >> "$histfile"
+fi

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+emacsclient -c -F "((name . \"dropdown_eshell\"))" -e '(progn (eshell) (delete-other-windows))'

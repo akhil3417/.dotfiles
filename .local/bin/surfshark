@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+# Script to automate starting and stopping openvpn, to be run as a regular user.
+# The script will prompt you for the sudo passwd if necessary. (Check
+# SUDO_ASKPASS.)
+#
+# 1. For this script to run add (or edit) the line in the openvpn-client configs
+# (located at /etc/openvpn/client/*):
+#
+# auth-user-pass openvpn-pass
+#
+# OR
+# 
+# 1. Change the systemd unit-file to run openvpn with the command-line option
+#
+# --auth-user-pass openvpn-pass 
+# 
+# 2. The script works by finding the username/pw credentials from running
+# $passcmd, placing them in a file in the openvpn clients folder ($passfile),
+# then starting the systemd unit on the client config you choose via dmenu.
+# Depending on how you store your credentials, you may need to modify the
+# function makeauthfile().
+
+# if [ "$(id -u)" != "0" ]; then
+#     echo "Please run this script as root." 1>&2
+#     notify-send "Please run this script as root."
+#     exit 1
+# fi
+
+passcmd="pass vpn/surfshark"
+passfile="/etc/openvpn/client/openvpn-pass"
+export SUDO_ASKPASS="/usr/bin/ksshaskpass"
+
+makeauthfile() {
+    mapfile -t < <($passcmd)
+    echo -e "${MAPFILE[1]##login: }\n${MAPFILE[0]}" | sudo --askpass tee $passfile >/dev/null
+}
+
+if ! systemctl is-active 'openvpn-client@*'; then
+    [[ -f $HOME/.dmenurc ]] && . $HOME/.dmenurc
+
+    vpnconf=$(sudo ls /etc/openvpn/client/ | dmenu $DMENU_OPTIONS -l 12 -p "Choose VPN configuration: ")
+    
+    notify-send "✓ Starting VPN"
+    makeauthfile
+    sudo --askpass systemctl start openvpn-client@${vpnconf%%.conf}
+    if [[ $# -eq 0 ]]; then
+        sudo systemctl restart systemd-sysctl.service
+        notify-send "✓ Started VPN with IP $(curl ifconfig.io)"
+    else
+        notify-send "❌ Couldn't start openvpn-client@${vpnconf%%.conf}"
+    fi
+    sudo rm $passfile
+else
+    notify-send "❌ VPN already running!
+    Disconnecting"
+    sudo --askpass systemctl stop 'openvpn-client@*'
+fi

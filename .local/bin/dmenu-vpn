@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+vpns="pulse\nsurfshark\n"
+
+choice=$(echo -e $vpns | dmenu $DMENU_OPTIONS -p "VPN service: ")
+
+pulse_toggle() {
+    pulsepids=$(pgrep -f 'openconnect --protocol=pulse')
+    
+    if [ -z "$pulsepids" ] ; then
+        # The automated approach no longer works because of 2FA
+        # printf '%s\n' \
+        #        "$(pass www/sso.ucsb.edu/kchikmagalur | awk 'NR==2 {print $2}')"  \
+        #        "$(pass www/sso.ucsb.edu/kchikmagalur | head -n1)" | script -q -c 'sudo openconnect --protocol=pulse "https://ps.vpn.ucsb.edu/ra"'
+        notify-send "Connecting to pulse-secure VPN (UCSB)"
+        $TERMINAL -t "dropdown_pulse-vpn" -e sudo openconnect --protocol=pulse "https://ps.vpn.ucsb.edu/ra"
+    else
+       while read -d" " pulsepid; do
+             echo pulsepid is $pulsepid
+             kill -s INT $pulsepid
+       done < <(echo $pulsepids)
+       notify-send "Disconnected from pulse-secure VPN (UCSB)"
+    fi
+    
+}
+
+case "$choice" in
+    surfshark) exec surfshark ;;
+    pulse) pulse_toggle ;;
+    *) exit 1;;
+esac
+
+
+
