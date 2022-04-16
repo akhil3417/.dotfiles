@@ -59,7 +59,7 @@ font-3 = "Fira Mono:size=6;-3"
 modules-left = exwm exwm-path exwm-workspace
 modules-center = spotify
 ; modules-left = exwm-workspace
-modules-right = wireless-network networkspeedup networkspeeddown  cpu memory uptime arch-aur-updates battery temperature date
+modules-right =  wireless-network networkspeedup networkspeeddown  cpu memory uptime arch-aur-updates battery temperature date
 
 ; exwm-workspace exwm exwm-path spotify mu4e telegram xkeyboard cpu cpu1 date battery1 battery temperture temperature1 xbacklight wireless-network wired-network
 ; weathe volume uptime filesystem pulseaudio memory wlan eth network networkspeedup networkspeeddown networkspeedup1 networkspeeddown1 arch-aur-updates aur-updates
