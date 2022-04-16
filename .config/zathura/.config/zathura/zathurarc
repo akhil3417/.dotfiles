@@ -1,0 +1,6 @@
+set window-title-basename true
+set font monospace normal 12
+include "zathura_colors"
+set recolor false
+# set keephue true
+
