@@ -1,0 +1,4 @@
+[diff "org"]
+  xfuncname = "^(\\*+ +.*)$"
+[user]
+	name = akhil3417

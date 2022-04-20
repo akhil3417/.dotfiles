@@ -11,6 +11,6 @@ settings:
   hints.chars:
     global: ahetiscn
   statusbar.show:
-    global: always
+    global: never
   tabs.show:
-    global: always
+    global: never
