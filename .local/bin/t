@@ -71,7 +71,6 @@ magnet=$(grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*" $cachedir/tmp.html | head 
 
 # see note about dependencies at top of script
 #peerflix --mpv -a "$magnet"
-
 while true;do
 echo "1. Stream"
 echo "2. Download"
