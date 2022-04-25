@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_D:cd\x20\x7e/Downloads\x3b\x20and\x20ls\x20\x2da
+SETUVAR _fish_abbr_Dd:/usr/bin/emacs\x20\x2d\x2ddaemon
 SETUVAR _fish_abbr_F:
 SETUVAR _fish_abbr_R:cd\x20\x7e/Documents/research\x3b\x20and\x20ls\x20\x2da
 SETUVAR _fish_abbr_aur:sudo\x20aura
@@ -14,7 +15,7 @@ SETUVAR _fish_abbr_cfo:emacsclient\x20\x2dt\x20\x2da\x20\x27\x27\x20\x7e/\x2eema
 SETUVAR _fish_abbr_cfs:emacsclient\x20\x2dt\x20\x2da\x20\x27\x27\x20\x7e/\x2econfig/i3status\x2drust/config\x2etoml
 SETUVAR _fish_abbr_cfv:emacsclient\x20\x2dt\x20\x2da\x20\x27\x27\x20\x7e/\x2econfig/nvim/init\x2evim
 SETUVAR _fish_abbr_d:cd\x20\x7e/Documents\x3b\x20and\x20ls\x20\x2da
-SETUVAR _fish_abbr_dot:cd\x20\x7e/dotfiles\x3b\x20and\x20ls\x20\x2da
+SETUVAR _fish_abbr_dot:cd\x20\x7e/\x2edotfiles\x3b\x20and\x20ls\x20\x2da
 SETUVAR _fish_abbr_e:emacsclient\x20\x2dt\x20\x2da\x20\x27\x27
 SETUVAR _fish_abbr_eb:emacsclient\x20\x2dt\x20\x2da\x20\x27\x27\x20\x7e/Documents/research/control_systems\x2ebib
 SETUVAR _fish_abbr_ec:emacsclient\x20\x2dc

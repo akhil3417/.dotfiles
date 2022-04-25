@@ -98,8 +98,8 @@ myBrowser = "qutebrowser "  -- Sets qutebrowser as browser
 myEmacs :: String
 myEmacs = "emacsclient -c -a 'emacs' "  -- Makes emacs keybindings easier to type
 
-myEditor :: String
-myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
+-- myEditor :: String
+-- myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
 -- myEditor = myTerminal ++ " -e vim "    -- Sets vim as editor
 
 myBorderWidth :: Dimension
@@ -127,7 +127,7 @@ myStartupHook = do
     spawnOnce "picom"
     -- spawnOnce "nm-applet"
     -- spawnOnce "volumeicon"
-    spawnOnce "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
+    -- spawnOnce "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
     spawnOnce "unclutter" -- emacs daemon for the emacsclient
     -- spawnOnce "xset r rate 200 60" -- emacs daemon for the emacsclient
 -- Autostart (The Startup Hook):2 ends here
@@ -371,6 +371,7 @@ myManageHook = composeAll
      , className =? "Yad"             --> doCenterFloat
      , title =? "Oracle VM VirtualBox Manager"  --> doFloat
      , title =? "Firefox Developer Edition"     --> doShift ( myWorkspaces !! 1 )
+     , title =? "qutebrowser"     --> doShift ( myWorkspaces !! 1 )
      , className =? "Brave-browser"   --> doShift ( myWorkspaces !! 1 )
      , className =? "mpv"             --> doShift ( myWorkspaces !! 7 )
      , className =? "Gimp"            --> doShift ( myWorkspaces !! 8 )
@@ -402,10 +403,6 @@ myKeys =
         , ("M-p h", spawn "dm-hub")           -- allows access to all dmscripts
         , ("M-f f", spawn "firefox-developer-edition")           -- allows access to all dmscripts
         , ("M-b c", spawn "bluetoothconnect")           -- allows access to all dmscripts
-        , ("M-d b", spawn "dmenu-bluetooth")           -- allows access to all dmscripts
-        , ("M-d c", spawn "dmenu-command")           -- run a command and see output via dunst
-        , ("M-d h", spawn "dmenu-handler")           -- do what i want with link
-        , ("M-d v", spawn "dmenu-vpn")           -- name says it all
         , ("M-e E", spawn "eshell")           -- an emacs shell
         , ("M-y s", spawn "yt -D")           -- youtube open
         , ("M-y d", spawn "yt -Ddf")           -- youtube downloader
@@ -414,6 +411,10 @@ myKeys =
         , ("M-y a", spawn "yt -Dm")           -- youtube audio
         , ("M-y h", spawn "yt -DH")           -- youtube history
         , ("M-y t", spawn "yt -DcT")           -- youtube trending
+        , ("M-d b", spawn "dmenu-bluetooth")           -- allows access to all dmscripts
+        , ("M-d c", spawn "dmenu-command")           -- run a command and see output via dunst
+        , ("M-d h", spawn "dmenu-handler")           -- do what i want with link
+        , ("M-d v", spawn "dmenu-vpn")           -- name says it all
         , ("M-d f", spawn "dmenufm -r")           -- allows access to all dmscripts
         , ("M-d e", spawn "dmenukaomoji")           -- allows access to all dmscripts
         , ("M-p a", spawn "dm-sounds")        -- choose an ambient background
@@ -518,12 +519,14 @@ myKeys =
 
     -- KB_GROUP Emacs (SUPER-e followed by a key)
         , ("M-e e", spawn (myEmacs ++ ("--eval '(dashboard-refresh-buffer)'")))   -- emacs dashboard
+        -- , ("M-e t", spawn (myEmacs ++ ("--eval '(doom/window-maximize-buffer(telega)'"))))   -- emacs dashboard
+        , ("M-e t", spawn (myEmacs ++ ("--eval '(doom/window-maximize-buffer(telega))'"))) -- eww browser if on Doom Emacs
         , ("M-e b", spawn (myEmacs ++ ("--eval '(ibuffer)'")))   -- list buffers
         , ("M-e d", spawn (myEmacs ++ ("--eval '(dired nil)'"))) -- dired
         , ("M-e i", spawn (myEmacs ++ ("--eval '(erc)'")))       -- erc irc client
         , ("M-e n", spawn (myEmacs ++ ("--eval '(elfeed)'")))    -- elfeed rss
         , ("M-e s", spawn (myEmacs ++ ("--eval '(eshell)'")))    -- eshell
-        , ("M-e t", spawn (myEmacs ++ ("--eval '(mastodon)'")))  -- mastodon.el
+        -- , ("M-e t", spawn (myEmacs ++ ("--eval '(mastodon)'")))  -- mastodon.el
         , ("M-e v", spawn (myEmacs ++ ("--eval '(+vterm/here nil)'"))) -- vterm if on Doom Emacs
         , ("M-e w", spawn (myEmacs ++ ("--eval '(doom/window-maximize-buffer(eww \"distro.tube\"))'"))) -- eww browser if on Doom Emacs
         , ("M-e a", spawn (myEmacs ++ ("--eval '(emms)' --eval '(emms-play-directory-tree \"~/Music/\")'")))
