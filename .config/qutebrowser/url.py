@@ -47,6 +47,7 @@ c.url.searchengines = {'s': 'http://searx.thegpm.org/?preferences=eJxtVU2P4zYM_T
                        'DEFAULT': 'https://duckduckgo.com/?q={}',
                        'r': 'https://old.reddit.com/r/{}',
                        'gs': 'https://scholar.google.com/scholar?q={}',
+                       'yt': 'https://vid.puffyan.us/search?q={}',
                        'n': 'https://nitter.net/{}',
                        'aw': 'https://wiki.archlinux.org/index.php?search={}',
                        'b': 'https://search.brave.com/search?q={}',

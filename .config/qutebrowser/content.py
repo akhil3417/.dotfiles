@@ -465,6 +465,7 @@ c.content.tls.certificate_errors = 'ask'
 ##   - default-public-interface-only: WebRTC should only use the default route used by http. This doesn't expose any local addresses.
 ##   - disable-non-proxied-udp: WebRTC should only use TCP to contact peers or servers unless the proxy server supports UDP. This doesn't expose any local addresses either.
 # c.content.webrtc_ip_handling_policy = 'all-interfaces'
+
 ## Monitor load requests for cross-site scripting attempts. Suspicious
 ## scripts will be blocked and reported in the inspector's JavaScript
 ## console.

@@ -87,7 +87,7 @@ c.completion.use_best_match = True
 ## completion. Changing this setting will cause the completion history to
 ## be regenerated on the next start, which will take a short while.
 ## Type: List of UrlPattern
-# c.completion.web_history.exclude = []
+c.completion.web_history.exclude = []
 
 ## Number of URLs to show in the web history. 0: no history / -1:
 ## unlimited
