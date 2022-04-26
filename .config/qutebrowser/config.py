@@ -1,5 +1,6 @@
-
-import os
+# pylint: disable=C0111
+#
+# import os
 ## This is here so configs done via the GUI are still loaded.
 ## Remove it to not load settings done via the GUI.
 config.load_autoconfig(False)

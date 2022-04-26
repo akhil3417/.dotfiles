@@ -171,7 +171,7 @@ myStartupHook = do
     spawnOnce "picom"
     -- spawnOnce "nm-applet"
     -- spawnOnce "volumeicon"
-    -- spawnOnce "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
+    spawnOnce "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
     spawnOnce "unclutter" -- emacs daemon for the emacsclient
     -- spawnOnce "xset r rate 200 60" -- emacs daemon for the emacsclient
 #+END_SRC

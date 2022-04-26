@@ -230,6 +230,11 @@ c.content.javascript.enabled = True
 ## Type: Dict
 # c.content.javascript.log = {'unknown': 'debug', 'info': 'debug', 'warning': 'debug', 'error': 'debug'}
 c.content.javascript.log = {
+    "unknown": "debug",
+    "info": "debug",
+    "warning": "debug",
+    "error": "debug",
+}
 
 
 ## Use the standard JavaScript modal dialog for `alert()` and
@@ -241,6 +246,7 @@ c.content.javascript.modal_dialog = False
 ## Show javascript prompts.
 ## Type: Bool
 c.content.javascript.prompt = True
+
 
 
 ## Allow locally loaded documents to access other local URLs.
@@ -264,7 +270,7 @@ c.content.local_storage = True
 ##   - true
 ##   - false
 ##   - ask
-c.content.media_capture = 'ask'
+# c.content.media_capture = 'ask'
 
 
 ## Allow websites to lock your mouse pointer.
@@ -294,7 +300,7 @@ c.content.netrc_file = None
 ##   - true
 ##   - false
 ##   - ask
-c.content.notifications.enabled = ask
+c.content.notifications.enabled = 'ask'
 
 
 # What notification presenter to use for web notifications. Note that
@@ -327,11 +333,7 @@ config.set('content.javascript.enabled', True, 'chrome-devtools://*')
 config.set('content.javascript.enabled', True, 'devtools://*')
 config.set('content.javascript.enabled', True, 'chrome://*/*')
 config.set('content.javascript.enabled', True, 'qute://*/*')
-    "unknown": "debug",
-    "info": "debug",
-    "warning": "debug",
-    "error": "debug",
-}
+
 ## Allow pdf.js to view PDF files in the browser. Note that the files can
 ## still be downloaded by clicking the download button in the pdf.js
 ## viewer.
@@ -415,7 +417,7 @@ c.content.webgl = True
 ## Limit fullscreen to the browser window (does not expand to fill the
 ## screen).
 ## Type: Bool
-c.content.windowed_fullscreen = True
+c.content.fullscreen.window = True
 
 
 # Enable quirks (such as faked user agent headers) needed to get

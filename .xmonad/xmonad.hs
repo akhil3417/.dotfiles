@@ -99,7 +99,7 @@ myEmacs :: String
 myEmacs = "emacsclient -c -a 'emacs' "  -- Makes emacs keybindings easier to type
 
 -- myEditor :: String
--- myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
+-- myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor ;;as we have already a script in .local/share/application
 -- myEditor = myTerminal ++ " -e vim "    -- Sets vim as editor
 
 myBorderWidth :: Dimension
@@ -127,7 +127,7 @@ myStartupHook = do
     spawnOnce "picom"
     -- spawnOnce "nm-applet"
     -- spawnOnce "volumeicon"
-    -- spawnOnce "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
+    spawnOnce "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
     spawnOnce "unclutter" -- emacs daemon for the emacsclient
     -- spawnOnce "xset r rate 200 60" -- emacs daemon for the emacsclient
 -- Autostart (The Startup Hook):2 ends here
