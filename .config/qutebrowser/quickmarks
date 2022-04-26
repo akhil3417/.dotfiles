@@ -1,0 +1,239 @@
+evil mode basic config steps https://juanjoalvarez.net/es/detail/2014/sep/19/vim-emacsevil-chaotic-migration-guide/
+emacs company config https://emacs.stackexchange.com/questions/3654/filename-completion-using-company-mode
+AC type behavior in company https://github.com/company-mode/company-mode/wiki/Switching-from-AC
+gpg/setup-including-subkey https://alexcabal.com/creating-the-perfect-gpg-keypair
+gpg/handbook https://www.gnupg.org/gph/en/manual.html
+truecrypt/wiki https://wiki.archlinux.org/index.php/TrueCrypt
+noncooperative game theory - hespanha https://www.scribd.com/book/381683569/Noncooperative-Game-Theory-An-Introduction-for-Engineers-and-Computer-Scientists
+cli/awesome-cli-apps https://github.com/agarrharr/awesome-cli-apps#entertainment
+cli/awesome-shell-list https://github.com/alebcay/awesome-shell#readme
+cli/awesome-cli-apps-2 https://github.com/herrbischoff/awesome-command-line-apps#readme
+emacs/gpg-integration https://www.masteringemacs.org/article/keeping-secrets-in-emacs-gnupg-auth-sources
+reveal.js/org-integration https://github.com/yjwen/org-reveal/blob/master/Readme.org
+reveal.js/main https://github.com/hakimel/reveal.js/
+fish/set up fzf extra https://github.com/jethrokuan/fzf
+backup/what is data deduplication https://www.backblaze.com/blog/backing-linux-backblaze-b2-duplicity-restic/
+backup/restic help https://restic.readthedocs.io/en/stable/040_backup.html
+backup/restic intro https://restic.net/
+backup/syncthing https://syncthing.net/
+fish/fish-to-bash equivalents https://en.wikipedia.org/wiki/Friendly_interactive_shell
+emacs/custom-abbrev-expansions http://ergoemacs.org/emacs/elisp_abbrev.html
+cli/illustrated-guide-to-some-cli-tools https://www.wezm.net/technical/2019/10/useful-command-line-tools/
+emacs/regex syntax https://www.emacswiki.org/emacs/RegularExpression
+org/babel-async-execution https://emacs.stackexchange.com/questions/21301/async-execution-in-org-babel
+ml/julia-library-flux https://github.com/FluxML/Flux.jl
+emacs/pyenv https://github.com/pythonic-emacs/pyenv-mode
+emacs/yasnippet docs http://joaotavora.github.io/yasnippet/index.html
+emacs/lsp matlab stackoverflow question https://emacs.stackexchange.com/questions/54034/getting-emacs-lsp-mode-to-work-with-this-matlab-langserver
+emacs/config/jamiecollinson https://jamiecollinson.com/blog/my-emacs-config/
+emacs/config/FredeEB https://github.com/FredeEB/.emacs.d/blob/master/config.org#lsp
+latex/inkspace macros for fast drawing https://github.com/karthink/inkscape-shortcut-manager
+entertainment/community-episodes https://www.the123movies.gdn/series/community/
+unicode/replacement-for-common-icons https://tutorialzine.com/2014/12/you-dont-need-icons-here-are-100-unicode-symbols-that-you-can-use
+unicode/character-lists https://www.compart.com/en/unicode/category/So
+emacs/projectile-mode-docs https://projectile.readthedocs.io/en/latest/configuration/#mode-line-indicator
+emacs/counsel-projectile-docs https://github.com/ericdanan/counsel-projectile
+emacs/config/pure-emacs-and-exwm https://github.com/farlado/dotemacs/blob/master/config.org
+dotfiles/bare-git-method-tutorial https://www.atlassian.com/git/tutorials/dotfiles
+emacs/writing-emacs-packages https://old.reddit.com/r/emacs/comments/fj5qth/my_first_experience_with_writing_emacs_packages/
+emacs/anki-setup https://yiufung.net/post/anki-org/
+emacs/native-comp-docker-image https://hub.docker.com/r/andreacorallo/emacs-nativecomp
+emacs/weekly-tips https://www.reddit.com/r/emacs/search/?q=weekly+tips&include_over_18=on&restrict_sr=on&sort=new
+docker/docker-as-user-not-root https://www.thegeekdiary.com/run-docker-as-a-non-root-user/
+latex/fast-latex-input-vim-code https://github.com/gillescastel/latex-snippets
+emacs/org/org-capture/auto delete the frame when done https://www.reddit.com/r/emacs/comments/74gkeq/system_wide_org_capture/
+org/org-capture/auto delete the frame when done 2 https://www.reddit.com/r/emacs/comments/6lzyg2/heres_how_to_do_emacsclient_global_orgcapture/
+vim/neovim/nvim-gtk config https://github.com/daa84/neovim-gtk/wiki/Configuration
+emacs/y-a-minimal-config-with-evil https://github.com/ianpan870102/yay-evil-emacs/blob/master/config.org
+emacs/imenu-setup http://howardism.org/Technical/Emacs/imenu.html
+emacs/window numbers https://github.com/deb0ch/emacs-winum
+emacs/hydras examples https://github.com/abo-abo/hydra/wiki/Emacs
+i3wm/kde with i3 https://userbase.kde.org/Tutorials/Using_Other_Window_Managers_with_Plasma
+emacs/use-package https://github.com/jwiegley/use-package#notes-about-lazy-loading
+emacs/protesilaos https://protesilaos.com/dotemacs/#h:06290f9c-491c-45b2-b213-0248f890c83d
+emacs/evil-mode tips - key translations https://www.emacswiki.org/emacs/Evil
+emacs/config set 1 https://github.com/raxod502/radian
+emacs/doom startup optimizations https://github.com/hlissner/doom-emacs/blob/develop/docs/faq.org#how-does-doom-start-up-so-quickly
+emacs/config set 2 https://github.com/michaeltd/.emacs.d
+awk/quick tutorial https://ferd.ca/awk-in-20-minutes.html
+syncthing/GUI http://127.0.0.1:8384/#
+restic/how to restore data https://restic.readthedocs.io/en/stable/050_restore.html
+ffmpeg/h265 guide https://trac.ffmpeg.org/wiki/Encode/H.265
+ffmpeg/h264 guide https://trac.ffmpeg.org/wiki/Encode/H.264#crf
+ffmpeg/recording the screen https://trac.ffmpeg.org/wiki/Capture/Desktop
+emacs/elfeed tips https://nullprogram.com/blog/2013/11/26/
+awesomewm/fancy materia setup https://github.com/HikariKnight/material-awesome
+ffmpeg/convert to gif https://superuser.com/questions/556029/how-do-i-convert-a-video-to-gif-using-ffmpeg-with-reasonable-quality
+ffmpeg/use with ffcast for easy window selection https://unix.stackexchange.com/questions/113695/gif-screencasting-the-unix-way
+git/working tree vs index vs HEAD https://stackoverflow.com/questions/3689838/whats-the-difference-between-head-working-tree-and-index-in-git
+org/babel save result to file https://emacs.stackexchange.com/questions/54695/no-graphic-output-for-matlab-src-block-in-org-mode
+org/link to (things inside source blocks) https://emacs.stackexchange.com/questions/57429/org-mode-link-to-tag-target-inside-a-source-code-block
+matlab/save figure without plotting it https://www.mathworks.com/matlabcentral/answers/43326-create-figure-without-displaying-it
+emacs/easy-kill https://github.com/leoliu/easy-kill
+org/hugo export docs https://ox-hugo.scripter.co/doc/org-meta-data-to-hugo-front-matter/
+git/rebase tutorial https://benmarshall.me/git-rebase/
+ffmpeg/tutorial and reference (not official) http://dranger.com/ffmpeg/ffmpeg.html
+emacs/config/scimax for scientists and engineers https://github.com/jkitchin/scimax
+xpath syntax https://www.w3schools.com/xml/xpath_syntax.asp
+vps/gollum wiki install https://computingforgeeks.com/how-to-install-gollum-wiki-on-ubuntu-18-04-lts/
+vps/gollum wiki install (shorter) https://www.rosehosting.com/blog/install-gollum-wiki-on-ubuntu/
+syncthing/ignoring files https://docs.syncthing.net/users/ignoring.html
+manga/reading suggestions https://docs.google.com/spreadsheets/d/1_wzXGF7I_tcluoSTVpygI81j7XLHAwi8bCo6rX5CULI/edit#gid=0
+manga/mal reading https://myanimelist.net/manga/genre/8/Drama
+dai/unique-builds https://fextralife.com/forums/t155829/my-favourite-unique-class-and-character-builds-a-compilation-thread/
+emacs/config/agar-for-brain-worms https://blog.sumtypeofway.com/posts/emacs-config.html
+emacs/anki-setup-better-looking https://rgoswami.me/posts/anki-decks-orgmode/
+emacs/windows 10 setup https://github.com/nobiot/Zero-to-Emacs-and-Org-roam
+ffmpeg/commander (build ffmpeg commands) https://alfg.github.io/ffmpeg-commander/
+latex/online equation editor https://www.codecogs.com/latex/eqneditor.php
+youtube/watch-later (wl) https://www.youtube.com/playlist?list=WL
+youtube/ckth https://studio.youtube.com/channel/UC_-cAym2cWLSKffwtWTm1Vw/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D
+ucsb/gs https://gauchospace.ucsb.edu/courses/
+gtd/general-guide-short https://hamberg.no/gtd/
+gtd/org-mode-implementation-1 https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html
+notmuch/tips for emacs https://notmuchmail.org/emacstips/
+vpn/openvpn tutorial https://support.surfshark.com/hc/en-us/articles/360011051133-How-to-set-up-OpenVPN-using-Linux-Terminal
+julia/with emacs org mode https://www.juliabloggers.com/julia-with-emacs-org-mode/
+julia/julia-repl for emacs https://github.com/tpapp/julia-repl
+julia/matlab-python-julia equivalents https://cheatsheets.quantecon.org/
+julia/quickref https://juliadocs.github.io/Julia-Cheat-Sheet/
+ffmpeg/to gif or webp https://mattj.io/posts/2021-02-27-create-animated-gif-and-webp-from-videos-using-ffmpeg/
+python/javascript based web scraping http://koaning.io.s3-website.eu-west-2.amazonaws.com/dynamic-scraping-with-python.html
+julia/pluto-on-binder http://pluto-on-binder.glitch.me/
+arch/setup/xserver-idle-reporting https://unix.stackexchange.com/questions/209274/how-do-i-tell-systemd-logind-that-the-session-is-not-idle-without-using-a-deskt
+arch/udev help https://wiki.archlinux.org/title/Udev#Tips_and_tricks
+latex/learn latex short lessons http://www.learnlatex.org/en/#toc
+qutebrowser/all config settings https://qutebrowser.org/doc/help/settings.html#colors.webpage.darkmode.threshold.text
+neovim/lsp config https://github.com/neovim/nvim-lspconfig#install
+irc/setting up a bouncer https://sgfault.com/2018/07/28/irc-bouncer-setup.html
+julia/plotattr list http://docs.juliaplots.org/latest/attributes/
+trackball/xah lee reviews http://xahlee.info/kbd/trackball_index.html
+trackball/using xinput to remap http://xahlee.info/kbd/trackball_index.html
+xinput/mouse pointer configuration https://xorg.freedesktop.org/wiki/Development/Documentation/PointerAcceleration/#Introduction
+trackball/bearing swap guide for elecom deft pro https://www.reddit.com/r/Trackballs/comments/8st8ud/i_made_first_elecom_deft_pro_disassembly_guide/
+wifi/wpa2-enterprise-setup (eduroam) https://github.com/wylermr/NetworkManager-WPA2-Enterprise-Setup
+sway/migration from i3 guide https://github.com/swaywm/sway/wiki/i3-Migration-Guide#common-x11-apps-used-on-i3-with-wayland-alternatives
+btrfs/remote backup https://github.com/wesbarnett/snap-sync
+btrfs/local backup (snapper) https://wiki.archlinux.org/title/Snapper#List_snapshots
+emacs/eshell reference https://masteringemacs.org/article/complete-guide-mastering-eshell
+arch/install with encrypted lvm + btrfs https://flypenguin.de/2018/01/20/arch-full-disk-encryption-btrfs-on-efi-systems/
+arch/swap partition with btrfs https://www.reddit.com/r/btrfs/comments/flu0e4/swapon_failed_invalid_argument/
+eshell/overview howard abrams http://www.howardism.org/Technical/Emacs/eshell-present.html
+snk/sos reaction https://www.youtube.com/playlist?list=PLJVzCiCh8OrTKb3nSAYkvD-QSwIsCnMK_
+x205t/linux install guide https://ubuntuforums.org/showthread.php?t=2254322&page=34&p=13414345#post13414345
+x205t/arch wiki linux install https://wiki.archlinux.org/title/ASUS_x205ta
+x205t/restoring windows after linux https://superuser.com/questions/873146/asus-x205t-legacy-boot
+eshell/config howard abrams https://github.com/howardabrams/dot-files/blob/master/emacs-eshell.org
+julia/animations with plots.jl https://docs.juliaplots.org/latest/animations/
+biote https://github.com/bdarcus/bibtex-actions
+wayland/custom keyboard layout (xmodmap replacement) https://blog.stigok.com/2020/10/27/from-x11-xmodmap-to-wayland-xkb-custom-keyboard-layout.html
+qtile/rice/genome https://github.com/Barbarossa93/Genome
+qtile/rice/gruvbox https://github.com/BetThical/dotfiles
+qtile/rice/transparent https://github.com/justinesmithies/qtile-dotfiles
+qtile/rice/magenta https://github.com/DanCarzano/dotfiles
+qtile/arch basics https://wiki.archlinux.org/title/Qtile
+qtile/docs https://docs.qtile.org/en/latest/manual/config/index.html
+openvpn/dns leak issues https://github.com/systemd/systemd/issues/6076
+karthinks/staticman/setting up hugo + staticman https://gohugohq.com/howto/staticman-hugo-comment-system/
+karthinks/staticman/getting started https://staticman.net/docs/getting-started.html
+karthinks/staticman/heroku side deployment guide https://github.com/pacollins/hugo-future-imperfect-slim/wiki/staticman.yml#initiate-in-configtoml
+inkscape/links in svgs https://stackoverflow.com/questions/7008355/how-to-make-links-in-an-embedded-svg-file-open-in-the-main-window-not-in-a-sepa
+karthinks/notify-on-posting-html-form https://code-boxx.com/display-message-after-submitt-html-form/
+inkscape/how to curve text https://scarlettrosedesigns.com/blogs/articles/how-to-curve-text-in-inkscape
+nix/how to learn diary https://ianthehenry.com/posts/how-to-learn-nix/
+rss/generate feed from popular websites https://rssbox.herokuapp.com/
+clojure/http requests https://github.com/dakrone/clj-http
+clojure/working with files http://clojure-doc.org/articles/cookbooks/files_and_directories.html
+clojure/working with strings http://clojure-doc.org/articles/cookbooks/strings.html
+clojure/how namespaces work https://8thlight.com/blog/colin-jones/2010/12/05/clojure-libs-and-namespaces-require-use-import-and-ns.html
+advent2021/bbatsov's solutions https://github.com/bbatsov/advent-of-code2021/blob/main/src/aoc2021/core.clj
+clojure/library cheatsheet https://www.clojure-toolbox.com/
+clojure/by-example http://kimh.github.io/clojure-by-example/#deref
+t14/display replacement links https://old.reddit.com/r/thinkpad/comments/lh5qqc/replacing_t14_gen_1_amd_screen/
+t14/display replacement (not original) link https://old.reddit.com/r/thinkpadsforsale/comments/mvno2n/uswtb_t495t14_400_nit_display/
+julia/folds library https://github.com/JuliaFolds/Folds.jl
+julia/transducers (like in clojure) https://juliafolds.github.io/Transducers.jl/dev/
+julia/publication quality plots guide https://nextjournal.com/leandromartinez98/tips-to-create-beautiful-publication-quality-plots-in-julia#
+julia/plots with makie https://makie.juliaplots.org/stable/tutorials/basic-tutorial/
+latex/latexdiff/dealing with compile errors https://tex.stackexchange.com/questions/574280/latexdiff-with-cite-commands-gives-output-with-apparently-mismatched-braces
+emacs/python/conda and jupyter setup https://sqrtminusone.xyz/posts/2021-05-01-org-python/
+emacs/python/conda package https://github.com/necaris/conda.el
+conda/intro docs https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html
+emacs/jupyter package https://github.com/nnicandro/emacs-jupyter
+ohshitgit https://ohshitgit.com/
+mpv/lua scripting guide https://mpv.io/manual/master/#lua-scripting
+lua/manual https://www.lua.org/manual/5.4/
+lua/fennel manual https://fennel-lang.org/
+julia/diffeq/integrator interface https://diffeq.sciml.ai/stable/basics/integrator/
+julia/diffeq/callbacks https://diffeq.sciml.ai/stable/features/callback_functions/#callbacks
+mit-scheme/install guide https://www.gnu.org/software/mit-scheme/documentation/stable/mit-scheme-user/Unix-Installation.html
+python/matplotlib/pyplot tutorial https://matplotlib.org/stable/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py
+btrfs/undoing changes with snapper guide https://doc.opensuse.org/documentation/leap/archive/15.0/reference/html/book.opensuse.reference/cha.snapper.html#sec.snapper.undo
+i3wm/i3-resurrect readme https://github.com/JonnyHaystack/i3-resurrect#per-window-swallow-criteria
+org/org-babel cookbook https://eschulte.github.io/org-scraps/
+4g https://boards.4channel.org/g/
+am https://www.amazon.in/
+arch https://www.archlinux.org/
+aws https://aws.amazon.com/
+bx https://bittrex.com/
+di https://diasp.org/stream
+do https://www.digitalocean.com/
+dt https://www.distro.tube
+dw https://www.distrowatch.com/
+eff http://eff.org/
+fsf http://fsf.org/
+gnu http://gnu.org/
+goog https://www.google.com
+hoog https://hoogle.haskell.org
+lab https://gitlab.com/dwt1
+lbry https://lbry.tv/@DistroTube:2
+mail https://www.mailgun.com/
+mast https://distrotoot.com/
+nf https://www.netflix.com/browse
+pa http://www.patreon.com/distrotube/
+py https://www.paypal.com/
+sb https://socialblade.com/youtube/c/distrotube
+sky https://www.skysilk.com/
+sp file:///home/dt/.surf/html/homepage.html
+suck https://suckless.org/
+tee https://teespring.com/stores/distrotube
+tt https://www.tastytrade.com/
+tw https://trade.tastyworks.com/
+ub https://www.urbandictionary.com/
+wiki https://www.wikipedia.org/
+Yt https://www.youtube.com/
+yt https://vid.puffyan.us/
+nifty emacs tricks https://www.emacswiki.org/emacs/EmacsNiftyTricks
+prot https://vid.puffyan.us/channel/UC0uTPqBCFIpZxlz_Lv1tk_g
+eprot https://vid.puffyan.us/playlist?list=PL8Bwba5vnQK14z96Gil86pLMDO2GnOhQ6
+omardotemacs https://www.omarpolo.com/dots/emacs.html#orgf4b30c1
+melpa https://melpa.org/#/
+hackertyper https://github.com/dieggsy/emacs-hacker-typer/tree/d5a23714a4ccc5071580622f278597d5973f40bd
+karthik https://github.com/karthink
+karthikblog https://karthinks.com/tags/emacs/
+regular expressions https://vid.puffyan.us/watch?v=TxYGHjKBMUg&list=PL8Bwba5vnQK14z96Gil86pLMDO2GnOhQ6&index=51
+doomemacs config https://dangirsh.org/projects/doom-config.html
+gt https://github.com/
+gtd https://github.com/akhil3417/Doom-Emacs-Config
+emacs ag blog https://ag91.github.io/blog/
+moldable emacs https://github.com/ag91/moldable-emacs
+eaf doom https://github.com/emacs-eaf/emacs-application-framework/discussions/475
+eaf https://github.com/emacs-eaf/emacs-application-framework
+linuxdie https://linux.die.net/
+mt https://monkeytype.com/
+doom https://github.com/hlissner/doom-emacs
+ts https://github.com/tecosaur
+org ref https://github.com/yantar92/org-capture-ref
+md https://github.com/akhil3417/.dotfiles
+linuxhint https://linuxhint.com/
+pianobar https://github.com/PromyLOPh/pianobar
+android webcam https://cubethethird.wordpress.com/2015/12/15/using-android-camera-as-webcam-on-linux/
+eva https://github.com/meedstrom/eva
+neet https://examinationservices.nic.in/neet2022/root/Home.aspx?enc=WPJ5WSCVWOMNiXoyyomJgATm16WDSuAdfwpi7ZXy4cM3hblcyDpJgf1oyFFZyuBY
+jarvis https://github.com/sukeesh/Jarvis
+doomreddit https://old.reddit.com/r/emacs/comments/qbpqdl/exwm_doom_constant_garbage_collection/
+nuclear https://github.com/nukeop/nuclear
+discoursedoom https://discourse.doomemacs.org/
+setupsearx https://michaelbovyn.com/?page_id=1237
+s https://searx.thegpm.org/
+portatcuidol https://portal.cuidol.in/
