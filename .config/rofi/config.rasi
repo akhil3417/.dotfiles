@@ -1,0 +1,8 @@
+/* -*- mode: scss -*- */
+
+configuration {
+        show-icons:   true;
+        sidebar-mode: false;
+        modi:         "window,ssh,drun,combi";
+}
+@theme "nord"
