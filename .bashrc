@@ -134,6 +134,15 @@ alias doomdoctor="~/.emacs.d/bin/doom doctor"
 alias doomupgrade="~/.emacs.d/bin/doom upgrade"
 alias doompurge="~/.emacs.d/bin/doom purge"
 
+alias install='sudo xbps-install -S'
+alias remove='sudo xbps-remove -R'
+alias update='sudo xbps-install -S'
+alias upgrade='sudo xbps-install -Su'
+alias find='xbps-query -Rs'
+alias orphan='sudo xbps-remove -ov'
+alias clean='sudo xbps-remove -Ov'
+
+
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
@@ -244,7 +253,7 @@ alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
 # Or install it from the Arch User Repository: shell-color-scripts
-# colorscript random
+colorscript random
 
 ### BASH INSULTER ###
 if [ -f /etc/bash.command-not-found ]; then
