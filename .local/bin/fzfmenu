@@ -1,0 +1,1 @@
+xterm -name 'floating xterm' -e "fzf $* < /proc/$$/fd/1"
