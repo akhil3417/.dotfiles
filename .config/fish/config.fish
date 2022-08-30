@@ -9,7 +9,7 @@ set fish_greeting                                 # Supresses fish's intro messa
 set TERM "xterm-256color"                         # Sets the terminal type
 set EDITOR "emacsclient -t -a ''"                 # $EDITOR use Emacs in terminal
 set VISUAL "emacsclient -c -a emacs"              # $VISUAL use Emacs in GUI mode
-
+export HISTCONTROL=ignorespace
 ### SET MANPAGER
 ### Uncomment only one of these!
 
@@ -289,7 +289,7 @@ end
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
 # Or install it from the Arch User Repository: shell-color-scripts
-colorscript random
+# colorscript random
 
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source

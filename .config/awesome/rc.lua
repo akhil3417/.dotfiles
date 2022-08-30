@@ -681,6 +681,17 @@ awful.rules.rules = {
           "Wpa_gui",
           "pinentry",
           "veromix",
+          "confirm",
+          "file-progress",
+          "dialog",
+          "download",
+          "error",
+          "gimp",
+          "notification",
+          "splash",
+          "toolbar",
+          "Yad",
+          "pinentry-gtk-2",
           "xtightvncviewer"},
 
         name = {

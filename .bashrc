@@ -12,7 +12,7 @@ export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR=""                        # setting for emacsclient
 export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
 export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
-
+export HISTCONTROL=ignorespace
 ### SET MANPAGER
 ### Uncomment only one of these!
 
@@ -253,7 +253,7 @@ alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
 # Or install it from the Arch User Repository: shell-color-scripts
-colorscript random
+# colorscript random
 
 ### BASH INSULTER ###
 if [ -f /etc/bash.command-not-found ]; then

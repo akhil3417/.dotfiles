@@ -5,16 +5,16 @@
 ! |____/ |_|  	
 
 
-Xft.dpi: 96
-Xft.antialias: true
+#Xft.dpi: 96
+Xft.autohint: 1
+Xft.antialias: 1
 Xft.hinting: true
+Xft.hintstyle: hintslight
 Xft.rgba: rgb
-Xft.autohint: true
-Xft.hintstyle: hintfull
-Xft.lcdfilter: lcdfilter
+Xft.lcdfilter: lcddefault
 
 XTerm*renderFont: true
-XTerm*faceName: xft:Mononoki Nerd Font, \
+XTerm*faceName: xft:JetBrains Mono Regular, \
                 xft:JoyPixels:size=12, \
                 xft:Monospace:style=Medium:size=12   
 XTerm*faceSize: 11

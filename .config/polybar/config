@@ -11,8 +11,10 @@ margin-bottom = 0
 
 [colors]
 background = #f0232635
+; background = #aa2F343F
 background-alt = #576075
 foreground = #A6Accd
+; foreground = #f3f4f5
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
@@ -55,9 +57,10 @@ font-1 = "Font Awesome:size=7;1"
 font-2 = "Material Icons:size=10;3"
 font-3 = "Fira Mono:size=6;-3"
 
-modules-left = i3 xwindow
-modules-center = 
-modules-right =  wireless-network networkspeedup networkspeeddown  cpu memory uptime arch-aur-updates battery temperature date
+modules-left = exwm exwm-path exwm-workspace
+modules-center = spotify
+; modules-left = exwm-workspace
+modules-right =  wireless-network networkspeedup networkspeeddown weather cpu memory uptime arch-aur-updates battery temperature date pulseaudio volume pavolume
 
 ; exwm-workspace exwm exwm-path spotify mu4e telegram xkeyboard cpu cpu1 date battery1 battery temperture temperature1 xbacklight wireless-network wired-network
 ; weathe volume uptime filesystem pulseaudio memory wlan eth network networkspeedup networkspeeddown networkspeedup1 networkspeeddown1 arch-aur-updates aur-updates
@@ -68,144 +71,6 @@ tray-maxsize =40
 
 cursor-click = pointer
 cursor-scroll = ns-resize
- 
-################################################################################
-################################################################################
-############                       MODULE I3                        ############
-################################################################################
-################################################################################
-
-[module/i3]
-;https://github.com/jaagr/polybar/wiki/Module:-i3
-type = internal/i3
-
-; Only show workspaces defined on the same output as the bar
-;
-; Useful if you want to show monitor specific workspaces
-; on different bars
-;
-; Default: false
-pin-workspaces = true
-
-; This will split the workspace name on ':'
-; Default: false
-strip-wsnumbers = false
-
-; Sort the workspaces by index instead of the default
-; sorting that groups the workspaces by output
-; Default: false
-index-sort = false
-
-; Create click handler used to focus workspace
-; Default: true
-enable-click = true
-
-; Create scroll handlers used to cycle workspaces
-; Default: true
-enable-scroll = true
-
-; Wrap around when reaching the first/last workspace
-; Default: true
-wrapping-scroll = false
-
-; Set the scroll cycle direction
-; Default: true
-reverse-scroll = false
-
-; Use fuzzy (partial) matching on labels when assigning
-; icons to workspaces
-; Example: code;♚ will apply the icon to all workspaces
-; containing 'code' in the label
-; Default: false
-fuzzy-match = false
-
-;extra icons to choose from
-;http://fontawesome.io/cheatsheet/
-;       v     
-
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-ws-icon-default = " "
-
-; Available tags:
-;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
-;   <label-mode> (default)
-format = <label-state> <label-mode>
-
-label-mode = %mode%
-label-mode-padding = 2
-label-mode-foreground = #000000
-label-mode-background = #FFBB00
-
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-;   %output%
-; Default: %icon%  %name%
-; focused = Active workspace on focused monitor
-label-focused = %icon% %name%
-label-focused-background = ${colors.background}
-label-focused-foreground = ${colors.foreground}
-label-focused-underline = #AD69AF
-label-focused-padding = 2
-
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon% %name%
-label-unfocused-padding = 2
-label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.foreground}
-label-unfocused-underline =
-
-; visible = Active workspace on unfocused monitor
-label-visible = %icon% %name%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = 2
-
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
-; urgent = Workspace with urgency hint set
-label-urgent = %icon% %name%
-label-urgent-background = ${self.label-focused-background}
-label-urgent-foreground = #db104e
-label-urgent-padding = 2
-
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-
-
-[module/xwindow]
-;https://github.com/jaagr/polybar/wiki/Module:-xwindow
-type = internal/xwindow
-
-; Available tokens:
-;   %title%
-; Default: %title%
-label = %title%
-label-maxlen = 50
-
-format-prefix = "  "
-format-prefix-underline = #292d3e
-format-underline = #e1acff
-format-foreground = #e1acff
-format-background = ${colors.background}
 
 [module/exwm-workspace]
 type = custom/ipc
@@ -269,6 +134,7 @@ interval = 2
 format = <label> <ramp-coreload>
 format-foreground = ${colors.draculacpu}
 format-underline = ${colors.draculacpu}
+click-right = exec htop
 click-left = emacsclient -e "(proced)"
 label = %percentage:2%%
 label-foreground = ${colors.draculacpu}
@@ -524,7 +390,7 @@ format-background = ${colors.background}
 [module/wireless-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = wlp2s0
+interface = wlp0s20f0u4
 interval = 3.0
 label-connected = %essid%
 
@@ -561,7 +427,7 @@ ramp-signal-foreground = #7e52c6
 [module/wired-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = enp4s0
+interface = enp2s0
 ;interface = enp14s0
 interval = 3.0
 
@@ -631,6 +497,7 @@ format-muted-prefix = "  "
 format-muted-prefix-foreground = "#ff0000"
 format-muted-foreground = ${colors.foreground}
 format-muted-background = ${colors.background}
+
 [module/uptime]
 ;https://github.com/jaagr/polybar/wiki/User-contributed-modules#uptime
 type = custom/script
@@ -643,6 +510,7 @@ format-background = ${colors.background}
 format-prefix = " "
 format-prefix-foreground = #98be65
 format-underline = #98be65
+
 [module/filesystem]
 type = internal/fs
 interval = 25
@@ -668,6 +536,7 @@ label-volume-underline = ${colors.underline-1}
 
 label-muted = muted
 label-muted-foreground = ${colors.foreground}
+
 [module/memory]
 type = internal/memory
 interval = 2
@@ -707,7 +576,7 @@ label-connected-background = #FF0000
 
 [module/networkspeedup]
 type = internal/network
-interface = wlp2s0
+interface = wlp0s20f0u4
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-underline = ${colors.underline-1}
@@ -720,7 +589,7 @@ format-connected-foreground = ${colors.draculanet}
 
 [module/networkspeeddown]
 type = internal/network
-interface = wlp2s0
+interface = wlp0s20f0u4
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-underline = ${colors.underline-1}
