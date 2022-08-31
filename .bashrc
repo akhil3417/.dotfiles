@@ -1,9 +1,9 @@
-#  ____ _____
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |    http://www.youtube.com/c/DistroTube
-# | |_| || |    http://www.gitlab.com/dwt1/
-# |____/ |_|
-#
+
+#     _    _    _     _ _
+#    / \  | | _| |__ (_) |   Akhil
+#   / _ \ | |/ / '_ \| | |   http://www.youtube.com/c/italented
+#  / ___ \|   <| | | | | |   http://www.gitlab.com/akhil3417/
+# /_/   \_\_|\_\_| |_|_|_|
 # My bash config. Not much to see here; just some pretty standard stuff.
 
 ### EXPORT
@@ -134,6 +134,7 @@ alias doomdoctor="~/.emacs.d/bin/doom doctor"
 alias doomupgrade="~/.emacs.d/bin/doom upgrade"
 alias doompurge="~/.emacs.d/bin/doom purge"
 
+#void linux aliases
 alias install='sudo xbps-install -S'
 alias remove='sudo xbps-remove -R'
 alias update='sudo xbps-install -S'
@@ -246,9 +247,9 @@ alias tips='lbrynet txo spend --type=support --is_not_my_input --blocking'
 
 ### DTOS ###
 # Copy/paste all content of /etc/dtos over to home folder. A backup of config is created. (Be careful running this!)
-alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
+alias mydotscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/mydots/* ~'
 # Backup contents of /etc/dtos to a backup folder in $HOME.
-alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-$(date +%Y.%m.%d-%H.%M.%S)'
+alias mydotsbackup='cp -Rf /etc/mydots ~/mydots-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
