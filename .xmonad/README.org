@@ -1,5 +1,5 @@
-#+TITLE: XMonad Config
-#+AUTHOR: Derek Taylor
+#+TITLE: My XMonad Config with documentation
+#+AUTHOR: Akhil Pratap Singh
 #+PROPERTY: header-args :tangle xmonad.hs
 #+auto_tangle: t
 #+STARTUP: showeverything
@@ -24,19 +24,19 @@
 * About This Config
 #+CAPTION: XMonad Scrot
 #+ATTR_HTML: :alt XMonad Scrot :title XMonad Scrot :align left
-[[https://gitlab.com/dwt1/dotfiles/-/raw/master/.screenshots/dotfiles05-thumb.png]]
+https://github.com/akhil3417/.dotfiles/blob/main/.xmonad/xmonad-example-configs/xmonadwithxmobar.png
 
 Xmonad is a dynamically tiling X11 window manager that is written and configured in Haskell.
 - XMonad Official Website: [[https://xmonad.org][https://xmonad.org]]
 - Haskell Official Website: [[https://haskell.org][https://haskell.org]]
 
-This is the xmonad configuration of Derek Taylor (DistroTube)
-- My YouTube: [[http://www.youtube.com/c/DistroTube][http://www.youtube.com/c/DistroTube]]
-- My GitLab:  [[http://www.gitlab.com/dwt1/][http://www.gitlab.com/dwt1/]]
+This is the xmonad configuration of Akhil Pratap Singh
+- My YouTube: [[http://www.youtube.com/c/DistroTube][http://www.youtube.com/c/italented]]
+- My GitLab:  [[http://www.gitlab.com/dwt1/][http://www.github.com/akhil3417/]]
 
 Keep in mind, that my configs are purposely bloated with examples of what you can do with xmonad. It is written more as a study guide rather than a config that you should download and use.
 
-NOTE: You will also need my xmobar config, which is located here: https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/xmobar
+NOTE: You will also need my xmobar config, which is located here: https://github.com/akhil3417/.dotfiles/tree/main/.config/xmobar
 
 * Imports
 These are Haskell modules that we must import so that we can use their functions later in the config.
@@ -124,7 +124,7 @@ import XMonad.Util.SpawnOnce
       -- SolarizedDark
       -- SolarizedLight
       -- TomorrowNight
-import Colors.DoomOne
+import Colors.Palenight
 
 #+END_SRC
 
@@ -551,6 +551,7 @@ myManageHook = composeAll
   , className =? "file_progress"   --> doFloat
   , className =? "dialog"          --> doFloat
   , className =? "download"        --> doFloat
+  , className =? "Properties"        --> doFloat
   , className =? "error"           --> doFloat
   , className =? "Gimp"            --> doFloat
   , className =? "notification"    --> doFloat
@@ -560,7 +561,9 @@ myManageHook = composeAll
   , className =? "Yad"             --> doCenterFloat
   , title =? "Oracle VM VirtualBox Manager"  --> doFloat
   , title =? "Mozilla Firefox"     --> doShift ( myWorkspaces !! 1 )
-  , title =? "Telegram Desktop"     --> doShift ( myWorkspaces !! 5 )
+  , className =? "TelegramDesktop"     --> doShift ( myWorkspaces !! 5 )
+  , title =? "Virtual Machine Manager"     --> doShift ( myWorkspaces !! 4 )
+  , className =? "kdenlive"     --> doShift ( myWorkspaces !! 8 )
   , title =? "qutebrowser"     --> doShift ( myWorkspaces !! 1 )
   , className =? "Brave-browser"   --> doShift ( myWorkspaces !! 1 )
   , className =? "mpv"             --> doShift ( myWorkspaces !! 7 )
@@ -722,6 +725,7 @@ myKeys c =
   , ("M-d h",addName " do what i want with link"               $ spawn "dmenu-handler")           -- do what i want with link
   , ("M-d v",addName " name says it all"                       $ spawn "dmenu-vpn")           -- name says it all
   , ("M-d f",addName " allows access to all dmscripts"         $ spawn "dmenufm -r")           -- allows access to all dmscripts , ("M-d e",addName " allows access to all dmscripts" $ spawn "dmenukaomoji")           -- allows access to all dmscripts
+  , ("C-n",addName " rofi show window"         $ spawn "rofi -show window")           -- rofi show window
   , ("M-p r",addName " reddio (a reddit viewer)"               $ spawn "dm-reddit")]        -- reddio (a reddit viewer)
 
 
