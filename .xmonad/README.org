@@ -125,7 +125,7 @@ import XMonad.Util.SpawnOnce
       -- SolarizedDark
       -- SolarizedLight
       -- TomorrowNight
-import Colors.Palenight
+import Colors.DoomOne
 
 #+END_SRC
 
@@ -148,8 +148,6 @@ myBrowser = "qutebrowser "  -- Sets qutebrowser as browser
 myEmacs :: String
 myEmacs = "emacsclient -c -a 'emacs' "  -- Makes emacs keybindings easier to type
 
-myEditor :: String
-myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
 -- myEditor = myTerminal ++ " -e vim "    -- Sets vim as editor
 
 myBorderWidth :: Dimension
@@ -181,10 +179,13 @@ myStartupHook = do
 #+END_SRC
 
 #+BEGIN_SRC haskell
+  -- spawnOnce "killall emacs" -- emacs daemon for the emacsclient
   -- spawnOnce "lxsession"
   spawnOnce "picom --config ~/.config/picom/picom.conf"
-  -- spawnOnce "nm-applet"
-  -- spawnOnce "volumeicon"
+  spawnOnce "nm-applet"
+  spawnOnce "volumeicon"
+  spawnOnce "pasystray"
+  spawnOnce "blueman-applet"
   spawn "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
   spawnOnce "unclutter" -- emacs daemon for the emacsclient
   spawnOnce "xset r rate 200 60" -- emacs daemon for the emacsclient
@@ -201,7 +202,7 @@ Select only =ONE= of the following four ways to set the wallpaper.
 #+BEGIN_SRC haskell
   spawnOnce "xargs xwallpaper --stretch < ~/.cache/wall"
   -- spawnOnce "~/.fehbg &"  -- set last saved feh wallpaper
-  -- spawnOnce "feh --randomize --bg-fill /usr/share/backgrounds/dtos-backgrounds/*"  -- feh set random wallpaper
+  -- spawnOnce "feh --randomize --bg-fill /usr/share/backgrounds/my-backgrounds/*"  -- feh set random wallpaper
   -- spawnOnce "nitrogen --restore &"   -- if you prefer nitrogen to feh
   setWMName "LG3D"
 #+END_SRC
