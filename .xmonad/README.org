@@ -183,6 +183,7 @@ myStartupHook = do
   -- spawnOnce "lxsession"
   spawnOnce "picom --config ~/.config/picom/picom.conf"
   spawnOnce "nm-applet"
+  spawnOnce "dunst"
   spawnOnce "volumeicon"
   spawnOnce "pasystray"
   spawnOnce "blueman-applet"
@@ -532,7 +533,7 @@ I have made my workspaces in xmobar "clickable." Clickable workspaces means the 
 
 #+begin_src haskell
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
-myWorkspaces = [" dev ", " www ", " sys ", " doc ", " vbox ", " chat ", " mus ", " vid ", " gfx "]
+myWorkspaces = [" dev ", " www ", " sys ", " doc ", " vbox ", " chat ", " game ", " vid ", " gfx "]
 myWorkspaceIndices = M.fromList $ zipWith (,) myWorkspaces [1..] -- (,) == \x y -> (x,y)
 
 clickable ws = "<action=xdotool key super+"++show i++">"++ws++"</action>"
@@ -567,6 +568,10 @@ myManageHook = composeAll
   , title =? "Virtual Machine Manager"     --> doShift ( myWorkspaces !! 4 )
   , className =? "kdenlive"     --> doShift ( myWorkspaces !! 8 )
   , title =? "qutebrowser"     --> doShift ( myWorkspaces !! 1 )
+  , title =? "Cube 2: Sauerbraten"     --> doShift ( myWorkspaces !! 6 )
+  , title =? "SuperTuxKart"     --> doShift ( myWorkspaces !! 6 )
+  , title =? "Xonotic"     --> doShift ( myWorkspaces !! 6 )
+  , title =? "AssaultCube"     --> doShift ( myWorkspaces !! 6 )
   , className =? "Brave-browser"   --> doShift ( myWorkspaces !! 1 )
   , className =? "mpv"             --> doShift ( myWorkspaces !! 7 )
   , className =? "Gimp"            --> doShift ( myWorkspaces !! 8 )
