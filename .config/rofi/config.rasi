@@ -1,8 +1,13 @@
 /* -*- mode: scss -*- */
 
 configuration {
-        show-icons:   true;
-        sidebar-mode: false;
-        modi:         "window,ssh,drun,combi,calc";
-}
+ modi: "window,drun,combi";
+ font: "Fira Code 14";
+ terminal: "urxvtc";
+ show-icons: true;
+ sidebar-mode: false;
+ combi-modi: "window,drun";
+ }
+// @import "/home/shiva/.config/rofi/themes/Arc-Dark.rasi"
 @theme "nord"
+// @import "/home/shiva/.config/rofi/nord.rasi"
