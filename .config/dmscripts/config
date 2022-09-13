@@ -57,10 +57,11 @@ esac
 bookman_show_source=1
 
 # dm-sounds
-sounds_dir="${HOME}/.config/dmscripts/dmsounds"
+# sounds_dir="${HOME}/.config/dmscripts/dmsounds"
+sounds_dir="${HOME}/Music/"
 
 # dm-setbg
-setbg_dir="/usr/share/backgrounds/my-backgrounds"
+setbg_dir="${HOME}/.config/my-backgrounds/"
 # Set this to 1 if you want to use imv and wayland, 0 if you want to use sxiv
 # Note that sxiv is X11 only, you need to mark the image you want to use.
 use_imv=0
