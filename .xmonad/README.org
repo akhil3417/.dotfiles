@@ -19,6 +19,7 @@
 - [[#system-sounds][System Sounds]]
 - [[#namedactions][NamedActions]]
 - [[#keybindings][Keybindings]]
+- [[#desktop-notifications][desktop notifications]]
 - [[#main][Main]]
 
 * About This Config
@@ -50,7 +51,8 @@ import System.Exit (exitSuccess)
 import qualified XMonad.StackSet as W
 
     -- Actions
-import XMonad.Actions.CopyWindow (kill1)
+import XMonad.Actions.CopyWindow -- for dwm window style tagging
+-- import XMonad.Actions.CopyWindow (kill1)
 import XMonad.Actions.CycleWS (Direction1D(..), moveTo, shiftTo, WSType(..), nextScreen, prevScreen)
 import XMonad.Actions.GridSelect
 import XMonad.Actions.MouseResize
@@ -65,6 +67,7 @@ import Data.Char (isSpace, toUpper)
 import Data.Maybe (fromJust)
 import Data.Monoid
 import Data.Maybe (isJust)
+import Data.Ratio ((%)) -- for video
 import Data.Tree
 import qualified Data.Map as M
 
@@ -72,13 +75,14 @@ import qualified Data.Map as M
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, wrap, xmobarPP, xmobarColor, shorten, PP(..))
 import XMonad.Hooks.EwmhDesktops  -- for some fullscreen events, also for xcomposite in obs.
 import XMonad.Hooks.ManageDocks (avoidStruts, docks, manageDocks, ToggleStruts(..))
-import XMonad.Hooks.ManageHelpers (isFullscreen, doFullFloat, doCenterFloat)
+import XMonad.Hooks.ManageHelpers (isFullscreen, isDialog,  doFullFloat, doCenterFloat, doRectFloat)
 import XMonad.Hooks.ServerMode
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
 import XMonad.Hooks.WindowSwallowing
 import XMonad.Hooks.WorkspaceHistory
+import XMonad.Hooks.UrgencyHook
 
     -- Layouts
 import XMonad.Layout.Accordion
@@ -182,14 +186,14 @@ myStartupHook = do
   -- spawnOnce "killall emacs" -- emacs daemon for the emacsclient
   -- spawnOnce "lxsession"
   spawnOnce "picom --config ~/.config/picom/picom.conf"
-  spawnOnce "nm-applet"
-  spawnOnce "dunst"
-  spawnOnce "volumeicon"
-  spawnOnce "pasystray"
-  spawnOnce "blueman-applet"
+  spawnOnce "nm-applet &"
+  spawnOnce "dunst &"
+  spawnOnce "volumeicon &"
+  spawnOnce "pasystray &"
+  spawnOnce "blueman-applet &"
   spawn "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
-  spawnOnce "unclutter" -- emacs daemon for the emacsclient
-  spawnOnce "xset r rate 200 60" -- emacs daemon for the emacsclient
+  spawnOnce "unclutter &" -- emacs daemon for the emacsclient
+  spawnOnce "xset r rate 200 60 &" -- emacs daemon for the emacsclient
 #+END_SRC
 
 We killed any running conky and trayer processes earlier in the autostart, so now we sleep for 2 seconds and then restart conky and trayer.
@@ -375,7 +379,7 @@ gsUtilities =
 
 #+END_SRC
 
-* Scratchpads
+* TODO Scratchpads
 Allows to have several floating scratchpads running different applications.  Import Util.NamedScratchpad and bind a key to namedScratchpadSpawnAction.  In the example below, I have created named scratchpads for:
 + alacritty -- my terminal
 + mocp -- a terminal music player
@@ -386,6 +390,7 @@ myScratchPads :: [NamedScratchpad]
 myScratchPads = [ NS "terminal" spawnTerm findTerm manageTerm
                 , NS "mocp" spawnMocp findMocp manageMocp
                 , NS "calculator" spawnCalc findCalc manageCalc
+                , NS "emacs-scratch" spawnEmacsScratch findEmacsScratch manageEmacsScratch
                 ]
   where
     spawnTerm  = myTerminal ++ " -t scratchpad"
@@ -412,6 +417,10 @@ myScratchPads = [ NS "terminal" spawnTerm findTerm manageTerm
                  w = 0.4
                  t = 0.75 -h
                  l = 0.70 -w
+
+    findEmacsScratch = title =? "emacs-scratch"
+    spawnEmacsScratch = "emacsclient -a='' -nc --frame-parameters='(quote (font . \"Inconsolata:size=24:weight=regular:antialias=true:hinting=true:hintstyle=hintfull\")(name . \"emacs-scratch\"))'"
+    manageEmacsScratch = nonFloating
 #+END_SRC
 
 * Layouts
@@ -551,8 +560,13 @@ myManageHook = composeAll
   -- I'm doing it this way because otherwise I would have to write out the full
   -- name of my workspaces and the names would be very long if using clickable workspaces.
   [ className =? "confirm"         --> doFloat
+  ,className =? "mpv"            --> doRectFloat (W.RationalRect (1 % 4) (1 % 4) (1 % 2) (1 % 2))
+  , className =? "Firefox" <&&> resource =? "Toolkit" --> doFloat -- firefox pip
   , className =? "file_progress"   --> doFloat
+  , className =? "Google Earth Pro" --> doFloat
   , className =? "dialog"          --> doFloat
+  , className =? "pip"          --> doFloat
+  , className =? "picture-in-picture"          --> doFloat
   , className =? "download"        --> doFloat
   , className =? "Properties"        --> doFloat
   , className =? "error"           --> doFloat
@@ -562,6 +576,9 @@ myManageHook = composeAll
   , className =? "splash"          --> doFloat
   , className =? "toolbar"         --> doFloat
   , className =? "Yad"             --> doCenterFloat
+  , resource  =? "desktop_window" --> doIgnore
+  , resource  =? "kdesktop"       --> doIgnore
+  , title =? "emacs-capture"      --> doRectFloat (W.RationalRect (1 % 4) (1 % 4) (1 % 2) (1 % 2)) -- emacs org capture
   , title =? "Oracle VM VirtualBox Manager"  --> doFloat
   , title =? "Mozilla Firefox"     --> doShift ( myWorkspaces !! 1 )
   , className =? "TelegramDesktop"     --> doShift ( myWorkspaces !! 5 )
@@ -753,6 +770,11 @@ myKeys c =
   [ ("M-<Tab>", addName "Switch to next layout"   $ sendMessage NextLayout)
   , ("M-<Space>", addName "Toggle noborders/full" $ sendMessage (MT.Toggle NBFULL) >> sendMessage ToggleStruts)]
 
+-- copy & kill windows in all workspace
+  ^++^ subKeys "copy & kill windows in all workspace"
+  [ ("M-C-a", addName "Copy window to all workspaces" $ windows copyToAll)   -- copy window to all workspaces
+  , ("M-C-z", addName "kill window copies" $ killAllOtherCopies)]  -- kill copies of window on other workspaces
+
   -- Window resizing
   ^++^ subKeys "Window resizing"
   [ ("M-h", addName "Shrink window"               $ sendMessage Shrink)
@@ -800,6 +822,7 @@ myKeys c =
   ^++^ subKeys "Scratchpads"
   [ ("M-s t", addName "Toggle scratchpad terminal"   $ namedScratchpadAction myScratchPads "terminal")
   , ("M-s m", addName "Toggle scratchpad mocp"       $ namedScratchpadAction myScratchPads "mocp")
+  , ("M-s d", addName "emacs-scratchpad"               $namedScratchpadAction myScratchPads "emacs-scratch")
   , ("M-s c", addName "Toggle scratchpad calculator" $ namedScratchpadAction myScratchPads "calculator")]
 
   -- Controls for mocp music player (SUPER-u followed by a key)
@@ -867,6 +890,22 @@ myKeys c =
 : <interactive>:206:73-77: error:
 :     Not in scope: ‘W.tag’
 :     No module named ‘W’ is imported.
+* desktop notifications
+#+begin_src haskell :tangle no
+
+------------------------------------------------------------------------
+-- desktop notifications -- dunst package required
+------------------------------------------------------------------------
+
+data LibNotifyUrgencyHook = LibNotifyUrgencyHook deriving (Read, Show)
+
+instance UrgencyHook LibNotifyUrgencyHook where
+    urgencyHook LibNotifyUrgencyHook w = do
+        name     <- getName w
+        Just idx <- fmap (W.findTag w) $ gets windowset
+
+        safeSpawn "notify-send" [show name, "workspace " ++ idx]
+#+end_src
 
 * Main
 This is the "main" of XMonad. This where everything in our configs comes together and works.
@@ -880,6 +919,7 @@ main = do
   xmproc2 <- spawnPipe ("xmobar -x 2 $HOME/.config/xmobar/" ++ colorScheme ++ "-xmobarrc")
   -- the xmonad, ya know...what the WM is named after!
   xmonad $ addDescrKeys' ((mod4Mask, xK_F1), showKeybindings) myKeys $ ewmh $ docks $ def
+  -- xmonad $ withUrgencyHook LibNotifyUrgencyHook $ ewmh desktopConfig
     { manageHook         = myManageHook <+> manageDocks
     , handleEventHook    = swallowEventHook (className =? "Alacritty"  <||> className =? "st-256color" <||> className =? "XTerm") (return True)
     , modMask            = myModMask
@@ -887,6 +927,7 @@ main = do
     , startupHook        = myStartupHook
     , layoutHook         = showWName' myShowWNameTheme $ myLayoutHook
     , workspaces         = myWorkspaces
+    -- , handleEventHook    = handleEventHook desktopConfig
     , borderWidth        = myBorderWidth
     , normalBorderColor  = myNormColor
     , focusedBorderColor = myFocusColor
