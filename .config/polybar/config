@@ -1,3 +1,4 @@
+# [[file:../doom/config.org::*polybar config][polybar config:1]]
 ; Docs: https://github.com/polybar/polybar
 ;==========================================================
 
@@ -393,6 +394,7 @@ type = internal/network
 interface = wlp0s20f0u4
 interval = 3.0
 label-connected = %essid%
+click-right = exec nm-applet
 
 format-connected = <label-connected>
 ;format-connected = <ramp-signal> <label-connected>
@@ -786,3 +788,4 @@ scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 format-foreground = #fefefe
 format-background = #668bd7
+# polybar config:1 ends here

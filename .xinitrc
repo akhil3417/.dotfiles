@@ -17,4 +17,4 @@ xsetroot -cursor_name left_ptr
 # Set keyboard repeat rate.
 xset r rate 300 50
 
-
+exec xmonad
