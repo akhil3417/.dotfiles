@@ -129,7 +129,7 @@ import XMonad.Util.SpawnOnce
       -- SolarizedDark
       -- SolarizedLight
       -- TomorrowNight
-import Colors.DoomOne
+import Colors.MonokaiPro
 
 #+END_SRC
 
@@ -185,9 +185,11 @@ myStartupHook = do
 #+BEGIN_SRC haskell
   -- spawnOnce "killall emacs" -- emacs daemon for the emacsclient
   -- spawnOnce "lxsession"
-  spawnOnce "picom --config ~/.config/picom/picom.conf"
+  -- spawnOnce "picom --config ~/.config/picom/picom.conf"
+  spawnOnce "picom --experimental-backends &"
   spawnOnce "nm-applet &"
   spawnOnce "dunst &"
+  spawnOnce "wal -R &"
   spawnOnce "volumeicon &"
   spawnOnce "pasystray &"
   spawnOnce "blueman-applet &"
@@ -205,8 +207,8 @@ We killed any running conky and trayer processes earlier in the autostart, so no
 Select only =ONE= of the following four ways to set the wallpaper.
 
 #+BEGIN_SRC haskell
-  spawnOnce "xargs xwallpaper --stretch < ~/.cache/wall"
-  -- spawnOnce "~/.fehbg &"  -- set last saved feh wallpaper
+  -- spawnOnce "xargs xwallpaper --stretch < ~/.cache/wall"
+  spawnOnce "~/.fehbg &"  -- set last saved feh wallpaper
   -- spawnOnce "feh --randomize --bg-fill /usr/share/backgrounds/my-backgrounds/*"  -- feh set random wallpaper
   -- spawnOnce "nitrogen --restore &"   -- if you prefer nitrogen to feh
   setWMName "LG3D"
@@ -676,6 +678,7 @@ myKeys c =
   , ("M-S-q", addName "Quit XMonad"            $ sequence_ [spawn (mySoundPlayer ++ shutdownSound), io exitSuccess])
   , ("M-S-c", addName "Kill focused window"    $ kill1)
   , ("M-S-a", addName "Kill all windows on WS" $ killAll)
+  -- , ("M-S-<Return>", addName "Run prompt"      $ sequence_ [spawn (mySoundPlayer ++ dmenuSound), spawn "~/.local/bin/dm-run"])
   , ("M-S-<Return>", addName "Run prompt"      $ sequence_ [spawn (mySoundPlayer ++ dmenuSound), spawn "~/.local/bin/dm-run"])
   , ("M-/", addName "DTOS Help"                $ spawn "~/.local/bin/dtos-help")]
 
