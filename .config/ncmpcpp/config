@@ -11,7 +11,7 @@ lyrics_directory = ~/.lyrics
 ##### MPD #####
 mpd_host = localhost
 mpd_port = 6600
-mpd_music_dir = ~/Music
+mpd_music_dir = /home/shiva/Music/
 mpd_connection_timeout = 5
 mpd_crossfade_time = 0
 
@@ -166,9 +166,12 @@ song_columns_list_format = (6)[]{} (23)[red]{a} (26)[yellow]{t|f} (40)[green]{b}
 ## Note: Custom command that will be executed each time song changes. Useful for
 ## notifications etc.
 ##
-#execute_on_song_change = "~/.ncmpcpp/art.sh"
+## #execute_on_song_change = "~/.ncmpcpp/art.sh"
 #song_list_format = "                       $2%t $R$5%a "
-
+## to have a notify-send on song change
+#execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
+## for the notifications with album art  (uses the songinfo in ~/.local/bin)
+execute_on_song_change = songinfo
 ##
 ## Note: Custom  command that will be  executed each time player  state changes.
 ## The environment variable MPD_PLAYER_STATE is set to the current state (either
