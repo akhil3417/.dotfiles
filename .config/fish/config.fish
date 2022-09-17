@@ -293,3 +293,10 @@ end
 
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
+# Import the colors.
+# . "$HOME/.cache/wal/colors.sh"
+
+# Create the alias.
+# alias dmenu='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
+cat ~/.cache/wal/sequences &
+# source ~/.cache/wal/colors.fish
