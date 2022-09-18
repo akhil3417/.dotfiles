@@ -239,6 +239,10 @@ globalkeys = my_table.join(
     awful.key({ modkey, "Shift" }, "Return", function () awful.util.spawn("dm-run") end,
       {description = "Run launcher", group = "hotkeys"}),
 
+    -- rofi windows selector
+    awful.key({ modkey }, "n", function () awful.util.spawn("rofi show window") end,
+      {description = "Rofi window selector", group = "hotkeys"}),
+
     -- Dmscripts (Super + p followed by KEY)
     awful.key( {modkey}, "p", function()
       local grabber
@@ -251,6 +255,7 @@ globalkeys = my_table.join(
             elseif key == "a" then awful.spawn.with_shell("dm-sounds")
             elseif key == "b" then awful.spawn.with_shell("dm-setbg")
             elseif key == "c" then awful.spawn.with_shell("dtos-colorscheme")
+            elseif key == "C" then awful.spawn.with_shell("dm-colorpick")
             elseif key == "e" then awful.spawn.with_shell("dm-confedit")
             elseif key == "i" then awful.spawn.with_shell("dm-maim")
             elseif key == "k" then awful.spawn.with_shell("dm-kill")
@@ -268,6 +273,49 @@ globalkeys = my_table.join(
           )
         end,
         {description = "followed by KEY", group = "Dmscripts"}
+        ),
+    -- Dmscripts (Super + y followed by KEY) for youtube
+    awful.key( {modkey}, "y", function()
+      local grabber
+      grabber =
+        awful.keygrabber.run(
+          function(_, key, event)
+            if event == "release" then return end
+
+            if     key == "s" then awful.spawn.with_shell("yt -D")
+            elseif key == "d" then awful.spawn.with_shell("yt -Ddf")
+            elseif key == "l" then awful.spawn.with_shell("yt -Dl")
+            elseif key == "q" then awful.spawn.with_shell("yt -Dq")
+            elseif key == "a" then awful.spawn.with_shell("yt -Dm")
+            elseif key == "h" then awful.spawn.with_shell("yt -DH")
+            elseif key == "t" then awful.spawn.with_shell("yt -DcT")
+            end
+            awful.keygrabber.stop(grabber)
+            end
+          )
+        end,
+        {description = "followed by KEY", group = "youtube"}
+        ),
+
+    -- Dmscripts (Super + d followed by KEY) for some dmenu scripts
+    awful.key( {modkey}, "d", function()
+      local grabber
+      grabber =
+        awful.keygrabber.run(
+          function(_, key, event)
+            if event == "release" then return end
+
+            if     key == "b" then awful.spawn.with_shell("dmenu-bluetooth")
+            elseif key == "c" then awful.spawn.with_shell("dmenu-command")
+            elseif key == "h" then awful.spawn.with_shell("dmenu-handler")
+            elseif key == "v" then awful.spawn.with_shell("dmenu-vpn")
+            elseif key == "f" then awful.spawn.with_shell("dmenufm -r")
+            end
+            awful.keygrabber.stop(grabber)
+            end
+          )
+        end,
+        {description = "followed by KEY", group = "dmenu"}
         ),
 
     -- Emacs (Super + e followed by KEY)
@@ -642,12 +690,6 @@ awful.rules.rules = {
     { rule = { class = "VirtualBox Manager" },
           properties = { maximized = true } },
 
-    { rule = { class = "VirtualBox Machine" },
-          properties = { maximized = true } },
-
-    { rule = { class = "VirtualBox Machine" },
-          properties = { maximized = true } },
-
     { rule = { class = "download" },
           properties = { floating = true } },
 
@@ -671,6 +713,7 @@ awful.rules.rules = {
           "Imagewriter",
           "Font-manager",
           "Kruler",
+          "emacs-capture",
           "MessageWin",  -- kalarm.
           "Oblogout",
           "Peek",
@@ -787,14 +830,22 @@ client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 awful.spawn.with_shell(soundplayer .. startupSound)
--- awful.spawn.with_shell("lxsession")
-awful.spawn.with_shell("picom --config ~/.config/picom/picom.conf")
+-- awful.spawn.with_shell("picom --config ~/.config/picom/picom.conf")
+awful.spawn.with_shell("picom --experimental-backends &")
 awful.spawn.with_shell("nm-applet")
--- awful.spawn.with_shell("volumeicon")
--- awful.spawn.with_shell("killall conky && conky -c $HOME/.config/conky/awesome/" .. "doom-one" .. "-01.conkyrc")
+awful.spawn.with_shell("dunst")
+awful.spawn.with_shell("wal -R")
+awful.spawn.with_shell("pasystray")
+awful.spawn.with_shell("unclutter")
+awful.spawn.with.shell("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 --height 22")
 awful.spawn.with_shell("/usr/bin/emacs --daemon")
 awful.spawn.with_shell("xset r rate 200 60")
 awful.spawn.with_shell("xargs xwallpaper --stretch < ~/.cache/wall")
+awful.spawn.with_shell("lxsession")
+-- awful.spawn.with_shell('/usr/libexec/xfce-polkit')
+-- awful.spawn.with_shell("lxappearance --restore")
+-- awful.spawn.with_shell("volumeicon")
+-- awful.spawn.with_shell("killall conky && conky -c $HOME/.config/conky/awesome/" .. "doom-one" .. "-01.conkyrc")
 --awful.spawn.with_shell("~/.fehbg") -- set last saved feh wallpaper
 --awful.spawn.with_shell("feh --randomize --bg-fill /usr/share/backgrounds/dtos-backgrounds/*") -- feh sets random wallpaper
 --awful.spawn.with_shell("nitrogen --restore") -- if you prefer nitrogen to feh/xwallpaper
