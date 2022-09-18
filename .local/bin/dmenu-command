@@ -2,7 +2,7 @@
 
 histfile="$HOME/.cache/dmenu-command-hist"
 
-if ! [ -f "$histfile"]; then
+if ! [ -f "$histfile" ]; then
     touch "$histfile"
 fi
 

@@ -2,7 +2,7 @@
 
 configuration {
  modi: "window,run,drun,combi";
- font: "Fira Code 14";
+ font: "Fira Code 13";
  terminal: "alacritty";
  drun-display-format: "{name}";
  display-drun: "Applications:";
@@ -38,11 +38,11 @@ configuration {
 }
 
 window {
-  width: 40%;
+  width: 50%;
 }
 
 element {
-  padding: 8 0;
+  padding: 6 0;
   text-color: @fg-alt;
 }
 
@@ -57,12 +57,12 @@ element-text {
 }
 
 element-icon {
-  size: 30;
+  size: 20;
 }
 
 entry {
   background-color: @bg-alt;
-  padding: 12;
+  padding: 10;
   text-color: @fg;
 }
 
