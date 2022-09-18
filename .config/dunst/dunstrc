@@ -32,7 +32,12 @@
 
     # Horizontal padding.
     horizontal_padding = 4
+    text_icon_padding = 8
+    vertical_alignment = center
 
+    # Alignment of message text.
+    # Possible values are "left", "center" and "right".
+    alignment = left
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
     frame_width = 1
@@ -49,7 +54,7 @@
 
     ### Text ###
 
-    font = Cantarell 9
+    font = Fira Sans 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -68,9 +73,13 @@
     # Markup is allowed
     format = "<b>%s</b>\n%b"
 
-    # Alignment of message text.
-    # Possible values are "left", "center" and "right".
-    alignment = left
+
+    # Progress bar appears when an integer hint is received, e.g.
+    # notify-send -h int:value:50 "Test"
+    progress_bar = true
+    progress_bar_height = 16
+    progress_bar_frame_width = 2
+    progress_bar_max_width = 400
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
@@ -97,6 +106,9 @@
     # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
 
+    # Notification appears on the currently focused monitor
+    follow = keyboard
+
     ### Icons ###
 
     # Align icons left/right/off
@@ -112,7 +124,7 @@
 
     # Should a notification popped up from history be sticky or timeout
     # as if it would normally do.
-    sticky_history = no
+    sticky_history = yes
 
     # Maximum amount of notifications kept in history
     history_length = 20
