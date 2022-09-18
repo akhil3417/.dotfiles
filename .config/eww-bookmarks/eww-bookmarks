@@ -1,0 +1,4 @@
+;; Auto-generated file; don't edit -*- mode: lisp-data -*-
+((:url "https://www.passwordstore.org/" :title "Pass: The Standard Unix Password Manager" :time "Sun Sep 18 19:05:37 2022")
+ (:url "https://mikemylonakis.com/cryptography/unix-pass/" :title "The Unix Password Manager | Mike Mylonakis" :time "Sun Sep 18 19:03:20 2022")
+ (:url "https://systemcrafters.net/build-a-second-brain-in-emacs/5-org-roam-hacks/" :title "5 Org Roam Hacks for Better Productivity in Emacs - System Crafters" :time "Wed Sep 14 11:20:23 2022"))
