@@ -2,6 +2,8 @@
     # ============================= Appearance ============================== #
     font = Fira Sans 12
 
+    ### Display ###
+    monitor = 0
     transparency = 15
 
     geometry = "400x50-20+64" # [{width}]x{height}[+/-{x}+/-{y}]
@@ -90,7 +92,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/chromium-bin
+    browser = /usr/bin/qutebrowser
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
