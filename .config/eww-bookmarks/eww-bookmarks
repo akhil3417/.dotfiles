@@ -1,4 +1,6 @@
 ;; Auto-generated file; don't edit -*- mode: lisp-data -*-
-((:url "https://www.passwordstore.org/" :title "Pass: The Standard Unix Password Manager" :time "Sun Sep 18 19:05:37 2022")
+((:url "https://ag91.github.io/blog/2022/05/02/emms-+-org-roam-youtube-playlists-with-titles/" :title "Emms + Org Roam: YouTube playlists with titles! - Where parallels cross" :time "Sun Sep 18 21:31:28 2022")
+ (:url "https://docs.github.com/en/enterprise-cloud@latest/authentication/managing-commit-signature-verification/generating-a-new-gpg-key" :title "Generating a new GPG key - GitHub Enterprise Cloud Docs" :time "Sun Sep 18 19:35:08 2022")
+ (:url "https://www.passwordstore.org/" :title "Pass: The Standard Unix Password Manager" :time "Sun Sep 18 19:05:37 2022")
  (:url "https://mikemylonakis.com/cryptography/unix-pass/" :title "The Unix Password Manager | Mike Mylonakis" :time "Sun Sep 18 19:03:20 2022")
  (:url "https://systemcrafters.net/build-a-second-brain-in-emacs/5-org-roam-hacks/" :title "5 Org Roam Hacks for Better Productivity in Emacs - System Crafters" :time "Wed Sep 14 11:20:23 2022"))
