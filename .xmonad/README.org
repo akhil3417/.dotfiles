@@ -192,14 +192,15 @@ myStartupHook = do
   spawnOnce "volumeicon &"
   spawnOnce "pasystray &"
   spawnOnce "blueman-applet &"
+  spawnOnce "xfce4-clipman &"
   spawn "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
   spawnOnce "unclutter &" -- emacs daemon for the emacsclient
-  spawnOnce "xset r rate 200 60 &" -- emacs daemon for the emacsclient
+  spawnOnce "xset r rate 200 40 &" -- emacs daemon for the emacsclient
 #+END_SRC
 
 We killed any running conky and trayer processes earlier in the autostart, so now we sleep for 2 seconds and then restart conky and trayer.
 #+BEGIN_SRC haskell
-  -- spawn ("sleep 2 && conky -c $HOME/.config/conky/xmonad/" ++ colorScheme ++ "-01.conkyrc")
+  spawn ("sleep 2 && conky -c $HOME/.config/conky/xmonad/" ++ colorScheme ++ "-01.conkyrc")
   spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 22")
 #+END_SRC
 
@@ -742,13 +743,13 @@ myKeys c =
   , ("M-f f",addName " allows access to all dmscripts"         $ spawn "firefox-developer-edition")           -- allows access to all dmscripts
   , ("M-b c",addName "connect to bluetooth"         $ spawn "bluetoothconnect")           -- allows access to all dmscripts
   , ("M-e E",addName " an emacs shell"                         $ spawn "eshell")           -- an emacs shell
-  , ("M-y s",addName " youtube open"                           $ spawn "yt -D")           -- youtube open
-  , ("M-y d",addName " youtube downloader"                     $ spawn "yt -Ddf")           -- youtube downloader
-  , ("M-y l",addName " youtube loop"                           $ spawn "yt -Dl")           -- youtube loop
-  , ("M-y q",addName " youtube query"                          $ spawn "yt -Dq")           -- youtube query
-  , ("M-y a",addName " youtube audio"                          $ spawn "yt -Dm")           -- youtube audio
-  , ("M-y h",addName " youtube history"                        $ spawn "yt -DH")           -- youtube history
-  , ("M-y t",addName " youtube trending"                       $ spawn "yt -DcT")           -- youtube trending
+  , ("M-y s",addName " youtube open"                           $ spawn "ytfzf -D")           -- youtube open
+  , ("M-y d",addName " youtube downloader"                     $ spawn "ytfzf -Ddf")           -- youtube downloader
+  , ("M-y l",addName " youtube loop"                           $ spawn "ytfzf -Dl")           -- youtube loop
+  , ("M-y q",addName " youtube query"                          $ spawn "ytfzf -Dq")           -- youtube query
+  , ("M-y a",addName " youtube audio"                          $ spawn "ytfzf -Dm")           -- youtube audio
+  , ("M-y h",addName " youtube history"                        $ spawn "ytfzf -DH")           -- youtube history
+  , ("M-y t",addName " youtube trending"                       $ spawn "ytfzf -DcT")           -- youtube trending
   , ("M-d b",addName " dmenu bluetooth dmscripts"         $ spawn "dmenu-bluetooth")           -- allows access to all dmscripts
   , ("M-d c",addName " run a command and see output via dunst" $ spawn "dmenu-command")           -- run a command and see output via dunst
   , ("M-d h",addName " do what i want with link"               $ spawn "dmenu-handler")           -- do what i want with link
