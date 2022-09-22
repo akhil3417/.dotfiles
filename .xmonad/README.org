@@ -924,7 +924,7 @@ main = do
   xmonad $ addDescrKeys' ((mod4Mask, xK_F1), showKeybindings) myKeys $ ewmh $ docks $ def
   -- xmonad $ withUrgencyHook LibNotifyUrgencyHook $ ewmh desktopConfig
     { manageHook         = myManageHook <+> manageDocks
-    -- , handleEventHook    = swallowEventHook (className =? "Alacritty"  <||> className =? "st-256color" <||> className =? "XTerm") (return True)
+    , handleEventHook    = swallowEventHook (className =? "Alacritty"  <||> className =? "st-256color" <||> className =? "XTerm") (return True)
     , modMask            = myModMask
     , terminal           = myTerminal
     , startupHook        = myStartupHook
