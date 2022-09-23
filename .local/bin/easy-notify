@@ -1,0 +1,34 @@
+#! /usr/bin/env python
+
+"""
+easy-notify: simply draw notification widgets on the screen.
+Depends on: python and python-notify (libnotify)
+
+Tested on: Debian GNU/Linux Squeeze (testing)
+
+Copyright 2010 Emanuele Santoro <santoro@autistici.org>
+License is GNU GPL version three or any later publishied
+by the free software foundation.
+"""
+
+import sys
+import pynotify
+from optparse import *
+
+parser = OptionParser()
+
+parser.add_option("-t", "--title", help="title of the notification widget",
+		  metavar="TEXT", dest="title")
+
+parser.add_option("-m", "--message", help="message of the notification widget",
+		  metavar="MESSAGE", dest="message")
+
+(options, args) = parser.parse_args()
+
+if pynotify.init("emms-notifier"):
+	n = pynotify.Notification(options.title, options.message)
+	n.show()
+	sys.exit(0)
+else:
+	print "there was a problem initializing the pynotify module"
+	sys.exit(1)

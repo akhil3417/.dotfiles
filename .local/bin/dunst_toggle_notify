@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# dunst_toggle_notify --- Notify on Dunst pause/activation
+
+command -v dunstctl > /dev/null || { echo "ERROR: No 'dunstctl'." ; exit 1 ; }
+
+if [ "$(dunstctl is-paused)" = 'true' ]
+then
+    dunstctl set-paused false
+    notify-send "Dunst (active)" "Dunst is active"
+else
+    notify-send "Dunst (pause)" "Dunst will be paused"
+    sleep 2s
+    dunstctl set-paused true
+fi

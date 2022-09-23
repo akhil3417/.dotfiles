@@ -1,0 +1,92 @@
+#!/bin/sh
+
+# sauron - external video player script for ytfzf
+
+# if script is run without arguments exit
+[ $# -gt 0 ] || exit
+
+# input set to args passed to script
+input=$(printf "%s\n" "$@")
+
+# mpd and taskspooler
+audio() {
+    printf "%s\n" "${input}" | \
+    while read line
+    do
+      tsp pinch -i "${line}" 1>/dev/null 
+    done
+}
+
+# download with yt-dlp
+download() {
+    printf "%s\n" "${input}" | \
+    while read line
+    do
+      tsp \
+      yt-dlp \
+      --no-playlist \
+      -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
+      -o "$HOME/Downloads/%(title)s.%(ext)s" \
+      "${line}" 1>/dev/null
+    done
+}
+
+
+# download with yt-dlp with sponsorblock to remove sponsor
+sponsorblock_download() {
+    printf "%s\n" "${input}" | \
+    while read line
+    do
+      tsp \
+      yt-dlp \
+      --no-playlist \
+      --sponsorblock-remove all \
+      -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
+      -o "$HOME/Downloads/%(title)s.%(ext)s" \
+      "${line}" 1>/dev/null
+    done
+}
+
+# mpv fullscreen on second display and taskspooler
+fullscreen() {
+    printf "%s\n" "${input}" | \
+    while read line
+    do
+      tsp mpv --fs --screen=1 "${line}" 1>/dev/null 
+    done
+}
+
+# mpv and taskspooler
+video() {
+    printf "%s\n" "${input}" | \
+    while read line
+    do
+      tsp mpv --no-terminal "${line}" 1>/dev/null
+    done
+}
+
+# fzf prompt variables spaces to line up menu options
+audio_tsp='audio        - mpd play audio'
+download_tsp='download     - yt-dlp download links'
+sponsorblock_tsp='sponsorblock - sponsorblock yt-dlp'
+fullscreen_tsp='fullscreen   - mpv play fullscreen on second display'
+video_tsp='video        - mpv play video on current display'
+
+# fzf prompt to specify function to run on links from ytfzf
+menu=$(printf "%s\n" \
+	      "${audio_tsp}" \
+	      "${download_tsp}" \
+	      "${sponsorblock_tsp}" \
+	      "${fullscreen_tsp}" \
+	      "${video_tsp}" \
+	      | fzf --delimiter='\n' --prompt='Pipe links to: ' --info=inline --layout=reverse --no-multi)
+
+# case statement to run function based on fzf prompt output
+case "${menu}" in
+   audio*) audio;;
+   download*) download;;
+   sponsor*)sponsorblock_download ;;
+   fullscreen*) fullscreen;;
+   video*) video;;
+   *) exit;;
+esac
