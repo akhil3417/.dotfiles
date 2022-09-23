@@ -1,0 +1,165 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("review.org"
+ (filename . "~/.config/doom/review.org")
+ (front-context-string . "** Very large fi")
+ (rear-context-string . "te: 2022-09-22\n\n")
+ (position . 66))
+("CProgrammingAbsoluteBeginnersGuide3rdEditio.424140197.pdf"
+ (filename . "~/Documents/Ebooks/CProgrammingAbsoluteBeginnersGuide3rdEditio.424140197.pdf")
+ (front-context-string . "language to spic")
+ (rear-context-string . "hot programming\n")
+ (position . 14170))
+("C lang"
+ (filename . "~/Learn stuff/C lang/")
+ (front-context-string)
+ (rear-context-string . "lable 285.4 GiB\n")
+ (position . 83))
+("Music"
+ (filename . "~/Music/")
+ (front-context-string . "01 Ankhon Mein B")
+ (rear-context-string . "022-03-17 13:18 ")
+ (position . 187))
+("local share"
+ (filename . "~/.local/share/")
+ (front-context-string . "lutris/\n  drwxrw")
+ (rear-context-string . "022-09-09 16:31 ")
+ (position . 1072))
+("share"
+ (filename . "~/.local/share/")
+ (front-context-string . "lutris/\n  drwxrw")
+ (rear-context-string . "022-09-09 16:31 ")
+ (position . 1072))
+(".local"
+ (filename . "~/.local/")
+ (front-context-string . "bin -> ../.dotfi")
+ (rear-context-string . "022-08-22 21:45 ")
+ (position . 114))
+("trash emacs"
+ (filename . "~/.local/share/Trash/files/")
+ (front-context-string . "Untitled Folder/")
+ (rear-context-string . "022-09-12 14:35 ")
+ (position . 137))
+("tmpexpdir"
+ (filename . "~/tmpexpdir/")
+ (front-context-string)
+ (rear-context-string . "lable 226.5 GiB\n")
+ (position . 74))
+("org"
+ (filename . "~/org/")
+ (front-context-string . "org-roam2/\n  -rw")
+ (rear-context-string . "022-08-26 08:34 ")
+ (position . 162))
+("org-capture-last-stored"
+ (filename . "~/org/org-roam2/ref/reftest.org")
+ (front-context-string . "\n* well hello \nc")
+ (rear-context-string . "ence idontknow \n")
+ (position . 136))
+("virtsharedcommand"
+ (filename . "~/kvmshared.txt")
+ (front-context-string . "sudo mount -t 9p")
+ (rear-context-string)
+ (position . 1))
+("tv shows reddit"
+ (filename . "/media/New_Volume/tv shows reddit")
+ (front-context-string . "\ndeadwood \nwestw")
+ (rear-context-string)
+ (position . 1))
+(".dotfiles"
+ (filename . "~/.dotfiles/")
+ (front-context-string . ".config/\n  drwxr")
+ (rear-context-string . "022-08-29 13:43 ")
+ (position . 118))
+("LearningC"
+ (filename . "~/LearningC/")
+ (front-context-string . "C.org\n  -rwxr-xr")
+ (rear-context-string . "022-03-03 17:20 ")
+ (position . 120))
+("rc.lua"
+ (filename . "~/.dotfiles/.config/awesome/rc.lua")
+ (front-context-string . ")\n)\n\n-- Set keys")
+ (rear-context-string . "esize(c)\n    end")
+ (position . 26056))
+("hddhome"
+ (filename . "/media/hdd_home/shiva/")
+ (front-context-string . ".audacity-data/\n")
+ (rear-context-string . "022-08-14 22:36 ")
+ (position . 120))
+("Web Series"
+ (filename . "/media/New_Volume/Edu/Web Series/")
+ (front-context-string . "Chernobyl.S01.CO")
+ (rear-context-string . "021-08-01 03:12 ")
+ (position . 128))
+("songs"
+ (filename . "/media/New_Volume/Entertainment/songs/")
+ (front-context-string . "AADAT   NINJA  L")
+ (rear-context-string . "017-04-27 14:42 ")
+ (position . 133))
+("movies"
+ (filename . "/media/New_Volume/Entertainment/movies/")
+ (front-context-string . "Enola Holmes (20")
+ (rear-context-string . "020-10-02 13:15 ")
+ (position . 135))
+("bhakti songs"
+ (filename . "/media/New_Volume/Entertainment/bhakti songs/")
+ (front-context-string . "1 Jai Jai Jai Ba")
+ (rear-context-string . "017-03-02 01:45 ")
+ (position . 141))
+("New_Volume"
+ (filename . "/media/New_Volume/")
+ (front-context-string . "Stardust_(2007)_")
+ (rear-context-string . "022-07-31 07:01 ")
+ (position . 1872))
+("lisp"
+ (filename . "~/.config/doom/lisp/")
+ (front-context-string . "setup-corfu.el\n ")
+ (rear-context-string . "022-08-27 09:42 ")
+ (position . 4161))
+("Downloads"
+ (filename . "~/Downloads/")
+ (front-context-string . "Bazik_Dark_Blue/")
+ (rear-context-string . "020-07-23 22:15 ")
+ (position . 120))
+("Documents"
+ (filename . "~/Documents/")
+ (front-context-string . ".emacs.d/\n  drwx")
+ (rear-context-string . "022-08-27 23:17 ")
+ (position . 117))
+("void-packages"
+ (filename . "~/void-packages/")
+ (front-context-string . ".github/\n  drwxr")
+ (rear-context-string . "022-08-26 02:32 ")
+ (position . 122))
+("myrepos"
+ (filename . "~/myrepos/")
+ (front-context-string . "void-linux-scrip")
+ (rear-context-string . "022-08-28 12:46 ")
+ (position . 113))
+("doom"
+ (filename . "~/.config/doom/")
+ (front-context-string . "lisp/\n  -rw-rw-r")
+ (rear-context-string . "022-08-29 00:30 ")
+ (position . 277))
+("gitclones"
+ (filename . "~/gitclones/")
+ (front-context-string . ".doom.d/\n  drwxr")
+ (rear-context-string . "022-08-29 00:26 ")
+ (position . 118))
+("bin"
+ (filename . "~/.dotfiles/.local/bin/")
+ (front-context-string . "bluetoothconnect")
+ (rear-context-string . "022-08-22 21:45 ")
+ (position . 184))
+("config"
+ (filename . "~/.dotfiles/.config/")
+ (front-context-string . "alacritty/\n  drw")
+ (rear-context-string . "022-08-22 21:45 ")
+ (position . 128))
+("xmonad"
+ (filename . "~/.dotfiles/.xmonad/README.org")
+ (front-context-string . "#+TITLE: XMonad ")
+ (rear-context-string)
+ (position . 1))
+)
