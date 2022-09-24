@@ -222,11 +222,13 @@ alias yta-best="youtube-dl --extract-audio --audio-format best "
 alias yta-flac="youtube-dl --extract-audio --audio-format flac "
 alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
 alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+# alias yta-opus="youtube-dl --extract-audio --audio-format opus "
 alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
 alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
+alias yta-opus="yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Downloads/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Downloads/youtube-dl/%(title)s-%(id)s.%(ext)s' "
+alias yta-batchopus="yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Downloads/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Downloads/youtube-dl/%(title)s-%(id)s.%(ext)s'  --batch-file= "
 # switch between shells
 # I do not recommend switching default SHELL from bash.
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
@@ -284,3 +286,7 @@ wal-tile() {
 
 # Create the alias.
 alias dmenu='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
+export YTFZF_EXTMENU='rofi -dmenu -fuzzy -width 1000'
+export YTFZF_ENABLE_FZF_DEFUALT_OPTS=0
+export YTFZF_PLAYER='vlc '
+#(YTFZF_PLAYER)
