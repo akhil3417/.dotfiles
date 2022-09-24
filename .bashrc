@@ -227,8 +227,8 @@ alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
 alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
-alias yta-opus="yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Downloads/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Downloads/youtube-dl/%(title)s-%(id)s.%(ext)s' "
-alias yta-batchopus="yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Downloads/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Downloads/youtube-dl/%(title)s-%(id)s.%(ext)s'  --batch-file= "
+alias yta-opus="yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Downloads/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Downloads/youtube-dl/%(title)s-[%(id)s].%(ext)s' "
+alias yta-batchopus="yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Downloads/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Downloads/youtube-dl/%(title)s-[%(id)s].%(ext)s'  --batch-file= "
 # switch between shells
 # I do not recommend switching default SHELL from bash.
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
