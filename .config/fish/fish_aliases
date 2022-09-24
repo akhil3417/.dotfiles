@@ -15,10 +15,7 @@ abbr    scu "systemctl --user"
 abbr    ssc "sudo systemctl" 
 abbr    jcu "journalctl --user"
 abbr    sjc "sudo journalctl"
-#abbr	yta "youtube-dl -w -c -r 1M -o '%(playlist_index)s-%(title)s.%(ext)s' --add-metadata  -f 'bestaudio[ext=m4a]'"
-# abbr	yt "youtube-dl -w -c -o '%(title)s.%(ext)s' -f 'bestvideo[height<=?1080]+bestaudio/best' --add-metadata"
 abbr    z "fzf-cdhist-widget"
-abbr    yt ytfzf
 abbr    qb "qutebrowser"
 abbr    qnb "qutebrowser --temp-basedir --config ~/.config/qutebrowser/config.py --set 'colors.webpage.darkmode.enabled' 'False' "
 alias	cp "cp -i" 
@@ -49,9 +46,6 @@ command -v nvim >/dev/null && alias vim="nvim" && alias vimdiff="nvim -d" # Use 
 # sdn="sudo shutdown -h now" 
 # trem="transmission-remote" 
 # upc="sudo pacman -Syu; pkill -RTMIN+8 i3blocks" 
-# yta="yt -x -f bestaudio/best" 
-# yt="youtube-dl --add-metadata -i -o '%(upload_date)s-%(title)s.%(ext)s'" 
-# YT="youtube-viewer" 
 
 alias clear='/bin/clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 
@@ -67,7 +61,6 @@ alias .5='cd ../../../../..'
 # General
 alias ka='killall'
 # vim and emacs
-alias ytd='yt -D' #or you can also make an bin file
 alias vim='nvim'
 alias em='/usr/bin/emacs -nw'
 #alias emacs="emacsclient -c -a 'emacs'"
@@ -148,15 +141,25 @@ alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
 # youtube-dl
+#abbr	yta "youtube-dl -w -c -r 1M -o '%(playlist_index)s-%(title)s.%(ext)s' --add-metadata  -f 'bestaudio[ext=m4a]'"
+# abbr	yt  "youtube-dl -w -c -o '%(title)s.%(ext)s' -f 'bestvideo[height<=?1080]+bestaudio/best' --add-metadata"
+abbr    yt ytfzf
+abbr	yts 'ytfzf -l -u sauron'
+alias   ytd='yt -D' #or you can also make an bin file
 alias yta-aac="youtube-dl --extract-audio --audio-format aac "
 alias yta-best="youtube-dl --extract-audio --audio-format best "
 alias yta-flac="youtube-dl --extract-audio --audio-format flac "
 alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
 alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+# alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+alias yta-opus ="yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Downloads/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Downloads/youtube-dl/%(title)s-%(id)s.%(ext)s'"
+alias yta-batchopus "yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Downloads/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Downloads/youtube-dl/%(title)s-%(id)s.%(ext)s'  --batch-file="
 alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
 alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
+# yta="yt -x -f bestaudio/best"
+# yt="youtube-dl --add-metadata -i -o '%(upload_date)s-%(title)s.%(ext)s'"
+# YT="youtube-viewer"
 
 # switch between shells
 # I do not recommend switching default SHELL from bash.
