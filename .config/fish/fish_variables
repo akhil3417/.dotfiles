@@ -42,8 +42,9 @@ SETUVAR _fish_abbr_ssc:sudo\x20systemctl
 SETUVAR _fish_abbr_tri:trizen\x20\x2dS
 SETUVAR _fish_abbr_vv:cd\x20\x7e/Videos\x3b\x20and\x20ls\x20\x2da
 SETUVAR _fish_abbr_ww:cd\x20\x7e/Pictures/wallpapers\x3b\x20and\x20ls\x20\x2da
-SETUVAR _fish_abbr_yt:ytfzf
+SETUVAR _fish_abbr_yt:ytfzf\x20\x2dl
 SETUVAR _fish_abbr_yta:youtube\x2ddl\x20\x2dw\x20\x2dc\x20\x2dr\x201M\x20\x2do\x20\x27\x25\x28playlist_index\x29s\x2d\x25\x28title\x29s\x2e\x25\x28ext\x29s\x27\x20\x2d\x2dadd\x2dmetadata\x20\x20\x2df\x20\x27bestaudio\x5bext\x3dm4a\x5d\x27
+SETUVAR _fish_abbr_yts:ytfzf\x20\x2dl\x20\x2du\x20sauron
 SETUVAR _fish_abbr_z:fzf\x2dcdhist\x2dwidget
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_comment:990000

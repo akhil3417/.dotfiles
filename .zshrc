@@ -249,3 +249,25 @@ fi
 ### SETTING THE STARSHIP PROMPT ###
 eval "$(starship init zsh)"
 
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+cat /home/shiva/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+source /home/shiva/.cache/wal/colors-tty.sh
+# You can create a function for this in your shellrc (.bashrc, .zshrc).
+wal-tile() {
+    wal -n -i "$@"
+    feh --bg-tile "$(< "/home/shiva/.cache/wal/wal")"
+}
+
+# Import the colors.
+. "/home/shiva/.cache/wal/colors.sh"
+
+# Create the alias.
+alias dmenu='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'

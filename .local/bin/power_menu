@@ -17,8 +17,10 @@ res=$(printf 'shutdown\nreboot\nsleep\nhibernate\nkill X' | $LAUNCHER 'Power Men
 # check for running programs
 progcheck pip
 progcheck pacman
+progcheck xbps-install
+progcheck xbps-update
+progcheck xbps-remove
 progcheck yay
-progcheck apt
 progcheck yarn
 progcheck npm
 progcheck rustc

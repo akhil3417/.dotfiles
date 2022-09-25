@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("review.org"
+(("org capture todo"
+ (filename . "~/org/org-capture/todo.org")
+ (front-context-string . "* Tasks\n** Learn")
+ (rear-context-string)
+ (position . 1))
+("review.org"
  (filename . "~/.config/doom/review.org")
  (front-context-string . "** Very large fi")
  (rear-context-string . "te: 2022-09-22\n\n")
@@ -53,10 +58,10 @@
  (rear-context-string . "022-09-23 20:03 ")
  (position . 422))
 ("org-capture-last-stored"
- (filename . "~/org/org-capture/todo.org")
- (front-context-string . "** [ ] youtube-d")
- (rear-context-string . "\n\n* Interesting\n")
- (position . 522))
+ (filename . "~/.dotfiles/todo.org")
+ (front-context-string . "** TODO find a f")
+ (rear-context-string)
+ (position . 9))
 ("virtsharedcommand"
  (filename . "~/kvmshared.txt")
  (front-context-string . "sudo mount -t 9p")

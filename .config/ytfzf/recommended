@@ -25,6 +25,7 @@ scrape_recommended () {
     11. run 'ytfzf -c recommended'
 "; exit; }
 
+    # read -r cookie < "$_cookie_file"
     read -r cookie < "$_cookie_file"
     cookie="${cookie#Cookie: }"
     curl -s -f -b "$_cookie_file" "https://www.youtube.com" \

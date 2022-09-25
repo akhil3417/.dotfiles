@@ -30,7 +30,21 @@ download() {
       "${line}" 1>/dev/null
     done
 }
+#download audio with yt-dlp
 
+downaudio() {
+    printf "%s\n" "${input}" | \
+    while read line
+    do
+      ts \
+      yt-dlp \
+      --no-playlist \
+      -f 'ba' -x --audio-format opus --embed-subs --embed-metadata --download-archive ~/Downloads/youtube-dl/videos.txt \
+      -o "$HOME/Downloads/youtube-dl/%(title)s-[%(id)s].%(ext)s" \
+      "${line}" 1>/dev/null notify-send "Song Downloded ♫" "${name}"
+
+    done
+}
 
 # download with yt-dlp with sponsorblock to remove sponsor
 sponsorblock_download() {
@@ -42,7 +56,7 @@ sponsorblock_download() {
       --no-playlist \
       --sponsorblock-remove all \
       -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
-      -o "$HOME/Downloads/%(title)s.%(ext)s" \
+      -o "$HOME/Downloads/youtube-dl/%(title)s-[%(id)s].%(ext)s" \
       "${line}" 1>/dev/null
     done
 }
@@ -62,12 +76,14 @@ video() {
     while read line
     do
       ts mpv --no-terminal "${line}" 1>/dev/null
+	   notify-send "Now Playing ♫" "${name}"
     done
 }
 
 # fzf prompt variables spaces to line up menu options
 audio_ts='audio        - mpd play audio'
 download_ts='download     - yt-dlp download links'
+downaudio_ts='downaudio     - yt-dlp download audio'
 sponsorblock_ts='sponsorblock - sponsorblock yt-dlp'
 fullscreen_ts='fullscreen   - mpv play fullscreen on second display'
 video_ts='video        - mpv play video on current display'
@@ -76,6 +92,7 @@ video_ts='video        - mpv play video on current display'
 menu=$(printf "%s\n" \
 	      "${audio_ts}" \
 	      "${download_ts}" \
+	      "${downaudio_ts}" \
 	      "${sponsorblock_ts}" \
 	      "${fullscreen_ts}" \
 	      "${video_ts}" \
@@ -85,6 +102,7 @@ menu=$(printf "%s\n" \
 case "${menu}" in
    audio*) audio;;
    download*) download;;
+   downaudio*) downaudio;;
    sponsor*)sponsorblock_download ;;
    fullscreen*) fullscreen;;
    video*) video;;

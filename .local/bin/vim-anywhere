@@ -23,8 +23,8 @@ if [ -z $clip ] ;then
     #move mouse to center of window
     xdotool mousemove $((x + w/2)) $((y + h/2))
     xdotool type  --clearmodifiers "$text"
-    setxkbmap -layout "$layout"
+    # setxkbmap -layout "$layout"
     #uses my remaps script to remap capslock back to ctrl and escape
-    remaps
+    # remaps
 fi
 

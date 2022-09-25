@@ -2,7 +2,7 @@
 # a script for converting Chrome Passwords.csv to pass
 # files that can, its still a work in progress
 # currently it is functional enough to use
-FILE="$HOME/Documents/Chrome Passwords.csv"
+FILE="$HOME/Documents/passwords.csv"
 PREFORMAT=$(tail -n +2 "$FILE" | sed '/http/!d' | sed '/^,android/d'| \
     sed 's/,/\n/g' | sed '/^http/d' | sed 'n;N;s/^/user:/')
 

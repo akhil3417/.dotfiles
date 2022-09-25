@@ -154,7 +154,7 @@ sort_videos_data=0
 #options are: music, gaming, movies, ""
 #same as --trending=
 trending_tab=""
-
+# 'custom_scrape_search_exclude=\"recommended\"'
 #the filter id that will be used when searching youtube
 #same as --filter-id={filter}
 #to get a filter id go to youtube search for something, choose the filter you want,
