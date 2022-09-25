@@ -477,3 +477,17 @@ def_key "x"
   delete_playlist_items
 def_key "P"
   show_playlist
+
+def_key "'"
+ seek_forward
+
+def_key ";"
+ seek_backward
+
+def_key "ctrl-j"
+ select_item
+ scroll_down
+
+def_key "ctrl-k"
+ select_item
+ scroll_up

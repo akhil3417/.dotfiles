@@ -2,9 +2,9 @@
 -- This is one of the xmobar configurations for DTOS.
 -- This config is packaged in the DTOS repo as 'dtos-xmobar'
 -- Color scheme: Doom One
--- Dependencies: 
-   -- otf-font-awesome 
-   -- ttf-mononoki 
+-- Dependencies:
+   -- otf-font-awesome
+   -- ttf-mononoki
    -- ttf-ubuntu-font-family
    -- htop
    -- emacs
@@ -96,9 +96,13 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
                         -- Script that dynamically adjusts xmobar padding depending on number of trayer icons.
                     , Run Com ".config/xmobar/trayer-padding-icon.sh" [] "trayerpad" 20
                         -- Prints out the left side items such as workspaces, layout, etc.
+
                     , Run UnsafeStdinReader
+
+                    , Run PipeReader         "~/tmpexpdir/PS"    "PS"                           -- MPD control buttons
                     ]
+
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "<action=`dm-run`> <icon=haskell_20.xpm/> </action>  <fc=#666666>|</fc> %UnsafeStdinReader% }{ <box type=Bottom width=2 mb=2 color=#51afef><fc=#51afef>%penguin%  %dynnetwork%</fc></box>    <box type=Bottom width=2 mb=2 color=#ecbe7b><fc=#ecbe7b><action=`alacritty -e htop`>%multicpu%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#ff6c6b><fc=#ff6c6b><action=`alacritty -e htop`>%memory%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#a9a1e1><fc=#a9a1e1>%disku%</fc></box>    <box type=Bottom width=2 mb=2 color=#98be65><fc=#98be65>%uparrow%  %uptime%</fc></box>    <box type=Bottom width=2 mb=2 color=#c678dd><fc=#c678dd>%bell%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc></box>   <box type=Bottom width=2 mb=2 color=#da8548><fc=#da8548>%baticon%  %battery%</fc></box>    <box type=Bottom width=2 mb=2 color=#46d9ff><fc=#46d9ff><action=`emacsclient -c -a 'emacs' --eval '(doom/window-maximize-buffer(dt/year-calendar))'`>%date%</action></fc></box> %trayerpad%"
+       , template = "<action=`dm-run`> <icon=haskell_20.xpm/> </action>  <fc=#666666>|</fc> %UnsafeStdinReader% }{ <box type=Bottom width=2 mb=2 color=#51afef><fc=#51afef>%penguin%  %dynnetwork%</fc></box>    <box type=Bottom width=2 mb=2 color=#ecbe7b><fc=#ecbe7b><action=`alacritty -e htop`>%multicpu%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#ff6c6b><fc=#ff6c6b><action=`alacritty -e htop`>%memory%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#a9a1e1><fc=#a9a1e1>%disku%</fc></box>    <box type=Bottom width=2 mb=2 color=#98be65><fc=#98be65>%uparrow%  %uptime%</fc></box>    <box type=Bottom width=2 mb=2 color=#c678dd><fc=#c678dd>%bell%  <action=`alacritty -e sudo pacman -Syu`>%pacupdate%</action></fc></box>   <box type=Bottom width=2 mb=2 color=#da8548><fc=#da8548>%baticon%  %battery%</fc></box>    <box type=Bottom width=2 mb=2 color=#46d9ff><fc=#46d9ff><action=`emacsclient -c -a 'emacs' --eval '(doom/window-maximize-buffer(dt/year-calendar))'`>%date%</action></fc></box> <box type=Bottom width=2 mb=2 color=#ecbe7b><fc=#ecbe7b><action=`alacritty -e ncmpcpp`><fn=2>\🎶</fn></action></fc></box> <box type=Bottom width=2 mb=2 color=#ecbe7b><fc=#ecbe7b><action=`XMMPCprev`><fn=2>\⏮</fn></action></fc></box> <box type=Bottom width=2 mb=2 color=#ecbe7b><fc=#ecbe7b><action=`XMMPCtoggle`><fn=2>\⏯</fn></action></fc></box> <box type=Bottom width=2 mb=2 color=#ecbe7b><fc=#ecbe7b><action=`XMMPCnext`><fn=2>\⏭</fn></action></fc></box> %trayerpad%"
        }

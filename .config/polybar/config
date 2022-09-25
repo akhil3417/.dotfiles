@@ -1,3 +1,4 @@
+# [[file:../doom/config.org::*polybar config][polybar config:1]]
 ; Docs: https://github.com/polybar/polybar
 ;==========================================================
 
@@ -73,7 +74,7 @@ font-2 = "Material Icons:size=10;3"
 font-3 = "Fira Mono:size=6;-3"
 
 modules-left = exwm exwm-path exwm-workspace
-modules-center = spotify
+modules-center = spotify mpd
 ; modules-left = exwm-workspace
 modules-right =  wireless-network networkspeedup networkspeeddown cpu memory uptime arch-aur-updates battery temperature date pulseaudio volume pavolume
 
@@ -802,3 +803,4 @@ scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 format-foreground = #fefefe
 format-background = #668bd7
+# polybar config:1 ends here
