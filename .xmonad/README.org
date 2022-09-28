@@ -384,13 +384,13 @@ gsUtilities =
 * TODO Scratchpads
 Allows to have several floating scratchpads running different applications.  Import Util.NamedScratchpad and bind a key to namedScratchpadSpawnAction.  In the example below, I have created named scratchpads for:
 + alacritty -- my terminal
-+ mocp -- a terminal music player
++ ncmpcppp -- a terminal ncurses music player
 + qalculate-gtk -- a nice calculator
 
 #+BEGIN_SRC haskell
 myScratchPads :: [NamedScratchpad]
 myScratchPads = [ NS "terminal" spawnTerm findTerm manageTerm
-                , NS "mocp" spawnMocp findMocp manageMocp
+                , NS "ncmpcpp" spawnncmpcpp findncmpcpp managencmpcpp
                 , NS "calculator" spawnCalc findCalc manageCalc
                 , NS "emacs-scratch" spawnEmacsScratch findEmacsScratch manageEmacsScratch
                 ]
@@ -403,9 +403,9 @@ myScratchPads = [ NS "terminal" spawnTerm findTerm manageTerm
                  w = 0.9
                  t = 0.95 -h
                  l = 0.95 -w
-    spawnMocp  = myTerminal ++ " -t mocp -e mocp"
-    findMocp   = title =? "mocp"
-    manageMocp = customFloating $ W.RationalRect l t w h
+    spawnncmpcpp  = myTerminal ++ " -t ncmpcpp -e ncmpcpp"
+    findncmpcpp   = title =? "ncmpcpp"
+    managencmpcpp = customFloating $ W.RationalRect l t w h
                where
                  h = 0.9
                  w = 0.9
@@ -421,7 +421,8 @@ myScratchPads = [ NS "terminal" spawnTerm findTerm manageTerm
                  l = 0.70 -w
 
     findEmacsScratch = title =? "emacs-scratch"
-    spawnEmacsScratch = "emacsclient -a='' -nc --frame-parameters='(quote (font . \"Inconsolata:size=24:weight=regular:antialias=true:hinting=true:hintstyle=hintfull\")(name . \"emacs-scratch\"))'"
+    -- spawnEmacsScratch = "emacsclient -a='' -nc --frame-parameters='(quote (font . \"Inconsolata:size=24:weight=regular:antialias=true:hinting=true:hintstyle=hintfull\")(name . \"emacs-scratch\"))'"
+    spawnEmacsScratch = "emacsclient -a='' -nc "
     manageEmacsScratch = nonFloating
 #+END_SRC
 
@@ -544,7 +545,7 @@ I have made my workspaces in xmobar "clickable." Clickable workspaces means the 
 
 #+begin_src haskell
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
-myWorkspaces = [" dev ", " www ", " sys ", " doc ", " vbox ", " chat ", " game ", " vid ", " gfx "]
+myWorkspaces = [" dev ", " www ", " sys ", " doc ", " vbox ", " chat ", " game ", " music ", " gfx "]
 myWorkspaceIndices = M.fromList $ zipWith (,) myWorkspaces [1..] -- (,) == \x y -> (x,y)
 
 clickable ws = "<action=xdotool key super+"++show i++">"++ws++"</action>"
@@ -580,7 +581,7 @@ myManageHook = composeAll
   , className =? "Yad"             --> doCenterFloat
   , resource  =? "desktop_window" --> doIgnore
   , resource  =? "kdesktop"       --> doIgnore
-  , title =? "emacs-capture"      --> doRectFloat (W.RationalRect (1 % 4) (1 % 4) (1 % 2) (1 % 2)) -- emacs org capture
+  , title =? "dropdown_edit"      --> doRectFloat (W.RationalRect (1 % 4) (1 % 4) (1 % 2) (1 % 2)) -- emacs org capture
   , title =? "Oracle VM VirtualBox Manager"  --> doFloat
   , title =? "Mozilla Firefox"     --> doShift ( myWorkspaces !! 1 )
   , className =? "TelegramDesktop"     --> doShift ( myWorkspaces !! 5 )
@@ -824,16 +825,16 @@ myKeys c =
   -- Toggle them to hide and it sends them back to hidden workspace (NSP).
   ^++^ subKeys "Scratchpads"
   [ ("M-s t", addName "Toggle scratchpad terminal"   $ namedScratchpadAction myScratchPads "terminal")
-  , ("M-s m", addName "Toggle scratchpad mocp"       $ namedScratchpadAction myScratchPads "mocp")
+  , ("M-s m", addName "Toggle scratchpad ncmpcpp"       $ namedScratchpadAction myScratchPads "ncmpcpp")
   , ("M-s d", addName "emacs-scratchpad"               $namedScratchpadAction myScratchPads "emacs-scratch")
   , ("M-s c", addName "Toggle scratchpad calculator" $ namedScratchpadAction myScratchPads "calculator")]
 
   -- Controls for mocp music player (SUPER-u followed by a key)
-  ^++^ subKeys "Mocp music player"
-  [ ("M-u p", addName "mocp play"                $ spawn "mocp --play")
-  , ("M-u l", addName "mocp next"                $ spawn "mocp --next")
-  , ("M-u h", addName "mocp prev"                $ spawn "mocp --previous")
-  , ("M-u <Space>", addName "mocp toggle pause"  $ spawn "mocp --toggle-pause")]
+  ^++^ subKeys "ncmpcpp music player"
+  [ ("M-u p", addName "mpd play"                $ spawn "mpd play")
+  , ("M-u l", addName "mpd next"                $ spawn "mpd next")
+  , ("M-u h", addName "mpd prev"                $ spawn "mpd prev")
+  , ("M-u <Space>", addName "ncmpcpp toggle pause"  $ spawn "mpd toggle")]
 
   ^++^ subKeys "GridSelect"
   -- , ("C-g g", addName "Select favorite apps"     $ runSelectedAction' defaultGSConfig gsCategories)
@@ -866,9 +867,9 @@ myKeys c =
 
   -- Multimedia Keys
   ^++^ subKeys "Multimedia keys"
-  [ ("<XF86AudioPlay>", addName "mocp play"           $ spawn "mocp --play")
-  , ("<XF86AudioPrev>", addName "mocp next"           $ spawn "mocp --previous")
-  , ("<XF86AudioNext>", addName "mocp prev"           $ spawn "mocp --next")
+  [ ("<XF86AudioPlay>", addName "mpd play"           $ spawn "mpd play")
+  , ("<XF86AudioPrev>", addName "mpd next"           $ spawn "mpd prev")
+  , ("<XF86AudioNext>", addName "mpd prev"           $ spawn "mpd next")
   , ("<XF86AudioMute>", addName "Toggle audio mute"   $ spawn "amixer set Master toggle")
   , ("<XF86AudioLowerVolume>", addName "Lower vol"    $ spawn "amixer set Master 5%- unmute")
   , ("<XF86AudioRaiseVolume>", addName "Raise vol"    $ spawn "amixer set Master 5%+ unmute")
