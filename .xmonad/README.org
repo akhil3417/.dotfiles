@@ -129,7 +129,7 @@ import XMonad.Util.SpawnOnce
       -- SolarizedDark
       -- SolarizedLight
       -- TomorrowNight
-import Colors.OceanicNext
+import Colors.GruvboxDark
 
 #+END_SRC
 
