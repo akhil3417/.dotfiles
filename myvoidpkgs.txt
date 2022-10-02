@@ -26,6 +26,7 @@ apparmor
 arandr
 aspell
 aspell-en
+at
 at-spi2-atk
 at-spi2-atk-devel
 at-spi2-core
@@ -85,6 +86,7 @@ calc
 cantarell-fonts
 cdrtools
 celt
+cheese
 chromaprint
 chromium
 chrony
@@ -94,6 +96,7 @@ cjs
 clang
 cloc
 clutter
+clutter-gst
 clutter-gst3
 clutter-gtk
 cmake
@@ -121,6 +124,7 @@ device-mapper
 dhcpcd
 diffutils
 dkms
+dma
 dmenu
 dmidecode
 dmraid
@@ -264,6 +268,7 @@ gnome-desktop
 gnome-disk-utility
 gnome-icon-theme
 gnome-keyring
+gnome-video-effects
 gnupg
 gnupg2
 gnutls
@@ -510,6 +515,7 @@ libcddb
 libcdio
 libcdio-paranoia
 libcdparanoia
+libcheese
 libclang
 libclang-cpp
 libclc
@@ -706,6 +712,7 @@ libpostproc
 libprotobuf-lite
 libproxy
 libpsl
+libptytty
 libpulseaudio
 libpwquality
 libqalculate
@@ -980,6 +987,7 @@ pavucontrol
 pciutils
 pcmanfm
 pcre-devel
+pcre2-devel
 perl
 perl-AnyEvent
 perl-AnyEvent-I3
@@ -1164,6 +1172,8 @@ runc
 runit
 runit-void
 runit-void-apparmor
+rxvt-unicode
+rxvt-unicode-terminfo
 sakura
 samba-libs
 sauerbraten
@@ -1178,6 +1188,7 @@ setxkbmap
 shaderc
 shadow
 shared-mime-info
+shellcheck
 signon-kwallet-extension
 signon-plugin-oauth2
 signon-ui
@@ -1203,6 +1214,9 @@ spice-protocol
 spice-vdagent
 sqlite
 sratom
+st
+st-terminfo
+stack
 starship
 startup-notification
 stow
@@ -1231,6 +1245,7 @@ tor
 torsocks
 traceroute
 transset
+trash-cli
 trayer-srg
 tree
 tree-sitter
@@ -1247,6 +1262,7 @@ udisks2
 ueberzug
 unclutter
 unibilium
+unicode-emoji
 unixodbc
 unrar
 unzip
@@ -1334,12 +1350,6 @@ xf86-input-libinput
 xf86-input-synaptics
 xf86-input-vmmouse
 xf86-input-wacom
-xf86-video-amdgpu
-xf86-video-ati
-xf86-video-dummy
-xf86-video-fbdev
-xf86-video-nouveau
-xf86-video-vesa
 xf86-video-vmware
 xfce-polkit
 xfce4
@@ -1378,6 +1388,7 @@ xmlcatmgr
 xmobar
 xmodmap
 xmonad
+xmonad-contrib
 xonotic
 xonotic-data
 xorg
@@ -1394,6 +1405,7 @@ xprop
 xrandr
 xrdb
 xrefresh
+xsel
 xset
 xsetroot
 xterm
@@ -1413,7 +1425,6 @@ yajl
 youtube-dl
 yt-dlp
 ytmdl
-yturl
 zd1211-firmware
 zip
 zlib

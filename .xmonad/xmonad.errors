@@ -1,0 +1,2 @@
+$ stack build --silent --stack-yaml /home/shiva/.dotfiles/.xmonad/stack.yaml
+$ stack ghc --stack-yaml /home/shiva/.dotfiles/.xmonad/stack.yaml -- --make xmonad.hs -i -ilib -fforce-recomp -main-is main -v0 -outputdir /home/shiva/.xmonad/build-x86_64-linux -o /home/shiva/.xmonad/xmonad-x86_64-linux

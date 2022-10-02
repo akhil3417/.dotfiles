@@ -18,3 +18,6 @@ xsetroot -cursor_name left_ptr
 xset r rate 300 50
 
 exec xmonad
+PS=/tmp/.volume-pipe
+[[ -S $PS ]] || mkfifo $PS
+XMMPCstop

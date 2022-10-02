@@ -14,5 +14,6 @@ text/x-moc=emacs-client.desktop;
 text/x-pascal=emacs-client.desktop;
 text/x-tcl=emacs-client.desktop;
 text/x-tex=emacs-client.desktop;
+x-scheme-handler/assaultcube=assaultcube-connectprotocol.desktop;
 x-scheme-handler/mailto=emacsclient-mail.desktop;
 x-scheme-handler/org-protocol=org-protocol.desktop;
