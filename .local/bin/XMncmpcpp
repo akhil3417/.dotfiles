@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL  http://www.wtfpl.net/
+
+if [[ -n $(pidof ncmpcpp) ]]; then 
+    kill $(pidof ncmpcpp)
+else 
+    alacritty -e ncmpcpp
+fi
+exit 0

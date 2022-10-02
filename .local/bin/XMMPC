@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL  http://www.wtfpl.net/
+
+if [[ -n $(pidof dunst) ]]; then 
+    # kill $(pidof dunst)
+else 
+    mpc | head -1 | xargs -0 notify-send -i "~/.icons/nouveGnomeGray/24x24/mimetypes/gnome-mime-audio-x-midi.png" -t 0
+fi
+exit 0

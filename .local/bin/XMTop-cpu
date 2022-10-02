@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL  http://www.wtfpl.net/
+
+if [[ -n $(pidof dunst) ]]; then 
+    kill $(pidof dunst)
+else 
+    ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 10 | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/devices/computer.png" -t 0
+fi
+exit 0

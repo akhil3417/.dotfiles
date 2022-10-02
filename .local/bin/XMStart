@@ -1,0 +1,50 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL  http://www.wtfpl.net/
+
+echo   "0"  > /tmp/haron/ChU &
+echo  ""  > /tmp/haron/NT  &
+echo  ""  > /tmp/haron/TS  &
+echo  " " > /tmp/haron/WI  &
+echo > /tmp/haron/CT &
+echo > /tmp/haron/CU &
+echo > /tmp/haron/DO &
+echo > /tmp/haron/DT &
+echo > /tmp/haron/MU &
+echo > /tmp/haron/MW &
+echo > /tmp/haron/NS &
+echo > /tmp/haron/PL &
+echo > /tmp/haron/RU &
+echo > /tmp/haron/TA &
+echo > /tmp/haron/UP &
+echo > /tmp/haron/UT &
+echo > /tmp/haron/VL &
+if [[ $(pulseaudio-ctl full-status | awk '{print $2}') == "yes" ]]; then
+    echo "<fc=#f60></fc>" > /tmp/haron/VS &
+else
+    echo "<fc=#0e0></fc>" > /tmp/haron/VS &
+fi
+if [[ -z $(pgrep auryo | head -n 1) ]]; then
+    echo "<fc=#ccc></fc>" > /tmp/haron/SC &
+else
+    echo "<fc=#0e0></fc>" > /tmp/haron/SC &
+fi
+if [[ -z $(ps aux | grep gis-weather.py | grep -v grep | awk '{print $2}') ]]; then
+    gis-weather &
+fi
+if [[ -z $(ps aux | grep XMTimeNew | grep -v grep | awk '{print $2}') ]]; then
+    XMTimeNew &
+fi
+if [[ -z $(ps aux | grep XMNetTest | grep -v grep | awk '{print $2}') ]]; then
+    XMNetTest &
+fi
+if [[ -z $(ps aux | grep XMTrans | grep -v grep | awk '{print $2}') ]]; then
+    XMTrans &
+fi
+if [[ -z $(ps aux | grep XMMPD | grep -v grep | awk '{print $2}') ]]; then
+    XMMPD &
+fi
+if [[ -z $(ps aux | grep XMUpdateNew | grep -v grep | awk '{print $2}') ]]; then
+    XMUpdateNew &
+fi
+exit 0

@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL  http://www.wtfpl.net/
+
+inotifywait -m -e modify /home/shiva/.config/mpd |\
+(
+if [[ -n $(pidof mpd) ]]; then
+    ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`
+    case $ST in
+        playing  ) echo "  <fc=#84ff7f></fc>" > /tmp/haron/PS  ;;
+        paused   ) echo " <fc=#f7ff7f></fc> " > /tmp/haron/PS  ;;
+        *        ) echo "<fc=#ff8181></fc>  " > /tmp/haron/PS  ;;
+    esac
+fi
+)
