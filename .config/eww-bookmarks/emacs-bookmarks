@@ -2,7 +2,34 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("org capture todo"
+(("(org) TODO Items"
+ (front-context-string . "\n5 TODO Items\n**")
+ (rear-context-string . "links,  Up: Top\n")
+ (position . 150914)
+ (filename . "/usr/share/info/org")
+ (info-node . "TODO Items")
+ (handler . Info-bookmark-jump))
+("c"
+ (filename . "~/exercism/c/")
+ (front-context-string)
+ (rear-context-string . "022-10-05 20:58 ")
+ (position . 117))
+("ncmpcppkeybinds.txt"
+ (filename . "~/gitclones/ncmpcppkeybinds.txt")
+ (front-context-string . "\n  Keys - Moveme")
+ (rear-context-string)
+ (position . 1))
+("emacs-from-scratch"
+ (filename . "~/gitclones/emacs-from-scratch/")
+ (front-context-string . "show-notes/\n  -r")
+ (rear-context-string . "022-09-29 19:11 ")
+ (position . 293))
+("pentesting"
+ (filename . "~/gitclones/pentesting/")
+ (front-context-string . "Important-Linux-")
+ (rear-context-string . "022-10-01 19:31 ")
+ (position . 128))
+("org capture todo"
  (filename . "~/org/org-capture/todo.org")
  (front-context-string . "* Tasks\n** Learn")
  (rear-context-string)
@@ -59,9 +86,9 @@
  (position . 422))
 ("org-capture-last-stored"
  (filename . "~/org/org-capture/webnotes.org")
- (front-context-string . "** [[https://mal")
- (rear-context-string)
- (position . 4))
+ (front-context-string . "** test\n[[https:")
+ (rear-context-string . "ials 2022\n**\n* \n")
+ (position . 312688))
 ("virtsharedcommand"
  (filename . "~/kvmshared.txt")
  (front-context-string . "sudo mount -t 9p")
