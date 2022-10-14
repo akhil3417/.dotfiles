@@ -195,5 +195,4 @@ alias upgrade='sudo xbps-install -Su'
 alias findp='xbps-query -Rs'
 alias orphan='sudo xbps-remove -ov'
 alias clean='sudo xbps-remove -Ov'
-
-
+alias flatpak='flatpak --user'
