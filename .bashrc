@@ -61,6 +61,7 @@ case ${TERM} in
     ;;
 esac
 
+
 ### SHOPT
 shopt -s autocd # change to named directory
 shopt -s cdspell # autocorrects cd misspellings
