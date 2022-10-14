@@ -290,7 +290,11 @@ wal-tile() {
 
 # Create the alias.
 alias dmenu='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 export YTFZF_EXTMENU='rofi -dmenu -fuzzy -width 1000'
 export YTFZF_ENABLE_FZF_DEFUALT_OPTS=0
 export YTFZF_PLAYER='vlc '
 #(YTFZF_PLAYER)
+
