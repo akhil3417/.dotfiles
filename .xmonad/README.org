@@ -757,7 +757,7 @@ myKeys c =
   , ("M-d h",addName " do what i want with link"               $ spawn "dmenu-handler")           -- do what i want with link
   , ("M-d v",addName " name says it all"                       $ spawn "dmenu-vpn")           -- name says it all
   , ("M-d f",addName " allows access to all dmscripts"         $ spawn "dmenufm -r")           -- allows access to all dmscripts , ("M-d e",addName " allows access to all dmscripts" $ spawn "dmenukaomoji")           -- allows access to all dmscripts
-  , ("C-n",addName " rofi show window"         $ spawn "rofi -show window")           -- rofi show window
+  , ("M-n",addName " rofi show window"         $ spawn "rofi -show window")           -- rofi show window
   , ("M-p r",addName " reddio (a reddit viewer)"               $ spawn "dm-reddit")]        -- reddio (a reddit viewer)
 
 
