@@ -1,3 +1,4 @@
+# [[file:../doom/config.org::*polybar config][polybar config:1]]
 ; Docs: https://github.com/polybar/polybar
 ;==========================================================
 
@@ -405,7 +406,7 @@ format-background = ${colors.background}
 [module/wireless-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = wlp0s20f0u4
+interface = wlp0s20f0u3
 interval = 3.0
 label-connected = %essid%
 click-right = exec nm-applet
@@ -592,7 +593,7 @@ label-connected-background = #FF0000
 
 [module/networkspeedup]
 type = internal/network
-interface = wlp0s20f0u4
+interface = wlp0s20f0u3
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-underline = ${colors.underline-1}
@@ -605,7 +606,7 @@ format-connected-foreground = ${colors.draculanet}
 
 [module/networkspeeddown]
 type = internal/network
-interface = wlp0s20f0u4
+interface = wlp0s20f0u3
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-underline = ${colors.underline-1}
@@ -802,3 +803,4 @@ scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 format-foreground = #fefefe
 format-background = #668bd7
+# polybar config:1 ends here
