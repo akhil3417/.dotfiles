@@ -37,7 +37,7 @@ enable_cur=1
 #enable(1)/disable(0) notification when play video
 #the notification is send via send-notify
 #(YTFZF_NOTI)
-enable_noti=0
+enable_noti=1
 
 #the format of the video (1080p, 720p, etc)
 #uses the youtube-dl preference system
@@ -50,7 +50,7 @@ video_pref="243+bestaudio/best"
 #when -D is given it will use this external menu instead of fzf
 #(YTFZF_EXTMENU)
 external_menu="dmenu -i -l 30 -p Search:"
-external_menu="rofi -dmenu -fuzzy -width 1500"
+# external_menu="rofi -dmenu -fuzzy -width 1500"
 
 #the amount of characters that can fit on a line in the external menu
 #tweek this for better formatting if the external menu looks weird
@@ -101,7 +101,7 @@ is_ext_menu=0
 
 #enable/disable viewing of thumbnails (currently only works when using the X display manager)
 #same as -t
-show_thumbnails=0
+show_thumbnails=1
 
 #enable/disable selecting the first result automatically
 #same as -a
@@ -130,7 +130,7 @@ show_format=0
 #the side to show thumbnails
 #options are "left", "right", "top", "bottom"
 #same as --priview-side=
-preview_side="left"
+# preview_side="left"
 
 #the amount of links to get from each subscription
 #same as --subs=
@@ -208,7 +208,7 @@ history_file="$cache_dir/ytfzf_hst"
 current_file="$cache_dir/ytfzf_cur"
 
 #the folder where thumbnails are cached
-thumb_dir="$cache_dir/thumb"
+thumb_dir="$cache_dir/thumbnails"
 
 #when using the menu, use the text printed in this function to display all the info, $shorturl must be present in order to work
 #available default colors (note: they are be bolded):
