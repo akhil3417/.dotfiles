@@ -2,7 +2,24 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("(org) TODO Items"
+(("(eintr) Preface"
+ (front-context-string . "\nPreface\n*******")
+ (rear-context-string . ": Top,  Up: Top\n")
+ (position . 20627)
+ (filename . "/usr/share/info/eintr")
+ (info-node . "Preface")
+ (handler . Info-bookmark-jump))
+("gita"
+ (filename . "/media/New_Volume/Edu/beyond science/gita/")
+ (front-context-string . "Achyuta Ashtakam")
+ (rear-context-string . "017-08-05 20:57 ")
+ (position . 138))
+("flute"
+ (filename . "/media/New_Volume/Edu/flute/")
+ (front-context-string . "rakesh chaurasia")
+ (rear-context-string . "017-11-05 19:41 ")
+ (position . 6823))
+("(org) TODO Items"
  (front-context-string . "\n5 TODO Items\n**")
  (rear-context-string . "links,  Up: Top\n")
  (position . 150914)
@@ -85,10 +102,10 @@
  (rear-context-string . "022-09-23 20:03 ")
  (position . 422))
 ("org-capture-last-stored"
- (filename . "~/org/org-capture/todo.org")
- (front-context-string . "** yeah well coo")
- (rear-context-string . ")\n* Appointment\n")
- (position . 33653))
+ (filename . "~/org/org-roam2/ProgLangs/20221022215516-lisp.org")
+ (front-context-string . "* Characteristic")
+ (rear-context-string . ":\n#+title: lisp\n")
+ (position . 82))
 ("virtsharedcommand"
  (filename . "~/kvmshared.txt")
  (front-context-string . "sudo mount -t 9p")
