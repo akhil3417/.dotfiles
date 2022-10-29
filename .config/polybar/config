@@ -28,21 +28,6 @@ draculacpu = #f1fa8c
 draculagreen = #5af78e
 draculapink = #ff79c6
 
-; for pywal
-
-; [colors]
-; background = ${xrdb:color0:#222}
-; foreground = ${xrdb:color7:#222}
-; foreground-alt = ${xrdb:color7:#222}
-; primary = ${xrdb:color1:#222}
-; secondary = ${xrdb:color2:#222}
-; alert = ${xrdb:color3:#222}
-
-; [bar/bar]
-; ; ...
-; background = ${colors.background}
-; foreground = ${colors.foreground}
-
 
 [bar/panel]
 width = 100%
