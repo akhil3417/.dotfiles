@@ -101,7 +101,7 @@ is_ext_menu=0
 
 #enable/disable viewing of thumbnails (currently only works when using the X display manager)
 #same as -t
-show_thumbnails=1
+show_thumbnails=0
 
 #enable/disable selecting the first result automatically
 #same as -a
