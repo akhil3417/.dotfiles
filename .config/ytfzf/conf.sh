@@ -44,7 +44,7 @@ enable_noti=1
 #must be a number eg: 22 is 720p
 #(YTFZF_PREF)
 # video_pref=""
-video_pref="243+bestaudio/best"
+# video_pref="243+bestaudio/best"
 # 278,242,243,244,247,248,271,313
 
 #when -D is given it will use this external menu instead of fzf
