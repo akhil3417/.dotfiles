@@ -59,7 +59,7 @@ font-2 = "Material Icons:size=10;3"
 font-3 = "Fira Mono:size=6;-3"
 
 modules-left = exwm exwm-path exwm-workspace
-modules-center = spotify mpd
+modules-center = spotify
 ; modules-left = exwm-workspace
 modules-right =  wireless-network networkspeedup networkspeeddown cpu memory uptime arch-aur-updates battery temperature date pulseaudio
 
