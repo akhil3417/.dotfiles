@@ -228,11 +228,11 @@ alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
 alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
-# alias yta-opus="yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s' "
-# alias yta-batchopus="yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s'  --batch-file= "
-alias yta-opus="yt-dlp --extract-audio --audio-format opus  --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s' "
+# alias yta-opus="yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/download-archive/audios.txt --yes-playlist -o '/home/shiva/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s' "
+# alias yta-batchopus="yt-dlp -f 'ba' -x --audio-format opus --embed-thumbnail --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/download-archive/audios.txt --yes-playlist -o '/home/shiva/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s'  --batch-file= "
+alias yta-opus="yt-dlp --extract-audio --audio-format opus  --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/download-archive/audios.txt --yes-playlist -o '/home/shiva/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s' "
 # alias yta-opus="yt-dlp -f 'ba' -x --audio-format opus  --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s' "
-alias yta-batchopus="yt-dlp -f 'ba' -x --audio-format opus  --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/videos.txt --yes-playlist -o '/home/shiva/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s'  --batch-file= "
+alias yta-batchopus="yt-dlp -f 'ba' -x --audio-format opus  --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/download-archive/audios.txt --yes-playlist -o '/home/shiva/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s'  --batch-file= "
 
 # switch between shells
 # I do not recommend switching default SHELL from bash.
@@ -299,3 +299,8 @@ export YTFZF_ENABLE_FZF_DEFUALT_OPTS=0
 export YTFZF_PLAYER='vlc '
 #(YTFZF_PLAYER)
 
+
+source /home/shiva/.config/broot/launcher/bash/br
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
