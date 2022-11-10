@@ -17,16 +17,20 @@ audio() {
     done
 }
 
+# yt-dlp -f 'bv*+ba' https://www.youtube.com/watch?v=1La4QzGeaaQ -o '%(id)s.%(ext)s'
+      # -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
+      # -f 'bv*+ba' \ #best possible video and audio
 # download with yt-dlp
 download() {
     printf "%s\n" "${input}" | \
     while read line
     do
+     TS_SOCKET=/tmp/videos \
       ts \
       yt-dlp \
       --no-playlist \
-      -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
-      -o "$HOME/Downloads/%(title)s.%(ext)s" \
+      -f 'bv*[height=1080]+ba' --embed-thumbnail --download-archive ~/Music/youtube-dl/download-archive/videos.txt \
+      -o "$HOME/Downloads/yt-dl/videos/%(title)s-[%(id)s].%(ext)s" \
       "${line}" 1>/dev/null
     done
 }
@@ -36,13 +40,13 @@ downaudio() {
     printf "%s\n" "${input}" | \
     while read line
     do
+     TS_SOCKET=/tmp/videos \
       ts \
       yt-dlp \
       --no-playlist \
-      -f 'ba' -x --audio-format opus --embed-subs --embed-metadata --download-archive ~/Downloads/youtube-dl/videos.txt \
+      -f 'ba' -x --audio-format opus --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/download-archive/audios.txt \
       -o "$HOME/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s" \
-      "${line}" 1>/dev/null notify-send "Song Downloded ♫" "${name}"
-
+      "${line}" 1>/dev/null
     done
 }
 
@@ -51,11 +55,14 @@ sponsorblock_download() {
     printf "%s\n" "${input}" | \
     while read line
     do
+     TS_SOCKET=/tmp/videos \
       ts \
       yt-dlp \
       --no-playlist \
       --sponsorblock-remove all \
       -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
+     --embed-thumbnail \
+     --download-archive ~/Music/youtube-dl/rvideos.txt \
       -o "$HOME/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s" \
       "${line}" 1>/dev/null
     done
@@ -66,6 +73,7 @@ fullscreen() {
     printf "%s\n" "${input}" | \
     while read line
     do
+     TS_SOCKET=/tmp/videos \
       ts mpv --fs --screen=1 "${line}" 1>/dev/null
     done
 }
@@ -75,6 +83,7 @@ video() {
     printf "%s\n" "${input}" | \
     while read line
     do
+     TS_SOCKET=/tmp/videos \
       ts mpv --no-terminal "${line}" 1>/dev/null
 	   notify-send "Now Playing ♫" "${name}"
     done
