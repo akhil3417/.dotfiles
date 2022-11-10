@@ -1,0 +1,16 @@
+cat <<EOF> ~/.config/polybar/scripts/xbps-updates.sh
+#/bin/bash
+
+updates=$(xbps-install -un | cut -d' ' -f2 | sort | uniq -c | xargs)
+
+if [ -z "$updates" ]; then
+
+echo "Fully Updated"
+
+else
+
+echo "$updates""s"
+
+fi
+
+EOF
