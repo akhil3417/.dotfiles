@@ -20,6 +20,7 @@
 - [[#namedactions][NamedActions]]
 - [[#keybindings][Keybindings]]
 - [[#desktop-notifications][desktop notifications]]
+- [[#mouse][mouse]]
 - [[#main][Main]]
 
 * About This Config
@@ -83,7 +84,7 @@ import XMonad.Hooks.StatusBar.PP
 import XMonad.Hooks.WindowSwallowing
 import XMonad.Hooks.WorkspaceHistory
 import XMonad.Hooks.UrgencyHook
-
+import XMonad.Actions.UpdatePointer
     -- Layouts
 import XMonad.Layout.Accordion
 import XMonad.Layout.GridVariants (Grid(Grid))
@@ -913,7 +914,15 @@ instance UrgencyHook LibNotifyUrgencyHook where
 
         safeSpawn "notify-send" [show name, "workspace " ++ idx]
 #+end_src
+* mouse
+#+begin_src haskell
+-- Mouse bindings
+-- Focus rules
+-- True if your focus should follow your mouse cursor.
+myFocusFollowsMouse :: Bool
+myFocusFollowsMouse = False
 
+#+end_src
 * Main
 This is the "main" of XMonad. This where everything in our configs comes together and works.
 
