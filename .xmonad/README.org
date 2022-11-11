@@ -194,7 +194,7 @@ myStartupHook = do
   spawnOnce "pasystray &"
   spawnOnce "blueman-applet &"
   spawnOnce "xfce4-clipman &"
-  spawn "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
+  spawnOnce "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
   spawnOnce "unclutter &" -- emacs daemon for the emacsclient
   spawnOnce "xset r rate 200 40 &" -- emacs daemon for the emacsclient
 #+END_SRC
