@@ -264,21 +264,8 @@ animation-charging-4 = 
 animation-charging-foreground = ${colors.draculagreen}
 animation-charging-framerate = 750
 
+
 [module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-
-format = <label>
-format-underline = ${colors.underline-1}
-format-warn = <label-warn>
-format-warn-underline = ${self.format-underline}
-
-label = %temperature-c%
-label-warn = %temperature-c%!
-label-warn-foreground = ${colors.secondary}
-
-[module/temperature1]
 ;https://github.com/jaagr/polybar/wiki/Module:-temperature
 type = internal/temperature
 ; Thermal zone to use
@@ -292,7 +279,18 @@ thermal-zone = 0
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
 ; to find path to desired file
 ; Default reverts to thermal zone setting
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp2_input
+; nvme: Composite /sys/devices/pci0000:00/0000:00:1c.4/0000:03:00.0/nvme/nvme0/hwmon0/temp1_input
+; nvme: Sensor 1 /sys/devices/pci0000:00/0000:00:1c.4/0000:03:00.0/nvme/nvme0/hwmon0/temp2_input
+; nvme: Sensor 2 /sys/devices/pci0000:00/0000:00:1c.4/0000:03:00.0/nvme/nvme0/hwmon0/temp3_input
+; acpitz: temp1 /sys/devices/virtual/thermal/thermal_zone0/hwmon1/temp1_input
+; coretemp: Package id 0 /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+; coretemp: Core 0 /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp2_input
+; coretemp: Core 1 /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp3_input
+; coretemp: Core 2 /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp4_input
+; coretemp: Core 3 /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp5_input
+; coretemp: Core 4 /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp6_input
+; coretemp: Core 5 /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp7_input
 
 warn-temperature = 70
 format = <ramp> <label>
