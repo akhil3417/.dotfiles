@@ -230,6 +230,7 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-foreground = #a3c725
 animation-charging-framerate = 750
+
 [module/battery]
 type = internal/battery
 battery = BAT1
@@ -334,6 +335,7 @@ bar-empty-font = 2
 bar-empty-foreground = #fff
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+
 [module/wireless-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
@@ -372,6 +374,7 @@ ramp-signal-5 = ▆
 ramp-signal-6 = ▇
 ramp-signal-7 = █
 ramp-signal-foreground = #7e52c6
+
 [module/wired-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
@@ -401,6 +404,7 @@ format-connected-prefix-background = ${colors.background}
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${colors.alert}
 label-disconnected-foreground = ${colors.foreground}
+
 [module/weather]
 type = custom/script
 interval = 10
@@ -412,6 +416,7 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 exec = python -u ~/.config/polybar/scripts/weather.py
 tail = true
+
 [module/volume]
 ;https://github.com/jaagr/polybar/wiki/Module:-volume
 type = internal/volume
@@ -523,6 +528,7 @@ format-connected-prefix-foreground = ${colors.underline-1}
 ; format-connected-foreground = #fefefe
 format-connected-foreground = ${colors.draculanet}
 ; format-connected-background = #8d62a9
+; ip link show =interface
 
 [module/networkspeeddown]
 type = internal/network
