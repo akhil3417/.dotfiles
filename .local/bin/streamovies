@@ -1,0 +1,23 @@
+#!/bin/bash
+domain="https://www.2embed.to"
+[[ "$*" ]] && q="$*" || read -p "Enter Movie or Show Title: " q
+[[ "$q" ]] || exit
+
+results="$(wget -qO- "$domain/library/search?keyword=$q"|grep "d-block")"
+
+function list(){
+  while read l
+  do
+    url="${domain}$(echo $l|cut -d\" -f2)"
+    title="$(echo $l|cut -d\> -f2)"
+    echo -e "$title|$url"
+  done < <(echo $results|tr "<" "\n"|grep "bop-name")
+}
+
+selection="$(list|fzf)"
+[[ $selection ]] || exit
+
+url="$(echo $selection|cut -d\| -f2)"
+echo "$url"
+echo ": $(date +%s):0;open \"$url\"" > $HOME/.streamovieshistory
+firefox -p KodachiBrowserLight "$url"
