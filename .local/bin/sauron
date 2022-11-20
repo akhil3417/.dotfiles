@@ -25,7 +25,7 @@ download() {
     printf "%s\n" "${input}" | \
     while read line
     do
-     TS_SOCKET=/tmp/videos \
+     TS_SOCKET=/tmp/download \
       ts \
       yt-dlp \
       --no-playlist \
@@ -40,7 +40,7 @@ downaudio() {
     printf "%s\n" "${input}" | \
     while read line
     do
-     TS_SOCKET=/tmp/videos \
+     TS_SOCKET=/tmp/download \
       ts \
       yt-dlp \
       --no-playlist \
@@ -55,7 +55,7 @@ sponsorblock_download() {
     printf "%s\n" "${input}" | \
     while read line
     do
-     TS_SOCKET=/tmp/videos \
+     TS_SOCKET=/tmp/download \
       ts \
       yt-dlp \
       --no-playlist \
