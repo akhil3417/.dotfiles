@@ -95,7 +95,7 @@ video() {
 
 # fzf prompt variables spaces to line up menu options
 audio_ts='audio        - mpd play audio'
-download_ts='download     - yt-dlp download links'
+download_ts='download     - yt-dlp download links video max quality'
 downaudio_ts='downaudio     - yt-dlp download audio'
 sponsorblock_ts='sponsorblock - sponsorblock yt-dlp'
 fullscreen_ts='fullscreen   - mpv play fullscreen on second display'
