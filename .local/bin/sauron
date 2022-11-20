@@ -27,14 +27,15 @@ download() {
     do
      TS_SOCKET=/tmp/download \
       ts \
-      yt-dlp \
+      yt-dlp -ciw \
       --no-playlist \
       -f 'bv*[height=1080]+ba' --embed-thumbnail --download-archive ~/Music/youtube-dl/download-archive/videos.txt \
       -o "$HOME/Downloads/yt-dl/videos/%(title)s-[%(id)s].%(ext)s" \
+      --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
       "${line}" 1>/dev/null
     done
 }
-#download audio with yt-dlp
+# download audio with yt-dlp
 
 downaudio() {
     printf "%s\n" "${input}" | \
@@ -42,13 +43,15 @@ downaudio() {
     do
      TS_SOCKET=/tmp/download \
       ts \
-      yt-dlp \
+      yt-dlp -ciw \
       --no-playlist \
       -f 'ba' -x --audio-format opus --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/download-archive/audios.txt \
       -o "$HOME/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s" \
+      --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
       "${line}" 1>/dev/null
     done
 }
+
 
 # download with yt-dlp with sponsorblock to remove sponsor
 sponsorblock_download() {
@@ -57,13 +60,14 @@ sponsorblock_download() {
     do
      TS_SOCKET=/tmp/download \
       ts \
-      yt-dlp \
+      yt-dlp -ciw \
       --no-playlist \
       --sponsorblock-remove all \
       -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
      --embed-thumbnail \
      --download-archive ~/Music/youtube-dl/rvideos.txt \
       -o "$HOME/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s" \
+      --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
       "${line}" 1>/dev/null
     done
 }
