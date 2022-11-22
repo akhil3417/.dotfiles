@@ -90,15 +90,19 @@ alt + super + z
 # increase volume = function + .
 
 # Play - ducky keyboard pause, function + o
-Pause
+# Pause
+ctrl + shift + space
     playerctl play-pause
 
 # Previous - ducky keyboard prior, function + p
-Prior
+# Prior
+
+ctrl + shift + c
     playerctl previous
 
 # Next - ducky keyboard next, function + ;
-Next
+# Next
+ctrl + shift + n
     playerctl next
 
 
@@ -106,4 +110,5 @@ Next
 #==========================
 
 ctrl + super + x
- TS_SOCKET=/tmp/videos ts mpv --fs --screen=0 $(xclip -o) 1>/dev/null
+ TS_SOCKET=/tmp/videos ts mpv $(xclip -o) 1>/dev/null
+ # TS_SOCKET=/tmp/videos ts mpv --fs --screen=0 $(xclip -o) 1>/dev/null
