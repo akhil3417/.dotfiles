@@ -471,6 +471,16 @@ config.bind('y', 'prompt-accept yes', mode='yesno')
 config.bind('cit', 'spawn --userscript org-protocol capture Pit')
 config.bind('cl', 'spawn --userscript org-protocol store-link')
 
+config.bind(',M', 'spawn emacsclient -n -e "(mpv-enqueue-maybe-archive \\"{url}\\")"')
+config.bind(',m', 'hint links spawn emacsclient -n -e "(mpv-enqueue-maybe-archive \\"{hint-url}\\")"')
+config.bind(',n', 'hint --rapid links spawn emacsclient -n -e "(mpv-enqueue-maybe-archive \\"{hint-url}\\")"')
+
+config.bind(',P', 'spawn emacsclient -n -e "(mpv-build-playlist \\"{url}\\")"')
+config.bind(',p', 'hint links spawn emacsclient -n -e "(mpv-build-playlist \\"{hint-url}\\")"')
+config.bind(',l', 'hint --rapid links spawn emacsclient -n -e "(mpv-build-playlist \\"{hint-url}\\")"')
+
+config.bind(',y', 'hint links spawn emacsclient -n -e "(ytdl-downloader \\"{hint-url}\\")"')
+config.bind(',Y', 'spawn emacsclient -n -e "(ytdl-downloader \\"{url}\\")"')
 ## Backend to use to display websites. qutebrowser supports two different
 ## web rendering engines / backends, QtWebKit and QtWebEngine. QtWebKit
 ## was discontinued by the Qt project with Qt 5.6, but picked up as a
