@@ -20,6 +20,7 @@ abbr    qb "qutebrowser"
 abbr    qnb "qutebrowser --temp-basedir --config ~/.config/qutebrowser/config.py --set 'colors.webpage.darkmode.enabled' 'False' "
 abbr    ts-shorttask "TS_SOCKET=/tmp/shorttask ts"
 abbr    ts-videos "TS_SOCKET=/tmp/videos ts"
+abbr    ts-download "TS_SOCKET=/tmp/download ts"
 abbr    ts-mediumtask "TS_SOCKET=/tmp/mediumtask ts"
 alias	cp "cp -i" 
 alias	df 'df -h' 
