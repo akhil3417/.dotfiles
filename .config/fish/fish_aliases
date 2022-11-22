@@ -22,13 +22,14 @@ abbr    ts-shorttask "TS_SOCKET=/tmp/shorttask ts"
 abbr    ts-videos "TS_SOCKET=/tmp/videos ts"
 abbr    ts-download "TS_SOCKET=/tmp/download ts"
 abbr    ts-mediumtask "TS_SOCKET=/tmp/mediumtask ts"
+abbr	rsyncp  "rsync -azvPh"
 alias	cp "cp -i" 
 alias	df 'df -h' 
 alias	ffmpeg "ffmpeg -hide_banner"
 alias   rm "rm -i"
 alias	free 'free -m' 
 alias	mkdir "mkdir -pv" 
-alias	more less 
+alias	more less
 alias	mpv "mpv --input-ipc-server=/tmp/mpvsoc"(date +%s)
 alias	ref "shortcuts >/dev/null; source ~/.config/fish/fish_shortcuts" 
 alias	x "xclip -selection clipboard" 
