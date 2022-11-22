@@ -5,7 +5,7 @@ config: ConfigAPI = config  # noqa: F821 pylint: disable=E0602,C0103
 c: ConfigContainer = c  # noqa: F821 pylint: disable=E0602,C0103
 
 # Open every tab as a new window, Vimb style
-# c.tabs.tabs_are_windows = True
+c.tabs.tabs_are_windows = True
 
 ## Open new tabs (middleclick/ctrl+click) in the background.
 ## Type: Bool
@@ -153,9 +153,6 @@ c.tabs.show = 'multiple'
 ## Type: Int
 c.tabs.show_switching_delay = 800
 
-## Open a new window for every tab.
-## Type: Bool
-c.tabs.tabs_are_windows = False
 
 ## Alignment of the text inside of tabs.
 ## Type: TextAlignment
