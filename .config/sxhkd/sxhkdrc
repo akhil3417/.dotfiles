@@ -1,141 +1,109 @@
-#
-# wm independent hotkeys
-#
 
-# printscreen
-@Print
-	screenshot
+# sxhkdrc
 
-shift + @Print
-	screenshot select
+# sxhkd reload config
+ctrl + super + Escape
+    pkill -USR1 -x sxhkd
 
-control + @Print
-	screenshot window
+# open rofi
+ctrl + super + p
+    rofi -show combi -modi combi
 
-# brightness keys
-XF86MonBrightnessUp
-	changebrightness up
-
-XF86MonBrightnessDown
-	changebrightness down
-
-# media keys
-XF86Audio{Prev,Next}
-	playerctl {previous,next}
-
-XF86AudioPlay
-	playerctl play-pause
-
-# volume keys
-XF86AudioRaiseVolume
-	changevolume up
-
-XF86AudioLowerVolume
-	changevolume down
-
-XF86AudioMute
-	changevolume mute
-
-# lockscreen
-super + x
-	systemctl suspend
-
-super + shift + x
-	powermenu
-
-# program launcher
-super + @space
-	rofi -terminal alacritty -show drun
-
-# make sxhkd reload its configuration files:
-super + Escape
-	~/.config/polybar/launch.sh
-	pkill -USR1 -x sxhkd
-
-#
-# bspwm hotkeys
-#
-
-# quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
-
-# close and kill
-super + {_,shift + }q
-	bspc node -{c,k}
-
-#
-#
-# state/flags
-#
-
-super + f
-	bspc node focused.tiled -t fullscreen || bspc node focused.fullscreen -t tiled
-
-super + p
-	bspc node focused.floating -t tiled
-
-super + t
-	bspc node focused.tiled -t floating
-
-#
-# focus/swap
-#
-
-# focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
-
-# focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
-
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
-
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
-
-#
-# move/resize
-#
-
-# expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-# contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-# move a floating window
-super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-# notifications
+# close dunst notifications
 ctrl + space
-  dunstctl close
+    dunstctl close-all
 
-ctrl + shift + space
-  dunstctl close-all
 
-ctrl + shift + period
-  dunstctl context
+# multimedia keys
+#==========================
 
-ctrl + grave
-  dunstctl history-pop
+# using xfce4-volumed for volume
 
-ctrl + alt + x
-	xkill
+# Increase volume
+# XF86AudioRaiseVolume
+    amixer set Master 10%+ 1>/dev/null
 
-super + Return
-	$TERMINAL
+# Decrease volume
+# XF86AudioLowerVolume
+    amixer set Master 10%- 1>/dev/null
 
-# browser
-super + {w, g, o, v, s}
-	{$BROWSER, gimp, obs, olive-editor, spotify}
+# Mute Audio
+# XF86AudioMute
+    amixer -D pulse set Master 1+ toggle 1>/dev/null
 
-super + {e, m, c, n}
-	$TERMINAL -e {lf-ueberzug, neomutt, calcurse, ncmpcpp}
+# Play
+XF86AudioPlay
+    playerctl play-pause
+
+# Next
+XF86AudioNext
+    playerctl next
+
+# Previous
+XF86AudioPrev
+    playerctl previous
+
+# Stop
+XF86AudioStop
+    playerctl stop
+
+
+# standard keys
+#==========================
+
+# h,j,k,l keys
+alt + super + {h,j,k,l}
+  playerctl position {0.5-,10-,10+,0.5+}
+
+# play/pause toggle
+alt + super + space
+    playerctl play-pause && now-playing
+
+# Next
+alt + super + ctrl + l
+    playerctl next && sleep 1 && now-playing
+
+# Previous
+alt + super + ctrl + h
+    playerctl previous && sleep 1 && now-playing
+
+# stop/quit
+alt + super + n
+    playerctl stop
+
+# go to start of video
+alt + super + 0
+  playerctl position 0
+
+
+# now playing
+#==========================
+
+alt + super + z
+  now-playing
+
+# ducky one 2 mini keyboard
+#==========================
+
+# mute = function + m
+# decrease volume = function + ,
+# increase volume = function + .
+
+# Play - ducky keyboard pause, function + o
+Pause
+    playerctl play-pause
+
+# Previous - ducky keyboard prior, function + p
+Prior
+    playerctl previous
+
+# Next - ducky keyboard next, function + ;
+Next
+    playerctl next
+
+
+# tsp mpv play clipboard
+#==========================
+
+ctrl + super + x
+ TS_SOCKET=/tmp/videos ts mpv --fs --screen=0 $(xclip -o) 1>/dev/null
