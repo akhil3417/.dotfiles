@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# org mode capture
+emacsclient -c -F "((name . \"emacs-capture\"))" "$@"
