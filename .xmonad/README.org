@@ -130,7 +130,7 @@ import XMonad.Util.SpawnOnce
       -- SolarizedDark
       -- SolarizedLight
       -- TomorrowNight
-import Colors.DoomOne
+import Colors.MonokaiPro
 
 #+END_SRC
 
@@ -977,3 +977,5 @@ main = do
         }
     }
 #+END_SRC
+
+#+RESULTS:
