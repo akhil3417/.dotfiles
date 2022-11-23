@@ -1,5 +1,6 @@
 #!/bin/bash
 domain="https://www.2embed.to"
+# other alternatives  https://github.com/yukithang13/MovieYuu  https://github.com/axnguyenit/ax-movies
 [[ "$*" ]] && q="$*" || read -p "Enter Movie or Show Title: " q
 [[ "$q" ]] || exit
 
@@ -18,6 +19,6 @@ selection="$(list|fzf)"
 [[ $selection ]] || exit
 
 url="$(echo $selection|cut -d\| -f2)"
-echo "$url"
-echo ": $(date +%s):0;open \"$url\"" > $HOME/.streamovieshistory
+echo "$url" "$q"
+echo ": $(date +%s):0;open \"$url $q\"" >> $HOME/.streamovieshistory
 firefox -p KodachiBrowserLight "$url"
