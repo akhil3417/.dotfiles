@@ -106,9 +106,17 @@ ctrl + shift + n
     playerctl next
 
 
+ # TS_SOCKET=/tmp/videos ts mpv $(xclip -o) 1>/dev/null
+ # TS_SOCKET=/tmp/videos ts mpv --fs --screen=0 $(xclip -o) 1>/dev/null
 # tsp mpv play clipboard
 #==========================
 
+# ctrl + super + x
+#  TS_SOCKET=/tmp/videos ts mpv "$(xsel -ob)"
+#   # ts mpv $(xsel -ob) 1>/dev/null
+#   # TS_SOCKET=/tmp/videos ts mpv $(xsel -ob) 1>/dev/null
+#
 ctrl + super + x
- TS_SOCKET=/tmp/videos ts mpv $(xclip -o) 1>/dev/null
- # TS_SOCKET=/tmp/videos ts mpv --fs --screen=0 $(xclip -o) 1>/dev/null
+ TS_SOCKET=/tmp/videos ts mpv "$(xsel -ob)" 1>/dev/null
+  # ts mpv $(xsel -ob) 1>/dev/null
+  # TS_SOCKET=/tmp/videos ts mpv $(xsel -ob) 1>/dev/null
