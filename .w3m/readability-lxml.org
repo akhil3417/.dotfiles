@@ -33,4 +33,12 @@ add the following code to your ~/.w3m/keymap file
 #+begin_src sh
 keymap ,-. COMMAND "READ_SHELL 'python3 -m readability.readability -u $W3M_URL 2> /dev/null' ; VIEW ; DELETE_PREVBUF"
 #+end_src
-
+** surfraw
+- open the linux in your def browser
+  #+begin_example
+   sr ddg linux
+  #+end_example
+- print the link
+  #+begin_example
+   sr ddg linux  -p
+  #+end_example
