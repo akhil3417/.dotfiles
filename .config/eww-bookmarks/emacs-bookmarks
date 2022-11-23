@@ -102,10 +102,10 @@
  (rear-context-string . "022-09-23 20:03 ")
  (position . 422))
 ("org-capture-last-stored"
- (filename . "~/org/org-roam2/ProgLangs/20221022215516-lisp.org")
- (front-context-string . "* Characteristic")
- (rear-context-string . ":\n#+title: lisp\n")
- (position . 82))
+ (filename . "~/org/org-roam2/Notes/20221122152034--edit-videos-with-ffmpeg-mpv-emacs.org")
+ (front-context-string)
+ (rear-context-string . "gs: :commands  \n")
+ (position . 174))
 ("virtsharedcommand"
  (filename . "~/kvmshared.txt")
  (front-context-string . "sudo mount -t 9p")
