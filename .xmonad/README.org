@@ -185,8 +185,9 @@ myStartupHook = do
 
 #+BEGIN_SRC haskell
   -- spawnOnce "lxsession"
-  -- spawnOnce "picom --config ~/.config/picom/picom.conf"
-  spawnOnce "picom --experimental-backends &"
+  -- spawnOnce "picom --experimental-backends &"
+  spawnOnce "picom &"
+  -- spawnOnce "-b --unredir-if-possible --no-fading-openclose"
   spawnOnce "nm-applet &"
   spawnOnce "dunst &"
   spawnOnce "wal -R &"
