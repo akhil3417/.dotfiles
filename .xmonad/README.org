@@ -190,6 +190,8 @@ myStartupHook = do
   -- spawnOnce "-b --unredir-if-possible --no-fading-openclose"
   spawnOnce "nm-applet &"
   spawnOnce "dunst &"
+  spawnOnce "sxhkd &"
+  spawnOnce "clipmenud &"
   spawnOnce "wal -R &"
   spawnOnce "volumeicon &"
   spawnOnce "pasystray &"
