@@ -28,7 +28,7 @@
 	tab q    w    e    r    t    y    u    i    o    p    [    ]    \
 	caps a    s    d    f    g    h    j    k    l    ;    '    ret
 	lsft z    x    c    v    b    n    m    ,    .    /    rsft
-	ralt met    lctl     @spc               @esc  met menu rctl lft  up   down rght
+	lctl met    lalt     @spc               @esc  met menu rctl lft  up   down rght
 )
 (deflayer num
 	_
