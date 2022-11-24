@@ -19,7 +19,7 @@ fi
 
 # mpd and taskspooler
 audio() {
-      tsp pinch -i "${url}" 1>/dev/null 
+      ts pinch -i "${url}" 1>/dev/null
 }
 
 copy_link() {
@@ -57,7 +57,7 @@ fullscreen() {
 # mpv and taskspooler
 video() {
      TS_SOCKET=/tmp/videos \
-      ts mpv --no-terminal "${line}" 1>/dev/null
+      ts mpv --no-terminal "${url}" 1>/dev/null
 	   notify-send "Now Playing ♫" "${name}"
 }
 
