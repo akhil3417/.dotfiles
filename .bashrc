@@ -62,6 +62,9 @@ case ${TERM} in
 esac
 
 
+#### autojump setup
+. /usr/share/autojump/autojump.bash
+
 ### SHOPT
 shopt -s autocd # change to named directory
 shopt -s cdspell # autocorrects cd misspellings
