@@ -22,8 +22,13 @@ abbr    ts-shorttask "TS_SOCKET=/tmp/shorttask ts"
 abbr    ts-videos "TS_SOCKET=/tmp/videos ts"
 abbr    ts-download "TS_SOCKET=/tmp/download ts"
 abbr    ts-mediumtask "TS_SOCKET=/tmp/mediumtask ts"
-abbr	rsyncp  "rsync -azvPh"
-alias	cp "cp -i" 
+abbr	rsyncp  "rsync -azvPh" # copy files with some useful flags
+abbr	chmodref  "chmod --verbose --reference=" # change file permissions of a file to be similar of another
+abbr	protc  "sudo protonvpn c"
+abbr	protd  "sudo protonvpn d"
+abbr	nmclia  "nmcli connection show --active"
+abbr	nmclid  "nmcli connection delete"
+alias	cp "cp -i"
 alias	df 'df -h' 
 alias	ffmpeg "ffmpeg -hide_banner"
 alias   rm "rm -i"
@@ -82,19 +87,19 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 # pacman and yay
-alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
-alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
-alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
-alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
-alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
-alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
+# alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
+# alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
+# alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
+# alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
+# alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
+# alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
+# alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
 
 # get fastest mirrors
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+# alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+# alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+# alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+# alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -104,7 +109,8 @@ alias fgrep='fgrep --color=auto'
 # confirm before overwriting something
 alias cp="cp -i"
 alias mv='mv -i'
-alias rm='rm -i'
+# alias rm='rm -i'
+alias rm='trash -v'
 
 # adding flags
 alias df='df -h'                          # human-readable sizes
@@ -198,3 +204,12 @@ alias findp='xbps-query -Rs'
 alias orphan='sudo xbps-remove -ov'
 alias clean='sudo xbps-remove -Ov'
 alias flatpak='flatpak --user'
+
+alias tsp="ts"
+
+##transmission
+
+alias tr='transmission-remote'
+alias tra='transmission-remote -a'
+alias trl='transmission-remote -l'
+# transmission-remote -t ID -r to remove torrent
