@@ -120,3 +120,26 @@ ctrl + super + x
  TS_SOCKET=/tmp/videos ts mpv "$(xsel -ob)" 1>/dev/null
   # ts mpv $(xsel -ob) 1>/dev/null
   # TS_SOCKET=/tmp/videos ts mpv $(xsel -ob) 1>/dev/null
+
+ctrl + super + X
+ peerflix --mpv -a "$(xsel -ob)" 1>/dev/null
+
+ctrl + super + d
+     TS_SOCKET=/tmp/download \
+      ts \
+      yt-dlp -ciw \
+      --no-playlist \
+      -f 'bv*[height=1080]+ba' --embed-thumbnail --download-archive ~/Music/youtube-dl/download-archive/videos.txt \
+      -o "$HOME/Downloads/yt-dl/videos/%(title)s-[%(id)s].%(ext)s" \
+      --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
+      "$(xsel -ob)" 1>/dev/null
+
+ctrl + super + D
+     TS_SOCKET=/tmp/download \
+      ts \
+      yt-dlp -ciw \
+      --no-playlist \
+      -f 'ba' -x --audio-format opus --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/download-archive/audios.txt \
+      -o "$HOME/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s" \
+      --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
+      "$(xsel -ob)" 1>/dev/null
