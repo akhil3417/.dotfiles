@@ -52,7 +52,6 @@ downaudio() {
     done
 }
 
-
 # download with yt-dlp with sponsorblock to remove sponsor
 sponsorblock_download() {
     printf "%s\n" "${input}" | \
