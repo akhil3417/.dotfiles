@@ -32,7 +32,7 @@ selectquality(){
 main(){
 	selecturl
 	selectquality
-	providearguments
+	# providearguments
 	quality=`echo $quality | sed 's/ /+/'`
 	if [[ $arguments = "no" ]]
 		then
