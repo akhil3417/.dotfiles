@@ -119,10 +119,11 @@
     icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 0
+    # max_icon_size = 0
+    max_icon_size = 300
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/Adwaita/96x96/status:/usr/share/icons/Adwaita/96x96/emblems
+    icon_path = /home/shiva/.local/share/icons/svg/status:/usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/16x16/legacy/:/usr/share/icons/HighContrast/scalable/status/
 
     ### History ###
 
