@@ -17,7 +17,7 @@ export HISTCONTROL=ignorespace
 ### Uncomment only one of these!
 
 ### "bat" as manpager
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 ### "vim" as manpager
 # export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
@@ -194,6 +194,7 @@ alias psa="ps auxf"
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias psmem='ps auxf | sort -nr -k 4'
 alias pscpu='ps auxf | sort -nr -k 3'
+alias tsp='ts'
 
 # Merge Xresources
 alias merge='xrdb -merge ~/.Xresources'
