@@ -241,6 +241,7 @@ fn_tts_svoxpico_page.cgi#@TTS_SVOXPICO_PAGE&#-- SVOX Pico text to speech whole p
 fn_tts_svoxpico_word.cgi#@TTS_SVOXPICO_WORD&#-- SVOX Pico text to speech single word
 fn_tts_kill.cgi#@TTS_KILL&*#-- Killall text to speech playback in progress
 fn_diana_add.cgi#@DIANA_ADD&*#-- Add to aria2 daemon for downloading
+fn_peerflixmpv.cgi#@PEERFLIXMPV_PLAY&*#-- play torrent using peerflix and mpv
 fn_diana_addpaused.cgi#@DIANA_ADDPAUSED&*#-- Add to aria2 daemon for downloading (paused state)
 fn_aria2p.cgi#@TUI_ARIA2P&#-- Aria2p TUI aria2 daemon download manager (python3)
 fn_aria2t.cgi#@TUI_ARIA2T&#-- Aria2t TUI aria2 daemon download manager (c/c++)

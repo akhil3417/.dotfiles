@@ -1,7 +1,7 @@
 tabstop 8
 indent_incr 4
-pixel_per_char 12
-pixel_per_line 27
+pixel_per_char 10
+pixel_per_line 22
 frame 1
 target_self 0
 open_tab_blank 0
@@ -13,7 +13,7 @@ display_lineinfo 0
 ext_dirlist 1
 dirlist_cmd file:///$LIB/dirlist.cgi
 use_dictcommand 1
-dictcommand file:///$LIB/w3mdict.cgi
+dictcommand file:///cgi-bin/omnibar_xdcceu.cgi
 multicol 0
 alt_entity 0
 graphic_char 0
@@ -30,7 +30,7 @@ max_load_image 4
 ext_image_viewer 1
 image_scale 100
 inline_img_protocol 4
-imgdisplay ueberzug
+# imgdisplay ueberzug
 image_map_list 0
 fold_line 0
 show_lnum 0
@@ -73,7 +73,7 @@ preserve_timestamp 1
 keymap_file keymap
 document_root 
 personal_document_root 
-cgi_bin ~/.w3m/cgi-bin:/usr/lib/w3m/cgi-bin
+cgi_bin ~/.w3m/cgi-bin:~/.w3m/cgi-bin/omnibar:usr/lib/w3m/cgi-bin
 index_file 
 mime_types ~/.mime.types, /usr/local/etc/mime.types
 mailcap ~/.w3m/mailcap, /usr/local/etc/w3m/mailcap
