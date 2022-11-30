@@ -14,8 +14,13 @@ export HISTCONTROL=ignorespace
 ### Uncomment only one of these!
 
 ### "bat" as manpager
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
+### "vim" as manpager
+# export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
+
+### "nvim" as manpager
+# export MANPAGER="nvim -c 'set ft=man' -"
 
 if test -x (command -v fzf) && test -e "$HOME/.config/fzf/key-bindings.fish"
    source "$HOME/.config/fzf/key-bindings.fish"
@@ -281,7 +286,22 @@ function org-search -d "send a search string to org-mode"
     \"))")
     printf $output
 end
+###autojump
+###
+# function j
+#     set new_path (autojump $argv)
 
+#     if test -d "$new_path"
+#         echo $new_path
+#         cd "$new_path"
+#     else
+#         echo "autojump: directory '$argv' not found"
+#         echo "Try \`autojump --help\` for more information."
+#         false
+#     end
+# end
+
+. /usr/share/autojump/autojump.fish
 ### END OF FUNCTIONS ###
 
 
