@@ -2,7 +2,27 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("(eintr) Preface"
+(("/usr/share/doc"
+ (filename . "/usr/share/doc/")
+ (front-context-string)
+ (rear-context-string . "1:14 gperf.html\n")
+ (position . 6662))
+("w3m keymap"
+ (filename . "~/.dotfiles/.w3m/keymap")
+ (front-context-string)
+ (rear-context-string . "and.cgi ; BACK\"\n")
+ (position . 666))
+("w3m config"
+ (filename . "~/.dotfiles/.w3m/")
+ (front-context-string . "cgi-bin/\n  drwxr")
+ (rear-context-string . "022-11-23 13:54 ")
+ (position . 124))
+("gotbletu"
+ (filename . "~/gitclones/shownotes/")
+ (front-context-string . "bleachbit_cleane")
+ (rear-context-string . "022-09-21 21:25 ")
+ (position . 130))
+("(eintr) Preface"
  (front-context-string . "\nPreface\n*******")
  (rear-context-string . ": Top,  Up: Top\n")
  (position . 20627)
@@ -102,10 +122,10 @@
  (rear-context-string . "022-09-23 20:03 ")
  (position . 422))
 ("org-capture-last-stored"
- (filename . "~/org/org-roam2/Notes/20221122152034--edit-videos-with-ffmpeg-mpv-emacs.org")
+ (filename . "~/org/org-roam2/Articles/20221129233107--How to ssh to IPv6 address on Linux.org")
  (front-context-string)
- (rear-context-string . "gs: :commands  \n")
- (position . 174))
+ (rear-context-string . "iletags: :ssh  \n")
+ (position . 171))
 ("virtsharedcommand"
  (filename . "~/kvmshared.txt")
  (front-context-string . "sudo mount -t 9p")
