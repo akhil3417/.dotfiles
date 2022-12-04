@@ -130,7 +130,7 @@ import XMonad.Util.SpawnOnce
       -- SolarizedDark
       -- SolarizedLight
       -- TomorrowNight
-import Colors.MonokaiPro
+import Colors.Dracula
 
 #+END_SRC
 
@@ -189,6 +189,7 @@ myStartupHook = do
   spawnOnce "picom &"
   -- spawnOnce "-b --unredir-if-possible --no-fading-openclose"
   spawnOnce "nm-applet &"
+  spawnOnce "dad start &"
   spawnOnce "dunst &"
   spawnOnce "sxhkd &"
   spawnOnce "clipmenud &"
