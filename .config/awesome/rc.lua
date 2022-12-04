@@ -2217,6 +2217,13 @@ awful.key( {modkey}, "p", function()
     end,
     {description = "followed by KEY", group = "Dmscripts"}
     ),
+
+--dmenu-win for navigation
+
+awful.key({ modkey }, "n", function ()
+        awful.util.spawn("dmenu-win")
+end),
+
 -- Dmscripts (Super + y followed by KEY) for youtube
 awful.key( {modkey}, "y", function()
   local grabber
@@ -2475,7 +2482,7 @@ awful.key({modkey, "Shift"}, "r", customization.func.tag_rename),
 
 uniarg:key_repeat({modkey,"Shift"}, "p", customization.func.tag_view_prev),
 
-uniarg:key_repeat({modkey,}, "n", customization.func.tag_view_next),
+uniarg:key_repeat({modkey,}, "N", customization.func.tag_view_next),
 
 awful.key({modkey,}, "z", customization.func.tag_last),
 
