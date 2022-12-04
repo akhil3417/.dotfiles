@@ -182,7 +182,7 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 # termbin
-alias tb="nc termbin.com 9999"
+alias tb="nc termbin.com 9999" #generate link of output
 
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
