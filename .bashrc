@@ -4,7 +4,6 @@
 #   / _ \ | |/ / '_ \| | |   http://www.youtube.com/c/italented
 #  / ___ \|   <| | | | | |   http://www.gitlab.com/akhil3417/
 # /_/   \_\_|\_\_| |_|_|_|
-# My bash config. Not much to see here; just some pretty standard stuff.
 
 ### EXPORT
 export TERM="xterm-256color"                      # getting proper colors
@@ -16,7 +15,7 @@ export HISTCONTROL=ignorespace
 ### SET MANPAGER
 ### Uncomment only one of these!
 
-### "bat" as manpager
+### "bat" as manpager --fucks up man-pages in void linux
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 ### "vim" as manpager
