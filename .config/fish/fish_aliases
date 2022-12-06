@@ -154,8 +154,9 @@ alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 # youtube-dl
 #abbr	yta "youtube-dl -w -c -r 1M -o '%(playlist_index)s-%(title)s.%(ext)s' --add-metadata  -f 'bestaudio[ext=m4a]'"
 #abbr	yt  "youtube-dl -w -c -o '%(title)s.%(ext)s' -f 'bestvideo[height<=?1080]+bestaudio/best' --add-metadata"
-abbr    yt 'ytfzf -l'
 abbr	yts 'ytfzf -l -u sauron'
+abbr	ytd 'ytfzf -l -d -f '
+abbr	ytq 'ytfzf -l -f '
 # alias   ytd='yt -D' #or you can also make an bin file
 alias   ytd='ytfzf -ldf ' #or you can also make an bin file
 alias yta-aac="youtube-dl --extract-audio --audio-format aac "
