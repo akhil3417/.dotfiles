@@ -28,6 +28,9 @@ abbr	protc  "sudo protonvpn c"
 abbr	protd  "sudo protonvpn d"
 abbr	nmclia  "nmcli connection show --active"
 abbr	nmclid  "nmcli connection delete"
+abbr   tempomail "tempomail -path ~/tmpexpdir/tempmail"
+abbr   ffmpegextractlink "yt-dlp --youtube-skip-dash-manifest -g"
+
 alias	cp "cp -i"
 alias	df 'df -h' 
 alias	ffmpeg "ffmpeg -hide_banner"
@@ -38,6 +41,7 @@ alias	more less
 alias	mpv "mpv --input-ipc-server=/tmp/mpvsoc"(date +%s)
 alias	ref "shortcuts >/dev/null; source ~/.config/fish/fish_shortcuts" 
 alias	x "xclip -selection clipboard" 
+
 # alias   wp "find ~/Pictures/wallpapers/ -name .git -prune -o -type f | shuf | sxiv -o -"
 
 command -v nvim >/dev/null && alias vim="nvim" && alias vimdiff="nvim -d" # Use neovim for vim if present.
@@ -205,6 +209,8 @@ alias findp='xbps-query -Rs'
 alias orphan='sudo xbps-remove -ov'
 alias clean='sudo xbps-remove -Ov'
 alias flatpak='flatpak --user'
+# abbr   findq 'xbps-query -Rs '*' | fzf -i --exact --prompt="Select package(s) to install: " --multi | awk '{print $2}' | xargs -ro sudo xbps-install -S'
+
 
 alias tsp="ts"
 
