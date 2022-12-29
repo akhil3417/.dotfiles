@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 #
 # Use =youtube-dl --youtube-skip-dash-manifest -g "URL"= to get the video and audio streams.
+# TODO: read url and length from user
 start_time="14:30"
 duration="7:00"
 output_name="Kanha Re Thoda Sa Pyar de"
