@@ -211,6 +211,7 @@ alias clean='sudo xbps-remove -Ov'
 alias flatpak='flatpak --user'
 # abbr   findq 'xbps-query -Rs '*' | fzf -i --exact --prompt="Select package(s) to install: " --multi | awk '{print $2}' | xargs -ro sudo xbps-install -S'
 
+alias findpfzf='xbps-query -Rs  "*" | fzf -i --exact --prompt="Select package(s) to install: " --multi | awk "{print \$2}" | xargs -ro sudo xbps-install -S'
 
 alias tsp="ts"
 
