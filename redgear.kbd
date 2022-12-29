@@ -20,6 +20,7 @@
 	esc (tap-next-release esc (layer-toggle num))
 	     e (tap-hold-next-release 200 e (layer-toggle symkeypad))
 	     a (tap-hold-next-release 200 a (layer-toggle numkeypad))
+  sl (sticky-key 500 lsft)
 )
 
    
