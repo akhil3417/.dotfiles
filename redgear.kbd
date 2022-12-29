@@ -17,10 +17,18 @@
 ;; Default layout aliases
 (defalias
 	spc (tap-hold 200 spc lctl)
-	esc (tap-next-release esc (layer-toggle num))
+	;; spc (tap-hold-next-release 200 lalt (layer-toggle tes))
+	;; esc (layer-toggle num)
+	;; met (tap-hold 200 met (layer-toggle num))
+;; layer full of symbols
+         ;; sym  (layer-toggle tes)
+	     ;; w (tap-hold-next-release 200 w (layer-toggle num))
 	     e (tap-hold-next-release 200 e (layer-toggle symkeypad))
 	     a (tap-hold-next-release 200 a (layer-toggle numkeypad))
+         ;; sl (layer-toggle numkeypad)
+;; Let's make both shift keys sticky
   sl (sticky-key 500 lsft)
+  ;; sl (sticky-key 900 rsft)
 )
 
    
