@@ -56,3 +56,7 @@
 
 # System Crafters
 "filter:~/.local/bin/youtube-rss:https://www.youtube.com/feeds/videos.xml?channel_id=UCAiiOTio8Yu69c3XnR7nQBQ" emacs "~System Crafters"
+
+#indian-podcasts
+
+"filter:~/.local/bin/youtube-rss:https://www.youtube.com/feeds/videos.xml?channel_id=UCfH_Hz868iwzA7g36NyBX1A" Podcast "~Shivoham "
