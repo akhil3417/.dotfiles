@@ -41,6 +41,15 @@
 	_    met   _               rsft              tab    _    _    _    _    _  _  _
 )
 
+(deflayer symkeypad
+	_
+	_    _    _    _    _    _    _    _    _    _    _    _    _    bspc
+	_    `    #    _   &    %    _    _    _    _    _    _    _  _
+	del  rsft    ^    @    \(    _    $    _    _    !    _    _  _
+	_    _    _    c    _    _    =    *    _    _    _    _
+	_    met   _               rsft              tab    _    _    _    _    _  _  _
+)
+
 (deflayer num
 	_
 	_    _    _    _    _    _    _    _    _    _    _    _    _    _   
