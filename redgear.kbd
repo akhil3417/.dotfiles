@@ -26,8 +26,8 @@
          ;; sym  (layer-toggle tes)
          sr (layer-toggle sym)
 	     ;; w (tap-hold-next-release 200 w (layer-toggle num))
-	     e (tap-hold-next-release 200 e (layer-toggle symkeypad))
-	     a (tap-hold-next-release 200 a (layer-toggle numkeypad))
+	     e (tap-hold-next-release 200 e (layer-toggle symkeypadv2))
+	     a (tap-hold-next-release 200 a (layer-toggle numkeypadv2))
          ;; sl (layer-toggle numkeypad)
 ;; Let's make both shift keys sticky
   sl (sticky-key 500 lsft)
@@ -39,7 +39,7 @@
 	esc
 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
 	tab  q    w   @e    r    t    y    u    i    o    p    [    ]    \
-	caps @a    s    d    f    g    h    j    k    l    ;    '    ret
+	caps @a   s    d    f    g    h    j    k    l    ;    '    ret
 	@sl  z    x    c    v    b    n    m    ,    .    /    @sr
 	lctl met    lalt     @spc               @esc  met menu rctl lft  up   down rght
 )
@@ -48,21 +48,37 @@
 (deflayer numkeypad
 	_
 	_    _    _    _    _    _    _    _    _    _    _    _    _    bspc
-	_    `    3    _   7    5    _    _    _    _    _    _    _  _
-	del  rsft    6    2    9    _    4    _    _    1    _    _  _
-	_    _    _    c    _    _    =    8    _    _    _    _
+	_    `    3    _    7    5    _    _    _    _    0    _    _  _
+	del  rsft 6    2    9    _    4    _    _    1    _    _  _
+	_    _    _    c    _    0    =    8    _    _    _    _
 	_    met   _               rsft              tab    _    _    _    _    _  _  _
 )
 
 (deflayer symkeypad
 	_
 	_    _    _    _    _    _    _    _    _    _    _    _    _    bspc
-	_    `    #    _   &    %    _    _    _    _    _    _    _  _
-	del  rsft    ^    @    \(    _    $    _    _    !    _    _  _
-	_    _    _    c    _    _    =    *    _    _    _    _
+	_    `    #    _   &    %    _    _    _    _    \)   _    _  _
+	del  rsft ^    @    \(    _    $    _    _    !    _    _  _
+	_    _    _    c     _    _    =    *    _    _    _    _
+	_    met   _               rsft              tab    _    _    _    _    _  _  _
+)
+(deflayer numkeypadv2
+	_
+	_    _    _    _    _    _    _    _    _    _    _    _    _    bspc
+	_    `    6    _    7    2    _    _    _    _    0    _    _  _
+	del  rsft 3    5    9    _    1    _    _    4    _    _  _
+	_    _    _    c    _    0    =    8    _    _    _    _
 	_    met   _               rsft              tab    _    _    _    _    _  _  _
 )
 
+(deflayer symkeypadv2
+	_
+	_    _    _    _    _    _    _    _    _    _    _    _    _    bspc
+	_    `    #    _   &    =    _    _    _    _    %   _    _  _
+	del  rsft \)    $    \(    _    @    _    _    !    _    _  _
+	_    _    _    c     _    _    ^    *    _    _    _    _
+	_    met   _               rsft              tab    _    _    _    _    _  _  _
+)
 (deflayer num
 	_
 	_    _    _    _    _    _    _    _    _    _    _    _    _    bspc
