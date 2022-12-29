@@ -201,15 +201,19 @@ alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.confi
 # Backup contents of /etc/dtos to a backup folder in $HOME.
 alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-(date +%Y.%m.%d-%H.%M.%S)'
 
-alias install='sudo xbps-install -S'
-alias remove='sudo xbps-remove -R'
+# to sync the repository cache (i.e. download the latest list of packages available):
+alias install='sudo xbps-install '
+alias remove='sudo xbps-remove -Rv'
 alias update='sudo xbps-install -S'
 alias upgrade='sudo xbps-install -Suv'
 alias findp='xbps-query -Rs'
 alias orphan='sudo xbps-remove -ov'
 alias clean='sudo xbps-remove -oOv'
 alias flatpak='flatpak --user'
-# abbr   findq 'xbps-query -Rs '*' | fzf -i --exact --prompt="Select package(s) to install: " --multi | awk '{print $2}' | xargs -ro sudo xbps-install -S'
+# abbr findq 'xbps-query -Rs '*' | fzf -i --exact --prompt="Select package(s) to
+# install: " --multi | awk '{print $2}' | xargs -ro sudo xbps-install -S' ;;
+# this one does'nt work cause their are multilple single quotes in between , can
+# be fixed by using "" as done below
 
 alias findpfzf='xbps-query -Rs  "*" | fzf -i --exact --prompt="Select package(s) to install: " --multi | awk "{print \$2}" | xargs -ro sudo xbps-install -S'
 
