@@ -22,6 +22,7 @@
 	;; met (tap-hold 200 met (layer-toggle num))
 ;; layer full of symbols
          ;; sym  (layer-toggle tes)
+         sr (layer-toggle sym)
 	     ;; w (tap-hold-next-release 200 w (layer-toggle num))
 	     e (tap-hold-next-release 200 e (layer-toggle symkeypad))
 	     a (tap-hold-next-release 200 a (layer-toggle numkeypad))
