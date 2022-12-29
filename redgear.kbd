@@ -15,6 +15,7 @@
 )
 
 ;; Default layout aliases
+;; Default layout aliases
 (defalias
 	spc (tap-hold 200 spc lctl)
 	;; spc (tap-hold-next-release 200 lalt (layer-toggle tes))
