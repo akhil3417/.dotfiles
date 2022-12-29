@@ -2,7 +2,27 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("ffmpeg_x11grab_screencast.txt"
+(("quickemu"
+ (filename . "~/gitclones/quickemu/")
+ (front-context-string . ".github/\n  drwxr")
+ (rear-context-string . "022-12-22 09:26 ")
+ (position . 129))
+("todo.org"
+ (filename . "~/org/org-capture/todo.org")
+ (front-context-string . "* Inbox\n** TODO ")
+ (rear-context-string . "kra Gita :read:\n")
+ (position . 3284))
+("sharevoid"
+ (filename . "~/ShareVoid/")
+ (front-context-string . ".stfolder/\n  -rw")
+ (rear-context-string . "022-12-21 18:34 ")
+ (position . 120))
+("csc116ModernCplusplus"
+ (filename . "~/gitclones/emacsconf/csc116ModernCplusplus/")
+ (front-context-string . "lectures/\n  -rw-")
+ (rear-context-string . "022-10-13 18:59 ")
+ (position . 203))
+("ffmpeg_x11grab_screencast.txt"
  (filename . "~/gitclones/shownotes/ffmpeg_x11grab_screencast.txt")
  (front-context-string . "# record single ")
  (rear-context-string . "encast_out.avi\n\n")
@@ -137,10 +157,10 @@
  (rear-context-string . "022-09-23 20:03 ")
  (position . 422))
 ("org-capture-last-stored"
- (filename . "~/org/org-roam2/Articles/20221217112551--User Interface - Bash Scripting Tutorial.org")
+ (filename . "~/org/org-roam2/Notes/20221223100347--tips from my emacs config.org")
  (front-context-string)
- (rear-context-string . "letags: :bash  \n")
- (position . 177))
+ (rear-context-string . "letags: :tips  \n")
+ (position . 162))
 ("virtsharedcommand"
  (filename . "~/kvmshared.txt")
  (front-context-string . "sudo mount -t 9p")
