@@ -30,6 +30,17 @@
 	lsft z    x    c    v    b    n    m    ,    .    /    rsft
 	lctl met    lalt     @spc               @esc  met menu rctl lft  up   down rght
 )
+
+
+(deflayer numkeypad
+	_
+	_    _    _    _    _    _    _    _    _    _    _    _    _    bspc
+	_    `    3    _   7    5    _    _    _    _    _    _    _  _
+	del  rsft    6    2    9    _    4    _    _    1    _    _  _
+	_    _    _    c    _    _    =    8    _    _    _    _
+	_    met   _               rsft              tab    _    _    _    _    _  _  _
+)
+
 (deflayer num
 	_
 	_    _    _    _    _    _    _    _    _    _    _    _    _    _   
