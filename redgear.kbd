@@ -18,6 +18,7 @@
 (defalias
 	spc (tap-hold 200 spc lctl)
 	;; spc (tap-hold-next-release 200 lalt (layer-toggle tes))
+	esc (tap-next-release lalt (layer-toggle num))
 	;; esc (layer-toggle num)
 	;; met (tap-hold 200 met (layer-toggle num))
 ;; layer full of symbols
