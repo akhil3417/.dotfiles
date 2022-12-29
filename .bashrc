@@ -155,7 +155,11 @@ up () {
     echo "Couldn't go up $limit dirs.";
   fi
 }
-
+pipdepuninstall ()
+{
+    pip install -q pipdeptree
+    pipdeptree -p$1 -fj | jq ".[] | .package.key" | xargs pip uninstall -y
+}
 # vim and emacs
 alias vim="nvim"
 alias em="/usr/bin/emacs -nw"
@@ -166,21 +170,22 @@ alias doomupgrade="~/.emacs.d/bin/doom upgrade"
 alias doompurge="~/.emacs.d/bin/doom purge"
 
 #void linux aliases
-alias install='sudo xbps-install -S'
-alias remove='sudo xbps-remove -R'
+alias install='sudo xbps-install '
+alias remove='sudo xbps-remove -Rv'
 alias update='sudo xbps-install -S'
-alias upgrade='sudo xbps-install -Su'
+alias upgrade='sudo xbps-install -Suv'
 alias findp='xbps-query -Rs'
 alias orphan='sudo xbps-remove -ov'
-alias clean='sudo xbps-remove -Ov'
-
+alias clean='sudo xbps-remove -oOv'
+alias flatpak='flatpak --user'
+alias findpfzf='xbps-query -Rs "*" | fzf -i --exact --prompt="Select package(s) to install: " --multi | awk "{print \$2}" | xargs -ro sudo xbps-install -S'
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a | egrep "^\."'
+# alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+# alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+# alias ll='exa -l --color=always --group-directories-first'  # long format
+# alias lt='exa -aT --color=always --group-directories-first' # tree listing
+# alias l.='exa -a | egrep "^\."'
 
 # pacman and yay
 # alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
