@@ -243,7 +243,13 @@ function copy
         command cp $argv
     end
 end
-
+#download partial youtube videos
+#https://gist.github.com/anakaiti/6c02ba44f2a0db260803b5526aceb511
+function youtube -d 'Download partial youtube videos' -a url start duration out
+    set mp4 (youtube-dl -g -f 22 $url)
+    set -q out; or set out 'out.mp4'
+    ffmpeg -ss $start -i $mp4 -t $duration -c copy $out
+end
 # Function for printing a column (splits input on whitespace)
 # ex: echo 1 2 3 | coln 3
 # output: 3
