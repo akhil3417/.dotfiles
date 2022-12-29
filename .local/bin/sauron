@@ -21,20 +21,26 @@ audio() {
       # -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
       # -f 'bv*+ba' \ #best possible video and audio
 # download with yt-dlp
-download() {
-    printf "%s\n" "${input}" | \
-    while read line
-    do
-     TS_SOCKET=/tmp/download \
-      ts \
-      yt-dlp -ciw \
-      --no-playlist \
-      -f 'bv*[height=1080]+ba' --embed-thumbnail --download-archive ~/Music/youtube-dl/download-archive/videos.txt \
-      -o "$HOME/Downloads/yt-dl/videos/%(title)s-[%(id)s].%(ext)s" \
-      --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
-      "${line}" 1>/dev/null
-    done
-}
+ download() {
+     printf "%s\n" "${input}" | \
+     while read line
+     do
+   formats=$(yt-dlp -F "$line")
+   echo "Available formats:"
+   echo "$formats"
+   read -p "Enter the format code to use: " format_code
+
+      TS_SOCKET=/tmp/download \
+       ts \
+       yt-dlp -ciw \
+       --no-playlist \
+       -f 'bv*[height=1080]+ba' --embed-thumbnail --download-archive ~/Music/youtube-dl/download-archive/videos.txt \
+       -o "$HOME/Downloads/yt-dl/videos/%(title)s-[%(id)s].%(ext)s" \
+       --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
+       "${line}" 1>/dev/null
+     done
+ }
+
 # download audio with yt-dlp
 
 downaudio() {
