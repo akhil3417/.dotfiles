@@ -60,9 +60,6 @@ bash
 bash-completion
 bat
 bc
-bctoolbox
-belcard
-belr
 binutils
 binutils-doc
 bison
@@ -90,7 +87,6 @@ btrfs-progs
 bubblewrap
 bzip2
 bzip2-devel
-bzrtp
 c-ares
 c-blosc
 ca-certificates
@@ -99,7 +95,6 @@ cabextract
 cairo
 cairo-devel
 cairomm
-calc
 calibre
 cantarell-fonts
 capstone
@@ -259,6 +254,7 @@ fontforge
 fonts-roboto-ttf
 fortune-mod
 fortune-mod-anarchism
+fox
 freefont-ttf
 freetds
 freetype
@@ -312,8 +308,8 @@ gnome-icon-theme
 gnome-keyring
 gnome-video-effects
 gnupg
-gnupg2
 gnutls
+go
 gperf
 gperftools
 gpgmepp
@@ -404,10 +400,7 @@ inetutils-uucpd
 inetutils-whois
 inih
 inotify-tools
-intel-gmmlib
-intel-media-driver
 intel-ucode
-intel-video-accel
 inxi
 iproute2
 iptables
@@ -577,7 +570,6 @@ libbtrfs
 libbytesize
 libcaca
 libcacard
-libcalc
 libcanberra
 libcanberra-gtk3
 libcap
@@ -642,6 +634,7 @@ libfdisk
 libffi
 libffi-devel
 libfftw
+libfixposix
 libfl-devel
 libflac
 libfluidsynth
@@ -763,7 +756,6 @@ libodbc
 libogg
 libopenal
 libopencv
-libopencv4
 libopenexr
 libopenglrecorder
 libopenjpeg2
@@ -779,7 +771,6 @@ libpciaccess
 libpciaccess-devel
 libpcre
 libpcre2
-libpcrecpp
 libpcsclite
 libpipeline
 libpipewire
@@ -859,6 +850,7 @@ libsvt-av1
 libswresample
 libswscale
 libsynctex
+libsysfs
 libtasn1
 libtd
 libtdb
@@ -957,6 +949,7 @@ lmdb
 lolcat-c
 lowdown
 lsof
+lua
 lua52
 lua53
 lua53-lgi
@@ -982,11 +975,11 @@ mc
 mcpp
 mdadm
 mdocml
-mediastreamer
 meld
 menu-cache
 mesa
 mesa-dri
+mesa-intel-dri
 mesa-opencl
 mesa-vulkan-intel
 mimic
@@ -1033,6 +1026,7 @@ neon
 neovim
 net-tools
 netcat
+nethogs
 nettle
 network-manager-applet
 newsboat
@@ -1050,6 +1044,7 @@ ntfs-3g
 ntp
 numix-themes
 nvi
+nyxt
 oath-toolkit
 obs
 ocl-icd
@@ -1075,7 +1070,6 @@ optipng
 opus
 opusfile
 orc
-ortp
 os-prober
 osinfo-db
 overpass-otf
@@ -1103,7 +1097,6 @@ pavucontrol
 pcaudiolib
 pciutils
 pcmanfm
-pcre-devel
 pcre2-devel
 perl
 perl-AnyEvent
@@ -1186,6 +1179,7 @@ python3-async-timeout
 python3-attrs
 python3-cairo
 python3-cchardet
+python3-certifi
 python3-chardet
 python3-charset-normalizer
 python3-colorama
@@ -1196,7 +1190,6 @@ python3-dbus
 python3-dbus-devel
 python3-decorator
 python3-defusedxml
-python3-deprecated
 python3-devel
 python3-distro
 python3-dnspython
@@ -1236,12 +1229,13 @@ python3-sip-PyQt5
 python3-six
 python3-soupsieve
 python3-telegram
+python3-toml
 python3-urllib3
 python3-urwid
 python3-wcwidth
 python3-webencodings
-python3-wrapt
 python3-xlib
+python3-xmltodict
 python3-yaml
 python3-zeroconf
 pywal
@@ -1385,6 +1379,7 @@ surfraw
 sxhkd
 sxiv
 syndication
+sysfsutils
 taglib
 talloc
 tanidvr
@@ -1419,6 +1414,7 @@ tor
 torbrowser-launcher
 torsocks
 traceroute
+translate-shell
 transset
 trash-cli
 trayer-srg
@@ -1468,6 +1464,7 @@ void-docs-browse
 void-repo-multilib
 void-repo-multilib-nonfree
 void-repo-nonfree
+void-updates
 volume_key
 volumeicon
 vsv
@@ -1528,11 +1525,6 @@ xdpyinfo
 xen-libs
 xev
 xf86-input-evdev
-xf86-input-libinput
-xf86-input-synaptics
-xf86-input-vmmouse
-xf86-input-wacom
-xf86-video-vmware
 xfce-polkit
 xfce4
 xfce4-appfinder
@@ -1547,6 +1539,7 @@ xfce4-taskmanager
 xfce4-terminal
 xfconf
 xfdesktop
+xfe
 xfontsel
 xfsprogs
 xfwm4
@@ -1603,6 +1596,7 @@ xxd
 xz
 yajl
 youtube-dl
+yq
 yt-dlp
 zathura
 zathura-pdf-mupdf
