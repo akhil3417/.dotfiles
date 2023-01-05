@@ -1,0 +1,65 @@
+
+  IMAPAccount gmail
+  Host imap.gmail.com
+  UserCmd "pass Email/accounts.google.com/primary | tail -n +2 | head -n 1 | awk -F : '{print $NF}'"
+  PassCmd "pass Email/accounts.google.com/primary | tail -n 1 | awk -F: '{print $NF}'"
+  SSLType IMAPS
+  CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+  IMAPStore gmail-remote
+  Account gmail
+
+  MaildirStore gmail-local
+  Subfolders Verbatim
+  Path ~/Mail/Gmail/
+  Inbox ~/Mail/Gmail/Inbox
+
+  Channel gmail
+  Far :gmail-remote:
+  Near :gmail-local:
+  Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail" "[Gmail]/Trash" "bca"
+  Create Both
+  Expunge Both
+  SyncState *
+
+#Some basic notes
+#
+  # *NOTE*: Non-English users might need to pay extra attention to the =Patterns= line since Gmail /renames/ the IMAP folders based on the selected user interface language one uses in the Gmail web interface.
+  # In Dutch e.g. the /folder/ =[Gmail]/Starred= would need to be changed to =[Gmail]/Met ster=. Changing the =Patterns= line to =*= and running the command =mbsync --list gmail= might give some insight into which /folders/ are available. Unfortunately the mapping does not appear to be one to one, e.g. the /label/ =Sent= is shown as =Verzonden= in Dutch while =mbsync= reports =[Gmail]/Verzonden berichten= as the name of the IMAP folder. Furthermore similar changes need to be made to the =mu4e= configuration below.
+#
+# =PassCmd= - We're getting the contents of a plain text file here, you might want to use gpg!
+# =Pass= - If you want to use plaintext password (not recommended!), doesn't need quotation marks
+# =CertificateFile= - This location can vary based on your Linux distribution!
+# =Patterns= - Defines which folders will be synced\\
+# create both tells mbsync to create new messages in both mailboxes if they do not exist in both places.
+# expunge both tells mbsync to delete messages that have been marked for deletion in both mailboxes.
+
+# Patterns * !"[Gmail]/All Mail" !"[Gmail]/Important" !"[Gmail]/Starred" !"[Gmail]/Bin"
+# PassCmd "gpg --quiet --decrypt ~/.mbsync-pw-mailbox.gpg"
+# - Use GPG to decrypt an encrypted password file: =gpg --quiet --for-your-eyes-only --no-tty --decrypt ~/.passwords/gmail.gpg=
+# - Use the Password Store program to simplify this: =pass Mail/MyGmail=
+
+# IMAP e-mail access is not enabled on your Gmail account by default!  Follow these steps to enable it:
+
+# https://support.google.com/mail/answer/7126229?hl=en
+
+# Make sure to configure these settings!
+
+# - "Auto-expunge off"
+# - "Move the message to the trash"
+
+
+
+# You have two-factor authentication turned on:
+# If you have two-factor authentication turned on, you will need to create an App Password to access your account.  More details can be found at this link:
+# https://support.google.com/accounts/answer/185833
+
+# No two-factor authentication: enable "Less secure apps" for your Google account
+# If you don't have two-factor authentication turned on, Google will still automatically block "less secure" apps like =isync= from accessing your mail over IMAP.  Give access to mbsync by going to the following page:
+
+# https://myaccount.google.com/lesssecureapps
+#For single account, and for multiple accounts , append --my-address=fuckgoogl@gmail.com
+  # mu init --maildir=~/Mail --my-address=systemcrafters.test@gmail.com
+  # then mu index
+
+#mbsync --all --config ~/.config/mu4e/mbsynrc
