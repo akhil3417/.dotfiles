@@ -194,7 +194,7 @@ myStartupHook = do
   spawnOnce "sxhkd &"
   spawnOnce "clipmenud &"
   spawnOnce "wal -R &"
-  spawnOnce "volumeicon &"
+  -- spawnOnce "volumeicon &"
   spawnOnce "pasystray &"
   spawnOnce "blueman-applet &"
   spawnOnce "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
