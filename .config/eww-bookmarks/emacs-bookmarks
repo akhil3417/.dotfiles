@@ -2,7 +2,112 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("quickemu"
+(("Backup"
+ (filename . "~/Documents/Backup/")
+ (front-context-string)
+ (rear-context-string . "023-01-15 11:28 ")
+ (position . 121))
+("xorg user"
+ (filename . "/sudo:root@localhost:/etc/X11/xorg.conf.d/")
+ (front-context-string . "B\n  -rwxr-xr-x 1")
+ (rear-context-string . "vailable 61.9 Gi")
+ (position . 93))
+("sv"
+ (filename . "/etc/sv/")
+ (front-context-string . "NetworkManager/\n")
+ (rear-context-string . "022-12-16 17:32 ")
+ (position . 102))
+("xorg.conf.d"
+ (filename . "/usr/share/X11/xorg.conf.d/")
+ (front-context-string . "20-intel.conf\n  ")
+ (rear-context-string . "023-01-14 17:45 ")
+ (position . 295))
+("modprobe.d"
+ (filename . "/etc/modprobe.d/")
+ (front-context-string . "8821au.conf\n  -r")
+ (rear-context-string . "022-08-22 09:48 ")
+ (position . 112))
+("X11"
+ (filename . "/usr/share/X11/")
+ (front-context-string . "app-defaults/\n  ")
+ (rear-context-string . "022-08-23 01:12 ")
+ (position . 110))
+("fontconfig"
+ (filename . "/usr/share/fontconfig/")
+ (front-context-string)
+ (rear-context-string . "022-11-16 01:03 ")
+ (position . 115))
+("fonts"
+ (filename . "/usr/share/fonts/")
+ (front-context-string . "OTF/\n  drwxr-xr-")
+ (rear-context-string . "022-11-16 01:03 ")
+ (position . 110))
+("dracut.conf.d"
+ (filename . "/sudo:root@localhost:/etc/dracut.conf.d/")
+ (front-context-string . "00-hostonly.conf")
+ (rear-context-string . "34 Aug 22 02:31 ")
+ (position . 134))
+("fstab"
+ (filename . "/etc/fstab")
+ (front-context-string . "#\n# See fstab(5)")
+ (rear-context-string)
+ (position . 1))
+("grub"
+ (filename . "/etc/default/grub")
+ (front-context-string . "#\n# Configuratio")
+ (rear-context-string)
+ (position . 1))
+("Steve Summit's C contribution"
+ (filename . "~/Learn Langs/C lang/Steve Summit's C contribution/")
+ (front-context-string . "~scs/\n  -rw-r--r")
+ (rear-context-string . "023-01-13 04:42 ")
+ (position . 158))
+("books & pdf"
+ (filename . "~/Documents/books & pdf/")
+ (front-context-string . "Good old books/\n")
+ (rear-context-string . "023-01-01 12:27 ")
+ (position . 177))
+("napoleonwilson"
+ (filename . "~/gitclones/napoleonwilson/")
+ (front-context-string . "ffmpeg-scripts/\n")
+ (rear-context-string . "023-01-08 10:10 ")
+ (position . 184))
+("ffmpeg-scripts"
+ (filename . "~/gitclones/napoleonwilson/ffmpeg-scripts/")
+ (front-context-string . "Makefiles/\n  -rw")
+ (rear-context-string . "022-11-22 11:10 ")
+ (position . 147))
+("org-refile-last-stored"
+ (filename . "~/org/org-capture/todo.org")
+ (front-context-string . "** add openvpn t")
+ (rear-context-string . "\n* Code and Fix\n")
+ (position . 3371))
+("ramayna songs"
+ (filename . "/media/New_Volume/Edu/beyond science/ramayna songs/")
+ (front-context-string . "Krishna - A Most")
+ (rear-context-string . "017-08-05 21:05 ")
+ (position . 1561))
+("xsessions"
+ (filename . "/usr/share/xsessions/")
+ (front-context-string . "exwm (copy).desk")
+ (rear-context-string . "022-08-27 01:18 ")
+ (position . 175))
+("dnsmasq.conf"
+ (filename . "/etc/dnsmasq.conf")
+ (front-context-string . "# Configuration ")
+ (rear-context-string)
+ (position . 1))
+("dhcpcd.conf"
+ (filename . "/etc/dhcpcd.conf")
+ (front-context-string . "# A sample confi")
+ (rear-context-string)
+ (position . 1))
+("resolv.conf"
+ (filename . "/sudo:root@localhost:/etc/resolv.conf")
+ (front-context-string . "0.1\nnameserver 2")
+ (rear-context-string . "ameserver 127.0.")
+ (position . 69))
+("quickemu"
  (filename . "~/gitclones/quickemu/")
  (front-context-string . ".github/\n  drwxr")
  (rear-context-string . "022-12-22 09:26 ")
@@ -32,11 +137,6 @@
  (front-context-string . "1st sem/\n  drwxr")
  (rear-context-string . "022-12-08 10:54 ")
  (position . 131))
-("Beginning Programming With C For Dummies.org"
- (filename . "~/Documents/Ebooks/Beginning Programming With C For Dummies.org")
- (front-context-string . "s\n:PROPERTIES:\n:")
- (rear-context-string . "ith C For Dummie")
- (position . 42))
 ("/usr/share/doc"
  (filename . "/usr/share/doc/")
  (front-context-string)
@@ -157,10 +257,10 @@
  (rear-context-string . "022-09-23 20:03 ")
  (position . 422))
 ("org-capture-last-stored"
- (filename . "~/org/org-roam2/Notes/20221223100347--tips from my emacs config.org")
- (front-context-string)
- (rear-context-string . "letags: :tips  \n")
- (position . 162))
+ (filename . "~/org/org-capture/todo.org")
+ (front-context-string . "** TODO Start af")
+ (rear-context-string . "genda]]\n* Tasks\n")
+ (position . 171))
 ("virtsharedcommand"
  (filename . "~/kvmshared.txt")
  (front-context-string . "sudo mount -t 9p")
