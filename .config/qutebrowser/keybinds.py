@@ -37,7 +37,7 @@ config.bind('<,><f><o>', 'spawn --userscript qute-pass --otp-only')
 config.bind('<,><z><l>', 'hint links userscript qute-zotero')
 config.bind(',Z', 'spawn --userscript qute-zotero')
 c.aliases.update({'zotero': 'spawn --userscript qute-zotero'})
-
+config.bind('<,><a><a>', 'spawn --userscript qute-capture read -f ~/read-later.org -H Read-Later')
 # Read later via wallabag
 config.bind(',rl', 'hint links spawn --userscript qute-readlater {hint-url}')
 config.bind(',rL', 'spawn --userscript qute-readlater')
