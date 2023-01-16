@@ -197,6 +197,7 @@ myStartupHook = do
   -- spawnOnce "volumeicon &"
   spawnOnce "pasystray &"
   spawnOnce "blueman-applet &"
+  spawnOnce "stubby &"
   spawnOnce "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
   spawnOnce "unclutter &" -- emacs daemon for the emacsclient
   spawnOnce "xset r rate 200 40 &" -- emacs daemon for the emacsclient
