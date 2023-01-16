@@ -1,7 +1,7 @@
 /* -*- mode: scss -*- */
 
 configuration {
- modi: "window,run,drun,combi";
+ modi: "window,run,drun,combi,filebrowser";
  font: "Fira Code 13";
  terminal: "alacritty";
  drun-display-format: "{name}";
