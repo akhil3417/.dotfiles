@@ -732,7 +732,7 @@ myKeys c =
   [ ("M-p h", addName "List all dmscripts"                     $ spawn "dm-hub")
   , ("M-p a", addName "Choose ambient sound"                   $ spawn "dm-sounds")
   , ("M-p b", addName "Set background"                         $ spawn "dm-setbg")
-  , ("M-p c", addName "Choose color scheme"                    $ spawn "~/.local/bin/dtos-colorscheme")
+  , ("M-p c", addName "Choose color scheme"                    $ spawn "dtos-colorscheme")
   , ("M-p C", addName "Pick color from scheme"                 $ spawn "dm-colpick")
   , ("M-p e", addName "Edit config files"                      $ spawn "dm-confedit")
   , ("M-p i", addName "Take a screenshot"                      $ spawn "dm-maim")
