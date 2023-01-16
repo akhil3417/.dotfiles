@@ -26,7 +26,7 @@ clone(){
 			repo=$(echo "$1" | cut -d# -f1)
 			repo=${repo}.git
 			notify-send "cloning repository ${repo}"
-			git -C "$HOME/Downloads/" clone "${repo}" \
+			git -C "$HOME/gitclones/" clone "${repo}" \
 				&& notify-send "finished cloning" && exit
 			notify-send "failed cloning"
 }
