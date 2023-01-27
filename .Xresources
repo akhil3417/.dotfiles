@@ -12,7 +12,7 @@ Xft.lcdfilter:	lcddefault
 XTerm*renderFont: true
 XTerm*faceName: xft:JetBrains Mono Regular, \
                 xft:JoyPixels:size=12, \
-                xft:Monospace:style=Medium:size=12   
+                xft:Monospace:style=Medium:size=12
 XTerm*faceSize: 11
 XTerm*utf8: 2
 XTerm*locale: true
@@ -37,7 +37,7 @@ URxvt*buffered: false
 URxvt.intensityStyles: false
 URxvt.font: xft:Mononoki Nerd Font:size=12, \
             xft:JoyPixels:size=12, \
-            xft:Monospace:style=Medium:size=12   
+            xft:Monospace:style=Medium:size=12
 URxvt.saveLines: 2000
 URxvt.scrollBar: false
 URxvt.cursorColor: white
