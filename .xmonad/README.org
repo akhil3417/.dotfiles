@@ -2,7 +2,7 @@
 #+AUTHOR: Akhil Pratap Singh
 #+PROPERTY: header-args :tangle xmonad.hs
 #+auto_tangle: t
-#+STARTUP: showeverything
+#+STARTUP: fold
 
 * Table Of Contents :toc:
 - [[#about-this-config][About This Config]]
