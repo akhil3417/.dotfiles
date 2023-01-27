@@ -67,7 +67,6 @@ Sxiv.foreground:   #bbc2cf
 Sxiv.background:   #282c34
 Sxiv.font: Ubuntu:style=bold:size=11
 
-
 FOR ALL OTHER PROGRAMS USE XRESOURCES
 This includes xterm and urxvt
 *.foreground:   #bbc2cf
