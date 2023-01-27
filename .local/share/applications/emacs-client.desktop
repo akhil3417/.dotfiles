@@ -1,3 +1,4 @@
+# [[file:../../../.config/doom/config.org::*Systemd daemon][Systemd daemon:3]]
 [Desktop Entry]
 Name=Emacs client
 GenericName=Text Editor
@@ -11,3 +12,4 @@ Categories=TextEditor;Utility;
 StartupWMClass=Emacs
 Keywords=Text;Editor;
 X-KDE-StartupNotify=false
+# Systemd daemon:3 ends here
