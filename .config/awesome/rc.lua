@@ -2221,7 +2221,15 @@ awful.key( {modkey}, "p", function()
 --dmenu-win for navigation
 
 awful.key({ modkey }, "n", function ()
-        awful.util.spawn("dmenu-win")
+        awful.util.spawn("rofi -show combi")
+        -- awful.util.spawn("dmenu-win")
+end),
+
+--dmenu-win for navigation
+
+awful.key({ modkey , "Shift" }, "f", function ()
+        awful.util.spawn("rofi -show filebrowser")
+        -- awful.util.spawn("dmenu-win")
 end),
 
 -- Dmscripts (Super + y followed by KEY) for youtube
@@ -2269,7 +2277,7 @@ awful.key( {modkey}, "d", function()
     ),
 
 -- Emacs (Super + e followed by KEY)
-awful.key( {modkey}, "e", function()
+awful.key( {modkey}, "c", function()
   local grabber
   grabber =
     awful.keygrabber.run(
