@@ -564,7 +564,11 @@ clickable ws = "<action=xdotool key super+"++show i++">"++ws++"</action>"
 #+END_SRC
 
 * Managehook
-Sets some rules for certain programs. Examples include forcing certain programs to always float, or to always appear on a certain workspace.  Forcing programs to a certain workspace with a doShift requires xdotool if you are using clickable workspaces. You need the className or title of the program. Use xprop to get this info.
+Sets some rules for certain programs. Examples include forcing certain programs
+to always float, or to always appear on a certain workspace. Forcing programs to
+a certain workspace with a doShift requires xdotool if you are using clickable
+workspaces. You need the className or title of the program. Use xprop to get
+this info.
 
 #+BEGIN_SRC haskell
 myManageHook :: XMonad.Query (Data.Monoid.Endo WindowSet)
@@ -612,6 +616,7 @@ myManageHook = composeAll
   , isFullscreen -->  doFullFloat
   ] <+> namedScratchpadManageHook myScratchPads
 #+END_SRC
+You can find the class name of a program by running xprop | grep WM_CLASS and clicking on the window.
 
 * System Sounds
 Available sounds that are part of the default =dtos-sounds= package include:
@@ -634,7 +639,12 @@ dmenuSound    = soundDir ++ "menu-01.mp3"
 #+end_src
 
 * NamedActions
-=NamedActions= is a wrapper for keybinding configuration that can list the available keybindings.  The following custom functions are used to add =NamedActions= to our keybindings in the format that I desired.  =subTitle'= allows me to format the subtitle (=subKeys=) so that I can prepend and/or append text to them.  =showKeybindings= is a function that pipes the output of our =NamedActions= into a GUI display program, such as 'yad' or 'zenity'.
+=NamedActions= is a wrapper for keybinding configuration that can list the
+available keybindings. The following custom functions are used to add
+=NamedActions= to our keybindings in the format that I desired. =subTitle'= allows
+me to format the subtitle (=subKeys=) so that I can prepend and/or append text to
+them. =showKeybindings= is a function that pipes the output of our =NamedActions=
+into a GUI display program, such as 'yad' or 'zenity'.
 
 #+begin_src haskell
 subtitle' ::  String -> ((KeyMask, KeySym), NamedAction)
