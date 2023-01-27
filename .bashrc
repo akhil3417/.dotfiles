@@ -1,4 +1,3 @@
-
 #     _    _    _     _ _
 #    / \  | | _| |__ (_) |   Akhil
 #   / _ \ | |/ / '_ \| | |   http://www.youtube.com/c/italented
@@ -6,12 +5,13 @@
 # /_/   \_\_|\_\_| |_|_|_|
 
 ### EXPORT
-export TERM="xterm-256color"                      # getting proper colors
-export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
-export ALTERNATE_EDITOR=""                        # setting for emacsclient
-export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
-export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
+export TERM="xterm-256color"            # getting proper colors
+export HISTCONTROL=ignoredups:erasedups # no duplicate entries
+export ALTERNATE_EDITOR=""              # setting for emacsclient
+export EDITOR="emacsclient -t -a ''"    # $EDITOR use Emacs in terminal
+export VISUAL="emacsclient -c -a emacs" # $VISUAL use Emacs in GUI mode
 export HISTCONTROL=ignorespace
+# export MB_CONFIG=~/.config/mbsync/config
 ### SET MANPAGER
 ### Uncomment only one of these!
 
@@ -38,93 +38,86 @@ bind -m vi-insert 'Control-l: clear-screen'
 # PS1='[\u@\h \W]\$ '
 
 ### PATH
-if [ -d "$HOME/.bin" ] ;
-  then PATH="$HOME/.bin:$PATH"
+if [ -d "$HOME/.bin" ]; then
+  PATH="$HOME/.bin:$PATH"
 fi
 
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.local/bin" ]; then
+  PATH="$HOME/.local/bin:$PATH"
 fi
 
-if [ -d "$HOME/Applications" ] ;
-  then PATH="$HOME/Applications:$PATH"
+if [ -d "$HOME/Applications" ]; then
+  PATH="$HOME/Applications:$PATH"
 fi
 
 ### SETTING OTHER ENVIRONMENT VARIABLES
-if [ -z "$XDG_CONFIG_HOME" ] ; then
-    export XDG_CONFIG_HOME="$HOME/.config"
+if [ -z "$XDG_CONFIG_HOME" ]; then
+  export XDG_CONFIG_HOME="$HOME/.config"
 fi
-if [ -z "$XDG_DATA_HOME" ] ; then
-    export XDG_DATA_HOME="$HOME/.local/share"
+if [ -z "$XDG_DATA_HOME" ]; then
+  export XDG_DATA_HOME="$HOME/.local/share"
 fi
-if [ -z "$XDG_CACHE_HOME" ] ; then
-    export XDG_CACHE_HOME="$HOME/.cache"
+if [ -z "$XDG_CACHE_HOME" ]; then
+  export XDG_CACHE_HOME="$HOME/.cache"
 fi
 export XMONAD_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/xmonad" # xmonad.hs is expected to stay here
 export XMONAD_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/xmonad"
 export XMONAD_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/xmonad"
 
-
-
 ### CHANGE TITLE OF TERMINALS
 case ${TERM} in
-  xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|konsole*)
+  xterm* | rxvt* | Eterm* | aterm | kterm | gnome* | alacritty | st | konsole*)
     PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-        ;;
+    ;;
   screen*)
     PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
     ;;
 esac
 
-
 #### autojump setup
 . /usr/share/autojump/autojump.bash
 
 ### SHOPT
-shopt -s autocd # change to named directory
+shopt -s autocd  # change to named directory
 shopt -s cdspell # autocorrects cd misspellings
 shopt -s cmdhist # save multi-line commands in history as single line
 shopt -s dotglob
-shopt -s histappend # do not overwrite history
+shopt -s histappend     # do not overwrite history
 shopt -s expand_aliases # expand aliases
-shopt -s checkwinsize # checks term size when bash regains control
+shopt -s checkwinsize   # checks term size when bash regains control
 
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
 ### COUNTDOWN
 
-cdown () {
-    N=$1
-  while [[ $((--N)) >  0 ]]
-    do
-        echo "$N" |  figlet -c | lolcat &&  sleep 1
-    done
+cdown() {
+  N=$1
+  while [[ $((--N)) > 0 ]]; do
+    echo "$N" | figlet -c | lolcat && sleep 1
+  done
 }
-
-
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
+ex() {
+  if [ -f $1 ]; then
     case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1   ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *.deb)       ar x $1      ;;
-      *.tar.xz)    tar xf $1    ;;
-      *.tar.zst)   unzstd $1    ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
+      *.tar.bz2) tar xjf $1 ;;
+      *.tar.gz) tar xzf $1 ;;
+      *.bz2) bunzip2 $1 ;;
+      *.rar) unrar x $1 ;;
+      *.gz) gunzip $1 ;;
+      *.tar) tar xf $1 ;;
+      *.tbz2) tar xjf $1 ;;
+      *.tgz) tar xzf $1 ;;
+      *.zip) unzip $1 ;;
+      *.Z) uncompress $1 ;;
+      *.7z) 7z x $1 ;;
+      *.deb) ar x $1 ;;
+      *.tar.xz) tar xf $1 ;;
+      *.tar.zst) unzstd $1 ;;
+      *) echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
     echo "'$1' is not a valid file"
@@ -137,7 +130,7 @@ ex ()
 alias doas="doas --"
 
 # navigation
-up () {
+up() {
   local d=""
   local limit="$1"
 
@@ -146,28 +139,24 @@ up () {
     limit=1
   fi
 
-  for ((i=1;i<=limit;i++)); do
+  for ((i = 1; i <= limit; i++)); do
     d="../$d"
   done
 
   # perform cd. Show error if cd fails
   if ! cd "$d"; then
-    echo "Couldn't go up $limit dirs.";
+    echo "Couldn't go up $limit dirs."
   fi
 }
-pipdepuninstall ()
-{
-    pip install -q pipdeptree
-    pipdeptree -p$1 -fj | jq ".[] | .package.key" | xargs pip uninstall -y
+pipdepuninstall() {
+  pip install -q pipdeptree
+  pipdeptree -p$1 -fj | jq ".[] | .package.key" | xargs pip uninstall -y
 }
 # vim and emacs
 alias vim="nvim"
 alias em="/usr/bin/emacs -nw"
 alias emacs="emacsclient -c -a 'emacs'"
-alias doomsync="~/.emacs.d/bin/doom sync"
-alias doomdoctor="~/.emacs.d/bin/doom doctor"
-alias doomupgrade="~/.emacs.d/bin/doom upgrade"
-alias doompurge="~/.emacs.d/bin/doom purge"
+alias doom="~/.emacs.d/bin/doom"
 
 #void linux aliases
 alias install='sudo xbps-install '
@@ -214,8 +203,8 @@ alias rsync='mv -i'
 alias rm='trash -v'
 
 # adding flags
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
+alias df='df -h'     # human-readable sizes
+alias free='free -m' # show sizes in MB
 alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
 alias vifm='./.config/vifm/scripts/vifmrun'
 alias ncmpcpp='ncmpcpp ncmpcpp_directory=$HOME/.config/ncmpcpp/'
@@ -241,7 +230,7 @@ alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
-alias stat='git status'  # 'status' is protected name so using 'stat' instead
+alias stat='git status' # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
 
@@ -302,7 +291,7 @@ alias mydotsbackup='cp -Rf /etc/mydots ~/mydots-backup-$(date +%Y.%m.%d-%H.%M.%S
 
 ### BASH INSULTER ###
 if [ -f /etc/bash.command-not-found ]; then
-    . /etc/bash.command-not-found
+  . /etc/bash.command-not-found
 fi
 
 ### SETTING THE STARSHIP PROMPT ###
@@ -319,8 +308,8 @@ cat /home/shiva/.cache/wal/sequences
 source /home/shiva/.cache/wal/colors-tty.sh
 # You can create a function for this in your shellrc (.bashrc, .zshrc).
 wal-tile() {
-    wal -n -i "$@"
-    feh --bg-tile "$(< "/home/shiva/.cache/wal/wal")"
+  wal -n -i "$@"
+  feh --bg-tile "$(<"/home/shiva/.cache/wal/wal")"
 }
 
 # Import the colors.
@@ -335,9 +324,9 @@ export YTFZF_EXTMENU='rofi -dmenu -fuzzy -width 1000'
 export YTFZF_ENABLE_FZF_DEFUALT_OPTS=0
 export YTFZF_PLAYER='vlc '
 #(YTFZF_PLAYER)
-
+alias chadwm='startx ~/.dotfiles/.config/chadwm/scripts/run.sh'
 
 source /home/shiva/.config/broot/launcher/bash/br
 # Use bash-completion, if available
-[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
-    . /usr/share/bash-completion/bash_completion
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
+  . /usr/share/bash-completion/bash_completion
