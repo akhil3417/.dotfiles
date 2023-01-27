@@ -1,7 +1,7 @@
 # ffmpeg scene detection makefile
 
 # Move this Makefile into the same directory as the video to process
-
+# run make input = filename.ext
 # you need to tell the Makefile the name of the video to process
 # either by editing the Makefile and changing input.mp4 to the name of the video to process
 # and then running: make
