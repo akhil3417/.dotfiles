@@ -470,7 +470,7 @@ config.bind('y', 'prompt-accept yes', mode='yesno')
 # org-capture
 config.bind('cit', 'spawn --userscript org-protocol capture Pit')
 config.bind('cl', 'spawn --userscript org-protocol store-link')
-
+#mpv
 config.bind(',M', 'spawn emacsclient -n -e "(mpv-enqueue-maybe-archive \\"{url}\\")"')
 config.bind(',m', 'hint links spawn emacsclient -n -e "(mpv-enqueue-maybe-archive \\"{hint-url}\\")"')
 config.bind(',n', 'hint --rapid links spawn emacsclient -n -e "(mpv-enqueue-maybe-archive \\"{hint-url}\\")"')
