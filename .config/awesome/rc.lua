@@ -3073,6 +3073,14 @@ awful.rules.rules = {
     },
 
     {
+        rule = { class = "mpv" },
+        properties = {
+            floating = true,
+            opacity = 1,
+        }
+    },
+
+    {
         rule = { class = "gimp" },
         properties = {
             floating = true,
