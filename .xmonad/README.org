@@ -668,7 +668,7 @@ I am using the Xmonad.Util.EZConfig module which allows keybindings to be writte
 
 | A FEW KEYBINDINGS       | ASSOCIATED ACTION                                            |
 |-------------------------+--------------------------------------------------------------|
-| MODKEY + RETURN         | opens terminal (alacritty)                                   |
+| MODKEY + RETURN         | opens terminal (st)                                          |
 | MODKEY + SHIFT + RETURN | opens run launcher (dmenu)                                   |
 | MODKEY + TAB            | rotates through the available layouts                        |
 | MODKEY + SPACE          | toggles fullscreen on/off (useful for watching videos)       |
