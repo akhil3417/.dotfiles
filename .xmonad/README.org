@@ -700,6 +700,8 @@ myKeys c =
   , ("M-S-r", addName "Restart XMonad"         $ spawn "xmonad --restart")
   , ("M-S-q", addName "Quit XMonad"            $ sequence_ [spawn (mySoundPlayer ++ shutdownSound), io exitSuccess])
   , ("M-S-c", addName "Kill focused window"    $ kill1)
+  , ("M-q", addName "Kill focused window"    $ kill1)
+  , ("M-S-q", addName "Kill all windows on WS" $ killAll)
   , ("M-S-a", addName "Kill all windows on WS" $ killAll)
   -- , ("M-S-<Return>", addName "Run prompt"      $ sequence_ [spawn (mySoundPlayer ++ dmenuSound), spawn "~/.local/bin/dm-run"])
   , ("M-S-<Return>", addName "Run prompt"      $ sequence_ [spawn (mySoundPlayer ++ dmenuSound), spawn "~/.local/bin/dm-run"])
@@ -764,7 +766,6 @@ myKeys c =
   , ("M-p s", addName "Search various engines"                 $ spawn "dm-websearch")
   , ("M-p t", addName "Translate text"                         $ spawn "dm-translate")
   -- , ("M-p h",addName "allows access to all dmscripts"          $ spawn "dm-hub")           --allows access to all dmscripts
-  , ("M-f f",addName " allows access to all dmscripts"         $ spawn "firefox-developer-edition")           -- allows access to all dmscripts
   , ("M-b c",addName "connect to bluetooth"         $ spawn "bluetoothconnect")           -- allows access to all dmscripts
   , ("M-e E",addName " an emacs shell"                         $ spawn "eshell")           -- an emacs shell
   , ("M-y s",addName " youtube open"                           $ spawn "ytfzf -D")           -- youtube open
