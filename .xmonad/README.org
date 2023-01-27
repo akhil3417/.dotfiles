@@ -548,7 +548,11 @@ myLayoutHook = avoidStruts
 #+END_SRC
 
 * Workspaces
-I have made my workspaces in xmobar "clickable." Clickable workspaces means the mouse can be used to switch workspaces. This requires /xdotool/ to be installed. You need to use UnsafeStdInReader instead of simply StdInReader in your xmobar config so you can pass actions to it.
+
+I have made my workspaces in xmobar "clickable." Clickable workspaces means the
+mouse can be used to switch workspaces. This requires /xdotool/ to be installed.
+You need to use UnsafeStdInReader instead of simply StdInReader in your xmobar
+config so you can pass actions to it.
 
 #+begin_src haskell
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
