@@ -1,0 +1,13 @@
+# [[file:../../../.config/doom/config.org::*Sending Mail][Sending Mail:3]]
+[Desktop Entry]
+Name=Mu4e
+GenericName=Compose a new message with Mu4e in Emacs
+Comment=Open mu4e compose window
+MimeType=x-scheme-handler/mailto;
+Exec=emacsmail %u
+Icon=emacs
+Type=Application
+Terminal=false
+Categories=Network;Email;
+StartupWMClass=Emacs
+# Sending Mail:3 ends here

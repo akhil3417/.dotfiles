@@ -1,0 +1,65 @@
+
+(defcfg
+	input (device-file "/dev/input/by-id/usb-BY_Tech_Gaming_Keyboard-event-kbd")
+	output (uinput-sink "KMonad kbd")
+	fallthrough true
+	cmp-seq lctl
+)
+
+(defsrc
+	esc
+	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+	tab  b    y    o    u    t    y    l    d    w    v    [    ]    \
+	caps c    i    e    a    ;    '    h    t    s    n    q    ret
+	lsft g    x    j    k    -    -    r    m    f    p    rsft
+	lctl met  lalt           spc            ralt met menu rctl lft  up   down rght
+)
+
+;; Default layout aliases
+(defalias
+	spc (tap-hold 200 spc lctl)
+	;; spc (tap-hold-next-release 200 spc (layer-toggle tes))
+	esc (tap-next-release lalt (layer-toggle num))
+	;; met (tap-hold 200 met (layer-toggle num))
+;; layer full of symbols
+         ;; sym  (layer-toggle tes)
+         fn (layer-toggle nums)
+;; Let's make both shift keys sticky
+  sl (sticky-key 200 lsft)
+  sr (sticky-key 200 rsft)
+)
+
+
+(deflayer default
+	esc
+	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+	tab  b    y    o    u    t    y    l    d    w    v    [    ]    \
+	caps c    i    e    a    ;    '    h    t    s    n    q    ret
+	@sl g    x    j    k    -    -    r    m    f    p    @sr
+	@fn met    lalt     @spc               @esc  met menu rctl lft  up   down rght
+)
+(deflayer num
+	_
+	_    _    _    _    _    _    _    _    _    _    _    _    _    _
+	_    _    _    _    [    {    /   _   _ ret   _    _    _    _
+	del  1    2    3    4    5    6    7    8    9    0    lsft    _
+	_    _ _    _    _    _    _    bspc  _    _    _    _
+	_    _   met               ralt              _    _    _    _    _    _  _  _
+)
+
+(deflayer nums
+	_
+	_    _    _    _    _    _    _    _    _    _    _    _    _    _
+	_    _    _    _    [    {    /   _   _ ret   _    _    _    _
+	del  1    i    e    1    0    6   \(   2  n  q \)  lsft
+	_    _ _    _    _    _    _    bspc  _    _    _    _
+	_    _   met               ralt              _    _    _    _    _    _  _  _
+)
+(deflayer test
+	_
+	_    _    _    _    _    _    _    _    _    _    _    _    _    _
+	_    _    _    _    [    {    }    _      _ ret _    _    _    _
+	|    _    _    _    _    _    _    lft    down up  rght         lsft    _
+	_    _ _    _    _    _    _    bspc  _    _    _    _
+	_    _    _            ralt              tab    _    _    _    _    _  _  _
+)
