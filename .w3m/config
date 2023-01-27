@@ -30,7 +30,7 @@ max_load_image 4
 ext_image_viewer 1
 image_scale 100
 inline_img_protocol 4
-# imgdisplay ueberzug
+imgdisplay ueberzug
 image_map_list 0
 fold_line 0
 show_lnum 0
