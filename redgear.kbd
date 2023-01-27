@@ -26,8 +26,8 @@
          ;; sym  (layer-toggle tes)
          sr (layer-toggle sym)
 	     ;; w (tap-hold-next-release 200 w (layer-toggle num))
-	     e (tap-hold-next-release 200 e (layer-toggle symkeypadv2))
-	     a (tap-hold-next-release 200 a (layer-toggle numkeypadv2))
+	     e (tap-hold-next-release 800 e (layer-toggle symkeypadv2))
+	     a (tap-hold-next-release 800 a (layer-toggle numkeypadv2))
          ;; sl (layer-toggle numkeypad)
 ;; Let's make both shift keys sticky
   sl (sticky-key 500 lsft)
@@ -75,7 +75,7 @@
 	_
 	_    _    _    _    _    _    _    _    _    _    _    _    _    bspc
 	_    `    #    _   &    =    _    _    _    _    %   _    _  _
-	del  rsft \)    $    \(    _    @    _    _    !    _    _  _
+	del  @a \)    $    \(    _    @    _    _    !    _    _  _
 	_    _    _    c     _    _    ^    *    _    _    _    _
 	_    met   _               rsft              tab    _    _    _    _    _  _  _
 )
