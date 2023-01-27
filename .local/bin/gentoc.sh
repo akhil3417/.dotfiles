@@ -1,7 +1,8 @@
 #!/bin/bash
 #generate toc for pdf documents
-#https://pypi.org/project/pdf.tocgen/
-#https://krasjet.com/voice/pdf.tocgen/#one-more-example-mathematics
+# https://pypi.org/project/pdf.tocgen/
+# https://krasjet.com/voice/pdf.tocgen/#one-more-example-mathematics
+# pip install -U pdf.tocgen
 rm recipe.toml
 rm toc
 # Check if all required arguments are provided
