@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# # # Use notify-send to show a notification with the selected sink's name
+# notify-send "Changed default sink to: $sinks"
+
+# Get a list of available PulseAudio sinks
+sinks=$(pactl list short sinks)
+
+# Use dmenu to prompt the user to select a sink
+selected_sink=$(echo "$sinks" | dmenu -i -l 20 -p "Select a sink:")
+
+# Extract the sink index from the selected sink
+sink_index=$(echo "$selected_sink" | awk '{print $1}')
+
+# Get the name of the selected sink
+sink_name=$(echo "$selected_sink" | awk '{$1=""; print $0}')
+
+# Change the default sink to the selected sink
+pactl set-default-sink "$sink_index"
+
+# Get a list of audio streams
+streams=$(pactl list short sink-inputs)
+
+# Move each stream to the selected sink
+while read -r stream; do
+  stream_index=$(echo "$stream" | awk '{print $1}')
+  pactl move-sink-input "$stream_index" "$sink_index"
+done <<< "$streams"
+
+# Use notify-send to show a notification with the selected sink's name
+notify-send "Changed default sink to: $sink_name"
