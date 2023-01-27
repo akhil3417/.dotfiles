@@ -588,6 +588,21 @@ format-prefix = "  "
 format-prefix-foreground = #fefefe
 format-underline = #FFBB00
 
+[module/voidupdates]
+type = custom/script
+; exec = ./scripts/xbps-updates
+exec = echo $(xbps-install -un | wc -l)
+interval = 9999
+label = Updates: %output%
+label-padding = 1
+; format-foreground = ${colors.foreground}
+format-foreground = #FFBB00
+format-background = ${colors.background}
+format-underline = #FFBB00
+format-prefix = "  "
+format-prefix-foreground = #fefefe
+
+
 [module/filesystem1]
 type = internal/fs
 interval = 25
