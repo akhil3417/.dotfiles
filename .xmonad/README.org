@@ -130,7 +130,7 @@ import XMonad.Util.SpawnOnce
       -- SolarizedDark
       -- SolarizedLight
       -- TomorrowNight
-import Colors.Dracula
+import Colors.DoomOne
 
 #+END_SRC
 
@@ -918,11 +918,11 @@ myKeys c =
 #+END_SRC
 
 #+RESULTS:
-: <interactive>:206:58-64: error:
+: <interactive>:219:58-64: error:
 :     Not in scope: ‘W.stack’
 :     No module named ‘W’ is imported.
 :
-: <interactive>:206:73-77: error:
+: <interactive>:219:73-77: error:
 :     Not in scope: ‘W.tag’
 :     No module named ‘W’ is imported.
 * desktop notifications
