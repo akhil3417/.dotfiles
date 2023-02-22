@@ -187,6 +187,8 @@ myStartupHook = do
 #+END_SRC
 
 #+BEGIN_SRC haskell
+
+-- spawnOnce "notify-log $HOME/.log/notify.log"
   -- spawnOnce "lxsession"
   -- spawnOnce "picom --experimental-backends &"
   spawnOnce "picom &"
@@ -200,10 +202,12 @@ myStartupHook = do
   -- spawnOnce "volumeicon &"
   spawnOnce "pasystray &"
   spawnOnce "blueman-applet &"
-  spawnOnce "stubby &"
+  -- spawnOnce "stubby &"
   spawnOnce "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
   spawnOnce "unclutter &" -- emacs daemon for the emacsclient
   spawnOnce "xset r rate 200 40 &" -- emacs daemon for the emacsclient
+  -- spawnOnce "./Downloads/dyn-wallpaper-linux "Mumbai" ~/Downloads/wall/ &" -- macos wall
+
 #+END_SRC
 
 We killed any running conky and trayer processes earlier in the autostart, so now we sleep for 2 seconds and then restart conky and trayer.
@@ -427,6 +431,7 @@ myScratchPads = [ NS "terminal" spawnTerm findTerm manageTerm
                  w = 0.4
                  t = 0.75 -h
                  l = 0.70 -w
+
 
     findEmacsScratch = title =? "emacs-scratch"
     -- spawnEmacsScratch = "emacsclient -a='' -nc --frame-parameters='(quote (font . \"Inconsolata:size=24:weight=regular:antialias=true:hinting=true:hintstyle=hintfull\")(name . \"emacs-scratch\"))'"
