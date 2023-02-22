@@ -145,7 +145,8 @@ myModMask :: KeyMask
 myModMask = mod4Mask        -- Sets modkey to super/windows key
 
 myTerminal :: String
-myTerminal = "tabbed -c -r 2 st -w '' "    -- Sets default terminal, also note that
+-- myTerminal = "tabbed -c -r 2 st -w '' "    -- Sets default terminal, also note that
+myTerminal = "st "    -- Sets default terminal, also note that
              -- tabbed -c -r 2 st -w '' which is st in tab mode , i use this cz
              -- multiple terminals can be painful for tiling window manager
 
