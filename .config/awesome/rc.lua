@@ -275,7 +275,7 @@ end
 
 --{{
 local tools = {
-    terminal = "alacritty",
+    terminal = "st",
     system = {
         filemanager = {
         },
