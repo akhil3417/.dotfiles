@@ -229,7 +229,7 @@ alias tsp="ts"
 
 ##transmission
 
-alias tr='transmission-remote'
-alias tra='transmission-remote -a'
-alias trl='transmission-remote -l'
+# alias tr='transmission-remote'
+# alias tra='transmission-remote -a'
+# alias trl='transmission-remote -l'
 # transmission-remote -t ID -r to remove torrent
