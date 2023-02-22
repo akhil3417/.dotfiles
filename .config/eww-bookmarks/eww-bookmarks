@@ -1,5 +1,8 @@
 ;; Auto-generated file; don't edit -*- mode: lisp-data -*-
-((:url "https://developer.mozilla.org/en-US/docs/Learn" :title "Learn web development | MDN" :time "Mon Jan 16 16:42:50 2023")
+((:url "https://tldp.org/LDP/Bash-Beginners-Guide/html/index.html" :title "Bash Guide for Beginners" :time "Wed Feb 15 19:34:21 2023")
+ (:url "https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html" :title "The GNU C Reference Manual" :time "Wed Feb 15 19:33:39 2023")
+ (:url "https://www.py4e.com/html3/01-intro" :title "PY4E - Python for Everybody Introduction" :time "Fri Feb 10 09:57:02 2023")
+ (:url "https://developer.mozilla.org/en-US/docs/Learn" :title "Learn web development | MDN" :time "Mon Jan 16 16:42:50 2023")
  (:url "https://www.eskimo.com/~scs/" :title "Steve Summit's home page , C lang" :time "Fri Jan 13 09:52:59 2023")
  (:url "https://ryanstutorials.net/" :title "Ryan's Tutorials - A bunch of Technology Tutorials" :time "Thu Jan 12 10:38:06 2023")
  (:url "http://www.eyewitnesstohistory.com/" :title "EyeWitness to History - history through the eyes of those who lived it" :time "Tue Jan 10 23:59:29 2023")
