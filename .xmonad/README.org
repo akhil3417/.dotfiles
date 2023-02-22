@@ -83,8 +83,7 @@ import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
 import XMonad.Hooks.WindowSwallowing
 import XMonad.Hooks.WorkspaceHistory
-import XMonad.Hooks.UrgencyHook
-import XMonad.Actions.UpdatePointer
+-- import XMonad.Actions.UpdatePointer
     -- Layouts
 import XMonad.Layout.Accordion
 import XMonad.Layout.GridVariants (Grid(Grid))
@@ -113,6 +112,7 @@ import qualified XMonad.Layout.MultiToggle as MT (Toggle(..))
    -- Utilities
 import XMonad.Util.Dmenu
 import XMonad.Util.EZConfig (additionalKeysP, mkNamedKeymap)
+import XMonad.Util.Hacks (windowedFullscreenFixEventHook, javaHack, trayerAboveXmobarEventHook, trayAbovePanelEventHook, trayerPaddingXmobarEventHook, trayPaddingXmobarEventHook, trayPaddingEventHook)
 import XMonad.Util.NamedActions
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
@@ -962,9 +962,9 @@ main = do
   -- xmproc2 <- spawnPipe ("xmobar -x 2 $HOME/.config/xmobar/" ++ colorScheme ++ "-xmobarrc")
   -- the xmonad, ya know...what the WM is named after!
   xmonad $ addDescrKeys' ((mod4Mask, xK_F1), showKeybindings) myKeys $ ewmh $ docks $ def
-  -- xmonad $ withUrgencyHook LibNotifyUrgencyHook $ ewmh desktopConfig
     { manageHook         = myManageHook <+> manageDocks
-    , handleEventHook    = swallowEventHook (className =? "Alacritty"  <||> className =? "St" <||> className =? "XTerm") (return True)
+    -- , handleEventHook    = swallowEventHook (className =? "Alacritty"  <||> className =? "St" <||> className =? "tabbed" <||> className =? "XTerm") (return True)
+    , handleEventHook    = windowedFullscreenFixEventHook <> swallowEventHook (className =? "Alacritty"  <||> className =? "st" <||> className =? "XTerm") (return True) <> trayerPaddingXmobarEventHook
     , modMask            = myModMask
     ,focusFollowsMouse  = myFocusFollowsMouse
     , terminal           = myTerminal
