@@ -128,6 +128,7 @@ ex() {
 
 # root privileges
 alias doas="doas --"
+alias sudo="doas"
 
 # navigation
 up() {
