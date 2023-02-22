@@ -10,6 +10,11 @@ set TERM "xterm-256color"                         # Sets the terminal type
 set EDITOR "emacsclient -t -a ''"                 # $EDITOR use Emacs in terminal
 set VISUAL "emacsclient -c -a emacs"              # $VISUAL use Emacs in GUI mode
 export HISTCONTROL=ignorespace
+
+export LIBGL_DRI3_DISABLE=1
+#for mspylsp
+# export DOTNET_ROOT=$HOME/.dotnet
+# export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
 # export MB_CONFIG=~/.config/mbsync/config
 ### SET MANPAGER
 ### Uncomment only one of these!
@@ -327,3 +332,4 @@ starship init fish | source
 # alias dmenu='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
 cat ~/.cache/wal/sequences &
 # source ~/.cache/wal/colors.fish
+
