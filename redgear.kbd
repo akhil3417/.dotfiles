@@ -26,8 +26,8 @@
          ;; sym  (layer-toggle tes)
          sr (layer-toggle sym)
 	     ;; w (tap-hold-next-release 200 w (layer-toggle num))
-	     e (tap-hold-next-release 800 e (layer-toggle symkeypadv2))
 	     a (tap-hold-next-release 800 a (layer-toggle numkeypadv2))
+	     e (tap-hold-next-release 800 e (layer-toggle symkeypadv2));;not
          ;; sl (layer-toggle numkeypad)
 ;; Let's make both shift keys sticky
   sl (sticky-key 500 lsft)
