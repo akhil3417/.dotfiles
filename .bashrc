@@ -169,6 +169,7 @@ alias orphan='sudo xbps-remove -ov'
 alias clean='sudo xbps-remove -oOv'
 alias flatpak='flatpak --user'
 alias findpfzf='xbps-query -Rs "*" | fzf -i --exact --prompt="Select package(s) to install: " --multi | awk "{print \$2}" | xargs -ro sudo xbps-install -S'
+alias b='pushd $(dirs -v | fzf)'
 alias dirs='dirs -v'
 
 # Changing "ls" to "exa"
