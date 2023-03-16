@@ -12,6 +12,9 @@ set VISUAL "emacsclient -c -a emacs"              # $VISUAL use Emacs in GUI mod
 export HISTCONTROL=ignorespace
 
 export LIBGL_DRI3_DISABLE=1
+# Use the iHD driver for media
+export LIBVA_DRIVER_NAME=iHD
+# export LIBGL_DRI3_DISABLE=1
 #for mspylsp
 # export DOTNET_ROOT=$HOME/.dotnet
 # export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
