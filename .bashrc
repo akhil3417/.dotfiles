@@ -154,7 +154,7 @@ pipdepuninstall() {
   pipdeptree -p$1 -fj | jq ".[] | .package.key" | xargs pip uninstall -y
 }
 # vim and emacs
-alias vim="nvim"
+# alias vim="nvim"
 alias em="/usr/bin/emacs -nw"
 alias emacs="emacsclient -c -a 'emacs'"
 alias doom="~/.emacs.d/bin/doom"
