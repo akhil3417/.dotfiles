@@ -10,8 +10,6 @@ set TERM "xterm-256color"                         # Sets the terminal type
 set EDITOR "emacsclient -t -a ''"                 # $EDITOR use Emacs in terminal
 set VISUAL "emacsclient -c -a emacs"              # $VISUAL use Emacs in GUI mode
 export HISTCONTROL=ignorespace
-
-export LIBGL_DRI3_DISABLE=1
 # Use the iHD driver for media
 export LIBVA_DRIVER_NAME=iHD
 # export LIBGL_DRI3_DISABLE=1
