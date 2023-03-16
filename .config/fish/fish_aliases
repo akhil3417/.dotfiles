@@ -210,7 +210,7 @@ abbr installr 'sudo xbps-install --repository hostdir/binpkgs '
 # be fixed by using "" as done below
 
 alias findpfzf='xbps-query -Rs  "*" | fzf -i --exact --prompt="Select package(s) to install: " --multi | awk "{print \$2}" | xargs -ro sudo xbps-install -S'
-alias pipi='pip install'
+alias pipi='pip install --user'
 alias pipu='pip uninstall'
 
 alias tsp="ts"
