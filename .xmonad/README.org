@@ -711,7 +711,7 @@ myKeys c =
   , ("M-S-q", addName "Kill all windows on WS" $ killAll)
   , ("M-S-a", addName "Kill all windows on WS" $ killAll)
   -- , ("M-S-<Return>", addName "Run prompt"      $ sequence_ [spawn (mySoundPlayer ++ dmenuSound), spawn "~/.local/bin/dm-run"])
-  , ("M-S-<Return>", addName "Run prompt"      $ sequence_ [spawn (mySoundPlayer ++ dmenuSound), spawn "~/.local/bin/dm-run"])
+  , ("M-S-<Return>", addName "Run prompt"      $ spawn "tabbed -c -r 2 st -w ''")
   , ("M-r", addName "Run prompt"      $ sequence_ [spawn (mySoundPlayer ++ dmenuSound), spawn "~/.local/bin/dm-run"])
   , ("M-/", addName "DTOS Help"                $ spawn "~/.local/bin/dtos-help")]
 
