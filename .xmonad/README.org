@@ -191,6 +191,7 @@ myStartupHook = do
 -- spawnOnce "notify-log $HOME/.log/notify.log"
   -- spawnOnce "lxsession"
   -- spawnOnce "picom --experimental-backends &"
+  -- spawnOnce "xrandr -s 1920x1080 -r 165"
   spawnOnce "picom &"
   -- spawnOnce "-b --unredir-if-possible --no-fading-openclose"
   spawnOnce "nm-applet &"
