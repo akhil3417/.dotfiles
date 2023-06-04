@@ -10,92 +10,86 @@ input=$(printf "%s\n" "$@")
 
 # mpd and taskspooler
 audio() {
-    printf "%s\n" "${input}" | \
-    while read line
-    do
-      ts pinch -i "${line}" 1>/dev/null
-    done
+    printf "%s\n" "${input}" |
+        while read line; do
+            ts pinch -i "${line}" 1>/dev/null
+        done
 }
 
 # yt-dlp -f 'bv*+ba' https://www.youtube.com/watch?v=1La4QzGeaaQ -o '%(id)s.%(ext)s'
-      # -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
-      # -f 'bv*+ba' \ #best possible video and audio
+# -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
+# -f 'bv*+ba' \ #best possible video and audio
 # download with yt-dlp
- download() {
-     printf "%s\n" "${input}" | \
-     while read line
-     do
-   formats=$(yt-dlp -F "$line")
-   echo "Available formats:"
-   echo "$formats"
-   read -p "Enter the format code to use: " format_code
+download() {
+    printf "%s\n" "${input}" |
+        while read line; do
+            formats=$(yt-dlp -F "$line")
+            echo "Available formats:"
+            echo "$formats"
+            read -p "Enter the format code to use: " format_code
 
-      TS_SOCKET=/tmp/download \
-       ts \
-       yt-dlp -ciw \
-       --no-playlist \
-       -f 'bv*[height=1080]+ba' --embed-thumbnail --download-archive ~/Music/youtube-dl/download-archive/videos.txt \
-       -o "$HOME/Downloads/yt-dl/videos/%(title)s-[%(id)s].%(ext)s" \
-       --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
-       "${line}" 1>/dev/null
-     done
- }
+            TS_SOCKET=/tmp/download \
+                ts \
+                yt-dlp -ciw \
+                --no-playlist \
+                -f 'bv*[height<=1080]+ba' --embed-thumbnail --download-archive ~/Music/youtube-dl/download-archive/videos.txt \
+                -o "$HOME/Downloads/yt-dl/videos/%(title)s-[%(id)s].%(ext)s" \
+                \
+                "${line}" 1>/dev/null # --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
+        done
+}
 
 # download audio with yt-dlp
 
 downaudio() {
-    printf "%s\n" "${input}" | \
-    while read line
-    do
-     TS_SOCKET=/tmp/download \
-      ts \
-      yt-dlp -ciw \
-      --no-playlist \
-      -f 'ba' -x --audio-format opus --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/download-archive/audios.txt \
-      -o "$HOME/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s" \
-      --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
-      "${line}" 1>/dev/null
-    done
+    printf "%s\n" "${input}" |
+        while read line; do
+            TS_SOCKET=/tmp/download \
+                ts \
+                yt-dlp -ciw \
+                --no-playlist \
+                -f 'ba' -x --audio-format opus --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/download-archive/audios.txt \
+                -o "$HOME/Music/youtube-dl/%(title)s-[%(id)s].%(ext)s" \
+                --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
+                "${line}" 1>/dev/null
+        done
 }
 
 # download with yt-dlp with sponsorblock to remove sponsor
 sponsorblock_download() {
-    printf "%s\n" "${input}" | \
-    while read line
-    do
-     TS_SOCKET=/tmp/download \
-      ts \
-      yt-dlp -ciw \
-      --no-playlist \
-      --sponsorblock-remove all \
-      -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
-     --embed-thumbnail \
-     --download-archive ~/Music/youtube-dl/rvideos.txt \
-      -o "$HOME/Downloads/yt-dl/videos/%(title)s-[%(id)s].%(ext)s" \
-      --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
-      "${line}" 1>/dev/null
-    done
+    printf "%s\n" "${input}" |
+        while read line; do
+            TS_SOCKET=/tmp/download \
+                ts \
+                yt-dlp -ciw \
+                --no-playlist \
+                --sponsorblock-remove all \
+                -f 'bestvideo[height<=1080][vcodec!=?vp9]+bestaudio[acodec!=?opus]' \
+                --embed-thumbnail \
+                --download-archive ~/Music/youtube-dl/rvideos.txt \
+                -o "$HOME/Downloads/yt-dl/videos/%(title)s-[%(id)s].%(ext)s" \
+                --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
+                "${line}" 1>/dev/null
+        done
 }
 
 # mpv fullscreen on second display and taskspooler
 fullscreen() {
-    printf "%s\n" "${input}" | \
-    while read line
-    do
-     TS_SOCKET=/tmp/videos \
-      ts mpv --fs --screen=1 "${line}" 1>/dev/null
-    done
+    printf "%s\n" "${input}" |
+        while read line; do
+            TS_SOCKET=/tmp/videos \
+                ts mpv --fs --screen=1 "${line}" 1>/dev/null
+        done
 }
 
 # mpv and taskspooler
 video() {
-    printf "%s\n" "${input}" | \
-    while read line
-    do
-     TS_SOCKET=/tmp/videos \
-      ts mpv --no-terminal "${line}" 1>/dev/null
-	   notify-send "Now Playing ♫" "${name}"
-    done
+    printf "%s\n" "${input}" |
+        while read line; do
+            TS_SOCKET=/tmp/videos \
+                ts mpv --no-terminal "${line}" 1>/dev/null
+            notify-send "Now Playing ♫" "${name}"
+        done
 }
 
 # fzf prompt variables spaces to line up menu options
@@ -108,21 +102,21 @@ video_ts='video        - mpv play video on current display'
 
 # fzf prompt to specify function to run on links from ytfzf
 menu=$(printf "%s\n" \
-	      "${audio_ts}" \
-	      "${download_ts}" \
-	      "${downaudio_ts}" \
-	      "${sponsorblock_ts}" \
-	      "${fullscreen_ts}" \
-	      "${video_ts}" \
-	      | fzf --delimiter='\n' --prompt='Pipe links to: ' --info=inline --layout=reverse --no-multi)
+    "${audio_ts}" \
+    "${download_ts}" \
+    "${downaudio_ts}" \
+    "${sponsorblock_ts}" \
+    "${fullscreen_ts}" \
+    "${video_ts}" |
+    fzf --delimiter='\n' --prompt='Pipe links to: ' --info=inline --layout=reverse --no-multi)
 
 # case statement to run function based on fzf prompt output
 case "${menu}" in
-   audio*) audio;;
-   download*) download;;
-   downaudio*) downaudio;;
-   sponsor*)sponsorblock_download ;;
-   fullscreen*) fullscreen;;
-   video*) video;;
-   *) exit;;
+    audio*) audio ;;
+    download*) download ;;
+    downaudio*) downaudio ;;
+    sponsor*) sponsorblock_download ;;
+    fullscreen*) fullscreen ;;
+    video*) video ;;
+    *) exit ;;
 esac
