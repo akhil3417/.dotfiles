@@ -224,5 +224,3 @@ alias tsp="ts"
 alias pipupdateall='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
 alias pipupdatefast='pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -P $(nproc) -n 1 pip install -U'
 alias pippudatefastmax='pip install -U pip --disable-pip-version-check && pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -P $(nproc) -n 1 pip install -U --no-cache-dir'
-
-#xbps-query -l | awk '{ print $2 }' | xargs -n1 xbps-uhelper getpkgname >/home/$USER/voidpkgs.txta
