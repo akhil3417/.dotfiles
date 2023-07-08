@@ -342,3 +342,5 @@ pw() {
   pass otp -c $1
   exit
 }
+eval $(keychain --eval --quiet id_ed25519)
+source ~/.keychain/$HOSTNAME-sh
