@@ -342,5 +342,10 @@ pw() {
   pass otp -c $1
   exit
 }
+# export LIBGL_DRI3_DISABLE=1
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
+# Use the iHD driver for media
+export LIBVA_DRIVER_NAME=iHD
 eval $(keychain --eval --quiet id_ed25519)
 source ~/.keychain/$HOSTNAME-sh
