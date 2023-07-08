@@ -342,6 +342,7 @@ pw() {
   pass otp -c $1
   exit
 }
+#for mspylsp
 # export LIBGL_DRI3_DISABLE=1
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
