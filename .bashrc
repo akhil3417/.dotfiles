@@ -139,12 +139,11 @@ up() {
   if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
     limit=1
   fi
-
   for ((i = 1; i <= limit; i++)); do
     d="../$d"
   done
 
-  # perform cd. Show error if cd fails
+ # perform cd. Show error if cd fails
   if ! cd "$d"; then
     echo "Couldn't go up $limit dirs."
   fi
