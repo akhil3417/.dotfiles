@@ -19,13 +19,13 @@
 # Script:
 
 # GitHub username
-USER="gavinok"
+USER="akhil3417"
 
 # GitHub user account URL
 URL="https://github.com/${USER}/"
 
 # Clone a repository into the current directory
-clone_repository(){
+clone_repository() {
   local repository=$1
   if [ -z "${repository}" ]; then
     echo "ERROR: You need to enter the name of the repository you wish to clone."
