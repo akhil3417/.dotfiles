@@ -1,9 +1,0 @@
-#!/usr/bin/env zsh
-# Author - Haron Prime
-# License WTFPL http://www.wtfpl.net/
-
-zenity  --question --text "You really want to shut down your computer?"
-if [ $? = 0 ]
-    then systemctl poweroff
-fi
-exit 0
