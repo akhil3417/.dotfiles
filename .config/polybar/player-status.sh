@@ -1,5 +1,5 @@
 #!/bin/sh
-# [[file:../doom/exwmmain.org::*polybar config][polybar config:2]]
+# [[file:../doom/config.org::*polybar config][polybar config:2]]
 status="$(playerctl -p spotify status 2>&1)"
 if [ "$status" != "No players found" ]
 then
