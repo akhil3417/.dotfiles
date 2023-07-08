@@ -138,10 +138,10 @@
  (rear-context-string . "022-11-22 11:10 ")
  (position . 147))
 ("org-refile-last-stored"
- (filename . "~/org/org-agenda/done.org")
- (front-context-string . "* DONE\n*** DONE ")
- (rear-context-string . "ate: 2023-02-09\n")
- (position . 63))
+ (filename . "~/tmpexpdir/new.org")
+ (front-context-string . "*** dm-colpick :")
+ (rear-context-string . ": run your life\n")
+ (position . 604))
 ("ramayna songs"
  (filename . "/media/New_Volume/Edu/beyond science/ramayna songs/")
  (front-context-string . "Krishna - A Most")
