@@ -24,14 +24,13 @@ host=
 [ $# -gt 0 ] || usage "${WRONG_ARGS_ERR}"
 
 # getopts check and validate options
-while getopts ':i:h' opt
-do
-  case ${opt} in
-     i) input="${OPTARG}";;
-     h) usage;;
-     \?) usage "${INVALID_OPT_ERR} ${OPTARG}" 1>&2;;
-     :) usage "${INVALID_OPT_ERR} ${OPTARG} ${REQ_ARG_ERR}" 1>&2;;
-  esac
+while getopts ':i:h' opt; do
+    case ${opt} in
+        i) input="${OPTARG}" ;;
+        h) usage ;;
+        \?) usage "${INVALID_OPT_ERR} ${OPTARG}" 1>&2 ;;
+        :) usage "${INVALID_OPT_ERR} ${OPTARG} ${REQ_ARG_ERR}" 1>&2 ;;
+    esac
 done
 shift $((OPTIND-1))
 
