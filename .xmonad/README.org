@@ -901,7 +901,7 @@ myKeys c =
   , ("M-c s", addName "Emacsclient Eshell"       $ spawn (myEmacs ++ ("--eval '(eshell)'")))
   , ("M-c v", addName "Emacsclient Vterm"        $ spawn (myEmacs ++ ("--eval '(+vterm/here nil)'")))
   , ("M-c c", addName "Emacsclient everywhere"   $ spawn ("emacsclient --eval '(emacs-everywhere)'"))
-  , ("M-c w", addName "Emacsclient EWW Browser"  $ spawn (myEmacs ++ ("--eval '(doom/window-maximize-buffer(eww \"distro.tube\"))'")))]
+  , ("M-c w", addName "Emacsclient EWW Browser"  $ spawn (myEmacs ++ ("--eval '(doom/window-maximize-buffer(eww \"duckduckgo.com\"))'")))]
 
   -- Multimedia Keys
   ^++^ subKeys "Multimedia keys"
