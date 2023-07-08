@@ -3,11 +3,10 @@
 # pinch send youtube audio to mpd
 
 # script usage
-usage()
-{
-echo "\
+usage() {
+    echo "\
 $(basename "$0") -i url"
-exit 2
+    exit 2
 }
 
 # error messages
