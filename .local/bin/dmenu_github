@@ -36,18 +36,18 @@ clone_repository() {
 
 # Get all the repositories for the user with curl and GitHub API and filter only
 # the repository name from the output with sed substitution
-all_my_repositories_short_name(){
-  curl -s "https://api.github.com/users/${USER}/repos?per_page=1000" | grep -o 'git@[^"]*' |\
+all_my_repositories_short_name() {
+  curl -s "https://api.github.com/users/${USER}/repos?per_page=1000" | grep -o 'git@[^"]*' |
     sed "s/git@github.com:${USER}\///g"
 }
 
 # Rofi dmenu
-rofi_dmenu(){
+rofi_dmenu() {
   dmenu -p "Select a repository >" -l 10
 }
 
-main(){
-  repository=$(all_my_repositories_short_name | rofi_dmenu )
+main() {
+  repository=$(all_my_repositories_short_name | rofi_dmenu)
   clone_repository "${repository}"
 }
 
