@@ -332,6 +332,7 @@ source /home/shiva/.config/broot/launcher/bash/br
 # Use bash-completion, if available
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
   . /usr/share/bash-completion/bash_completion
+
 pw() {
   export PASSWORD_STORE_CLIP_TIME=8
   export PASSWORD_STORE_X_SELECTION=primary
