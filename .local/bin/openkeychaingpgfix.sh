@@ -1,4 +1,21 @@
 #!/bin/bash
+# this script aims to solve the issue faced with openkeychain file decryption saying
+# Error "Encountered an error reading input data" when decrypting files created by gpg2.3 onwards
+#
+# reson for bug ? : as openkeychain app in no longer maintained , its incompatible with newer gnupg
+#
+# issuse reported links
+#
+#https://github.com/android-password-store/Android-Password-Store/issues/1456
+#https://github.com/open-keychain/open-keychain/issues/2096
+#
+#
+#after looking for half an hour i found the solution  here https://github.com/android-password-store/Android-Password-Store/issues/173
+# added throw-keyids to ~/.gnupg/gpg.conf which forced gpg to not put the recipient key IDs into the
+# encrypted gpg files for pass (which made it so that openkeychain couldn't open/decrypt the file
+# so this script solves that issue
+#
+
 set -euo pipefail
 export IFS=$'\n\t'
 
