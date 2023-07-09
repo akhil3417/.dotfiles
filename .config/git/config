@@ -2,3 +2,4 @@
   xfuncname = "^(\\*+ +.*)$"
 [user]
 	name = akhil3417
+	gpgsign = true
