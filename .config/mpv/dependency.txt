@@ -1,0 +1,2 @@
+for autosub:
+Installing collected packages: rebulk, rarfile, enzyme, pysrt, pbr, babelfish, stevedore, guessit, dogpile.cache, subliminal
