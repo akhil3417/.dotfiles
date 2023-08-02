@@ -901,7 +901,7 @@ myKeys c =
   , ("M-c s", addName "Emacsclient Eshell"       $ spawn (myEmacs ++ ("--eval '(eshell)'")))
   , ("M-c v", addName "Emacsclient Vterm"        $ spawn (myEmacs ++ ("--eval '(+vterm/here nil)'")))
   , ("M-c c", addName "Emacsclient everywhere"   $ spawn ("emacsclient --eval '(emacs-everywhere)'"))
-  , ("M-c w", addName "Emacsclient EWW Browser"  $ spawn (myEmacs ++ ("--eval '(doom/window-maximize-buffer(eww \"duckduckgo.com\"))'")))]
+  , ("M-c w", addName "Emacsclient EWW Browser"  $ spawn (myEmacs ++ ("--eval '(doom/window-maximize-buffer(eww \"gnu.org\"))'")))]
 
   -- Multimedia Keys
   ^++^ subKeys "Multimedia keys"
@@ -924,14 +924,6 @@ myKeys c =
 
 #+END_SRC
 
-#+RESULTS:
-: <interactive>:219:58-64: error:
-:     Not in scope: ‘W.stack’
-:     No module named ‘W’ is imported.
-:
-: <interactive>:219:73-77: error:
-:     Not in scope: ‘W.tag’
-:     No module named ‘W’ is imported.
 * desktop notifications
 #+begin_src haskell :tangle no
 
