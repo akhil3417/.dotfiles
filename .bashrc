@@ -93,7 +93,7 @@ bind "set completion-ignore-case on"
 
 cdown() {
   N=$1
-  while [[ $((--N)) > 0 ]]; do
+  while [[ $((--N)) ]] >0; do
     echo "$N" | figlet -c | lolcat && sleep 1
   done
 }
@@ -135,15 +135,15 @@ up() {
   local d=""
   local limit="$1"
 
-  # Default to limit of 1
-  if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
-    limit=1
-  fi
-  for ((i = 1; i <= limit; i++)); do
-    d="../$d"
-  done
+  # # Default to limit of 1
+  # if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
+  #   limit=1
+  # fi
+  # for ((i = 1; i <= limit; i++)); do
+  #   d="../$d"
+  # done
 
- # perform cd. Show error if cd fails
+  # perform cd. Show error if cd fails
   if ! cd "$d"; then
     echo "Couldn't go up $limit dirs."
   fi
@@ -309,10 +309,10 @@ cat /home/shiva/.cache/wal/sequences
 # To add support for TTYs this line can be optionally added.
 source /home/shiva/.cache/wal/colors-tty.sh
 # You can create a function for this in your shellrc (.bashrc, .zshrc).
-wal-tile() {
-  wal -n -i "$@"
-  feh --bg-tile "$(<"/home/shiva/.cache/wal/wal")"
-}
+# wal-tile() {
+#   wal -n -i "$@"
+#   feh --bg-tile "$(<"/home/shiva/.cache/wal/wal")"
+# }
 
 # Import the colors.
 . "/home/shiva/.cache/wal/colors.sh"
@@ -354,16 +354,18 @@ export LIBVA_DRIVER_NAME=iHD
 # !! Contents within this block are managed by 'conda init' !!
 # __conda_setup="$('/home/shiva/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 # if [ $? -eq 0 ]; then
-    # eval "$__conda_setup"
+# eval "$__conda_setup"
 # else
-    # if [ -f "/home/shiva/miniconda3/etc/profile.d/conda.sh" ]; then
-        # . "/home/shiva/miniconda3/etc/profile.d/conda.sh"
-    # else
-        # export PATH="/home/shiva/miniconda3/bin:$PATH"
-    # fi
+# if [ -f "/home/shiva/miniconda3/etc/profile.d/conda.sh" ]; then
+# . "/home/shiva/miniconda3/etc/profile.d/conda.sh"
+# else
+# export PATH="/home/shiva/miniconda3/bin:$PATH"
+# fi
 # fi
 # unset __conda_setup
 # <<< conda initialize <<<
 
-eval $(keychain --eval --quiet id_ed25519)
+# export PATH="$HOME/gitclones/SlymeGPT/chromedriver:$PATH"
+
+# eval $(keychain --eval --quiet id_ed25519)
 source ~/.keychain/$HOSTNAME-sh
