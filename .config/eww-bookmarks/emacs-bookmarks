@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("learnLangs"
+(("emacsrepos"
+ (filename . "~/gitclones/emacsrepos/")
+ (front-context-string . "copilot-emacsd\n ")
+ (rear-context-string . "42 Mar 11 19:01 ")
+ (position . 152)
+ (last-modified 25827 44979 560557 738000))
+("learnLangs"
  (filename . "~/gitclones/learnLangs/")
  (front-context-string)
  (rear-context-string . "022-12-29 22:35 ")
@@ -317,10 +323,11 @@
  (rear-context-string . "022-09-23 20:03 ")
  (position . 422))
 ("org-capture-last-stored"
- (filename . "~/org/org-roam2/Notes/20230601230803--Android Pentesting.org")
+ (filename . "~/org/org-roam2/Notes/20230808225834--code snippets.org")
  (front-context-string)
- (rear-context-string . "ags: :android  \n")
- (position . 158))
+ (rear-context-string . "letags: :code  \n")
+ (position . 150)
+ (last-modified 25810 31579 155752 57000))
 ("virtsharedcommand"
  (filename . "~/kvmshared.txt")
  (front-context-string . "sudo mount -t 9p")
