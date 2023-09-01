@@ -130,7 +130,7 @@ import XMonad.Util.SpawnOnce
       -- SolarizedDark
       -- SolarizedLight
       -- TomorrowNight
-import Colors.OceanicNext
+import Colors.DoomOne
 
 #+END_SRC
 
