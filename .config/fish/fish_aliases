@@ -85,7 +85,8 @@ alias ka='killall'
 # alias vim='nvim'
 alias em='/usr/bin/emacs -nw'
 #alias emacs="emacsclient -c -a 'emacs'"
-alias doom="~/.emacs.d/bin/doom"
+# alias doom="~/.emacs.d/bin/doom"
+alias doom="~/doom-emacs/bin/doom"
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
