@@ -17,6 +17,7 @@ WRONG_ARGS_ERR='wrong number of arguments passed to script'
 
 # mpd host socket
 host="${HOME}/.config/mpd/socket"
+# host="localhost"
 
 # if script is run arguments pass and check the options with getopts,
 # else display script usage and exit
@@ -44,20 +45,21 @@ yt () {
     if [ -z "$(mpc --host="${host}" current)" ]; then # nothing playing
         if [ -z "$(mpc --host="${host}" playlist)" ]; then # playlist empty
            mpc --host="${host}" add "${link}"
-           mpc --host="${host}" play 
+           mpc --host="${host}" play
 	   notify-send "Now Playing ♫" "${name}"
 	else # playlist not empty so clear add url and play
            mpc --host="${host}" clear
 	   mpc --host="${host}" add "${link}"
-           mpc --host="${host}" play 
+           mpc --host="${host}" play
 	   notify-send "Now Playing ♫" "${name}"
 	fi
     else # audio playing insert url and play next
-        mpc --host="${host}" add "${link}" 
+        mpc --host="${host}" add "${link}"
 #	mpc --host="${host}" next
 	notify-send "Queuing ♫" "${name}" 2>/dev/null
     fi
 }
+
 
 # run the yt function with the url
 yt "${url}"

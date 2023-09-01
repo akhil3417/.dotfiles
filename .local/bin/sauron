@@ -12,7 +12,7 @@ input=$(printf "%s\n" "$@")
 audio() {
     printf "%s\n" "${input}" |
         while read line; do
-            ts pinch -i "${line}" 1>/dev/null
+            ts pinchv2 -i "${line}" 1>/dev/null
         done
 }
 
