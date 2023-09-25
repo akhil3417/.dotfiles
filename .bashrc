@@ -11,6 +11,8 @@ export ALTERNATE_EDITOR=""              # setting for emacsclient
 export EDITOR="emacsclient -t -a ''"    # $EDITOR use Emacs in terminal
 export VISUAL="emacsclient -c -a emacs" # $VISUAL use Emacs in GUI mode
 export HISTCONTROL=ignorespace
+export MPD_HOST=/home/shiva/.config/mpd/socket  # for some reason only absolute path works
+export LC_ALL=en_US.UTF-8
 # export MB_CONFIG=~/.config/mbsync/config
 ### SET MANPAGER
 ### Uncomment only one of these!
@@ -156,7 +158,8 @@ pipdepuninstall() {
 # alias vim="nvim"
 alias em="/usr/bin/emacs -nw"
 alias emacs="emacsclient -c -a 'emacs'"
-alias doom="~/.emacs.d/bin/doom"
+# alias doom="~/.emacs.d/bin/doom"
+alias doom="~/doom-emacs/bin/doom"
 
 #void linux aliases
 alias install='sudo xbps-install '
@@ -349,6 +352,7 @@ export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
 # Use the iHD driver for media
 export LIBVA_DRIVER_NAME=iHD
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
