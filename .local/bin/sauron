@@ -55,6 +55,20 @@ downaudio() {
         done
 }
 
+classicaldownaudio() {
+    printf "%s\n" "${input}" |
+        while read line; do
+            TS_SOCKET=/tmp/download \
+                ts \
+                yt-dlp -ciw \
+                --no-playlist \
+                -f 'ba' -x --audio-format opus --embed-subs --embed-metadata --download-archive ~/Music/youtube-dl/download-archive/audiosclassical.txt \
+                -o "$HOME/Music/shiva/classical/%(title)s-[%(id)s].%(ext)s" \
+                --external-downloader aria2c --external-downloader-args '-c -j 10 -x 3 -s 3 -k 1M' \
+                "${line}" 1>/dev/null
+        done
+}
+
 # download with yt-dlp with sponsorblock to remove sponsor
 sponsorblock_download() {
     printf "%s\n" "${input}" |
@@ -96,6 +110,7 @@ video() {
 audio_ts='audio        - mpd play audio'
 download_ts='download     - yt-dlp download links video max quality'
 downaudio_ts='downaudio     - yt-dlp download audio'
+classicaldownaudio_ts='classicaldownaudio     - yt-dlp download audio to classical'
 sponsorblock_ts='sponsorblock - sponsorblock yt-dlp'
 fullscreen_ts='fullscreen   - mpv play fullscreen on second display'
 video_ts='video        - mpv play video on current display'
@@ -105,6 +120,7 @@ menu=$(printf "%s\n" \
     "${audio_ts}" \
     "${download_ts}" \
     "${downaudio_ts}" \
+    "${classicaldownaudio_ts}" \
     "${sponsorblock_ts}" \
     "${fullscreen_ts}" \
     "${video_ts}" |
@@ -115,6 +131,7 @@ case "${menu}" in
     audio*) audio ;;
     download*) download ;;
     downaudio*) downaudio ;;
+    classical*) classicaldownaudio ;;
     sponsor*) sponsorblock_download ;;
     fullscreen*) fullscreen ;;
     video*) video ;;
