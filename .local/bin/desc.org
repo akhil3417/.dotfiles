@@ -1,0 +1,299 @@
+#+title: Desc
+#+author: Akhil Pratap Singh
+#+date: 2023-07-04
+
+* All
+** Xmobar
+
+-   [[file:XMMPC][XMMPC]]
+-   [[file:XMMPCnext][XMMPCnext]]
+-   [[file:XMMPCprev][XMMPCprev]]
+-   [[file:XMMPCtoggle][XMMPCtoggle]]
+-   [[file:XMMPDToggle][XMMPDToggle]]
+-   [[file:XMTop-cpu][XMTop-cpu]]
+-   [[file:XMTop-mem][XMTop-mem]]
+-   [[file:XMncmpcpp][XMncmpcpp]]
+
+** dmenu and rofi scripts
+
+-   rofi-calc
+-   powermenurofi
+-   power_menu : rofi logout
+
+-   dmenukaomoji
+-   dmenu-theming
+
+-   dm-note : why note here when you have emacs
+-   dm-reddit : i run a third party app and need to buy  api
+-   dm-run : run your life
+
+-   dmenu-command
+-   dm-colpick : good , but need to extend.
+-   dm-confedit : choose from conf files to edit in your editor .
+-   dm-currencies : paisa
+-   dm-dictionary : need fix
+-   dm-hub : all dm-scripts at one place
+-   dm-kill : kill that sob
+-   dm-logout : wanna go home?
+
+** mount , unmount
+
+-    dmenumount
+-    dm-usbmount
+-    dmenumountcifs
+
+** volume control
+-    cm : pipewire volume control
+-    dmenu-audio-sink
+-    volume
+-    changevolume
+
+** files and linkhandler
+-    dmenuhandler
+-    dmenu-handler
+-    dmenu-open-file* : useful
+-    dmenu-places-menu : useful to open file manager in a location
+-    linkhandler
+-    fzfmenu
+-    dff : need to find ff-cache
+
+** dmenu vpn
+-    dmenu-vpn : add the openvpn config to this
+-    surfshark : Script to automate starting and stopping openvpn, to be run as
+     a regular user. # modify for runit
+
+** dmenu github
+-    dmenu_github: Display all repositories connected to a GitHub user account in rofi and clone the selected repository.
+-    stars: github
+
+** dmenu network
+-    dmenu-bluetooth
+-    dmenu-win : useful to switch between open windows
+-    dmenu_kdeconnect : wonderful
+-    rofi-wifi-menu
+-    dm-wifi : crack that wpa-2
+-    wifi
+-    menu_connection_manager.sh : connection
+-    dmenu_run_history :
+-    dm-ip : hackerman
+
+** browser and bookmarks
+-    ws :  ws - surfraw, fzf and w3m
+-    dm-bookman: browser bookmarks , need to have a look
+-    dm-websearch : cool but , emacs web-engine is superior
+-    w3m-pager :  w3m pager with stty columns for wrapping text
+
+** music and sounds
+-    dm-music : explore the ragas , uses mpc and mpd
+-    dm-sounds : play sounds
+-    tag.sh : tag music , songs
+-    songinfo
+-    now-playing : songs
+-    music-player-client:  use mpc&mpd or emacsclient&emms to play music
+-    dm-radio : ghsssssss
+-    punch :  punch send audio links to mpd
+
+** screencast , record and walls
+-    get-bing-wallpaper
+-    dm-setbg : haha , walls
+-    dm-maim : better take ss  of those chats
+-    dm-record : wanna be a youtuber? , make sure your desktop audio is recorded along with the mic
+-    record-desktop-audio : record system audio with sox
+
+** emacs and mail
+
+-    org-protocol-capture-html.sh : capture pages in org
+-    emacsmail: emacs mail
+-    tempomail : disposable mail
+-    emacs-capture
+-    eshell
+-    e : Emacs client convenience wrapper.
+
+** Rat
+
+-    dogeport : android rat port activation
+-    dogeratstart :
+
+** pdf tools
+-    getbib
+-    gentoc.sh : generate toc for pdf documents
+-    ocrmypdf
+-    tesseract :
+-    topdf : convert documents to pdf using the doc2pdf.net service
+
+** Torrent
+-    aria2p
+-    diana
+-    torrent.sh :search and download torrents
+-    t : torrent anything , down watch etc
+-    streamovies : need to fix this
+-    transmission-pwgen : torrent
+-    qbittorentpluginurls
+-    game-get.sh
+-    textbook.sh : find books, fix env
+
+** System tools
+
+1. kernel
+2. dm-man : like manpages! really?
+3. dm-wiki : void wiki??
+4. psave.sh :  manage power to usb ports
+5. otp : need fix
+6. dmenupass
+7. otptool
+8. redshift_location_aware
+9. voidlinux-mirror-speedtest.sh
+10. voidupdates
+11. unix : wonderful
+12. vbridge-start : create network bridge
+13. upt : calculate uptime
+14. tutorialvids
+15. stopwatch.sh
+16. dunst_toggle_notify : toggle notification
+17. memory
+18. mouseless
+19. sysact : A dmenu wrapper script for system functions.
+
+20. typo : spelling
+
+21. unicode : good list , but emacs has that
+22. vim-anywhere
+
+23. xmpv
+** display control
+1. xrandrfzf.sh : very useful
+2. cl
+3. displayselect
+
+** Internet etc
+
+1. dm-translate : need fix
+2. gis-weather
+3. dm-weather : need fix
+4. weather : curl weather
+5. mtu : make tiny url for site
+
+** Other
+   after
+   battery_charge_indicator_multicolored
+
+   cast
+   castcontrol
+
+   cheat
+   chrome_createpass :
+   clock
+   cmark
+   compiler
+   convert_to_xpm
+   covid19
+   csv2json
+   csv2kml
+   dad
+
+
+
+   dtos-colorscheme : xmobar
+   dtos-help:
+   emenu
+
+   getcomproot
+
+   logo-ls
+   macho : both need fix
+   machogui.sh
+
+   md2roff.sh
+
+   meson
+
+   pacupdate
+   pauseallmpv
+
+   prompt
+
+   pywalfox
+
+   qndl : review
+   qrcsv : qrencode batch create qr codes from a csv file
+   qutebrowser.sh
+   remaps
+   remind
+
+   rotdir : go through images
+
+   sd :  Open a terminal window in the same directory as the currently active window.
+   shoppinglist.sh
+* Media
+** ffmpeg
+
+- audio-silence
+- overlay-clip
+- overlay-pip
+- pan-scan
+- tile-thumbnails : tile thumbnails from a video
+- scopes : ffplay video scopes
+- noisereduce
+- noise_profile_file
+- normalize
+- opti : image optimize and file size reducer
+- vid_post.sh
+- subs2transcript : convert subtitles to a transcript
+- subtitle-add : add subtitles to a video
+- slider : Give a file with images and timecodes and creates a video slideshow of them.
+- vid2gif :  convert a video into a gif animation
+- ebu-meter:  ffplay ebu meter
+- h264-aac: convert video to h264 and audio to aac
+- imagetoemojisquares.sh
+- img2video
+- img-optimize
+- jiffy : convert a video into a gif animation
+- gif
+- speedvid
+- dnxhd-pcm : convert video at 30fps to dnxhd and audio to pcm
+- zoompan
+- loudnorm
+- trim-clip
+- scene-cut
+- scene-detect
+- scene-images
+- scene-time
+- extract-frame
+- correct-clip
+- combine-clips
+- cleanaudio
+- crossfade-clips
+- fade-clip
+- fade-normalize
+- fade-title
+- ffmpegcombineallvidswithsimilarext.sh
+- ffmpegcompressmp4.sh
+
+- webjpeg
+- waveform :  create a waveform from an audio or video file and save as a png
+- webp:  ffmpeg libwebp_anim
+- xfade : ffmpeg xfade transitions
+
+** youtube
+
+-    mcyt : multicast yt streams
+-    sauron : pipe links to this
+-    pinch
+-    pinchv2
+-    y : watch youtube , stream
+-    yd : youtube video downloader , dmenu
+-    dm-youtube : youtube for channels
+-    yt_r
+-    youtube-rss
+-    ytduration.sh
+-    yank :  sen video links to kodi
+
+-    _dm-helper.sh
+-    dmenuunicode
+** other
+-    modifyexitdata.sh : this script modifies exif values of an image such as the GPSZAccuracy
+-    namelistosvg.sh : downloads 10 random names and converts them to svg
+-    ngrok
+-    onlinesvg.sh :downloads 10 random names and converts them to svg
+
+-    kodi-send
