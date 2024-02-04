@@ -353,20 +353,59 @@ export LIBVA_DRIVER_NAME=iHD
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/shiva/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-# eval "$__conda_setup"
-# else
-# if [ -f "/home/shiva/miniconda3/etc/profile.d/conda.sh" ]; then
-# . "/home/shiva/miniconda3/etc/profile.d/conda.sh"
-# else
-# export PATH="/home/shiva/miniconda3/bin:$PATH"
-# fi
-# fi
-# unset __conda_setup
+__conda_setup="$('/home/shiva/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+eval "$__conda_setup"
+else
+if [ -f "/home/shiva/miniconda3/etc/profile.d/conda.sh" ]; then
+. "/home/shiva/miniconda3/etc/profile.d/conda.sh"
+else
+export PATH="/home/shiva/miniconda3/bin:$PATH"
+fi
+fi
+unset __conda_setup
 # <<< conda initialize <<<
 
 # export PATH="$HOME/gitclones/SlymeGPT/chromedriver:$PATH"
 
 # eval $(keychain --eval --quiet id_ed25519)
 source ~/.keychain/$HOSTNAME-sh
+
+
+# # taken from https://github.com/Ce-daros/ai-bash-response/blob/1fb3a1ce0ec419f2d5e2472e0acda713c3d42aea/sample.sh
+# command_not_found_handle() {
+#     # Call OpenAI API
+#     local input="$*"
+#   local formatted=""
+#   local arg
+
+#   # Loop over each argument in the input string
+#   for arg in $input; do
+#     # If the argument contains spaces, enclose it in quotes
+#     if [[ $arg == *[[:space:]]* ]]; then
+#       arg="\"$arg\""
+#     fi
+
+#     # Append the argument to the formatted string
+#     formatted+="$arg "
+#   done
+#   local api_URL=""
+#   local api_key=""
+#   # Remove the trailing space
+#   formatted=${formatted%?}
+#   local response=$(curl -s  --request POST \
+#      --url "$api_URL" \
+#      --header "Authorization: Bearer $api_key" \
+#      --header 'accept: application/json' \
+#      --header 'content-type: application/json' \
+#      --data "{\"model\":\"mistralai/Mixtral-8x7B-Instruct-v0.1\", \"max_tokens\": 100,\"temperature\": 0.7,\"messages\": [{\"role\": \"user\",\"content\": \"you are a linux shell in teenager tone. She said '$formatted' to you. If she wants to chat with you just answer her, if it seems like she used the wrong command just tell her the correct one.\"}],\"stream\": false}")
+
+#     # Parse the response and echo the generated text
+
+#     local generated_text=$(echo $response | jq -r '.choices[0].message.content')
+#     echo "Error: '$formatted' Command doesn't exist."
+#     echo
+#     echo -e "\033[36m$generated_text\033[0m"
+# return 127
+# }
+# export -f command_not_found_handle
