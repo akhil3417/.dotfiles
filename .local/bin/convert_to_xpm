@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+# Author - Akhi Pratap Singh
+# License WTFPL http://www.wtfpl.net/
+
+cd /home/shiva/.config/gis-weather &&
+convert -resize 18x18 cur_icon.png cur_icon_18.png && 
+convert cur_icon_18.png cur_icon.xpm &&
+rm -f convert cur_icon_18.png
+exit 0

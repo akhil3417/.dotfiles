@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+curl -s http://tinyurl.com/api-create.php\?url\=
