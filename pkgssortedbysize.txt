@@ -1,538 +1,1605 @@
-libglib-devel-2.76.1_1: 9.9MB
-android-tools-34.0.1_2: 10MB
+base-devel-20181003_2: 0B
+base-system-0.114_1: 0B
+breeze-cursors-1.0_3: 0B
+clang-17_2: 0B
+docker-25.0.3_1: 0B
+exa-0.18.3_1: 0B
+font-sourcecodepro-2.038R~ro+1.058R~it+1.018R~VAR_1: 0B
+gnupg2-2.4.3_2: 0B
+i3-gaps-4.23_1: 0B
+libclang-17_2: 0B
+libclang-cpp-17_2: 0B
+libreoffice-7.6.4.1_1: 0B
+libreoffice-fonts-7.6.4.1_1: 0B
+linux-6.6_1: 0B
+linux-headers-6.6_1: 0B
+lua-5.3.6_1: 0B
+p7zip-23.01_1: 0B
+php-8.3_1: 0B
+python3-gpg-1.23.1_2: 0B
+removed-packages-0.1.20240210_1: 0B
+sxiv-32_1: 0B
+void-docs-browse-2023.06.28_1: 0B
+wifi-firmware-1.3_4: 0B
+xorg-fonts-7.6_5: 0B
+xorg-minimal-1.2_2: 0B
+void-repo-nonfree-9_6: 62B
+void-repo-multilib-6_4: 63B
+void-repo-multilib-nonfree-6_4: 71B
+grub-btrfs-runit-4.13_1: 331B
+dnssec-anchors-20230213_1: 758B
+passmenu-1.7.4_3: 789B
+ufw-extras-0.6.0_1: 922B
+runit-void-apparmor-20231124_1: 936B
+openjdk-common-2_1: 995B
+linux-base-2023.05.29_1: 1279B
+at-spi2-atk-devel-2.48.0_1: 1622B
+pam-base-0.4_2: 1741B
+void-updates-20231023_1: 3836B
+python3-dbus-devel-1.3.2_2: 4057B
+passff-host-1.2.3_1: 4435B
+font-dec-misc-1.0.4_1: 4496B
+rxvt-unicode-terminfo-9.31_4: 5042B
+perl-Net-SMTP-SSL-1.04_3: 5141B
+font-cursor-misc-1.0.4_1: 5261B
+python3-certifi-2022.09.24_4: 6473B
+alacritty-terminfo-0.13.1_2: 7290B
+spdx-licenses-list-3.22_1: 8784B
+libXdamage-devel-1.1.6_1: 9647B
+libfl-devel-2.6.4_3: 9753B
+clipmenu-6.2.0_1: 13KB
+libdecor-devel-0.1.1_1: 13KB
+clipnotify-1.0.2_1: 14KB
+libaio-0.3.113_1: 14KB
+libboost_date_time-1.83.0_4: 14KB
+libboost_system-1.83.0_4: 14KB
+libwoff2common1.0.2-1.0.2_1: 14KB
+libXcomposite-0.4.6_1: 14KB
+libXinerama-1.1.5_1: 14KB
+libXpresent-1.0.1_1: 14KB
+libXScrnSaver-1.2.4_1: 14KB
+libpciaccess-devel-0.18_1: 15KB
+libXau-1.0.11_1: 15KB
+libXdamage-1.1.6_1: 15KB
+libxshmfence-1.3.2_1: 15KB
+perl-Digest-HMAC-1.04_1: 15KB
+python3-virtualenv-clone-0.5.4_5: 15KB
+xcb-util-keysyms-0.4.1_1: 15KB
+xtrlock-3.4_2: 15KB
+font-alias-1.0.5_1: 16KB
+unclutter-8_5: 16KB
+glu-devel-9.0.3_1: 17KB
+libgbm-devel-23.3.5_3: 17KB
+mythes-1.2.4_5: 17KB
+python3-mccabe-0.7.0_3: 17KB
+python3-notify2-0.3.1_7: 17KB
+libboost_atomic-1.83.0_4: 18KB
+npth-1.6_1: 18KB
+pass-otp-1.2.0_2: 18KB
+libxdg-basedir-1.2.0_4: 19KB
+xcb-util-image-0.4.1_1: 19KB
+slock-1.5_2: 20KB
+libXinerama-devel-1.1.5_1: 21KB
+libasyncns-0.8_9: 22KB
+libkeyutils-1.6.3_1: 22KB
+libsharpyuv-1.3.2_1: 22KB
+libusb-compat-0.1.8_1: 22KB
+libXv-1.0.12_1: 22KB
+libXxf86vm-1.1.5_1: 22KB
+python3-decorator-5.1.1_3: 22KB
+qt5-x11extras-5.15.11+20231124_2: 22KB
+libraqm-0.7.0_1: 23KB
+lolcat-c-1.4_1: 23KB
+xcb-util-xrm-1.3_1: 23KB
+perl-File-Which-1.27_1: 24KB
+xcb-util-cursor-0.1.4_1: 24KB
+xsetroot-1.1.3_1: 24KB
+python3-userpath-1.9.1_1: 25KB
+xcb-util-renderutil-0.3.10_1: 25KB
+xorg-server-common-21.1.11_1: 25KB
+libgpm-1.20.7_10: 26KB
+libijs-10.02.1_1: 26KB
+libmicrodns-0.2.0_1: 26KB
+libmnl-1.0.5_1: 26KB
+libXcomposite-devel-0.4.6_1: 26KB
+python3-filelock-3.13.1_1: 26KB
+xtools-minimal-0.66_1: 26KB
+attr-2.5.2_1: 27KB
+libscrypt-1.22_2: 27KB
+xcb-util-0.4.1_1: 27KB
+zsh-autosuggestions-0.7.0_1: 27KB
+libutempter-1.2.1_2: 28KB
+libXau-devel-1.0.11_1: 28KB
+python3-xmltodict-0.13.0_2: 28KB
+xhost-1.0.9_1: 28KB
+libatomic-13.2.0_2: 30KB
+libbtrfs-6.5.1_1: 30KB
+libfm-extra-1.3.2_1: 30KB
+libsigc++-2.12.0_1: 30KB
+libXfixes-6.0.1_1: 30KB
+libxkbregistry-1.6.0_2: 30KB
+libXtst-1.2.4_1: 30KB
+qt5-concurrent-5.15.11+20231124_2: 30KB
+run-parts-4.11.2_2: 30KB
+libebur128-1.2.6_1: 31KB
+libXScrnSaver-devel-1.2.4_1: 31KB
+tty-clock-2.3_2: 31KB
+libspiro-20221101_1: 32KB
+libuuid-2.38.1_4: 32KB
+pick-4.0.0_1: 32KB
+acpi-1.7_4: 33KB
+libxcvt-0.1.2_1: 33KB
+vdpauinfo-1.4_1: 33KB
+xxd-9.1.0104_1: 33KB
+dex-0.9.0_1: 34KB
+libargon2-20190702_3: 34KB
+libboost_chrono-1.83.0_4: 34KB
+libdaxctl-70.1_1: 34KB
+libnfnetlink-1.0.2_1: 34KB
+libsharpyuv-devel-1.3.2_1: 34KB
+libsord-0.16.16_1: 34KB
+msgpack-4.0.0_1: 34KB
+xbps-triggers-0.127_1: 34KB
+libdebuginfod-0.190_1: 35KB
+libfontenc-1.1.7_1: 35KB
+python3-magic-0.4.25_3: 35KB
+xdpyinfo-1.3.4_2: 35KB
+android-udev-rules-20231207_1: 36KB
+libusb-compat-devel-0.1.8_1: 36KB
+libXdmcp-devel-1.1.4_1: 36KB
+pwgen-2.08_2: 36KB
+xmessage-1.0.6_1: 36KB
+zsh-history-substring-search-1.0.2_2: 36KB
+python3-six-1.16.0_4: 37KB
+setxkbmap-1.3.4_1: 37KB
+acl-2.3.1_1: 38KB
+cabextract-1.11_1: 38KB
+gtk-update-icon-cache-2.24.33_2: 38KB
+libdvdcss-1.4.3_1: 38KB
+libfixposix-0.4.3_1: 38KB
+libogg-1.3.5_1: 38KB
+libsigc++3-3.4.0_1: 38KB
+libxkbcommon-x11-1.6.0_2: 38KB
+signon-kwallet-extension-23.08.4_1: 38KB
+zita-convolver-4.0.3_3: 38KB
+mpv-mpris-1.1_1: 39KB
+python3-docopt-0.6.2_10: 39KB
+python3-MarkupSafe-2.1.5_1: 39KB
+xclip-0.13_2: 39KB
+dbus-x11-1.14.10_1: 40KB
+libSM-1.2.4_1: 40KB
+portmidi-217_3: 40KB
+sndio-devel-1.9.0_1: 40KB
+cowsay-3.04_4: 41KB
+mtdev-1.1.6_1: 41KB
+xtools-0.66_1: 41KB
+inih-58_1: 42KB
+kcrash-5.115.0_1: 42KB
+libcracklib-2.9.11_1: 42KB
+libffi-3.3_2: 42KB
+libinotify-tools-3.20.11.0_1: 42KB
+liblrdf-0.6.1_2: 42KB
+libltdl-2.4.7_5: 42KB
+libqmobipocket-22.12.1_1: 42KB
+libXfixes-devel-6.0.1_1: 42KB
+libxxHash-0.8.2_1: 42KB
+pango-xft-1.50.14_1: 42KB
+qrencode-4.1.1_1: 42KB
+startup-notification-0.12_11: 42KB
+which-2.21_4: 42KB
+http-parser-2.9.4.20201223_1: 43KB
+libwpe-1.15.2_1: 43KB
+sratom-0.6.16_1: 43KB
+xinit-1.4.2_1: 43KB
+xsel-1.2.1_1: 43KB
+libcap-ng-0.8.4_1: 44KB
+python3-pyqt6-webchannel-6.6.1_2: 44KB
+snappy-1.1.10_1: 45KB
+zd1211-firmware-1.5_3: 45KB
+i3blocks-1.5_2: 46KB
+libqrencode-4.1.1_1: 46KB
+libXcursor-1.2.1_2: 46KB
+minizip-1.3_1: 46KB
+earlyoom-1.7_1: 47KB
+giflib-5.2.1_1: 47KB
+libpciaccess-0.18_1: 47KB
+graphite-devel-1.3.14_1: 48KB
+python3-pysocks-1.7.0_6: 48KB
+xset-1.2.5_2: 48KB
+bridge-utils-1.7.1_1: 49KB
+pixman-devel-0.42.2_1: 49KB
+xrdb-1.2.2_1: 49KB
+file-5.45_1: 50KB
+libasyncns-devel-0.8_9: 50KB
+libconfig-1.7.3_1: 50KB
+libndp-1.8_1: 50KB
+libnuma-2.0.14_1: 50KB
+libsysfs-2.1.0_7: 50KB
+libwoff2dec1.0.2-1.0.2_1: 50KB
+libXrandr-1.5.4_1: 50KB
+talloc-2.4.2_1: 50KB
+wendy-2.1_1: 50KB
+opendoas-6.8.2_1: 51KB
+python3-colorama-0.4.6_2: 51KB
+xwallpaper-0.7.4_1: 51KB
+zix-0.4.2_1: 51KB
+inetutils-uucpd-2.4_2: 52KB
+libcanberra-gtk3-0.30_12: 52KB
+yq-3.2.3_2: 52KB
+qtchooser-66_3: 53KB
+brotli-devel-1.1.0_1: 54KB
+hicolor-icon-theme-0.17_3: 54KB
+libfreeaptx-0.1.1_1: 54KB
+libgudev-238_1: 54KB
+liblqr-0.4.2_1: 54KB
+libspa-control-1.0.3_1: 54KB
+qt5-speech-5.15.11_1: 54KB
+dmenu-5.2_1: 55KB
+liba52-0.7.4_9: 55KB
+libbs2b-3.1.0_3: 55KB
+liburing-2.4_1: 55KB
+qt6-opengl-widgets-6.6.0_1: 55KB
+inetutils-dnsdomainname-2.4_2: 56KB
+inetutils-hostname-2.4_2: 56KB
+kpartx-0.9.6_1: 56KB
+pass-1.7.4_3: 56KB
+fuse-exfat-1.4.0_1: 57KB
+libdatrie-0.2.13_1: 57KB
+mkfontscale-1.2.2_1: 57KB
+trayer-srg-1.1.8_1: 57KB
+xdg-dbus-proxy-0.1.5_1: 57KB
+xwininfo-1.1.6_1: 57KB
+libsensors-3.6.0_1: 58KB
+double-conversion-3.3.0_1: 59KB
+giflib-devel-5.2.1_1: 59KB
+jp2a-1.1.1_1: 59KB
+libb2-0.98.1_1: 59KB
+libtermkey-0.22_1: 60KB
+xmlcatmgr-2.2_4: 60KB
+inetutils-traceroute-2.4_2: 61KB
+jpegoptim-1.5.5_1: 61KB
+libbytesize-2.8_3: 61KB
+ebook-tools-0.2.2_3: 62KB
+glxinfo-8.4.0_3: 62KB
+libpipeline-1.5.7_1: 62KB
+libspectre-0.2.12_1: 62KB
+jansson-2.14_1: 63KB
+keychain-2.8.5_2: 64KB
+libmpcdec-1.2.6_6: 64KB
+os-prober-1.81_1: 64KB
+inetutils-rcp-2.4_2: 65KB
+libXrender-0.9.11_1: 65KB
+libdatrie-devel-0.2.13_1: 66KB
+libmd4c-0.4.8_1: 66KB
+libmms-0.6.4_2: 66KB
+libwoff2enc1.0.2-1.0.2_1: 66KB
+libXi-1.8.1_1: 66KB
+xprop-1.2.6_1: 66KB
+libgbm-23.3.5_3: 67KB
+python3-defusedxml-0.7.1_2: 67KB
+xauth-1.1.2_1: 67KB
+bzip3-devel-1.4.0_1: 68KB
+clutter-gtk-1.8.4_4: 68KB
+libcap-2.69_2: 68KB
+libev-4.33_1: 68KB
+python3-distro-1.8.0_2: 68KB
+dtrx-8.5.3_2: 69KB
+libayatana-appindicator-0.5.93_1: 69KB
+libuuid-devel-2.38.1_4: 70KB
+ladspa-sdk-example-plugins-1.15_3: 71KB
+libsndio-1.9.0_1: 71KB
+pinentry-dmenu-0.2.3_1: 71KB
+json-c-0.17_1: 72KB
+libpcsclite-2.0.1_2: 72KB
+python3-lazy-object-proxy-1.9.0_2: 72KB
+netcat-0.7.1_7: 73KB
+avahi-glib-libs-0.8_7: 74KB
+libvidstab-1.1.0_2: 74KB
+jbigkit-libs-2.2_2: 75KB
+libsamplerate-devel-0.2.2_1: 75KB
+libspa-audiomixer-1.0.3_1: 75KB
+openresolv-3.13.2_1: 75KB
+speedtest-cli-2.1.3_4: 75KB
+libvterm-0.3.3_1: 76KB
+xcb-util-wm-0.4.2_1: 77KB
+libmspack-0.10.1alpha_1: 78KB
+tevent-0.11.0_3: 78KB
+unibilium-2.1.1_1: 78KB
+mediainfo-cli-22.12_2: 79KB
+python3-platformdirs-4.2.0_1: 79KB
+stfl-0.24_4: 79KB
+ldacBT-2.0.2.3_1: 80KB
+speexdsp-1.2.1_1: 80KB
+inetutils-inetd-2.4_2: 81KB
+tanidvr-1.4.1_2: 81KB
+efibootmgr-18_1: 82KB
+libassuan-2.5.6_1: 82KB
+libdbusmenu-gtk3-16.04.0_6: 82KB
+libplist-2.2.0_4: 82KB
+libtasn1-4.19.0_1: 82KB
+perl-Convert-BinHex-1.125_3: 82KB
+inotify-tools-3.20.11.0_1: 83KB
+libcacard-2.8.1_1: 84KB
+libsrtp-2.5.0_2: 84KB
+python3-keyutils-0.6_9: 84KB
+v4l2loopback-0.12.7_1: 84KB
+zziplib-0.13.72_1: 84KB
+libnotify-0.8.3_1: 85KB
+libvdpau-1.5_1: 85KB
+python3-pyte-0.8.0_8: 85KB
+bzip2-devel-1.0.8_2: 86KB
+libao-1.2.2_2: 86KB
+libatasmart-0.19_5: 86KB
+pulsemixer-1.5.1_2: 86KB
+confuse-3.3_1: 87KB
+qt6-plugin-sqlite-6.6.0_1: 87KB
+ts-1.0.2_1: 87KB
+sysfsutils-2.1.0_7: 88KB
+wpebackend-fdo-1.14.2_1: 88KB
+gvfs-smb-1.52.2_1: 89KB
+traceroute-2.1.3_1: 89KB
+libboost_iostreams-1.83.0_4: 90KB
+libdecor-0.1.1_1: 90KB
+libdvdnav-6.1.1_1: 90KB
+libsane-1.2.1_1: 90KB
+qt6-plugin-tls-qcertonly-6.6.0_1: 90KB
+stubby-0.4.0_1: 90KB
+bubblewrap-0.8.0_1: 91KB
+jbigkit-devel-2.2_2: 91KB
+libpaper-1.1.29_1: 93KB
+libid3tag-0.15.1b_8: 94KB
+libnemo-5.8.5_2: 94KB
+libserd-0.32.2_1: 94KB
+libtdb-1.4.9_2: 94KB
+libXcursor-devel-1.2.1_2: 94KB
+qt5-serialport-5.15.11+20231124_2: 94KB
+tidy5-5.8.0_1: 94KB
+libXrender-devel-0.9.11_1: 95KB
+aalib-1.4rc5_2: 96KB
+dma-0.13_5: 97KB
+libayatana-indicator-0.9.4_1: 97KB
+opusfile-0.12_3: 97KB
+libgsm-1.0.22_2: 98KB
+pam-libs-1.5.3_4: 98KB
+runit-void-20231124_1: 98KB
+zlib-1.3.1_1: 98KB
+libXft-2.3.8_1: 99KB
+rtkit-0.13_3: 99KB
+libXrandr-devel-1.5.4_1: 100KB
+xcowsay-1.6_1: 100KB
+perl-TimeDate-2.33_2: 101KB
+libconfig++-1.7.3_1: 102KB
+libkmod-31_1: 102KB
+optipng-0.7.7_1: 102KB
+xrandr-1.5.2_1: 102KB
+bzip3-1.4.0_1: 103KB
+libICE-1.1.1_1: 103KB
+tree-2.1.1_1: 103KB
+yajl-2.1.0_4: 103KB
+libcddb-1.3.2_9: 104KB
+liblilv-0.24.12_4: 106KB
+libusbmuxd-2.0.2_1: 106KB
+libcdparanoia-10.2_15: 107KB
+pasystray-0.8.2_2: 107KB
+usbredir-0.13.0_1: 107KB
+libvde2-2.3.2_25: 108KB
+libcloudproviders-0.3.5_1: 109KB
+grub-btrfs-4.13_1: 110KB
+libptytty-2.0_1: 110KB
+nsxiv-32_1: 110KB
+irqbalance-1.9.2_1: 111KB
+at-3.2.5_1: 113KB
+python3-ultrajson-5.9.0_1: 113KB
+xf86-input-libinput-1.4.0_1: 113KB
+chromaprint-1.5.1_1: 114KB
+faac-1.30_1: 114KB
+libspa-v4l2-1.0.3_1: 114KB
+libthai-devel-0.1.29_1: 114KB
+libwpg-0.3.3_1: 114KB
+libevdev-1.13.1_1: 116KB
+libspeex-1.2.1_1: 116KB
+perl-Authen-SASL-2.1700_1: 116KB
+libsasl-2.1.28_2: 117KB
+libsynctex-20230313_1: 117KB
+inetutils-ifconfig-2.4_2: 118KB
+libgudev-devel-238_1: 118KB
+libjbig2dec-0.20_1: 118KB
+libnetfilter_conntrack-1.0.9_1: 118KB
+librtmp-2.4.20161210_10: 118KB
+libtommath-1.2.1_1: 118KB
+menu-cache-1.1.0_2: 118KB
+ueberzug-18.1.9_3: 120KB
+autojump-22.5.3_3: 121KB
+inetutils-rexec-2.4_2: 121KB
+libffi-devel-3.3_2: 121KB
+libnuma-devel-2.0.14_1: 121KB
+libXtst-devel-1.2.4_1: 121KB
+libswresample-4.4.4_6: 122KB
+libusb-1.0.27_1: 122KB
+pinentry-1.2.1_1: 122KB
+fmt-9.1.0_1: 123KB
+liblc3-1.0.4_1: 123KB
+python3-argcomplete-3.2.1_1: 123KB
+qt6-serialport-6.6.0_1: 123KB
+libmpdclient-2.20_1: 124KB
+libXdmcp-1.1.4_1: 124KB
+dkms-3.0.10_3: 125KB
+ed-1.19_1: 125KB
+inetutils-rsh-2.4_2: 125KB
+libpsl-0.21.5_1: 125KB
+gstreamer1-pipewire-1.0.3_1: 126KB
+libavresample-4.4.4_6: 126KB
+libdvdread-6.1.3_1: 126KB
+libpostproc-4.4.4_6: 126KB
+libxklavier-5.4_3: 128KB
+python3-evdev-1.6.0_4: 128KB
+python3-wrapt-1.14.1_2: 128KB
+avahi-libs-devel-0.8_2: 129KB
+libboost_filesystem-1.83.0_4: 130KB
+libboost_thread-1.83.0_4: 130KB
+rnnoise-0.4.1_1: 130KB
+scrot-1.10_1: 130KB
+suil-0.10.12_1: 130KB
+popt-1.19_1: 131KB
+sdcv-0.5.3_1: 131KB
+font-awesome-4.7.0_3: 132KB
+libcap-progs-2.69_2: 132KB
+libslirp-4.7.0_1: 132KB
+urlscan-1.0.1_2: 132KB
+libdvbpsi-1.3.3_1: 134KB
+libmad-0.15.1b_10: 134KB
+lzo-2.10_2: 134KB
+libyaml-0.2.5_1: 135KB
+torbrowser-launcher-0.3.6_3: 135KB
+i3lock-color-2.13.c.4_1: 136KB
+inetutils-whois-2.4_2: 136KB
+lcms2-devel-2.16_2: 136KB
+libdbusmenu-glib-16.04.0_6: 136KB
+perl-IO-stringy-2.113_2: 136KB
+fortune-mod-anarchism-1.4.0_2: 137KB
+inetutils-tftp-2.4_2: 137KB
+inetutils-rlogin-2.4_2: 138KB
+libgirepository-1.76.1_3: 138KB
+libgusb-0.4.8_1: 138KB
+font-bitstream-75dpi-1.0.4_1: 139KB
+i3status-2.14_2: 139KB
+libcheese-43.0_2: 140KB
+libcdio-paranoia-10.2+2.0.1_1: 141KB
+libmpeg2-0.5.1_10: 141KB
+python3-pyqt6-sip-13.6.0_2: 141KB
+libebml-1.4.5_1: 142KB
+libgcc-13.2.0_2: 142KB
+liblz4-1.9.4_1: 142KB
+MesaLib-devel-23.3.5_3: 142KB
+libseccomp-2.5.5_1: 143KB
+fribidi-devel-1.0.13_1: 144KB
+inetutils-talk-2.4_2: 144KB
+libgsasl-1.10.0_1: 144KB
+zbar-0.23.1_7: 144KB
+libXpm-devel-3.5.17_1: 146KB
+sxhkd-0.6.2_1: 146KB
+bzip2-1.0.8_2: 147KB
+libmcpp-2.7.2_8: 147KB
+libatomic-devel-13.2.0_2: 148KB
+fribidi-1.0.13_1: 149KB
+hyphen-2.8.8_3: 149KB
+inetutils-syslog-2.4_2: 149KB
+libavdevice-4.4.4_6: 150KB
+libpagemaker-0.0.4_2: 150KB
+librist-0.2.7_1: 151KB
+python3-tomlkit-0.12.3_1: 152KB
+gvfs-afc-1.52.2_1: 153KB
+inetutils-ping-2.4_2: 153KB
+pkcs11-helper-1.29.0_2: 154KB
+celt-0.11.3_3: 156KB
+graphene-1.10.8_1: 156KB
+libndctl-70.1_1: 156KB
+xdg-user-dirs-0.18_1: 156KB
+python3-sip-PyQt5-12.13.0_2: 157KB
+volumeicon-0.5.1_4: 157KB
+eudev-libudev-3.2.14_1: 158KB
+font-bitstream-100dpi-1.0.4_1: 158KB
+qt6-xml-6.6.0_1: 158KB
+lxmenu-data-0.1.5_2: 159KB
+libdeflate-1.19_1: 161KB
+cairomm-1.14.5_1: 162KB
+libxkbfile-1.1.3_1: 162KB
+c-ares-1.26.0_1: 163KB
+alsa-pipewire-1.0.3_1: 164KB
+clutter-gst-2.0.18_2: 164KB
+acpid-2.0.34_2: 165KB
+gpgme-1.23.1_2: 165KB
+phodav-3.0_2: 165KB
+python3-charset-normalizer-3.3.2_1: 165KB
+dbus-glib-0.112_1: 166KB
+gvfs-mtp-1.52.2_1: 169KB
+python3-packaging-23.2_1: 169KB
+expat-2.6.0_1: 170KB
+ayatana-ido-0.9.3_1: 171KB
+cairo-devel-1.18.0_1: 171KB
+twolame-0.4.0_2: 171KB
+clutter-gst3-3.0.27_2: 172KB
+zsh-syntax-highlighting-0.8.0_1: 172KB
+newt-0.52.21_7: 173KB
+libwavpack-5.6.0_1: 174KB
+libheif-devel-1.17.5_1: 177KB
+libshout-2.4.5_1: 177KB
+libiscsi-1.19.0_1: 179KB
+qt5-webchannel-5.15.11+20231124_2: 179KB
+SDL2_image-2.6.3_1: 179KB
+font-alef-1.001_1: 180KB
+python3-requests-2.31.0_2: 180KB
+libluv-1.44.2.1_1: 182KB
+libotf-0.9.16_1: 182KB
+pywal-3.3.0_6: 182KB
+tree-sitter-0.20.9_1: 183KB
+cups-devel-2.4.7_4: 184KB
+kdbusaddons-5.115.0_1: 184KB
+cantarell-fonts-0.303.1_1: 185KB
+libtirpc-1.3.4_1: 188KB
+jack-1.9.22_1: 189KB
+libbluetooth-5.70_2: 189KB
+mpg123-devel-1.32.3_1: 189KB
+liblzma-5.4.6_1: 190KB
+qtkeychain-qt5-0.14.1_2: 190KB
+xdotool-3.20211022.1_1: 190KB
+dash-0.5.12_2: 191KB
+libcanberra-0.30_12: 191KB
+graphite-1.3.14_1: 192KB
+playerctl-2.4.1_1: 192KB
+gnome-video-effects-0.6.0_1: 194KB
+python3-attrs-23.1.0_2: 194KB
+portaudio-190600.20161030_6: 195KB
+libXpm-3.5.17_1: 196KB
+libuv-1.46.0_1: 197KB
+ncurses-base-6.4_2: 198KB
+pangomm-2.46.2_1: 198KB
+thefuck-3.32_4: 198KB
+libproxy-0.4.18_3: 199KB
+enchant2-2.6.4_1: 200KB
+libmanette-0.2.6_1: 200KB
+libxcrypt-4.4.36_3: 202KB
+libxcrypt-compat-4.4.36_3: 202KB
+polkit-qt5-0.114.0_1: 202KB
+python3-pipx-1.4.3_1: 202KB
+wayland-1.22.0_1: 203KB
+libnvme-1.6_2: 204KB
+libXft-devel-2.3.8_1: 204KB
+libglapi-23.3.5_3: 206KB
+libgusb-devel-0.4.8_1: 206KB
+libnftnl-1.2.6_1: 207KB
+bc-1.07.1_5: 208KB
+accounts-qml-module-0.7_1: 209KB
+asciinema-2.4.0_1: 209KB
+sakura-3.8.6_1: 209KB
+qt5-networkauth-5.15.11+20231124_2: 210KB
+pv-1.8.5_1: 212KB
+jsoncpp-1.9.5_1: 213KB
+libXext-1.3.6_1: 213KB
+libxmlb-0.3.15_1: 213KB
+kmod-31_1: 215KB
+xtrans-1.5.0_1: 215KB
+gzip-1.13_1: 219KB
+desktop-file-utils-0.27_1: 220KB
+patch-2.7.6_4: 220KB
+libdca-0.0.7_2: 221KB
+libpng-1.6.42_1: 221KB
+libunwind-1.8.0_1: 221KB
+xkbcomp-1.4.6_1: 221KB
+trash-cli-0.23.11.10_1: 222KB
+uchardet-0.0.8_1: 222KB
+inetutils-2.4_2: 223KB
+libgphoto2-udev-rules-2.5.31_1: 223KB
+dosfstools-4.2_1: 225KB
+atk-2.48.0_1: 227KB
+libass-0.17.1_1: 227KB
+perl-MailTools-2.21_3: 227KB
+libzip-1.10.1_1: 228KB
+font-util-1.4.1_1: 230KB
+libmicrohttpd-1.0.0_1: 230KB
+pciutils-3.10.0_1: 230KB
+gc-8.2.6_1: 233KB
+sbc-2.0_1: 233KB
+libsmartcols-2.38.1_4: 234KB
+libgexiv2-0.14.2_1: 235KB
+dmidecode-3.5_1: 236KB
+font-crosextra-caladea-ttf-20130214_1: 236KB
+font-mutt-misc-1.0.4_1: 236KB
+arandr-0.1.11_2: 237KB
+pamixer-1.6_2: 237KB
+librdf-1.0.17_6: 238KB
+python3-pyqt6-printsupport-6.6.1_2: 240KB
+zlib-devel-1.3.1_1: 241KB
+perl-URI-5.21_1: 242KB
+isync-1.4.4_3: 243KB
+libXfont2-2.0.6_1: 243KB
+python3-dill-0.3.6_2: 243KB
+wireless_tools-29_10: 243KB
+inetutils-telnet-2.4_2: 245KB
+libmikmod-3.3.11.1_1: 246KB
+libva-2.20.0_1: 246KB
+at-spi2-atk-2.48.0_1: 248KB
+kitemviews-5.115.0_1: 249KB
+harfbuzz-8.3.0_1: 251KB
+libdbusmenu-qt5-0.9.3+16.04.20160218_3: 254KB
+pulseaudio-utils-16.1_1: 255KB
+translate-shell-0.9.7.1_1: 255KB
+base-files-0.144_1: 256KB
+libupnp-1.14.18_1: 256KB
+dconf-0.40.0_1: 257KB
+twm-1.0.12_1: 257KB
+python3-pyqt6-dbus-6.6.1_2: 259KB
+libjpeg-turbo-tools-3.0.1_1: 262KB
+oneVPL-2023.3.1_2: 262KB
+python3-pyqt6-pdf-6.6.1_2: 262KB
+qt5-sql-5.15.11+20231124_2: 262KB
+ca-certificates-20240203+3.98_1: 264KB
+libedit-20230828.3.1_2: 264KB
+exfat-utils-1.4.0_1: 266KB
+pam-devel-1.5.3_4: 269KB
+qt5-xml-5.15.11+20231124_2: 270KB
+kpipewire-5.27.10_1: 271KB
+void-artwork-20221013_1: 271KB
+ffmpegthumbnailer-2.2.2_1: 275KB
+libSM-devel-1.2.4_1: 275KB
+liburcu-0.14.0_1: 275KB
+libssh2-1.11.0_2: 276KB
+libXext-devel-1.3.6_1: 277KB
+oath-toolkit-2.6.7_2: 278KB
+python3-idna-3.6_1: 278KB
+scrcpy-2.3.1_1: 279KB
+audiofile-0.3.6_4: 281KB
+libXmu-1.1.4_1: 281KB
+libvdpau-va-gl-0.4.2_2: 282KB
+kcompletion-5.115.0_1: 284KB
+libaccounts-qt5-1.16_2: 288KB
+iw-5.19_1: 289KB
+signon-plugin-oauth2-0.24_2: 289KB
+inetutils-ftp-2.4_2: 290KB
+duktape-2.7.0_1: 291KB
+lua53-lgi-0.9.2_4: 292KB
+kaccounts-providers-23.08.4_1: 293KB
+opencv-4.6.0_6: 293KB
+usbutils-017_1: 293KB
+iana-etc-20240117_1: 295KB
+libcxxabi-17.0.6_2: 298KB
+soundtouch-2.3.2_1: 298KB
+libxkbcommon-1.6.0_2: 299KB
+libusb-devel-1.0.27_1: 300KB
+libmodplug-0.8.9.0_1: 302KB
+libzen-0.4.40_1: 303KB
+tslib-1.22_1: 303KB
+gspell-1.12.2_1: 304KB
+gtk-engine-murrine-0.98.2_7: 304KB
+libxbps-0.59.2_3: 304KB
+ufw-0.36.2_2: 304KB
+qt6-webchannel-6.6.0_1: 305KB
+libjasper-2.0.25_1: 306KB
+gperf-3.1_3: 308KB
+maim-5.7.4_7: 309KB
+libboost_program_options-1.83.0_4: 310KB
+qt6-plugin-tls-openssl-6.6.0_1: 310KB
+surfraw-2.3.0_3: 310KB
+libtasn1-devel-4.19.0_1: 311KB
+dialog-1.3.20240101_1: 312KB
+qpdf-11.6.4_1: 313KB
+dunst-1.9.2_1: 315KB
+imath-3.1.9_3: 315KB
+qt6-sql-6.6.0_1: 315KB
+libsoxr-0.1.3_2: 317KB
+nspr-4.35_1: 317KB
+atkmm-2.28.3_1: 318KB
+kguiaddons-5.115.0_1: 318KB
+libxcrypt-devel-4.4.36_3: 318KB
+libgomp-13.2.0_2: 319KB
+lsof-4.99.3_1: 320KB
+xdg-utils-1.1.3_5: 320KB
+dtc-1.7.0_1: 323KB
+fuse3-3.16.2_1: 325KB
+libzbar-0.23.1_7: 325KB
+hunspell-1.7.2_1: 328KB
+qt6-imageformats-6.6.0_1: 329KB
+libnuspell-5.1.3_1: 330KB
+qt5-test-5.15.11+20231124_2: 330KB
+libpcap-1.10.4_1: 332KB
+python3-isort-5.12.0_2: 333KB
+unrar-6.2.12_1: 333KB
+dbus-libs-1.14.10_1: 338KB
+fuse-2.9.9_1: 339KB
+expat-devel-2.6.0_1: 343KB
+knotifyconfig-5.115.0_1: 344KB
+libgpgme-1.23.1_2: 344KB
+kauth-5.115.0_1: 346KB
+libvisual-0.4.2_1: 346KB
+neofetch-7.1.0_2: 346KB
+libblkid-2.38.1_4: 347KB
+libksba-1.6.5_1: 347KB
+libreadline8-8.2.001_1: 347KB
+python3-click-8.1.7_2: 347KB
+libvamp-plugin-sdk-2.10.0_1: 348KB
+lxdm-0.5.3_5: 349KB
+public-suffix-2024.01.07_1: 349KB
+python3-dbus-1.3.2_2: 349KB
+eudev-libudev-devel-3.2.14_1: 350KB
+glu-9.0.3_1: 350KB
+avahi-libs-0.8_2: 351KB
+libefivar-38_1: 352KB
+less-643_1: 353KB
+signon-ui-0.15_1: 353KB
+libabw-0.1.3_1: 354KB
+libgme-0.6.3_1: 358KB
+qt5-opengl-5.15.11+20231124_2: 358KB
+libavif-1.0.4_1: 359KB
+libxkbcommon-devel-1.6.0_2: 365KB
+slop-7.6_4: 365KB
+libqxp-0.0.2_9: 366KB
+htop-3.3.0_1: 368KB
+lm_sensors-3.6.0_1: 374KB
+font-adobe-utopia-type1-1.0.5_1: 375KB
+gumbo-parser-0.10.1_3: 375KB
+ocl-icd-2.3.2_2: 375KB
+opus-1.4_1: 376KB
+unzip-6.0_15: 376KB
+libsodium-1.0.19_1: 377KB
+pmount-0.9.23_7: 377KB
+ferm-2.7_1: 378KB
+gifsicle-1.94_1: 378KB
+libmount-2.38.1_4: 379KB
+libopenjpeg2-2.5.0_2: 380KB
+python3-pyqt6-sql-6.6.1_2: 380KB
+libbpf-1.3.0_1: 384KB
+python3-parsing-3.1.1_2: 387KB
+udiskie-2.5.1_1: 390KB
+pulseaudio-devel-16.1_1: 391KB
+lcms2-2.16_2: 394KB
+lxappearance-0.6.3_5: 397KB
+python3-urllib3-1.26.12_2: 397KB
+libxslt-1.1.39_2: 399KB
+libnice-0.1.21_2: 400KB
+ImageMagick-7.1.1.18_2: 402KB
+libdrm-2.4.120_1: 402KB
+libraptor-2.0.16_1: 402KB
+libmspub-0.1.4_11: 406KB
+libparted-3.6_1: 406KB
+libpwquality-1.4.5_2: 406KB
+lzo-devel-2.10_2: 408KB
+kiconthemes-5.115.0_1: 410KB
+gd-2.3.3_2: 411KB
+tbb-2020.U3_2: 414KB
+kjobwidgets-5.115.0_1: 416KB
+SDL-1.2.15_14: 419KB
+re2-2023.03.01_1: 420KB
+libapparmor-3.1.6_2: 423KB
+qt5-graphicaleffects-5.15.11+20231124_2: 423KB
+qt5-svg-5.15.11+20231124_2: 423KB
+libvoikko-4.3.2_1: 424KB
+libidn-1.42_1: 425KB
+python3-psutil-5.9.7_1: 426KB
+libXt-1.3.0_1: 427KB
+libldns-1.8.3_2: 430KB
+libICE-devel-1.1.1_1: 432KB
+libogg-devel-1.3.5_1: 432KB
+libnfs-5.0.3_1: 433KB
+font-bitstream-type1-1.0.4_1: 435KB
+python3-cairo-1.25.1_1: 439KB
+libexttextcat-3.4.6_1: 441KB
+libldap-2.6.6_3: 442KB
+json-glib-devel-1.8.0_1: 443KB
+knotifications-5.115.0_1: 444KB
+gpgmepp-1.23.1_2: 446KB
+libssh-0.10.6_1: 447KB
+ninja-1.11.1_4: 448KB
+kglobalaccel-5.115.0_1: 449KB
+dhcpcd-10.0.5_1: 450KB
+gdk-pixbuf-devel-2.42.10_2: 454KB
+lmdb-0.9.31_1: 454KB
+mlt7-data-7.20.0_2: 454KB
+libfluidsynth-2.3.4_1: 458KB
+libmng-2.0.3_2: 460KB
+texlive-latexmk-20230313_1: 460KB
+expect-5.45.4_3: 461KB
+alsa-lib-devel-1.2.11_1: 463KB
+libprotobuf-lite-24.1_1: 464KB
+vulkan-loader-1.3.261.1_1: 466KB
+libfdisk-2.38.1_4: 469KB
+kwindowsystem-5.115.0_1: 470KB
+font-liberation-narrow-ttf-1.07.6_1: 473KB
+ell-0.50_1: 477KB
+libepubgen-0.1.1_2: 478KB
+python3-Jinja2-3.1.3_1: 479KB
+libnpupnp-5.1.1_1: 480KB
+python3-yaml-6.0.1_1: 480KB
+feh-3.10_1: 484KB
+python3-wcwidth-0.2.12_1: 486KB
+xbps-0.59.2_3: 486KB
+gtk-vnc-1.3.1_2: 488KB
+plocate-1.1.22_1: 488KB
+libidn2-2.3.4_1: 489KB
+redshift-1.12_8: 489KB
+picom-11.2_1: 492KB
+libfreehand-0.1.2_3: 493KB
+libxfce4util-4.18.2_1: 493KB
+libmpg123-1.32.3_1: 498KB
+libflac-1.4.3_1: 500KB
+librasqal-0.9.33_3: 502KB
+libspa-audioconvert-1.0.3_1: 502KB
+libpcre-8.45_3: 504KB
+gmp-6.3.0_1: 506KB
+mobile-broadband-provider-info-20220511_1: 507KB
+trousers-devel-0.3.15_2: 510KB
+imlib2-devel-1.12.2_1: 511KB
+qt6-svg-6.6.0_1: 514KB
+xapian-core-devel-1.4.24_1: 514KB
+libcdio-2.1.0_1: 515KB
+libspdlog-1.11.0_1: 516KB
+lame-devel-3.100_2: 520KB
+iputils-20240117_1: 521KB
+libsecret-0.21.3_1: 521KB
+zip-3.0_6: 521KB
+jq-1.7.1_1: 523KB
+e2fsprogs-libs-1.47.0_2: 525KB
+libjack-pipewire-1.0.3_1: 525KB
+dbus-1.14.10_1: 527KB
+kaccounts-integration-23.08.4_1: 530KB
+kinit-5.115.0_1: 535KB
+p11-kit-devel-0.25.0_1: 536KB
+ncurses-6.4_2: 541KB
+gdbm-1.23_1: 543KB
+json-glib-1.8.0_1: 547KB
+libsndfile-1.2.2_1: 548KB
+libswscale-4.4.4_6: 550KB
+ttyd-1.7.3_2: 550KB
+curl-8.6.0_1: 551KB
+qt5-printsupport-5.15.11+20231124_2: 552KB
+hunspell-en_US-2020.12.07_1: 557KB
+karchive-5.115.0_1: 557KB
+python3-pyqt6-webengine-6.6.0_2: 559KB
+libcryptsetup-2.7.0_1: 561KB
+wayland-protocols-1.33_1: 561KB
+poppler-qt5-23.12.0_1: 562KB
+ipw2200-firmware-3.1_6: 563KB
+libwmf-0.2.8.4_18: 564KB
+polkit-121_1: 564KB
+perl-MIME-tools-5.510_1: 569KB
+poppler-glib-23.12.0_1: 569KB
+dnsmasq-2.89_1: 570KB
+liblzma-devel-5.4.6_1: 572KB
+qt5-dbus-5.15.11+20231124_2: 574KB
+vala-devel-0.56.14_1: 575KB
+libelogind-252.9_2: 580KB
+nvi-1.81.6_19: 581KB
+bind-utils-9.16.22_4: 583KB
+libimagequant-4.3.0_1: 583KB
+libgnomekbd-3.28.1_1: 586KB
+gmime-3.2.7_2: 592KB
+lua52-5.2.4_12: 596KB
+qt6-printsupport-6.6.0_1: 597KB
+f2fs-tools-1.16.0_1: 601KB
+wayland-devel-1.22.0_1: 603KB
+font-jis-misc-1.0.4_1: 604KB
+ipw2100-firmware-1.3_6: 604KB
+virglrenderer-1.0.1_1: 604KB
+font-ibm-type1-1.0.4_1: 606KB
+movit-1.6.3_1: 610KB
+net-tools-2.10_1: 612KB
+oniguruma-6.9.9_1: 613KB
+libthai-0.1.29_1: 614KB
+dvdauthor-0.7.2_4: 618KB
+glib-networking-2.76.0_1: 618KB
+nettle-3.9.1_1: 620KB
+usrsctp-0.9.5.0_1: 621KB
+kcodecs-5.115.0_1: 622KB
+pkg-config-0.29.2_3: 622KB
+encodings-1.0.7_1: 625KB
+libidn2-devel-2.3.4_1: 626KB
+kbookmarks-5.115.0_1: 628KB
+libwpd-0.10.3_1: 633KB
+attica-5.115.0_1: 634KB
+ldb-2.3.2_3: 634KB
+libe-book-0.1.3_13: 637KB
+syndication-5.115.0_1: 639KB
+libmatroska-1.7.1_1: 642KB
+libtheora-1.1.1_8: 642KB
+libreoffice-draw-7.6.4.1_1: 644KB
+intel-gmmlib-22.3.12_1: 645KB
+libcups-2.4.7_4: 646KB
+libcdr-0.1.7_6: 650KB
+libssl3-3.1.5_1: 652KB
+msmtp-1.8.25_1: 653KB
+figlet-2.2.5_6: 657KB
+libosinfo-1.11.0_1: 659KB
+lua53-5.3.6_1: 659KB
+faad2-2.11.1_1: 660KB
+perl-IO-Socket-SSL-2.085_1: 664KB
+fontconfig-2.14.2_1: 667KB
+python3-gobject-3.46.0_2: 667KB
+libvirt-glib-4.0.0_1: 668KB
+chrony-4.5_1: 672KB
+gd-devel-2.3.3_2: 672KB
+libfm-gtk+3-1.3.2_1: 675KB
+xvidcore-1.3.7_1: 675KB
+libavutil-4.4.4_6: 679KB
+pixman-0.42.2_1: 680KB
+python3-xlib-0.33_2: 683KB
+libvisio-0.1.7_8: 686KB
+font-reem-kufi-ttf-1.7_1: 691KB
+webrtc-audio-processing-0.3.1_1: 693KB
+fontconfig-devel-2.14.2_1: 694KB
+librevenge-0.0.5_1: 694KB
+pango-1.50.14_1: 695KB
+libdrm-devel-2.4.120_1: 698KB
+mbedtls-2.16.12_1: 699KB
+xapps-2.6.1_2: 704KB
+volume_key-0.3.12_7: 705KB
+socat-1.7.4.4_2: 711KB
+libsepol-3.0_1: 714KB
+libwacom-2.10.0_1: 717KB
+libwebp-1.3.2_1: 718KB
+mpc-0.34_1: 720KB
+libnumbertext-1.0.11_1: 721KB
+tiff-4.6.0_1: 723KB
+tini-0.19.0_2: 724KB
+ethtool-6.6_1: 727KB
+mpfr-4.2.1_1: 730KB
+kpackage-5.115.0_1: 731KB
+libboost_locale-1.83.0_4: 731KB
+gir-freedesktop-1.76.1_3: 734KB
+libcurl-8.6.0_1: 737KB
+libcolord-1.4.6_2: 738KB
+qalculate-4.9.0_1: 739KB
+font-bh-lucidatypewriter-75dpi-1.0.4_1: 745KB
+libevent-2.1.12_3: 747KB
+libarchive-3.7.2_1: 750KB
+binutils-doc-2.41_1: 751KB
+lua54-5.4.6_1: 751KB
+at-spi2-core-devel-2.48.0_1: 753KB
+freetype-2.13.2_1: 755KB
+cloc-2.00_1: 756KB
+libhunspell1.7-1.7.2_1: 756KB
+libXi-devel-1.8.1_1: 758KB
+libde265-1.0.12_1: 761KB
+xfconf-4.18.3_1: 761KB
+libzstd-1.5.5_2: 762KB
+trousers-0.3.15_2: 766KB
+plymouth-data-22.02.122_1: 770KB
+libelf-0.190_1: 772KB
+qt5-sensors-5.15.11+20231124_2: 772KB
+m4-1.4.19_1: 777KB
+libvirt-python3-9.10.0_1: 781KB
+mcpp-2.7.2_8: 781KB
+libselinux-3.0_2: 782KB
+libpng-devel-1.6.42_1: 783KB
+gptfdisk-1.0.9_3: 789KB
+qt6-dbus-6.6.0_1: 789KB
+pipewire-devel-1.0.3_1: 791KB
+libplacebo-5.264.1_1: 794KB
+m17n-lib-1.8.4_1: 794KB
+spandsp-0.0.6_4: 806KB
+font-daewoo-misc-1.0.4_1: 811KB
+libXaw-1.0.15_1: 813KB
+orc-0.4.37_1: 817KB
+dracut-059_7: 824KB
+rsync-3.2.7_2: 830KB
+libspa-alsa-1.0.3_1: 832KB
+imlib2-1.12.2_1: 834KB
+libheif-1.17.5_1: 834KB
+font-kacst-2.01+mry_1: 839KB
+virt-manager-tools-4.1.0_3: 841KB
+font-bh-lucidatypewriter-100dpi-1.0.4_1: 849KB
+bash-completion-2.11_5: 852KB
+libblkid-devel-2.38.1_4: 857KB
+brotli-1.1.0_1: 858KB
+libodfgen-0.1.8_1: 858KB
+libmount-devel-2.38.1_4: 859KB
+libtracker-3.6.0_1: 859KB
+lowdown-1.1.0_1: 865KB
+libksolid-5.115.0_1: 870KB
+libinput-1.25.0_1: 872KB
+opus-devel-1.4_1: 873KB
+vte3-0.74.2_1: 878KB
+libgpg-error-1.47_1: 882KB
+font-bh-ttf-1.0.4_1: 886KB
+libde265-devel-1.0.12_1: 886KB
+cinnamon-desktop-5.8.0_2: 888KB
+sed-4.9_1: 893KB
+libvorbis-1.3.7_1: 894KB
+libmypaint-1.6.1_1: 898KB
+lame-3.100_2: 902KB
+screen-4.9.1_2: 902KB
+sox-14.4.2_8: 907KB
+libsrt-1.5.3_1: 923KB
+font-isas-misc-1.0.4_1: 924KB
+libsoup3-3.4.2_1: 926KB
+psmisc-23.6_1: 930KB
+python3-urwid-2.2.3_1: 932KB
+python3-pyqt6-network-6.6.1_2: 934KB
+libblockdev-3.0.4_1: 936KB
+libmtp-1.1.21_1: 951KB
+ranger-1.9.3_5: 952KB
+stow-2.3.1_4: 952KB
+flex-2.6.4_3: 953KB
+libgsf-1.14.52_1: 957KB
+libaccounts-glib-1.24_7: 972KB
+ncurses-libs-6.4_2: 982KB
+unicode-emoji-14.0_1: 986KB
+libsoup-2.74.0_1: 995KB
+libxcb-1.16_1: 1002KB
+plymouth-22.02.122_1: 1005KB
+libreoffice-postgresql-7.6.4.1_1: 1009KB
+cpio-2.15_1: 1022KB
+font-sil-scheherazade-2.100_2: 1024KB
+grep-3.11_1: 1027KB
+rofi-1.7.5_1: 1029KB
+libnl3-3.9.0_1: 1032KB
+python3-astroid-3.0.2_1: 1035KB
+libspa-bluetooth-1.0.3_1: 1038KB
+helvum-0.5.1_1: 1043KB
+taglib-1.13.1_1: 1044KB
+libtidy5-5.8.0_1: 1063KB
+kservice-5.115.0_1: 1079KB
+pavucontrol-5.0_3: 1085KB
+signond-8.61_1: 1091KB
+libsnapper-0.10.3_4: 1092KB
+mdocml-1.14.6_8: 1099KB
+gpgme-python3-1.23.1_2: 1107KB
+kfilemetadata5-5.115.0_1: 1107KB
+libunbound-1.19.1_1: 1107KB
+mdadm-4.2_1: 1119KB
+kdeclarative-5.115.0_1: 1125KB
+libbluray-1.3.4_1: 1126KB
+eza-0.18.3_1: 1137KB
+librubberband-3.3.0_1: 1148KB
+python3-distlib-0.3.6_2: 1148KB
+postgresql-libs-16.1_1: 1151KB
+libzstd-devel-1.5.5_2: 1161KB
+gnuplot-common-6.0.0_1: 1166KB
+lpsolve-5.5.2.5_2: 1172KB
+vsv-2.0.0_1: 1176KB
+tzdata-2024a_1: 1182KB
+breeze-gtk-5.27.10_1: 1185KB
+spice-0.15.1_2: 1186KB
+libixion-0.19.0_1: 1206KB
+libmysofa-1.3.1_1: 1209KB
+font-adobe-utopia-75dpi-1.0.5_1: 1213KB
+libsndfile-devel-1.2.2_1: 1214KB
+libcaca-0.99.beta19_13: 1219KB
+LuaJIT-2.1.0beta3_2: 1223KB
+libepoxy-1.5.10_1: 1224KB
+colord-devel-1.4.6_2: 1234KB
+zxing-cpp-2.1.0_1: 1238KB
+font-hack-ttf-3.003_2: 1239KB
+libcxx-17.0.6_2: 1259KB
+font-bh-type1-1.0.4_1: 1269KB
+atk-devel-2.48.0_1: 1270KB
+libhandy1-1.8.3_1: 1285KB
+libmm-glib-1.18.12_1: 1299KB
+glew-2.2.0_1: 1302KB
+libwebp-devel-1.3.2_1: 1307KB
+libopenal-1.23.1_1: 1309KB
+libreoffice-impress-7.6.4.1_1: 1310KB
+fdk-aac-2.0.3_1: 1311KB
+live555-2020.08.11_3: 1314KB
+qt6-position-6.6.0_1: 1314KB
+xterm-382_1: 1332KB
+wireplumber-0.4.17_1: 1345KB
+aspell-0.60.8_5: 1355KB
+libgcrypt-1.10.2_1: 1360KB
+graphviz-libs-8.1.0_1: 1369KB
+zsh-completions-0.35.0_1: 1374KB
+alsa-lib-1.2.11_1: 1375KB
+ktextwidgets-5.115.0_1: 1379KB
+cairo-1.18.0_1: 1393KB
+pcmanfm-1.3.2_2: 1407KB
+xz-5.4.6_1: 1407KB
+ccls-0.20230717_2: 1424KB
+libxml2-python3-2.11.4_6: 1435KB
+openvpn-2.6.8_1: 1435KB
+at-spi2-core-2.48.0_1: 1436KB
+libnma-1.10.6_1: 1442KB
+kconfig-5.115.0_1: 1444KB
+kconfigwidgets-5.115.0_1: 1445KB
+font-adobe-utopia-100dpi-1.0.5_1: 1456KB
+libsamplerate-0.2.2_1: 1464KB
+dbus-devel-1.14.10_1: 1467KB
+python3-pillow-simd-7.1.2_7: 1477KB
+libical-3.0.17_1: 1479KB
+qt5-5.15.11+20231124_2: 1494KB
+ffplay-4.4.4_6: 1502KB
+lxsession-0.5.5_1: 1512KB
+pango-devel-1.50.14_1: 1518KB
+NetworkManager-openvpn-1.8.18_1: 1521KB
+qt6-qt5compat-6.6.0_1: 1534KB
+spice-gtk-0.42_1: 1545KB
+gst-rtsp-server-1.22.9_1: 1552KB
+libgimp-2.10.36_1: 1556KB
+gkill-1.0.2_11: 1558KB
+baobab-44.0_1: 1580KB
+libxml2-2.11.4_6: 1580KB
+ostree-2024.3_1: 1585KB
+libevent-devel-2.1.12_3: 1598KB
+ntfs-3g-2022.10.3_1: 1600KB
+runit-2.1.2_15: 1600KB
+xen-libs-4.14.1_10: 1602KB
+perl-Net-SSLeay-1.94_1: 1611KB
+exempi-2.6.4_1: 1618KB
+mpd-0.23.15_1: 1621KB
+xorgproto-2023.2_1: 1622KB
+libvorbis-devel-1.3.7_1: 1625KB
+libepoxy-devel-1.5.10_1: 1626KB
+libjack-1.9.22_1: 1626KB
+sonnet-5.115.0_1: 1629KB
+xdg-desktop-portal-1.18.2_1: 1637KB
+purpose-5.115.0_1: 1643KB
+libjpeg-turbo-3.0.1_1: 1656KB
+nettle-devel-3.9.1_1: 1658KB
+pam-1.5.3_4: 1684KB
+libdav1d-1.3.0_1: 1687KB
+gallery-dl-1.26.5_1: 1689KB
+shadow-4.8.1_3: 1692KB
+getdns-1.7.0_2: 1704KB
+libglvnd-1.7.0_1: 1704KB
+cogl-1.22.8_1: 1705KB
+kcoreaddons-5.115.0_1: 1708KB
+libunistring-1.0_1: 1710KB
+docbook-xml-4.5_5: 1711KB
+libdjvulibre-3.5.28_2: 1713KB
+font-awesome6-6.4.2_1: 1715KB
+qt6-network-6.6.0_1: 1719KB
+libnm-1.44.2_1: 1721KB
+font-firacode-6.2_1: 1729KB
+libpcre2-10.42_1: 1729KB
+diffutils-3.10_1: 1741KB
+libfm-1.3.2_1: 1747KB
+libfbclient3-3.0.6.33328_2: 1754KB
+gnuplot-6.0.0_1: 1786KB
+libdb-5.3.28_8: 1786KB
+findutils-4.9.0_1: 1790KB
+culmus-0.133_2: 1798KB
+gperftools-2.8_2: 1805KB
+librecode-3.6_10: 1814KB
+breeze-hacked-cursor-theme-1.0_3: 1831KB
+pylint-2.17.4_2: 1834KB
+kirigami2-5.115.0_1: 1842KB
+libvala-0.56.14_1: 1844KB
+man-db-2.11.2_1: 1850KB
+font-adobe-source-code-pro-2.038R~ro+1.058R~it+1.018R~VAR_1: 1895KB
+freetype-devel-2.13.2_1: 1899KB
+SDL2-2.28.5_3: 1900KB
+gmp-devel-6.3.0_1: 1911KB
+xmlsec1-1.3.2_1: 1928KB
+babl-0.1.106_1: 1946KB
+libreoffice-math-7.6.4.1_1: 1965KB
+mit-krb5-libs-1.21.2_3: 1972KB
+libreoffice-xtensions-7.6.4.1_1: 1990KB
+amiri-font-1.000_1: 2015KB
+font-sil-gentium-basic-1.102_1: 2028KB
+qca-qt5-2.3.7_2: 2047KB
+glances-3.4.0.3_2: 2071KB
+parted-3.6_1: 2084KB
+libvpx-1.13.1_1: 2088KB
+inxi-3.3.31.2_1: 2096KB
+elfutils-devel-0.190_1: 2100KB
+abseil-cpp-20230802.1_1: 2106KB
+hwids-0.375_1: 2127KB
+automake-1.16.5_1: 2131KB
+libadwaita-1.4.3_1: 2136KB
+libtool-2.4.7_5: 2152KB
+make-4.4.1_1: 2160KB
+clucene-2.3.3.4_10: 2178KB
+libglvnd-devel-1.7.0_1: 2206KB
+qt5-network-5.15.11+20231124_2: 2213KB
+nghttp2-1.59.0_1: 2235KB
+libxapian-1.4.24_1: 2238KB
+unbound-devel-1.19.1_1: 2243KB
+ntp-4.2.8p15_7: 2252KB
+libharfbuzz-8.3.0_1: 2291KB
+awesome-4.3_9: 2295KB
+libraw-0.21.2_1: 2304KB
+aria2-1.37.0_1: 2322KB
+libdatachannel-0.19.1_1: 2323KB
+kwallet-5.115.0_1: 2325KB
+words-en-2020.12.07_2: 2325KB
+cryptsetup-2.7.0_1: 2344KB
+libwps-0.4.12_1: 2375KB
+mypaint-brushes1-1.3.1_1: 2379KB
+smartmontools-7.3_1: 2421KB
+i3-4.23_1: 2445KB
+w3m-0.5.3+git20230121_2: 2457KB
+ncmpcpp-0.9.2_11: 2458KB
+libavformat-4.4.4_6: 2464KB
+man-pages-6.05.01_2: 2471KB
+snapper-0.10.3_4: 2495KB
+mlt7-7.20.0_2: 2501KB
+sqlite-devel-3.44.2_2: 2521KB
+alsa-utils-1.2.11_1: 2525KB
+kdoctools-5.115.0_1: 2538KB
+libimobiledevice-1.3.0_6: 2538KB
+libjpeg-turbo-devel-3.0.1_1: 2539KB
+7zip-23.01_1: 2547KB
+glibmm-2.66.6_1: 2555KB
+iptables-1.8.10_1: 2574KB
+gcr-3.41.1_1: 2579KB
+nano-7.2_1: 2592KB
+fortune-mod-1.99.1_7: 2599KB
+libgit2-1.6.5_1: 2606KB
+indic-otf-0.2_4: 2619KB
+breeze-snow-cursor-theme-5.27.10_1: 2652KB
+libprotobuf-24.1_1: 2653KB
+pipewire-1.0.3_1: 2660KB
+python3-setuptools-69.0.3_1: 2663KB
+frei0r-plugins-1.7.0_1: 2683KB
+elogind-252.9_2: 2685KB
+pup-0.4.0_14: 2687KB
+gdk-pixbuf-2.42.10_2: 2701KB
+font-crosextra-carlito-ttf-20220224_1: 2702KB
+libexif-0.6.24_1: 2707KB
+qjackctl-0.9.9_1: 2715KB
+overpass-otf-3.0.5_1: 2727KB
+cheese-43.0_2: 2731KB
+python3-pyqt6-declarative-6.6.1_2: 2765KB
+qt5-multimedia-5.15.11+20231124_2: 2803KB
+gtksourceview-3.24.11_1: 2833KB
+polybar-3.7.1_1: 2839KB
+libqpdf-11.6.4_1: 2865KB
+glibmm2.68-2.78.0_1: 2891KB
+libaspell-0.60.8_5: 2902KB
+openssl-3.1.5_1: 2925KB
+ttf-opensans-3.001_1: 2948KB
+libetonyek-0.1.10_2: 2954KB
+libgfortran-13.2.0_2: 2959KB
+shfmt-3.8.0_1: 2967KB
+libjxl-0.9.2_1: 2978KB
+tk-8.6.13_1: 2984KB
+gtksourceview-devel-3.24.11_1: 2987KB
+thin-provisioning-tools-1.0.4_1: 3004KB
+liblangtag-0.6.4_1: 3022KB
+gnutls-3.8.3_1: 3050KB
+sqlite-3.44.2_2: 3109KB
+gnome-desktop-44.0_1: 3115KB
+AppStream-0.16.4_1: 3128KB
+slang-2.3.2_2: 3138KB
+gufw-22.04_3: 3140KB
+bison-3.8.2_1: 3143KB
+kbd-2.6.3_1: 3155KB
+libstdc++-13.2.0_2: 3170KB
+gmime-devel-3.2.7_2: 3188KB
+qt5-quickcontrols-5.15.11+20231124_2: 3202KB
+wpa_supplicant-2.10_5: 3229KB
+libgcc-devel-13.2.0_2: 3239KB
+gsl-2.7.1_1: 3241KB
+font-bh-75dpi-1.0.4_1: 3257KB
+blueman-2.3.5_2: 3331KB
+procps-ng-4.0.4_2: 3348KB
+liborcus-0.19.2_1: 3354KB
+ttf-ubuntu-font-family-0.83_3: 3354KB
+device-mapper-2.03.23_1: 3358KB
+tar-1.35_1: 3372KB
+autoconf-2.71_1: 3375KB
+bind-libs-9.16.22_4: 3375KB
+kxmlgui-5.115.0_1: 3400KB
+fox-1.6.57_2: 3445KB
+terminus-font-4.49.1_1: 3471KB
+rxvt-unicode-9.31_4: 3477KB
+wget-1.21.4_2: 3498KB
+spectacle-23.08.4_1: 3529KB
+wxWidgets-common-3.2.4_2: 3529KB
+grub-x86_64-efi-2.06_3: 3585KB
+libunistring-devel-1.0_1: 3649KB
+osinfo-db-20231215_1: 3657KB
+xfsprogs-6.5.0_1: 3667KB
+v4l-utils-1.24.1_1: 3675KB
+fzf-0.46.1_1: 3690KB
+xorg-server-21.1.11_1: 3725KB
+libpoppler-23.12.0_1: 3726KB
+lvm2-2.03.23_1: 3759KB
+font-bh-100dpi-1.0.4_1: 3779KB
+nemo-5.8.5_2: 3787KB
+knewstuff-5.115.0_1: 3789KB
+x264-20191217.2245_1: 3793KB
+meson-1.3.1_1: 3799KB
+apparmor-3.1.6_2: 3852KB
+python3-virtualenv-20.25.0_1: 3968KB
+libpulseaudio-16.1_1: 3970KB
+libaria2-1.37.0_1: 4002KB
+fd-9.0.0_2: 4016KB
+iproute2-6.7.0_1: 4029KB
+p11-kit-0.25.0_1: 4031KB
+lutris-0.5.16_1: 4124KB
+font-misc-misc-1.1.3_1: 4129KB
+vim-9.1.0104_1: 4185KB
+libavfilter-4.4.4_6: 4196KB
+SPIRV-LLVM-Translator-17.0.0_1: 4211KB
+aspell-en-2020.12.07_2: 4221KB
+python3-Pygments-2.17.2_1: 4225KB
+liberation-fonts-ttf-2.1.5_2: 4258KB
+exiv2-0.28.1_1: 4283KB
+font-adobe-source-sans-pro-v2-2.045_1: 4306KB
+libX11-devel-1.8.7_1: 4325KB
+gnutls-devel-3.8.3_1: 4342KB
+gawk-5.1.1_1: 4374KB
+gnome-keyring-42.1_1: 4378KB
+qt6-wayland-6.6.0_1: 4390KB
+libreoffice-gnome-7.6.4.1_1: 4413KB
+python3-pyqt6-gui-6.6.1_2: 4444KB
+e2fsprogs-1.47.0_2: 4486KB
+libfftw-3.3.10_2: 4499KB
+bat-0.24.0_1: 4525KB
+libpipewire-1.0.3_1: 4525KB
+libqt6shadertools-6.6.0_1: 4571KB
+gtksourceview4-4.8.2_2: 4573KB
+cdrtools-2023.09.28_3: 4612KB
+udisks2-2.10.1_1: 4645KB
+shared-mime-info-2.4_2: 4661KB
+libtorrent-rasterbar-1.2.18_5: 4697KB
+gtkmm2-2.24.5_4: 4708KB
+conky-1.13.1_1: 4711KB
+clutter-1.26.4_1: 4714KB
+pcre2-devel-10.42_1: 4741KB
+font-adobe-source-serif-pro-3.001R_1: 4748KB
+gstreamer1-1.22.9_1: 4764KB
+libxcb-devel-1.16_1: 4785KB
+gtkmm-3.24.8_1: 4796KB
+x265-3.5_1: 4831KB
+python3-lxml-4.9.3_3: 4906KB
+qt5-wayland-5.15.11+20231124_2: 4913KB
+harfbuzz-devel-8.3.0_1: 4943KB
+python3-pyqt6-6.6.1_2: 4965KB
+sddm-0.20.0_2: 4972KB
+gsettings-desktop-schemas-44.0_1: 4975KB
+librsvg-2.57.0_1: 5005KB
+ffmpeg-4.4.4_6: 5068KB
+qutebrowser-3.1.0_2: 5144KB
+libcrypto3-3.1.5_1: 5230KB
+sudo-1.9.15p4_1: 5230KB
+gvfs-1.52.2_1: 5234KB
+network-manager-applet-1.36.0_1: 5256KB
+ripgrep-14.1.0_1: 5260KB
+libaom-3.8.1_1: 5269KB
+youtube-dl-2021.12.17_3: 5371KB
+python3-pyqt6-widgets-6.6.1_2: 5412KB
+kernel-libc-headers-6.1_1: 5449KB
+font-adobe-75dpi-1.0.4_1: 5540KB
+tiff-devel-4.6.0_1: 5560KB
+breeze-amber-cursor-theme-1.0_3: 5570KB
+breeze-blue-cursor-theme-1.0_3: 5570KB
+breeze-obsidian-cursor-theme-1.0_3: 5570KB
+breeze-purple-cursor-theme-1.0_3: 5570KB
+breeze-red-cursor-theme-1.0_3: 5570KB
+libflac-devel-1.4.3_1: 5612KB
+MangoHud-0.7.0_1: 5641KB
+glslang-11.11.0_1: 5718KB
+libxml2-devel-2.11.4_6: 5782KB
+btrfs-progs-6.5.1_1: 5787KB
+qt6-core-6.6.0_1: 5849KB
+qt5-core-5.15.11+20231124_2: 5860KB
+libgphoto2-2.5.31_1: 5865KB
+toilet-0.3_3: 5997KB
+font-emoji-one-color-1.4_1: 6007KB
+libopenexr-3.2.1_1: 6145KB
+mpv-0.36.0_4: 6158KB
+SDL2-devel-2.28.5_3: 6206KB
+virt-manager-4.1.0_3: 6208KB
+xfe-1.45_1: 6225KB
+font-adobe-100dpi-1.0.4_1: 6233KB
+openssh-9.6p1_2: 6310KB
+flatpak-1.15.6_1: 6368KB
+qt5-quickcontrols2-5.15.11+20231124_2: 6393KB
+bluez-5.70_2: 6437KB
+vmaf-2.3.1_1: 6466KB
+x265-devel-3.5_1: 6524KB
+gnome-disk-utility-44.0_1: 6546KB
+easyeffects-7.1.3_1: 6613KB
+source-sans-pro-3.046_1: 6685KB
+xkeyboard-config-2.40_1: 6730KB
+libX11-1.8.7_1: 6748KB
+kwidgetsaddons-5.115.0_1: 6756KB
+m17n-db-1.8.5_1: 6791KB
+qt5-widgets-5.15.11+20231124_2: 6818KB
+tcl-8.6.13_1: 6822KB
+gtk+-2.24.33_2: 6862KB
+python3-pip-24.0_1: 6957KB
+numix-themes-2.6.7_2: 6991KB
+man-pages-posix-2017a_5: 7072KB
+openjdk11-11.0.22+6_1: 7125KB
+NoiseTorch-0.12.2_2: 7165KB
+rtags-2.38_7: 7178KB
+gst-plugins-base1-1.22.9_1: 7196KB
+util-linux-2.38.1_7: 7216KB
+gst-plugins-good1-1.22.9_1: 7245KB
+breeze-contrast-cursor-theme-1.0_3: 7278KB
+libsvt-av1-1.7.0_1: 7333KB
+rav1e-0.6.6_2: 7494KB
+qt6-widgets-6.6.0_1: 7515KB
+bash-5.2.21_1: 7595KB
+perl-Tk-804.036_3: 7727KB
+void-docs-2023.06.28_1: 7788KB
+libaom-devel-3.8.1_1: 7820KB
+util-linux-common-2.38.1_4: 7860KB
+mc-4.8.31_1: 7902KB
+libqalculate-4.9.0_1: 7934KB
+topgrade-14.0.1_1: 7991KB
+zsh-5.9_3: 8156KB
+bluebird-themes-1.3_3: 8228KB
+libmagic-5.45_1: 8508KB
+libxatracker-23.3.5_3: 8615KB
+runc-1.1.12_1: 8645KB
+newsboat-2.34_1: 8670KB
+binutils-libs-2.41_1: 8697KB
+gettext-0.21_4: 8764KB
+shaderc-2022.2_1: 8776KB
+alacritty-0.13.1_2: 8909KB
+exercism-3.1.0_3: 8910KB
+libmediainfo-22.12_1: 8919KB
+libmagick-7.1.1.18_2: 9048KB
+libmwaw-0.3.22_1: 9091KB
+fonts-roboto-ttf-2.138_3: 9202KB
+qbittorrent-4.5.4_1: 9241KB
+eudev-3.2.14_1: 9272KB
+nss-3.98_1: 9341KB
+tldr-1.0.0.alpha_3: 9354KB
+python3-pipenv-2023.12.1_1: 9463KB
+fftw-devel-3.3.10_2: 9471KB
+yt-dlp-2023.12.30_1: 9520KB
+starship-1.17.1_1: 9683KB
+texinfo-7.0.3_1: 9691KB
+CoinMP-1.8.4_1: 9813KB
+gst-plugins-bad1-1.22.9_1: 9855KB
+dejavu-fonts-ttf-2.37_2: 9986KB
+vala-0.56.14_1: 9.8MB
+broot-1.33.1_1: 10MB
 freefont-ttf-20120503_8: 10MB
-qt5-location-5.15.7+20221119_6: 10MB
-gnupg-2.4.3_1: 11MB
-groff-1.22.4_3: 11MB
-intel-media-driver-22.5.3_1: 11MB
+libglib-devel-2.78.0_3: 10MB
+qt5-location-5.15.11+20231124_2: 10MB
+android-tools-34.0.4_1: 11MB
+gnupg-2.4.3_2: 11MB
+groff-1.23.0_1: 11MB
 kmonad-0.4.1.20220321_1: 11MB
-libcxx-devel-15.0.7_1: 11MB
-libreoffice-base-7.5.3.2_2: 11MB
+libreoffice-base-7.6.4.1_1: 11MB
 font-fira-otf-4.202_4: 12MB
-gegl-0.4.46_1: 12MB
-intel-ucode-20230613_1: 12MB
-libOSMesa-23.1.3_1: 12MB
+gegl-0.4.46_2: 12MB
+intel-ucode-20231114_1: 12MB
+libcxx-devel-17.0.6_2: 12MB
+libOSMesa-23.3.5_3: 12MB
 poppler-data-0.4.12_1: 12MB
-qt5-gui-5.15.7+20221119_6: 12MB
-qt6-gui-6.5.0_2: 12MB
+python3-devel-3.12.2_2: 12MB
+qt5-gui-5.15.11+20231124_2: 12MB
+qt6-gui-6.6.0_1: 12MB
 adwaita-icon-theme-44.0_1: 13MB
-capstone-4.0.2_5: 13MB
+clang17-headers-17.0.6_2: 13MB
 font-fira-ttf-4.202_4: 13MB
-glib-2.76.1_1: 13MB
-glibc-devel-2.36_1: 13MB
-libreoffice-writer-7.5.3.2_2: 13MB
-libavcodec-4.4.4_2: 14MB
-libvlc-3.0.18_4: 14MB
-qt5-tools-5.15.7+20221119_6: 14MB
-NetworkManager-1.42.8_1: 15MB
-openssl-devel-1.1.1t_1: 15MB
-qt5-translations-5.15.7+20221119_6: 15MB
+glib-2.78.0_3: 13MB
+libreoffice-writer-7.6.4.1_1: 13MB
+glibc-devel-2.38_5: 14MB
+intel-media-driver-23.4.1_1: 14MB
+libavcodec-4.4.4_6: 14MB
+libvlc-3.0.20_3: 14MB
+pyright-1.1.350_1: 14MB
+qt5-tools-5.15.11+20231124_2: 14MB
+NetworkManager-1.44.2_1: 15MB
+qt5-translations-5.15.11+20231124_2: 15MB
 docbook-xsl-1.79.2_2: 16MB
-fish-shell-3.6.1_1: 16MB
-python3-PyQt5-5.15.9_1: 16MB
-tor-0.4.7.14_1: 16MB
-binutils-2.39_2: 17MB
+python3-PyQt5-5.15.10_1: 16MB
+tor-0.4.8.9_1: 16MB
+fish-shell-3.7.0_1: 17MB
 gsfonts-20200910_1: 17MB
 icu-devel-73.2_2: 17MB
-ki18n-5.107.0_1: 17MB
-texlive-science-2022.62977_1: 17MB
-wxWidgets-gtk3-3.0.5.1_6: 17MB
-coreutils-9.2_1: 18MB
-exiftool-12.64_1: 18MB
-iso-codes-4.15.0_1: 18MB
-linux-firmware-broadcom-20230515_1: 18MB
+ki18n-5.115.1_1: 17MB
+capstone-5.0.1_2: 18MB
+coreutils-9.4_1: 18MB
+exiftool-12.70_1: 18MB
+linux-firmware-broadcom-20240115_1: 18MB
+texlive-science-2023.66461_1: 18MB
 cracklib-2.9.11_1: 19MB
-fontforge-20230101_2: 19MB
+fontforge-20230101_3: 19MB
 font-libertine-graphite-ttf-20120116_1: 19MB
-glibc-locales-2.36_1: 19MB
-gtk4-4.10.4_1: 19MB
-php8.2-8.2.8_1: 19MB
-qt5-declarative-5.15.7+20221119_6: 19MB
+glibc-locales-2.38_5: 19MB
+iso-codes-4.16.0_1: 19MB
+noto-fonts-emoji-2.042_1: 19MB
+qt5-declarative-5.15.11+20231124_2: 19MB
 shellcheck-0.9.0_1: 19MB
-Vulkan-Headers-1.3.231.1_1: 19MB
-noto-fonts-emoji-2.038_1: 20MB
-obs-29.1.2_1: 20MB
+gtk4-4.12.3_1: 20MB
 sane-1.2.1_1: 20MB
-texlive-20210325_6: 20MB
-libstdc++-devel-12.2.0_3: 21MB
-syncthing-1.23.6_1: 22MB
+texlive-20230313_1: 20MB
+wxWidgets-gtk3-3.2.4_2: 20MB
+obs-30.0.0_2: 21MB
+php8.3-8.3.0_3: 21MB
+qt6-pdf-6.6.0_3: 21MB
+samba-libs-4.14.12_5: 21MB
+libstdc++-devel-13.2.0_2: 22MB
+openssl-devel-3.1.5_1: 22MB
 cinnamon-translations-5.8.2_1: 23MB
-docker-cli-24.0.5_1: 23MB
-kio-5.107.0_1: 23MB
-mesa-23.1.3_1: 24MB
-neovim-0.9.1_1: 24MB
-linux-firmware-intel-20230515_1: 25MB
-python3-3.11.4_1: 25MB
+docker-cli-25.0.3_1: 23MB
+kio-5.115.0_1: 23MB
+syncthing-1.27.3_1: 23MB
+neovim-0.9.5_1: 24MB
+python3-3.12.2_2: 24MB
+Vulkan-Headers-1.3.268.0_1: 24MB
+binutils-2.41_1: 25MB
 flite-2.2_1: 26MB
-libmariadbclient-10.5.10_5: 26MB
-mesa-vulkan-intel-23.1.3_1: 26MB
-libgs-10.01.2_1: 27MB
-libreoffice-calc-7.5.3.2_2: 27MB
-libreoffice-i18n-en-US-7.5.3.2_2: 27MB
-nmap-7.94_1: 27MB
+linux-firmware-intel-20240115_1: 26MB
+libgs-10.02.1_1: 27MB
+libmariadbclient-11.1.2_2: 27MB
+mesa-23.3.5_3: 27MB
+mesa-vulkan-intel-23.3.5_3: 27MB
+nmap-7.94_4: 27MB
 grub-2.06_3: 28MB
-mesa-dri-23.1.3_1: 29MB
-openblas-0.3.23_1: 29MB
-audacity-2.4.1_2: 30MB
+libreoffice-calc-7.6.4.1_1: 28MB
+libreoffice-i18n-en-US-7.6.4.1_1: 28MB
 cabal-install-3.6.3.0_2: 30MB
+libopencv-4.6.0_6: 30MB
 xmobar-0.42_1: 30MB
-libclang-15.0.7_1: 32MB
-font-ibm-plex-otf-6.2.0_1: 33MB
-libgccjit-12.2.0_1: 33MB
-libreoffice-i18n-pl-7.5.3.2_2: 33MB
-libreoffice-i18n-pt-7.5.3.2_2: 33MB
-samba-libs-4.14.12_2: 33MB
-libreoffice-i18n-es-7.5.3.2_2: 34MB
-libreoffice-i18n-it-7.5.3.2_2: 34MB
-emacs-x11-29.0.92_1: 35MB
-glibc-2.36_1: 35MB
-libreoffice-i18n-de-7.5.3.2_2: 35MB
-libreoffice-i18n-fr-7.5.3.2_2: 35MB
-vim-common-9.0.1562_2: 35MB
+mesa-dri-23.3.5_3: 31MB
+openblas-0.3.26_1: 31MB
+glibc-2.38_5: 32MB
+font-ibm-plex-otf-6.4.0_1: 33MB
+libreoffice-i18n-pt-7.6.4.1_1: 33MB
+libgccjit-13.2.0_1: 34MB
+libreoffice-i18n-es-7.6.4.1_1: 34MB
+libreoffice-i18n-it-7.6.4.1_1: 34MB
+libreoffice-i18n-pl-7.6.4.1_1: 34MB
+libclang17-17.0.6_2: 35MB
+libreoffice-i18n-de-7.6.4.1_1: 35MB
+libreoffice-i18n-fr-7.6.4.1_1: 35MB
 gtk+3-3.24.38_1: 36MB
 icu-libs-73.2_2: 36MB
-qt6-declarative-6.5.0_1: 36MB
+vim-common-9.1.0104_1: 36MB
 gtk+3-devel-3.24.38_1: 37MB
+qt6-declarative-6.6.0_1: 37MB
 hoogle-5.0.18.3_1: 38MB
-sioyek-2.0.0_3: 38MB
-git-2.41.0_2: 40MB
-libvirt-9.5.0_1: 40MB
-cmake-3.26.4_3: 43MB
-texlive-pictures-2021.58558_1: 43MB
-vlc-3.0.18_4: 44MB
+sioyek-2.0.0_7: 38MB
+audacity-3.4.2_1: 40MB
+libvirt-9.10.0_1: 40MB
+git-2.43.2_1: 41MB
+clang17-17.0.6_2: 42MB
 qt5-webkit-5.212.0_16: 45MB
-nodejs-18.16.0_2: 50MB
+vlc-3.0.20_3: 46MB
+nodejs-18.19.1_1: 48MB
+docker-buildx-0.12.1_1: 51MB
+docker-compose-2.24.0_1: 51MB
 linux5.18-headers-5.18.19_1: 51MB
-sbcl-2.3.6_1: 52MB
-linux6.3-headers-6.3.13_1: 53MB
-ghostscript-10.01.2_1: 55MB
-noto-fonts-ttf-23.7.1_1: 55MB
+ghostscript-10.02.1_1: 54MB
+sbcl-2.4.1_1: 54MB
+linux6.6-headers-6.6.16_1: 55MB
+noto-fonts-ttf-24.2.1_1: 55MB
 stack-2.7.5_2: 57MB
-texlive-latexextra-2021.58668_1: 57MB
-font-ibm-plex-ttf-6.2.0_1: 58MB
-libclang-cpp-15.0.7_1: 59MB
+font-ibm-plex-ttf-6.4.0_1: 58MB
+linux-firmware-amd-20240115_1: 62MB
+linux-firmware-nvidia-20240115_1: 63MB
+libclang-cpp17-17.0.6_2: 64MB
 R-4.3.1_1: 66MB
-kdenlive-23.04.2_2: 67MB
-libclc-15.0.7_1: 68MB
-libopencv-4.6.0_4: 68MB
-breeze-icons-5.107.0_1: 71MB
-perl-5.36.1_1: 71MB
-linux-firmware-amd-20230515_1: 80MB
-moby-24.0.5_1: 81MB
-telegram-desktop-4.8.4_1: 86MB
-mesa-opencl-23.1.3_1: 98MB
-webkit2gtk-2.40.0_3: 99MB
-emacs-common-29.0.92_1: 101MB
-rav1e-0.6.6_1: 101MB
-gimp-2.10.34_1: 102MB
-containerd-1.7.3_1: 107MB
-libllvm15-15.0.7_1: 119MB
-linux6.3-6.3.13_1: 122MB
-nyxt-3.3.0_1: 148MB
-qt5-webengine-5.15.11_4: 151MB
+libclc-17.0.6_1: 67MB
+kdenlive-23.08.4_1: 68MB
+texlive-pictures-2023.66549_1: 68MB
+breeze-icons-5.115.0_1: 71MB
+perl-5.38.2_3: 71MB
+texlive-latexextra-2023.66551_1: 80MB
+moby-25.0.3_1: 83MB
+telegram-desktop-4.14.15_1: 98MB
+webkit2gtk-2.40.0_4: 99MB
+emacs-common-29.2_1: 101MB
+gimp-2.10.36_1: 103MB
+mesa-opencl-23.3.5_3: 104MB
+containerd-1.7.12_1: 110MB
+libllvm15-15.0.7_4: 119MB
+libllvm17-17.0.6_2: 134MB
+nyxt-3.3.0_2: 147MB
+qt5-webengine-5.15.16_1: 151MB
+emacs-x11-29.2_1: 153MB
+linux6.6-6.6.16_1: 153MB
 pandoc-2.17.1.1_1: 161MB
-openjdk11-jre-11.0.20+8_1: 165MB
+openjdk11-jre-11.0.22+6_1: 166MB
 linux5.18-5.18.19_1: 169MB
-gcc-12.2.0_3: 202MB
-firefox-115.0.2_1: 211MB
-clang-15.0.7_1: 277MB
-chromium-115.0.5790.98_1: 280MB
-linux-firmware-20230515_1: 280MB
+qt6-webengine-6.6.0_3: 194MB
+firefox-122.0_1: 206MB
+gcc-13.2.0_2: 209MB
+linux-firmware-20240115_1: 295MB
+chromium-121.0.6167.160_1: 297MB
 haskell-language-server-1.8.0.0_1: 358MB
 LanguageTool-5.8_1: 369MB
-noto-fonts-ttf-extra-23.7.1_1: 372MB
-linux-firmware-network-20230515_1: 375MB
-texlive-core-2021.58710_1: 405MB
-racket-8.9_1: 466MB
-qemu-7.1.0_2: 693MB
-libreoffice-common-7.5.3.2_2: 755MB
-ghc-9.0.2_1: 1508MB
-
-
-##pkg list Monday, September 25, 2023
-
-AppStream-0.16.2_1
-LanguageTool-5.8_1
-MangoHud-0.6.8_1
-NetworkManager-1.42.8_1
-NetworkManager-openvpn-1.8.18_1
-NoiseTorch-0.12.2_1
-R-4.3.1_1
-SDL2-devel-2.28.1_1
-acpi-1.7_4
-alacritty-0.12.2_1
-alsa-pipewire-0.3.76_1
-alsa-utils-1.2.9_1
-android-tools-34.0.1_2
-android-udev-rules-20230614_1
-apparmor-3.1.6_1
-arandr-0.1.11_1
-aria2-1.36.0_1
-asciinema-2.3.0_1
-aspell-0.60.8_5
-aspell-en-2020.12.07_2
-at-3.2.5_1
-audacity-2.4.1_2
-autoconf-2.71_1
-autojump-22.5.3_3
-automake-1.16.5_1
-awesome-4.3_9
-baobab-44.0_1
-base-devel-20181003_2
-base-system-0.114_1
-bash-completion-2.11_4
-bat-0.23.0_2
-bind-utils-9.16.22_2
-binutils-2.39_2
-bluebird-themes-1.3_3
-blueman-2.3.5_1
-bluez-5.68_1
-breeze-cursors-1.0_3
-breeze-gtk-5.27.6_1
-bridge-utils-1.7.1_1
-broot-1.24.2_1
-btrfs-progs-6.3.1_1
-bzip2-devel-1.0.8_2
-bzip3-devel-1.3.1_1
-cabal-install-3.6.3.0_2
-cantarell-fonts-0.303.1_1
-ccls-0.20220729_2
-cheese-43.0_2
-chromium-115.0.5790.98_1
-chrony-4.3_2
-clang-15.0.7_1
-clipmenu-6.2.0_1
-cloc-1.96.1_1
-cmake-3.26.4_3
-conky-1.13.1_1
-coreutils-9.2_1
-cowsay-3.04_3
-cpio-2.14_1
-cryptsetup-2.6.1_1
-curl-8.2.1_1
-dex-0.9.0_1
-dkms-3.0.10_2
-dmenu-5.2_1
-dmidecode-3.5_1
-docker-24.0.5_1
-dracut-059_3
-dtrx-8.5.0_1
-dunst-1.9.2_1
-earlyoom-1.7_1
-easyeffects-7.0.1_1
-elogind-246.10_3
-emacs-x11-29.0.92_1
-exa-0.10.1_4
-exercism-3.1.0_2
-exfat-utils-1.4.0_1
-exiftool-12.64_1
-expect-5.45.4_3
-fd-8.7.0_1
-feh-3.10_1
-ferm-2.7_1
-ffmpegthumbnailer-2.2.2_1
-figlet-2.2.5_6
-firefox-115.0.2_1
-fish-shell-3.6.1_1
-flatpak-1.15.4_2
-font-adobe-source-code-pro-2.038R~ro+1.058R~it+1.018R~VAR_1
-font-awesome-4.7.0_3
-font-awesome6-6.4.0_1
-font-fira-otf-4.202_4
-font-fira-ttf-4.202_4
-font-firacode-6.2_1
-font-hack-ttf-3.003_2
-font-ibm-plex-otf-6.2.0_1
-font-ibm-plex-ttf-6.2.0_1
-font-sourcecodepro-2.038R~ro+1.058R~it+1.018R~VAR_1
-fontforge-20230101_2
-fonts-roboto-ttf-2.138_3
-fortune-mod-anarchism-1.4.0_2
-fuse-exfat-1.4.0_1
-fzf-0.42.0_1
-gallery-dl-1.25.8_1
-gcc-12.2.0_3
-gd-devel-2.3.3_2
-gifsicle-1.93_3
-gimp-2.10.34_1
-git-2.41.0_2
-gkill-1.0.2_10
-glances-3.4.0.3_1
-glibmm-2.66.6_1
-gmime-devel-3.2.7_2
-gnome-disk-utility-44.0_1
-gnome-keyring-42.1_1
-gnupg2-2.4.3_1
-gnuplot-5.4.8_1
-gperf-3.1_3
-gperftools-2.8_2
-grub-btrfs-4.13_1
-grub-btrfs-runit-4.13_1
-grub-x86_64-efi-2.06_3
-gst-rtsp-server-1.22.2_1
-gstreamer1-pipewire-0.3.76_1
-gtkmm-3.24.7_1
-gtkmm2-2.24.5_4
-gtksourceview-devel-3.24.11_1
-gufw-22.04_2
-gvfs-afc-1.50.4_1
-gvfs-mtp-1.50.4_1
-gvfs-smb-1.50.4_1
-harfbuzz-8.0.1_1
-harfbuzz-devel-8.0.1_1
-haskell-language-server-1.8.0.0_1
-helvum-0.4.0_1
-hoogle-5.0.18.3_1
-htop-3.2.2_1
-hunspell-1.7.2_1
-hunspell-en_US-2020.12.07_1
-i3-gaps-4.22_1
-i3blocks-1.5_2
-i3lock-color-2.13.c.4_1
-i3status-2.14_1
-imlib2-devel-1.11.1_1
-indic-otf-0.2_4
-inetutils-2.4_1
-inotify-tools-3.20.11.0_1
-intel-media-driver-22.5.3_1
-intel-ucode-20230613_1
-irqbalance-1.9.2_1
-isync-1.4.4_1
-jp2a-1.1.1_1
-jpegoptim-1.5.4_1
-jq-1.6_4
-kdenlive-23.04.2_2
-keychain-2.8.5_2
-kmonad-0.4.1.20220321_1
-kpartx-0.9.5_1
-libX11-devel-1.8.6_1
-libXScrnSaver-devel-1.2.4_1
-libXext-devel-1.3.5_1
-libXft-devel-2.3.8_1
-libXinerama-devel-1.1.5_1
-libXrandr-devel-1.5.3_1
-libconfig++-1.7.3_1
-libcxx-devel-15.0.7_1
-libcxxabi-15.0.7_1
-liberation-fonts-ttf-2.1.5_2
-libjack-pipewire-0.3.76_1
-libqrencode-4.1.1_1
-libreoffice-7.5.3.2_2
-libselinux-3.0_2
-libspa-bluetooth-0.3.76_1
-libtool-2.4.7_4
-libvdpau-va-gl-0.4.2_2
-linux-6.3_1
-linux-base-2023.05.29_1
-linux-firmware-20230515_1
-linux-firmware-intel-20230515_1
-linux-headers-6.3_1
-linux5.18-5.18.19_1
-linux5.18-headers-5.18.19_1
-lm_sensors-3.6.0_1
-lolcat-c-1.4_1
-lsof-4.98.0_1
-lua-5.3.6_1
-lutris-0.5.13_1
-lvm2-2.02.187_2
-lxappearance-0.6.3_5
-lxdm-0.5.3_5
-lxsession-0.5.5_1
-maim-5.7.4_7
-man-db-2.11.2_1
-man-pages-6.04_1
-man-pages-posix-2017a_5
-mc-4.8.29_1
-mdadm-4.2_1
-mdocml-1.14.6_7
-mesa-dri-23.1.3_1
-mesa-vulkan-intel-23.1.3_1
-meson-1.1.0_1
-mpc-0.34_1
-mpd-0.23.13_2
-mpv-0.35.1_3
-mpv-mpris-1.0_1
-msmtp-1.8.24_1
-nano-7.2_1
-ncmpcpp-0.9.2_10
-ncurses-6.4_1
-ncurses-libs-6.4_1
-ncurses-libtinfo-devel-6.4_1
-nemo-5.8.4_1
-neofetch-7.1.0_2
-neovim-0.9.1_1
-netcat-0.7.1_7
-network-manager-applet-1.32.0_1
-newsboat-2.32_1
-nmap-7.94_1
-nodejs-18.16.0_2
-noto-fonts-emoji-2.038_1
-noto-fonts-ttf-23.7.1_1
-ntfs-3g-2022.10.3_1
-ntp-4.2.8p15_6
-numix-themes-2.6.7_2
-nyxt-3.3.0_1
-oath-toolkit-2.6.7_2
-obs-29.1.2_1
-opendoas-6.8.2_1
-openssl-devel-1.1.1t_1
-openvpn-2.6.4_1
-optipng-0.7.7_1
-overpass-otf-3.0.5_1
-p7zip-22.01_2
-pam-devel-1.5.2_2
-pamixer-1.6_1
-pandoc-2.17.1.1_1
-pass-1.7.4_3
-pass-otp-1.2.0_2
-passff-host-1.2.3_1
-passmenu-1.7.4_3
-pasystray-0.8.2_1
-pavucontrol-5.0_2
-pcmanfm-1.3.2_2
-php-8.2_2
-picom-10.2_1
-pinentry-dmenu-0.2.3_1
-pipewire-0.3.76_1
-pkg-config-0.29.2_3
-playerctl-2.4.1_1
-plocate-1.1.19_1
-plymouth-22.02.122_1
-pmount-0.9.23_7
-polybar-3.6.3_2
-poppler-23.05.0_1
-psmisc-23.6_1
-pulseaudio-utils-15.0_4
-pulsemixer-1.5.1_2
-pup-0.4.0_13
-pv-1.7.18_1
-pwgen-2.08_2
-pylint-2.17.4_1
-python3-dbus-devel-1.2.18_3
-python3-pip-23.2.1_1
-python3-setuptools-68.0.0_1
-python3-virtualenv-20.24.1_1
-pywal-3.3.0_5
-qalculate-4.5.1_3
-qbittorrent-4.5.2_1
-qemu-7.1.0_2
-qjackctl-0.9.9_1
-qrencode-4.1.1_1
-qt5-graphicaleffects-5.15.7+20221119_6
-qtkeychain-qt5-0.11.1_1
-qutebrowser-2.5.4_1
-racket-8.9_1
-ranger-1.9.3_4
-redshift-1.12_7
-ripgrep-13.0.0_2
-rofi-1.7.5_1
-rsync-3.2.7_1
-rtags-2.38_6
-rtkit-0.13_3
-rxvt-unicode-9.31_1
-sakura-3.8.6_1
-sbcl-2.3.6_1
-screen-4.9.0_2
-scrot-1.10_1
-sdcv-0.5.3_1
-sddm-0.20.0_1
-setxkbmap-1.3.4_1
-shellcheck-0.9.0_1
-shfmt-3.7.0_1
-sioyek-2.0.0_3
-slock-1.5_1
-smartmontools-7.3_1
-snapper-0.10.3_3
-socat-1.7.4.4_1
-source-sans-pro-3.046_1
-spectacle-23.04.2_1
-speedtest-cli-2.1.3_3
-stack-2.7.5_2
-starship-1.16.0_1
-stow-2.3.1_4
-stubby-0.4.0_1
-surfraw-2.3.0_2
-sxhkd-0.6.2_1
-sxiv-31_1
-syncthing-1.23.6_1
-sysfsutils-2.1.0_7
-tanidvr-1.4.1_2
-tar-1.35_1
-telegram-desktop-4.8.4_1
-terminus-font-4.49.1_1
-texlive-20210325_6
-texlive-latexextra-2021.58668_1
-texlive-science-2022.62977_1
-thefuck-3.32_2
-tidy5-5.8.0_1
-tldr-1.0.0.alpha_2
-toilet-0.3_3
-topgrade-12.0.2_1
-tor-0.4.7.14_1
-torbrowser-launcher-0.3.6_1
-translate-shell-0.9.7.1_1
-trash-cli-0.23.2.13.2_1
-trayer-srg-1.1.8_1
-tree-2.1.1_1
-ts-1.0.2_1
-ttf-ubuntu-font-family-0.83_3
-tty-clock-2.3_2
-ttyd-1.7.3_1
-twm-1.0.12_1
-udiskie-2.4.2_2
-ueberzug-18.1.9_2
-ufw-0.36.1_3
-ufw-extras-0.6.0_1
-unclutter-8_5
-unicode-emoji-14.0_1
-unrar-6.2.5_1
-unzip-6.0_15
-urlscan-1.0.0_1
-util-linux-2.38.1_4
-v4l2loopback-0.12.7_1
-vdpauinfo-1.4_1
-vim-9.0.1562_2
-virt-manager-4.1.0_2
-vlc-3.0.18_4
-void-docs-2023.06.28_1
-void-docs-browse-2023.06.28_1
-void-repo-multilib-6_4
-void-repo-multilib-nonfree-6_4
-void-repo-nonfree-9_6
-void-updates-20221026_1
-volumeicon-0.5.1_4
-vsv-2.0.0_1
-w3m-0.5.3+git20230121_1
-wget-1.21.4_1
-wireplumber-0.4.14_7
-words-en-2020.12.07_2
-xapian-core-devel-1.4.21_1
-xclip-0.13_2
-xcowsay-1.6_1
-xdg-user-dirs-0.18_1
-xdotool-3.20211022.1_1
-xfe-1.45_1
-xhost-1.0.9_1
-xmobar-0.42_1
-xorg-fonts-7.6_5
-xorg-minimal-1.2_2
-xprop-1.2.6_1
-xrdb-1.2.2_1
-xsel-1.2.1_1
-xsetroot-1.1.3_1
-xterm-382_1
-xtools-0.65_2
-xtrlock-3.4_2
-xwallpaper-0.7.4_1
-xwininfo-1.1.6_1
-xz-5.4.3_1
-youtube-dl-2021.12.17_2
-yq-3.2.2_1
-yt-dlp-2023.07.06_1
-zbar-0.23.1_6
-zip-3.0_6
-zsh-5.9_3
-zsh-autosuggestions-0.7.0_1
-zsh-completions-0.34.0_1
-zsh-history-substring-search-1.0.2_2
-zsh-syntax-highlighting-0.7.1_3
+noto-fonts-ttf-extra-24.2.1_1: 372MB
+linux-firmware-network-20240115_1: 412MB
+texlive-core-2023.66587_1: 413MB
+racket-8.12_1: 466MB
+qemu-8.1.3_1: 729MB
+libreoffice-common-7.6.4.1_1: 760MB
+ghc-9.0.2_2: 1493MB
