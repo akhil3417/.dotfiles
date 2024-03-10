@@ -1,0 +1,237 @@
+# This config is a hack. numen is lovely, but better integration with
+# Emacs would probably require an Elisp package.
+#
+# For some of these commands, you could use emacsclient
+# instead of pressing a key command. For example, instead of
+# jump: press ctrl+x ctrl+j
+# you could use
+# jump: run emacsclient -e '(dired-jump)'
+# but many commands won't work this way without extra effort.
+# For example, imenu doesn't work because it requires an argument.
+# Neither does yank, because emacsclient doesn't share the current buffer.
+# Also, emacsclient won't work if you're not running a server.
+#
+# Furthermore, by pressing keybindings, you're free to rebind default
+# keybindings. For example, I bind C-x b to consult-buffer.
+#
+# Here's a helper function for adding documentation:
+# (defun my/insert-numen-bound-command ()
+#   "Insert the next command's name in a comment, then move down two lines."
+#   (interactive)
+#   (insert "# " (call-interactively #'describe-key-briefly) "\n")
+#   (forward-line))
+# (local-set-key [f9] #'my/insert-numen-bound-command)
+# document: press F9
+
+# Default keybindings for build-in commands
+# M-x runs the command execute-extended-command
+run: press alt+x
+# C-u runs the command universal-argument
+fix: press ctrl+u
+# C-x b runs the command consult-buffer
+switch: press ctrl+x b
+# C-x o runs the command other-window
+other: press ctrl+x o
+# C-x 3 runs the command split-window-right
+split: press ctrl+x 3
+# C-x 2 runs the command split-window-below
+splat: press ctrl+x 2
+# C-x 1 runs the command delete-other-windows
+lone: press ctrl+x 1
+# C-x 0 runs the command delete-window
+hide: press ctrl+x 0
+# C-x + runs the command balance-windows
+equal: press ctrl+x plus
+# Yes, I know. I don't want to shout "kill" at my computer
+# C-x k runs the command kill-buffer
+bye: press ctrl+x k
+# C-x <left> runs the command previous-buffer
+back: press ctrl+x Left
+# C-x <right> runs the command next-buffer
+ford: press ctrl+x Right
+# C-x C-s runs the command save-buffer
+save: press ctrl+x ctrl+s
+# C-x C-f runs the command find-file
+file: press ctrl+x ctrl+f
+# C-SPC runs the command set-mark-command
+mark: press ctrl+space
+# C-u C-SPC pops the mark
+pop mark: press ctrl+u ctrl+space
+# C-x C-SPC runs the command pop-global-mark
+pop global mark: press ctrl+x ctrl+space
+# C-g runs the command keyboard-quit
+quit: press ctrl+g
+# M-% runs the command query-replace
+query: press alt+percent
+# C-/ runs the command undo
+undo: press ctrl+slash
+# C-? runs the command undo-redo
+redo: press ctrl+question
+# C-x C-x runs the command exchange-point-and-mark
+swap: press ctrl+x ctrl+x
+# C-x x g runs the command revert-buffer-quick
+refresh: press ctrl+x x g
+# C-x w s runs the command window-toggle-side-windows
+side: press ctrl+x w s
+# M-w runs the command kill-ring-save
+copy: press alt+w
+# C-y runs the command yank
+paste: press ctrl+y
+# M-y runs the command yank-pop
+yank pop: press alt+y
+# M-q runs the command fill-paragraph
+fill: press alt+q
+# C-w runs the command kill-region
+cut: press ctrl+w
+# M-c runs the command capitalize-word
+capital: press alt+c
+# M-c runs the command upcase-word
+upper: press alt+u
+# M-l runs the command downcase-word
+lower: press alt+l
+# M-g i runs the command imenu
+menu: press alt+g i
+# C-s runs the command isearch-forward
+search: press ctrl+s
+# C-r runs the command isearch-backward
+research: press ctrl+r
+# C-x p is the project prefix binding
+project: press ctrl+x p
+# C-l runs the command recenter-top-bottom
+center: press ctrl+l
+# M-< runs the command beginning-of-buffer
+top: press alt+percent
+# M-> runs the command end-of-buffer
+bottom: press alt+asciicircum
+# C-x > runs the command scroll-right
+slide: press ctrl+x greater
+# C-x < runs the command scroll-left
+scroll: press ctrl+x less
+# M-; runs the command comment-dwim
+comment: press alt+semicolon
+# M-<left> runs the command left-word
+word left: press alt+b
+# M-<right> runs the command right-word
+word right: press alt+f
+# M-DEL (translated from M-S-<backspace>) runs the command backward-kill-word
+word hack: press alt+BackSpace
+# M-d runs the command kill-word
+word toss: press alt+d
+# M-t runs the command transpose-words
+word trans: press alt+t
+# M-a runs the command backward-sentence
+sent left: press alt+a
+# M-e runs the command forward-sentence
+sent right: press alt+e
+# M-k runs the command kill-sentence
+sent toss: press alt+k
+# M-{ runs the command backward-paragraph
+graph left: press alt+braceleft
+# M-} runs the command forward-paragraph
+graph right: press alt+braceright
+
+# Common keybindings for built-in commands
+# C-x C-j runs the command dired-jump
+jump: press ctrl+x ctrl+j
+
+# Default keybindings for locally bound commands
+# C-c C-c might be bound to org-capture-finalize
+done: press ctrl+c ctrl+c
+# C-c C-k might be bound to org-capture-kill
+bail: press ctrl+c ctrl+k
+
+# Help commands
+# C-h e runs the command view-echo-area-messages
+messages: press ctrl+h e
+# C-h l runs the command view-lossage
+loss: press ctrl+h l
+# C-h f runs the command describe-function
+function: press ctrl+h f
+# C-h v runs the command describe-variable
+variable: press ctrl+h v
+# C-h o runs the command describe-symbol
+symbol: press ctrl+h o
+# C-h R runs the command info-display-manual
+info: press ctrl+h R
+# C-h k runs the command describe-key
+binding: press ctrl+h k
+
+# Extended commands
+# scratch-buffer
+scratch: press alt+x s c r a t c h comma b u f f e r Return
+
+# Personal commands (not built-in)
+# s-p starts a shell process
+command: press super+p
+# s-<return> runs the command vterm
+shell: press super+Return
+# M-j runs the command avy-goto-char-timer
+ivy: press alt+j
+# M-o runs the command ace-window
+window: press alt+o
+# C-x g runs the command magit-status
+magic: press ctrl+x g
+# C-c m runs the command simple-mpc
+muse: press ctrl+c m
+# C-c e runs the command mu4e
+mail: press ctrl+c e
+# S-<return> runs the command crux-smart-open-line
+below: press shift+Return
+# C-S-<return> runs the command crux-smart-open-line-above
+above: press ctrl+shift+Return
+# C-. runs the command embark-act
+bark: press ctrl+period
+# C-. runs the command embark-act
+open: press ctrl+period Return
+# C-. h runs the command embark-act
+help: press ctrl+period h
+
+# Structural editing
+# C-M-u runs the command backward-up-list
+out: press ctrl+alt+u
+# C-M-d runs the command down-list
+drill: press ctrl+alt+d
+# C-M-b runs the command backward-sexp
+under: press ctrl+alt+b
+# C-M-f runs the command forward-sexp
+over: press ctrl+alt+f
+# C-M-n runs the command forward-list
+next: press ctrl+alt+n
+# C-M-p runs the command backward-list
+last: press ctrl+alt+p
+# C-M-r runs the command raise-sexp
+raise: press ctrl+alt+r
+# C-M-s-u is undefined
+comb: press ctrl+alt+super+u
+# C-M-SPC runs the command mark-sexp
+whole: press ctrl+alt+space
+# C-M-k runs the command kill-sexp
+lick: press ctrl+alt+k
+# C-M-t runs the command transpose-sexps
+trans: press ctrl+alt+t
+# C-M-SPC ( wraps the next sexp in parens
+wrap: press ctrl+alt+space parenleft
+# C-M-a runs the command beginning-of-defun
+start: press ctrl+alt+a
+# C-M-e runs the command end-of-defun
+fin: press ctrl+alt+e
+
+# Structural editing (not built-in)
+# C-M-] runs the command sp-forward-slurp-sexp
+barf: press ctrl+alt+bracketright
+# C-M-} runs the command sp-forward-barf-sexp
+slurp: press ctrl+alt+braceright
+
+# Org
+# C-c C-l runs the command org-insert-link
+insert: press ctrl+c ctrl+l
+# C-c C-s runs the command org-schedule
+schedule: press ctrl+c ctrl+s
+
+# Org (not built-in)
+# C-c l runs the command org-store-link
+store: press ctrl+c l
+# C-c c runs the command org-capture
+capture: press ctrl+c c
+# C-c a opens my agenda for today
+agenda: press ctrl+c a t

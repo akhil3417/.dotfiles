@@ -1,0 +1,36 @@
+#!/bin/sh
+# menu [CHANGE]
+# Menu to type a transcription result.
+# If CHANGE, don't offer the top result and backspace it before typing.
+
+dmenu="${NUMEN_DMENU:-"${DMENU:-dmenu}"}"
+dmenu_opts="${NUMEN_DMENU_OPTS:--i -l 10}"
+
+export DISPLAY="$(/etc/numen/scripts/displaying)"
+
+f="$NUMEN_STATE_DIR/transcripts"
+s="$(/etc/numen/scripts/transcripts)"
+if [ "$1" ]; then
+	if [ "$(wc -l < "$f")" -gt 1 ]; then
+		if ! t="$(printf %s\\n "$s" | tail -n +2 | "$dmenu" $dmenu_opts)"; then
+			exit
+		fi
+		printf %s\\n "$s" | sed 's/./ BackSpace/g; s/^/press/; q'
+	else
+		notify-send 'No alternative transcripts' &
+		exit
+	fi
+else
+	if test -s "$f"; then
+		if ! t="$(printf %s\\n "$s" | "$dmenu" $dmenu_opts)"; then
+			exit
+		fi
+	else
+		notify-send 'No transcripts' &
+		exit
+	fi
+fi
+printf %s\\n "type $t"
+# Bring the choice to the top of the file
+t="$(printf %s\\n "$s" | awk -v t="$t" 'NR == FNR {if ($0 == t) n = NR; next} FNR == n' - "$f")"
+printf %s\\n "$(awk -v t="$t" 'BEGIN {print t} $0 != t' "$f")" > "$f"

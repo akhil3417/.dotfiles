@@ -1,0 +1,324 @@
+Escape                 k:1
+1                      k:2
+exclam                 shift+k:2
+at                     shift+k:3
+2                      k:3
+numbersign             shift+k:4
+3                      k:4
+4                      k:5
+dollar                 shift+k:5
+percent                shift+k:6
+5                      k:6
+6                      k:7
+asciicircum            shift+k:7
+7                      k:8
+ampersand              shift+k:8
+8                      k:9
+asterisk               shift+k:9
+parenleft              shift+k:10
+9                      k:10
+parenright             shift+k:11
+0                      k:11
+underscore             shift+k:12
+minus                  k:12
+equal                  k:13
+plus                   shift+k:13
+BackSpace              k:14
+Tab                    k:15
+ISO_Left_Tab           shift+k:15
+q                      k:16
+Q                      shift+k:16
+W                      shift+k:17
+w                      k:17
+e                      k:18
+E                      shift+k:18
+r                      k:19
+R                      shift+k:19
+T                      shift+k:20
+t                      k:20
+Y                      shift+k:21
+y                      k:21
+u                      k:22
+U                      shift+k:22
+I                      shift+k:23
+i                      k:23
+o                      k:24
+O                      shift+k:24
+P                      shift+k:25
+p                      k:25
+bracketleft            k:26
+braceleft              shift+k:26
+braceright             shift+k:27
+bracketright           k:27
+Return                 k:28
+Control_L              k:29
+A                      shift+k:30
+a                      k:30
+s                      k:31
+S                      shift+k:31
+d                      k:32
+D                      shift+k:32
+f                      k:33
+F                      shift+k:33
+g                      k:34
+G                      shift+k:34
+H                      shift+k:35
+h                      k:35
+J                      shift+k:36
+j                      k:36
+k                      k:37
+K                      shift+k:37
+L                      shift+k:38
+l                      k:38
+semicolon              k:39
+colon                  shift+k:39
+quotedbl               shift+k:40
+apostrophe             k:40
+grave                  k:41
+asciitilde             shift+k:41
+Shift_L                k:42
+backslash              k:43
+bar                    shift+k:43
+Z                      shift+k:44
+z                      k:44
+X                      shift+k:45
+x                      k:45
+c                      k:46
+C                      shift+k:46
+V                      shift+k:47
+v                      k:47
+b                      k:48
+B                      shift+k:48
+n                      k:49
+N                      shift+k:49
+M                      shift+k:50
+m                      k:50
+less                   shift+k:51
+comma                  k:51
+period                 k:52
+greater                shift+k:52
+question               shift+k:53
+slash                  k:53
+Shift_R                k:54
+XF86ClearGrab          ctrl+alt+k:55
+KP_Multiply            k:55
+Alt_L                  k:56
+Meta_L                 shift+k:56
+space                  k:57
+Caps_Lock              k:58
+XF86Switch_VT_1        ctrl+alt+k:59
+F1                     k:59
+F2                     k:60
+XF86Switch_VT_2        ctrl+alt+k:60
+F3                     k:61
+XF86Switch_VT_3        ctrl+alt+k:61
+XF86Switch_VT_4        ctrl+alt+k:62
+F4                     k:62
+XF86Switch_VT_5        ctrl+alt+k:63
+F5                     k:63
+XF86Switch_VT_6        ctrl+alt+k:64
+F6                     k:64
+XF86Switch_VT_7        ctrl+alt+k:65
+F7                     k:65
+XF86Switch_VT_8        ctrl+alt+k:66
+F8                     k:66
+XF86Switch_VT_9        ctrl+alt+k:67
+F9                     k:67
+XF86Switch_VT_10       ctrl+alt+k:68
+F10                    k:68
+Num_Lock               k:69
+Scroll_Lock            k:70
+KP_Home                k:71
+KP_7                   k:71
+KP_8                   k:72
+KP_Up                  k:72
+KP_Prior               k:73
+KP_9                   k:73
+KP_Subtract            k:74
+XF86Prev_VMode         ctrl+alt+k:74
+KP_Left                k:75
+KP_4                   k:75
+KP_5                   k:76
+KP_Begin               k:76
+KP_Right               k:77
+KP_6                   k:77
+KP_Add                 k:78
+XF86Next_VMode         ctrl+alt+k:78
+KP_1                   k:79
+KP_End                 k:79
+KP_2                   k:80
+KP_Down                k:80
+KP_3                   k:81
+KP_Next                k:81
+KP_0                   k:82
+KP_Insert              k:82
+KP_Decimal             k:83
+KP_Delete              k:83
+ISO_Level3_Shift       k:84
+brokenbar              altgr+shift+k:86
+XF86Switch_VT_11       ctrl+alt+k:87
+F11                    k:87
+F12                    k:88
+XF86Switch_VT_12       ctrl+alt+k:88
+Katakana               k:90
+Hiragana               k:91
+Henkan_Mode            k:92
+Hiragana_Katakana      k:93
+Muhenkan               k:94
+KP_Enter               k:96
+Control_R              k:97
+XF86Ungrab             ctrl+alt+k:98
+KP_Divide              k:98
+Print                  k:99
+Sys_Req                alt+k:99
+Meta_R                 shift+k:100
+Alt_R                  k:100
+Linefeed               k:101
+Home                   k:102
+Up                     k:103
+Prior                  k:104
+Left                   k:105
+Right                  k:106
+End                    k:107
+Down                   k:108
+Next                   k:109
+Insert                 k:110
+Delete                 k:111
+XF86AudioMute          k:113
+XF86AudioLowerVolume   k:114
+XF86AudioRaiseVolume   k:115
+XF86PowerOff           k:116
+KP_Equal               k:117
+plusminus              k:118
+Break                  ctrl+k:119
+Pause                  k:119
+XF86LaunchA            k:120
+Hangul                 k:122
+Hangul_Hanja           k:123
+Super_L                k:125
+Super_R                k:126
+Menu                   k:127
+Cancel                 k:128
+Redo                   k:129
+SunProps               k:130
+Undo                   k:131
+SunFront               k:132
+XF86Copy               k:133
+XF86Open               k:134
+XF86Paste              k:135
+Find                   k:136
+XF86Cut                k:137
+Help                   k:138
+XF86MenuKB             k:139
+XF86Calculator         k:140
+XF86Sleep              k:142
+XF86WakeUp             k:143
+XF86Explorer           k:144
+XF86Send               k:145
+XF86Xfer               k:147
+XF86Launch1            k:148
+XF86Launch2            k:149
+XF86WWW                k:150
+XF86DOS                k:151
+XF86ScreenSaver        k:152
+XF86RotateWindows      k:153
+XF86TaskPane           k:154
+XF86Mail               k:155
+XF86Favorites          k:156
+XF86MyComputer         k:157
+XF86Back               k:158
+XF86Forward            k:159
+XF86Eject              k:161
+XF86AudioNext          k:163
+XF86AudioPlay          k:164
+XF86AudioPause         shift+k:164
+XF86AudioPrev          k:165
+XF86AudioStop          k:166
+XF86AudioRecord        k:167
+XF86AudioRewind        k:168
+XF86Phone              k:169
+XF86Tools              k:171
+XF86HomePage           k:172
+XF86Reload             k:173
+XF86Close              k:174
+XF86ScrollUp           k:177
+XF86ScrollDown         k:178
+XF86New                k:181
+XF86Launch5            k:184
+XF86Launch6            k:185
+XF86Launch7            k:186
+XF86Launch8            k:187
+XF86Launch9            k:188
+XF86AudioMicMute       k:190
+XF86TouchpadToggle     k:191
+XF86TouchpadOn         k:192
+XF86TouchpadOff        k:193
+ISO_Level5_Shift       k:195
+Hyper_L                shift+k:199
+XF86Launch3            k:202
+XF86Launch4            k:203
+XF86LaunchB            k:204
+XF86Suspend            k:205
+XF86AudioForward       k:208
+XF86WebCam             k:212
+XF86AudioPreset        k:213
+XF86Messenger          k:216
+XF86Search             k:217
+XF86Go                 k:218
+XF86Finance            k:219
+XF86Game               k:220
+XF86Shop               k:221
+XF86MonBrightnessDown  k:224
+XF86MonBrightnessUp    k:225
+XF86AudioMedia         k:226
+XF86Display            k:227
+XF86KbdLightOnOff      k:228
+XF86KbdBrightnessDown  k:229
+XF86KbdBrightnessUp    k:230
+XF86Reply              k:232
+XF86MailForward        k:233
+XF86Save               k:234
+XF86Documents          k:235
+XF86Battery            k:236
+XF86Bluetooth          k:237
+XF86WLAN               k:238
+XF86UWB                k:239
+XF86MonBrightnessCycle k:243
+XF86BrightnessAuto     k:244
+XF86DisplayOff         k:245
+XF86WWAN               k:246
+XF86RFKill             k:247
+
+
+ask: press question
+plus: press plus
+mine: press minus
+tide: press asciitilde
+yell: press exclam
+quid: press dollar
+score: press underscore
+clause: press colon
+same: press semicolon
+wax: press parenleft
+wane: press parenright
+curl: press braceleft
+crimp: press braceright
+bric: press bracketleft
+brac: press bracketright
+small: press less
+big: press greater
+star: press asterisk
+hash: press numbersign
+mood: press percent
+blunt: press asciicircum
+snail: press at
+gain: press ampersand
+vert: press bar
+spoke: press quotedbl
+mark: press apostrophe
+tick: press grave
+slash: press slash
+slope: press backslash
+list: press comma
+point: press period
+match: press equal

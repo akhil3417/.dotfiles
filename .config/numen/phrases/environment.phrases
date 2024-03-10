@@ -1,0 +1,36 @@
+# I use these for managing application windows but they just simulate keys,
+# so you'll need to configure your desktop environment, or you can use my
+# preconfigured desktop environment: https://git.sr.ht/~geb/tiles
+
+# Navigate to the window in the given direction
+west: stick off \
+	press super+j
+east: stick off \
+	press super+k
+north: stick off \
+	press super+Up
+south: stick off \
+	press super+Down
+
+# Cycle round the windows
+cycle: stick off \
+	press super+c
+recycle: stick off \
+	press super+C
+
+# Close window
+exterminate: stick off \
+	press super+q
+
+# Toggle fullscreen
+screen: stick off \
+	press super+space
+
+
+
+# These two are just for --gadget mode.
+
+# Switch to controlling the gadget
+@gadget shock gadget: handler uinput
+# Switch to controlling the host machine
+@gadget shock host: handler gadget

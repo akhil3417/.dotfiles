@@ -1,0 +1,12 @@
+mute: press XF86AudioMute
+decrease volume:press XF86AudioLowerVolume
+increase volume:press XF86AudioRaiseVolume
+find: press Find
+screen saver: press XF86ScreenSaver
+next audio: press XF86AudioNext
+play audio: press XF86AudioPlay
+pause audio: press XF86AudioPause
+previous audio: press XF86AudioPrev
+stop audio: press XF86AudioStop
+bluetooth: press XF86Bluetooth
+wifi: press XF86WLAN

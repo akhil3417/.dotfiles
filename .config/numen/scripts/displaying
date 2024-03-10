@@ -1,0 +1,12 @@
+#!/bin/sh
+if [ $# != 0 ]; then
+	echo 'displaying: Heuristically prints the active X display.' >&2
+	[ "$1" = -h ] || [ "$1" = --help ]; exit
+fi
+for p in $(pgrep -t $(cat /sys/class/tty/tty0/active)); do
+	d="$(ps e $p | sed 's/.*DISPLAY=\([^ ]*\).*/\1/; t; d')"
+	[ "$d" ] && printf %s\\n "$d" && exit
+done
+echo 'displaying: Could not determine the active X display' >&2
+echo :0
+exit 1
