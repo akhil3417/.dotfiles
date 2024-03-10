@@ -12,36 +12,47 @@
 # With the first letter uppercase
 @transcribe scrub: set numen_fmt echo sentence \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1
+
 # With Each First Letter Uppercase
 @transcribe tight scribe: set numen_fmt echo title \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1
+
 # with_underscrores_inbetween
 @transcribe snake: set numen_fmt echo snake \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1
+
 # with-dashes-inbetween
 @transcribe dash: set numen_fmt echo dash \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1
+
 # with.dots.inbetween
 @transcribe dot scribe: set numen_fmt echo dot \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1
+
 # with, commas, inbetween
 @transcribe roh scribe: set numen_fmt echo list \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1
+
 # with/slashes/inbetween
 @transcribe path scribe: set numen_fmt echo path \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1
+
 # allsmashedtogether
 @transcribe kludge: set numen_fmt echo smash \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1
+
 # camelCase
 @transcribe camel: set numen_fmt echo camel \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1
+
 # PascalCase
 @transcribe pascal: set numen_fmt echo pascal \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1
+
 # dot.camelCase
 @transcribe dot camel: set numen_fmt echo dotcamel \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1
+
 # dot.PascalCase
 @transcribe dot pascal: set numen_fmt echo dotpascal \
 	pen ~/.config/numen/scripts/tweak; ~/.config/numen/scripts/transcripts | head -n 1

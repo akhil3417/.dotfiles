@@ -1,0 +1,54 @@
+#!/bin/sh
+# tweak
+# Does some cheeky post-processing of the transcription results.
+
+printf %s\\n "$(awk '
+	function rep(a, b) {
+		gsub("^"a"$", b)
+		gsub("^"a" ", b" ")
+		gsub(" "a" ", " "b" ")
+		gsub(" "a"$", " "b)
+	}
+	{ line = $0 }
+	NF < 5 {
+		# nudge
+		rep("or do you", "audio")
+		rep("or the you", "audio")
+		rep("or do", "audio")
+		rep("bite", "byte")
+		rep("bites", "bytes")
+		rep("cash", "cache")
+		rep("flute", "float")
+		rep("mt", "empty")
+		rep("colonel", "kernel")
+		rep("mean", "main")
+		rep("notify sand", "notify send")
+		rep("oh to put", "output")
+		rep("oh put", "output")
+		rep("to put", "output")
+		rep("oh to pit", "output")
+		rep("oh to poop", "output")
+		rep("oh poop", "output")
+		rep("freeze", "phrase")
+		rep("freezes", "phrases")
+		rep("read direct", "redirect")
+		rep("sighs", "size")
+		sub(/^turn$/, "return"); sub(/^turn /, "return ")
+		rep("heidi", "tidy")
+		rep("warren", "warn")
+		if (!/down|up|left/) sub(/^right /, "write ")
+
+		# unknown words
+		rep("the limit her", "delimiter")
+		rep("limit her", "delimiter")
+		rep("separate her", "separator")
+		rep("separate tour", "separator")
+		rep("to pull", "tuple")
+		rep("to poop", "tuple")
+		rep("drupal", "tuple")
+
+		if (ENVIRON["numen_fmt"] !~ /sentence|title|upper/)
+			sub(/^the /, "")
+	}
+	{ print; print line }
+' "$NUMEN_STATE_DIR/transcripts" | awk '!seen[$0]++')" > "$NUMEN_STATE_DIR/transcripts"

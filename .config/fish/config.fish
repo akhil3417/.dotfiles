@@ -33,6 +33,10 @@ if test -x (command -v fzf) && test -e "$HOME/.config/fzf/key-bindings.fish"
    source "$HOME/.config/fzf/key-bindings.fish"
    fzf_key_bindings
 end
+## setup numen
+export NUMEN_MODEL=/home/shiva/myrepos/linux-assistant/extensions/vosk/vosk-model-en-us-daanzu-20200328-lgraph
+export DOTOOL_XKB_LAYOUT=us numen
+export DOTOOL_XKB_VARIANT=engram
 
 # Source aliases and abbreviations
 source "$HOME/.config/fish/fish_aliases"
