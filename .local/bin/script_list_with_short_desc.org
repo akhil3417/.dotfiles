@@ -1,0 +1,299 @@
+#+title: Desc
+#+author: Akhil Pratap Singh
+#+date: 2023-07-04
+
+* All
+** Xmobar
+
+1. [[file:XMMPC][XMMPC]]
+2. [[file:XMMPCnext][XMMPCnext]]
+3. [[file:XMMPCprev][XMMPCprev]]
+4. [[file:XMMPCtoggle][XMMPCtoggle]]
+5. [[file:XMMPDToggle][XMMPDToggle]]
+6. [[file:XMTop-cpu][XMTop-cpu]]
+7. [[file:XMTop-mem][XMTop-mem]]
+8. [[file:XMncmpcpp][XMncmpcpp]]
+
+** dmenu and rofi scripts
+
+1. [[file:rofi-calc][rofi-calc]]
+2. [[file:powermenurofi][powermenurofi]]
+3. [[file:power_menu][power_menu]] : rofi logout
+
+4. [[file:dmenukaomoji][dmenukaomoji]]
+5. [[file:dmenu-theming][dmenu-theming]]
+
+6. [[file:dm-note][dm-note]] : why note here when you have emacs
+7. [[file:dm-reddit][dm-reddit]] : i run a third party app and need to buy  api
+8. [[file:dm-run][dm-run]] : run your life
+
+9. [[file:dmenu-command][dmenu-command]]
+10. [[file:dm-colpick][dm-colpick]] : good , but need to extend.
+11. [[file:dm-confedit][dm-confedit]] : choose from conf files to edit in your editor .
+12. [[file:dm-currencies][dm-currencies]] : paisa
+13. [[file:dm-dictionary][dm-dictionary]] : need fix
+14. [[file:dm-hub][dm-hub]] : all dm-scripts at one place
+15. [[file:dm-kill][dm-kill]] : kill that sob
+16. [[file:dm-logout][dm-logout]] : wanna go home?
+
+** mount , unmount
+
+1. [[file:dmenumount][dmenumount]]
+2. [[file:dm-usbmount][dm-usbmount]]
+3. [[file:dmenumountcifs][dmenumountcifs]]
+
+** volume control
+1. [[file:cm][cm]] : pipewire volume control
+2. [[file:dmenu-audio-sink][dmenu-audio-sink]]
+3. [[file:volume][volume]]
+4. [[file:changevolume][changevolume]]
+
+** files and linkhandler
+1. [[file:dmenuhandler][dmenuhandler]]
+2. [[file:dmenu-handler][dmenu-handler]]
+3. [[file:dmenu-open-file][dmenu-open-file*]] : useful
+4. [[file:dmenu-places-menu][dmenu-places-menu]] : useful to open file manager in a location
+5. [[file:linkhandler][linkhandler]]
+6. [[file:fzfmenu][fzfmenu]]
+7. [[file:dff][dff]] : need to find ff-cache
+
+** dmenu vpn
+1. [[file:dmenu-vpn][dmenu-vpn]] : add the openvpn config to this
+2. [[file:surfshark][surfshark]] : Script to automate starting and stopping openvpn, to be run as
+   a regular user. # modify for runit
+
+** dmenu github
+1. [[file:dmenu_github][dmenu_github]] : Display all repositories connected to a GitHub user account in rofi and clone the selected repository.
+2. [[file:stars][stars]] : github
+
+** dmenu network
+1. [[file:dmenu-bluetooth][dmenu-bluetooth]]
+2. [[file:dmenu-win][dmenu-win]] : useful to switch between open windows
+3. [[file:dmenu_kdeconnect][dmenu_kdeconnect]] : wonderful
+4. [[file:rofi-wifi-menu][rofi-wifi-menu]]
+5. [[file:dm-wifi][dm-wifi]] : crack that wpa-2
+6. [[file:wifi][wifi]]
+7. [[file:menu_connection_manager.sh][menu_connection_manager.sh]] : connection
+8. [[file:dmenu_run_history][dmenu_run_history]] :
+9. [[file:dm-ip][dm-ip]] : hackerman
+
+** browser and bookmarks
+1. [[file:ws][ws]] :  ws - surfraw, fzf and w3m
+2. [[file:dm-bookman][dm-bookman]] : browser bookmarks , need to have a look
+3. [[file:dm-websearch][dm-websearch]] : cool but , emacs web-engine is superior
+4. [[file:w3m-pager][w3m-pager]] :  w3m pager with stty columns for wrapping text
+
+** music and sounds
+1. [[file:dm-music][dm-music]] : explore the ragas , uses mpc and mpd
+2. [[file:dm-sounds][dm-sounds]] : play sounds
+3. [[file:tag.sh][tag.sh]] : tag music , songs
+4. songinfo
+5. [[file:now-playing][now-playing]] : songs
+6. [[file:music-player-client][music-player-client]] :  use mpc&mpd or emacsclient&emms to play music
+7. [[file:dm-radio][dm-radio]] : ghsssssss
+8. [[file:punch][punch]] :  punch send audio links to mpd
+
+** screencast , record and walls
+1. [[file:get-bing-wallpaper][get-bing-wallpaper]]
+2. [[file:dm-setbg][dm-setbg]] : haha , walls
+3. [[file:dm-maim][dm-maim]] : better take ss  of those chats
+4. [[file:dm-record][dm-record]] : wanna be a youtuber? , make sure your desktop audio is recorded along with the mic
+5. [[file:record-desktop-audio][record-desktop-audio]] : record system audio with sox
+
+** emacs and mail
+
+1. [[file:org-protocol-capture-html.sh][org-protocol-capture-html.sh]] : capture pages in org
+2. [[file:emacsmail][emacsmail]] : emacs mail
+3. [[file:tempomail][tempomail]] : disposable mail
+4. [[file:emacs-capture][emacs-capture]]
+5. [[file:eshell][eshell]]
+6. [[file:e][e]] Emacs client convenience wrapper.
+
+** Rat
+
+1. [[file:dogeport][dogeport]] : android rat port activation
+2. [[file:dogeratstart][dogeratstart]] :
+
+** pdf tools
+1. [[file:getbib][getbib]]
+2. [[file:gentoc.sh][gentoc.sh]] : generate toc for pdf documents
+3. [[file:ocrmypdf][ocrmypdf]]
+4. [[file:tesseract][tesseract]] :
+5. [[file:topdf][topdf]] : convert documents to pdf using the doc2pdf.net service
+
+** Torrent
+1. [[file:aria2p][aria2p]]
+2. [[file:diana][diana]]
+3. [[file:torrent.sh][torrent.sh]] :search and download torrents
+4. [[file:t][t]] torrent anything , down watch etc
+5. [[file:streamovies][streamovies]] : need to fix this
+6. [[file:transmission-pwgen][transmission-pwgen]] : torrent
+7. [[file:qbittorentpluginurls][qbittorentpluginurls]]
+8. [[file:game-get.sh][game-get.sh]]
+9. [[file:textbook.sh][textbook.sh]] : find books, fix env
+
+** System tools
+
+1. [[file:kernel][kernel]]
+2. [[file:dm-man][dm-man]] : like manpages! really?
+3. [[file:dm-wiki][dm-wiki]] : void wiki??
+4. [[file:psave.sh][psave.sh]] :  manage power to usb ports
+5. [[file:otp][otp]] : need fix
+6. [[file:dmenupass][dmenupass]]
+7. [[file:otptool][otptool]]
+8. [[file:redshift_location_aware][redshift_location_aware]]
+9. [[file:voidlinux-mirror-speedtest.sh][voidlinux-mirror-speedtest.sh]]
+10. [[file:voidupdates][voidupdates]]
+11. [[file:unix][unix]] : wonderful
+12. [[file:vbridge-start][vbridge-start]] : create network bridge
+13. [[file:upt][upt]] : calculate uptime
+14. [[file:tutorialvids][tutorialvids]]
+15. [[file:stopwatch.sh][stopwatch.sh]]
+16. [[file:dunst_toggle_notify][dunst_toggle_notify]] : toggle notification
+17. [[file:memory][memory]]
+18. [[file:mouseless][mouseless]]
+19. [[file:sysact][sysact]] : A dmenu wrapper script for system functions.
+
+20. [[file:typo][typo]] : spelling
+
+21. [[file:unicode][unicode]] : good list , but emacs has that
+22. [[file:vim-anywhere][vim-anywhere]]
+
+23. [[file:xmpv][xmpv]]
+** display control
+1. [[file:xrandrfzf.sh][xrandrfzf.sh]] : very useful
+2. [[file:cl][cl]]
+3. [[file:displayselect][displayselect]]
+
+** Internet etc
+
+1. [[file:dm-translate][dm-translate]] : need fix
+2. [[file:gis-weather][gis-weather]]
+3. [[file:dm-weather][dm-weather]] : need fix
+4. [[file:weather][weather]] : curl weather
+5. [[file:mtu][mtu]] : make tiny url for site
+
+** Other
+  [[file:after][after]]
+  [[file:battery_charge_indicator_multicolored][battery_charge_indicator_multicolored]]
+
+  [[file:cast][cast]]
+  [[file:castcontrol][castcontrol]]
+
+  [[file:cheat][cheat]]
+   [[file:chrome_createpass][chrome_createpass]] :
+  [[file:clock][clock]]
+  [[file:cmark][cmark]]
+  [[file:compiler][compiler]]
+  [[file:convert_to_xpm][convert_to_xpm]]
+  [[file:covid19][covid19]]
+  [[file:csv2json][csv2json]]
+  [[file:csv2kml][csv2kml]]
+  [[file:dad][dad]]
+
+
+
+   dtos-colorscheme : xmobar
+   dtos-help:
+   emenu
+
+   getcomproot
+
+   logo-ls
+   macho : both need fix
+   machogui.sh
+
+   md2roff.sh
+
+   meson
+
+   pacupdate
+   pauseallmpv
+
+   prompt
+
+   pywalfox
+
+   qndl : review
+   qrcsv : qrencode batch create qr codes from a csv file
+   qutebrowser.sh
+   remaps
+   remind
+
+   rotdir : go through images
+
+   sd :  Open a terminal window in the same directory as the currently active window.
+   shoppinglist.sh
+* Media
+** ffmpeg
+
+1. [[file:audio-silence][audio-silence]]
+2. [[file:overlay-clip][overlay-clip]]
+3. [[file:overlay-pip][overlay-pip]]
+4. [[file:pan-scan][pan-scan]]
+5. [[file:tile-thumbnails][tile-thumbnails]] : tile thumbnails from a video
+6. [[file:scopes][scopes]] : ffplay video scopes
+7. [[file:noisereduce][noisereduce]]
+8. [[file:noise_profile_file][noise_profile_file]]
+9. [[file:normalize][normalize]]
+10. [[file:opti][opti]] : image optimize and file size reducer
+11. [[file:vid_post.sh][vid_post.sh]]
+12. [[file:subs2transcript][subs2transcript]] : convert subtitles to a transcript
+13. [[file:subtitle-add][subtitle-add]] : add subtitles to a video
+14. [[file:slider][slider]] : Give a file with images and timecodes and creates a video slideshow of them.
+15. [[file:vid2gif][vid2gif]] :  convert a video into a gif animation
+16. [[file:ebu-meter][ebu-meter]]  ffplay ebu meter
+17. [[file:h264-aac][h264-aac]] convert video to h264 and audio to aac
+18. [[file:imagetoemojisquares.sh][imagetoemojisquares.sh]]
+19. [[file:img2video][img2video]]
+20. [[file:img-optimize][img-optimize]]
+21. [[file:jiffy][jiffy]] : convert a video into a gif animation
+22. [[file:gif][gif]]
+23. [[file:speedvid][speedvid]]
+24. [[file:dnxhd-pcm][dnxhd-pcm]] : convert video at 30fps to dnxhd and audio to pcm
+25. [[file:zoompan][zoompan]]
+26. [[file:loudnorm][loudnorm]]
+27. [[file:trim-clip][trim-clip]]
+28. [[file:scene-cut][scene-cut]]
+29. [[file:scene-detect][scene-detect]]
+30. [[file:scene-images][scene-images]]
+31. [[file:scene-time][scene-time]]
+32. [[file:extract-frame][extract-frame]]
+33. [[file:correct-clip][correct-clip]]
+34. [[file:combine-clips][combine-clips]]
+35. [[file:cleanaudio][cleanaudio]]
+36. [[file:crossfade-clips][crossfade-clips]]
+37. [[file:fade-clip][fade-clip]]
+38. [[file:fade-normalize][fade-normalize]]
+39. [[file:fade-title][fade-title]]
+40. [[file:ffmpegcombineallvidswithsimilarext.sh][ffmpegcombineallvidswithsimilarext.sh]]
+41. [[file:ffmpegcompressmp4.sh][ffmpegcompressmp4.sh]]
+
+42. [[file:webjpeg][webjpeg]]
+43. [[file:waveform][waveform]] :  create a waveform from an audio or video file and save as a png
+44. [[file:webp][webp]]  ffmpeg libwebp_anim
+45. [[file:xfade][xfade]] : ffmpeg xfade transitions
+
+** youtube
+
+1. [[file:mcyt][mcyt]] : multicast yt streams
+2. [[file:sauron][sauron]] : pipe links to this
+3. [[file:pinch][pinch]]
+4. [[file:pinchv2][pinchv2]]
+5. [[file:y][y]] watch youtube , stream
+6. [[file:yd][yd]] : youtube video downloader , dmenu
+7. [[file:dm-youtube][dm-youtube]] : youtube for channels
+8. [[file:yt_r][yt_r]]
+9. [[file:youtube-rss][youtube-rss]]
+10. [[file:ytduration.sh][ytduration.sh]]
+11. [[file:yank][yank]] :  sen video links to kodi
+
+12. [[file:_dm-helper.sh][_dm-helper.sh]]
+13. [[file:dmenuunicode][dmenuunicode]]
+** other
+1. [[file:modifyexitdata.sh][modifyexitdata.sh]] : this script modifies exif values of an image such as the GPSZAccuracy
+2. [[file:namelistosvg.sh][namelistosvg.sh]] : downloads 10 random names and converts them to svg
+3. [[file:ngrok][ngrok]]
+4. [[file:onlinesvg.sh][onlinesvg.sh]] :downloads 10 random names and converts them to svg
+
+5. [[file:kodi-send][kodi-send]]

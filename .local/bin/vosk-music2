@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# Variables
+VOSK_MODEL_PATH="$HOME/gitclones/text-generation-webui/models/vosk/vosk-model-small-en-us-0.15/"
+INVIDIOUS_INSTANCE="https://vid.puffyan.us" # some instances might not work
+
+# Stop current song and clear playlist
+mpc stop
+mpc clear
+
+# Take mic input and convert it into text
+ffmpeg -y -f alsa -i default -acodec pcm_s16le -ac 1 -ar 44100 -t 3 -f wav /tmp/audio.wav
+audio_input=$(vosk-transcriber -m "$VOSK_MODEL_PATH" -i /tmp/audio.wav)
+
+# Audio confirmation notification
+# google_speech "All right.. let me play.. $audio_input" &
+
+# Make youtube search query
+query="$(printf '%s' "song audio $audio_input" | tr ' ' '+' )"
+
+# Search on invidious (youtube) instance for video id to make a url
+video_id=$(curl -s "$INVIDIOUS_INSTANCE/search?q=$query" | grep -Eo "watch\?v=.{11}" | head -n 1)
+youtube_url="https://youtube.com/$video_id"
+
+# Get url for bestaudio stream from the youtube video
+audio_url=$(yt-dlp -f bestaudio --get-url "$youtube_url")
+
+# Add the track to mpd and play
+mpc add "$audio_url"
+mpc play
+
+# Get youtube video title for system notification
+title=$(yt-dlp --get-title "$youtube_url")
+notify-send "Playing: " "$title"
